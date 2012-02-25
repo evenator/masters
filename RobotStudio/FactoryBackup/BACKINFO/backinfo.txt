@@ -1,0 +1,43 @@
+#
+# Generated backup file, do not edit.
+#
+# Originally at: /hd0a/temp/F1B8D184
+# 12-02-12  19:53:55
+#
+>>SYSTEM_ID:
+12-80312
+
+>>PRODUCTS_ID:
+RobotWare Version: 5.14.1032.01
+
+  RW Control module key
+  RobotWare OS and English
+  748-1 DeviceNet Lean
+  RW Drive module 1 key
+  ABB standard manipulator
+  IRB 120
+  120-0.58/3
+  Drive System 09 120/140/1400/1600 Compact
+  1-Phase Power Supply
+  No additional drive
+
+>>ROBOT_TYPE:
+120-0.58/3
+
+>>HOME:
+All public files and directories
+
+>>SYSPAR:
+SYS.cfg
+PROC.cfg
+EIO.cfg
+SIO.cfg
+MOC.cfg
+MMC.cfg
+
+
+>>TASK1: (T_ROB1,,)
+SYSMOD/user.sys @ user.sys
+
+
+>>EOF:
