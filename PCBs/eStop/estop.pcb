@@ -1,5 +1,5 @@
 # release: pcb 20091103
-# date:    Mon Mar 19 23:53:22 2012
+# date:    Mon Mar 19 23:57:36 2012
 # user:    ed (Edward Venator,,,)
 # host:    ubuntu
 
@@ -1266,7 +1266,7 @@ Layer(1 "component")
 	(
 		[150000 15000] [330000 15000] [330000 65000] [150000 65000] 
 	)
-	Polygon("clearpoly,selected")
+	Polygon("clearpoly")
 	(
 		[15000 15000] [330000 15000] [330000 275000] [15000 275000] 
 	)
@@ -1337,6 +1337,10 @@ Layer(2 "solder")
 	Line[150000 150000 140000 150000 2500 2000 "clearline"]
 	Line[140000 150000 140000 135000 2500 2000 "clearline"]
 	Line[25000 205000 50000 205000 1600 2000 "clearline"]
+	Polygon("clearpoly")
+	(
+		[15000 15000] [330000 15000] [330000 275000] [15000 275000] 
+	)
 )
 Layer(3 "outline")
 (
