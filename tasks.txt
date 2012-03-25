@@ -1,0 +1,23 @@
+CAD Allen's frame
+CAD/find models of all components
+Figure out component mounting and weight distribution
+Order computer
+Order inverter and related cabling
+Order Kinect (Do we have one?)
+Fabricate all mechanical parts (frame rails, mounting brackets)
+Finalize sensor package
+Rebuild Allen mechanically
+Rewire Allen
+Format Allen's new computer
+Get Allen running with existing ROS software to control mobile base and receive sensor data
+Calibrate Allen's systems
+Create ROS gateway to control the IRB-120
+Set up IRB-120 to respond to control from network
+Adapt/Develop ROS arm_kinematics/kdl_arm_kinematics/move_arm packages to control IRB-120
+Create ROS representation of IRB-120 (Joint/Link model, tied to 3D model for visualization)
+Create ROS representation of full robot, incorporating existing drive base model and IRB-120 model
+Demonstrate working playback of robot model from recorded data
+Figure out what the deal is with HS network comms to IRC5
+Test IRB-120 with ABB software (prove it moves, run a small RAPID program)
+Test IRB-120 with ABB software running from inverter power (prove it moves, run a small RAPID program)
+disassemble allen
