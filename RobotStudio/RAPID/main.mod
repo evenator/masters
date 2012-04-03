@@ -1,2 +1,0 @@
-MODULE testprog
-ENDMODULE
