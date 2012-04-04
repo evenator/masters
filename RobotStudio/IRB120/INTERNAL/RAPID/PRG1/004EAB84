@@ -1,5 +1,0 @@
-MODULE main
-	VAR robtarget p0 := CRobT(\Tool:=tool0, \WObj:=wobj0);
-	VAR robtarget p1 := Offs(p0, 100, 100, 100);
-	MoveL p0, v1000, fine, tool0;
-ENDMODULE

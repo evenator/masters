@@ -1,5 +1,13 @@
 # Pin name action command file
 
+# Start of element C4
+ChangePinName(C4, 2, 2)
+ChangePinName(C4, 1, 1)
+
+# Start of element C3
+ChangePinName(C3, 2, 2)
+ChangePinName(C3, 1, 1)
+
 # Start of element R9
 ChangePinName(R9, 1, 1)
 ChangePinName(R9, 2, 2)
