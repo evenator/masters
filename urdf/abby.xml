@@ -11,7 +11,7 @@
 
   <createdOn>"Edward"</createdOn>
 
-  <createdBy>"05/26/12||00:46:08"</createdBy>
+  <createdBy>"05/30/12||10:50:53"</createdBy>
 
   <name>"robot"</name>
 
@@ -58,21 +58,8 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="13">
+          <Frame ref="14">
             <name>"CS2"</name>
-            <displayName>""</displayName>
-            <nodeID>"frame bracket:1:-:invacare assy:1::frame bracket:1(AUTOGEN)"</nodeID>
-            <position>-8.78691,-27.6303,12.6431</position>
-            <positionOrigin>"WORLD"</positionOrigin>
-            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-            <positionUnits>"in"</positionUnits>
-            <orientation>1,0,0,0,1,0,0,0,1</orientation>
-            <orientationType>"3x3 Transform"</orientationType>
-            <orientationUnits>"rad"</orientationUnits>
-            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-          </Frame>
-          <Frame ref="16">
-            <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"frame bracket:1:-:frame bracket:4::frame bracket:1(AUTOGEN)"</nodeID>
             <position>8.61309,-25.6625,13.0795</position>
@@ -84,7 +71,20 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="17">
+          <Frame ref="25">
+            <name>"CS3"</name>
+            <displayName>""</displayName>
+            <nodeID>"frame bracket:1:-:invacare assy:1::frame bracket:1(AUTOGEN)"</nodeID>
+            <position>-8.78691,-27.6303,12.6431</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame ref="27">
             <name>"CS4"</name>
             <displayName>""</displayName>
             <nodeID>"frame bracket:1:-:front upright:1::frame bracket:1(AUTOGEN)"</nodeID>
@@ -97,7 +97,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="20">
+          <Frame ref="30">
             <name>"CS5"</name>
             <displayName>""</displayName>
             <nodeID>"frame bracket:1:-:front frame plate:2::frame bracket:1(AUTOGEN)"</nodeID>
@@ -161,7 +161,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="15">
+          <Frame ref="13">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"frame bracket:1:-:frame bracket:4::frame bracket:4(AUTOGEN)"</nodeID>
@@ -174,7 +174,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="31">
+          <Frame ref="15">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"arm rail:1:-:frame bracket:4::frame bracket:4(AUTOGEN)"</nodeID>
@@ -187,7 +187,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="34">
+          <Frame ref="18">
             <name>"CS4"</name>
             <displayName>""</displayName>
             <nodeID>"frame bracket:4:-:front upright:2::frame bracket:4(AUTOGEN)"</nodeID>
@@ -200,7 +200,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="36">
+          <Frame ref="20">
             <name>"CS5"</name>
             <displayName>""</displayName>
             <nodeID>"frame bracket:4:-:front frame plate:1::frame bracket:4(AUTOGEN)"</nodeID>
@@ -264,7 +264,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="4">
+          <Frame ref="6">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>":-:robot/RootPart::invacare assy:1(AUTOGEN)"</nodeID>
@@ -277,7 +277,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="14">
+          <Frame ref="26">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"frame bracket:1:-:invacare assy:1::invacare assy:1(AUTOGEN)"</nodeID>
@@ -290,7 +290,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="22">
+          <Frame ref="32">
             <name>"CS4"</name>
             <displayName>""</displayName>
             <nodeID>"back frame plate:1:-:invacare assy:1::invacare assy:1(AUTOGEN)"</nodeID>
@@ -303,7 +303,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="23">
+          <Frame ref="33">
             <name>"CS5"</name>
             <displayName>""</displayName>
             <nodeID>"back frame plate:2:-:invacare assy:1::invacare assy:1(AUTOGEN)"</nodeID>
@@ -316,7 +316,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="26">
+          <Frame ref="36">
             <name>"CS6"</name>
             <displayName>""</displayName>
             <nodeID>"front frame plate:1:-:invacare assy:1::invacare assy:1(AUTOGEN)"</nodeID>
@@ -329,7 +329,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="27">
+          <Frame ref="37">
             <name>"CS7"</name>
             <displayName>""</displayName>
             <nodeID>"front frame plate:2:-:invacare assy:1::invacare assy:1(AUTOGEN)"</nodeID>
@@ -342,7 +342,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="30">
+          <Frame ref="40">
             <name>"CS8"</name>
             <displayName>""</displayName>
             <nodeID>"invacare assy:1:-:short frame bracket:2::invacare assy:1(AUTOGEN)"</nodeID>
@@ -406,7 +406,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="5">
+          <Frame ref="3">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>":-:robot/RootPart::IRC5_Compact:1(AUTOGEN)"</nodeID>
@@ -419,7 +419,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="37">
+          <Frame ref="21">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"IRC5_Compact:1:-:lower side rail:3::IRC5_Compact:1(AUTOGEN)"</nodeID>
@@ -432,7 +432,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="39">
+          <Frame ref="23">
             <name>"CS4"</name>
             <displayName>""</displayName>
             <nodeID>"IRC5_Compact:1:-:lower vertical rail:2::IRC5_Compact:1(AUTOGEN)"</nodeID>
@@ -767,7 +767,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="38">
+          <Frame ref="22">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"IRC5_Compact:1:-:lower side rail:3::lower side rail:3(AUTOGEN)"</nodeID>
@@ -1140,7 +1140,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="32">
+          <Frame ref="16">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"arm rail:1:-:frame bracket:4::arm rail:1(AUTOGEN)"</nodeID>
@@ -1398,7 +1398,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="18">
+          <Frame ref="28">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"frame bracket:1:-:front upright:1::front upright:1(AUTOGEN)"</nodeID>
@@ -1514,7 +1514,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="33">
+          <Frame ref="17">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"frame bracket:4:-:front upright:2::front upright:2(AUTOGEN)"</nodeID>
@@ -2119,7 +2119,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="21">
+          <Frame ref="31">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"back frame plate:1:-:invacare assy:1::back frame plate:1(AUTOGEN)"</nodeID>
@@ -2196,7 +2196,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="24">
+          <Frame ref="34">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"back frame plate:2:-:invacare assy:1::back frame plate:2(AUTOGEN)"</nodeID>
@@ -2273,11 +2273,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="25">
+          <Frame ref="19">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>"front frame plate:1:-:invacare assy:1::front frame plate:1(AUTOGEN)"</nodeID>
-            <position>9.11309,-24.62,12.6755</position>
+            <nodeID>"frame bracket:4:-:front frame plate:1::front frame plate:1(AUTOGEN)"</nodeID>
+            <position>10.6131,-27.6303,12.6431</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -2289,8 +2289,8 @@
           <Frame ref="35">
             <name>"CS3"</name>
             <displayName>""</displayName>
-            <nodeID>"frame bracket:4:-:front frame plate:1::front frame plate:1(AUTOGEN)"</nodeID>
-            <position>10.6131,-27.6303,12.6431</position>
+            <nodeID>"front frame plate:1:-:invacare assy:1::front frame plate:1(AUTOGEN)"</nodeID>
+            <position>9.11309,-24.62,12.6755</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -2350,7 +2350,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="19">
+          <Frame ref="29">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"frame bracket:1:-:front frame plate:2::front frame plate:2(AUTOGEN)"</nodeID>
@@ -2363,7 +2363,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="28">
+          <Frame ref="38">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"front frame plate:2:-:invacare assy:1::front frame plate:2(AUTOGEN)"</nodeID>
@@ -3057,7 +3057,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="40">
+          <Frame ref="24">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"IRC5_Compact:1:-:lower vertical rail:2::lower vertical rail:2(AUTOGEN)"</nodeID>
@@ -3636,7 +3636,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="29">
+          <Frame ref="39">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"invacare assy:1:-:short frame bracket:2::short frame bracket:2(AUTOGEN)"</nodeID>
@@ -3880,11 +3880,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="3">
+          <Frame ref="4">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>":-:robot/RootPart::robot/RootPart(AUTOGEN)"</nodeID>
-            <position>0,0,0</position>
+            <position>-8.92844,-21.492,18.5626</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -3893,11 +3893,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="6">
+          <Frame ref="5">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>":-:robot/RootPart::robot/RootPart(AUTOGEN)"</nodeID>
-            <position>-8.92844,-21.492,18.5626</position>
+            <position>0,0,0</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -3964,7 +3964,7 @@
     </bodies>
     <joints>
       <SimpleJoint>
-        <name>"RootPart--invacare assy:1"</name>
+        <name>"IRC5_Compact:1--RootPart"</name>
         <nodeID>":-:robot/RootPart"</nodeID>
         <status>""</status>
         <base>
@@ -3980,35 +3980,6 @@
             <name>""</name>
             <connection>
               <Frame ref="4"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"weld"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.57735,0.57735,0.57735</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"IRC5_Compact:1--RootPart"</name>
-        <nodeID>":-:robot/RootPart"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="5"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="6"></Frame>
             </connection>
           </JointSide>
         </follower>
@@ -4030,6 +4001,35 @@
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
             <axis>-1,2.50605e-010,0</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"RootPart--invacare assy:1"</name>
+        <nodeID>":-:robot/RootPart"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="5"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="6"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"weld"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.57735,0.57735,0.57735</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
@@ -4134,8 +4134,8 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"frame bracket:1--invacare assy:1"</name>
-        <nodeID>"frame bracket:1:-:invacare assy:1"</nodeID>
+        <name>"frame bracket:4--frame bracket:1"</name>
+        <nodeID>"frame bracket:1:-:frame bracket:4"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -4150,53 +4150,6 @@
             <name>""</name>
             <connection>
               <Frame ref="14"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>1,0,0</axis>
-          </Primitive>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0,1,0</axis>
-          </Primitive>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0,0,1</axis>
-          </Primitive>
-          <Primitive>
-            <name>"revolute"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>7.79371e-012,-0.995596,-0.0937434</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"frame bracket:4--frame bracket:1"</name>
-        <nodeID>"frame bracket:1:-:frame bracket:4"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="15"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="16"></Frame>
             </connection>
           </JointSide>
         </follower>
@@ -4222,257 +4175,6 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"frame bracket:1--front upright:1"</name>
-        <nodeID>"frame bracket:1:-:front upright:1"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="17"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="18"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"weld"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.57735,0.57735,0.57735</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"front frame plate:2--frame bracket:1"</name>
-        <nodeID>"frame bracket:1:-:front frame plate:2"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="19"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="20"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"weld"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.57735,0.57735,0.57735</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"back frame plate:1--invacare assy:1"</name>
-        <nodeID>"back frame plate:1:-:invacare assy:1"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="21"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="22"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0,0.995596,0.0937434</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"invacare assy:1--back frame plate:2"</name>
-        <nodeID>"back frame plate:2:-:invacare assy:1"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="23"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="24"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.0933342,0.99125,0.0933342</axis>
-          </Primitive>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.995635,-0.0929232,-0.00874947</axis>
-          </Primitive>
-          <Primitive>
-            <name>"revolute"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0,-0.0937434,0.995596</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"front frame plate:1--invacare assy:1"</name>
-        <nodeID>"front frame plate:1:-:invacare assy:1"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="25"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="26"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.0933342,0.99125,0.0933342</axis>
-          </Primitive>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-0.995635,0.0929232,0.00874947</axis>
-          </Primitive>
-          <Primitive>
-            <name>"revolute"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0,0.0937434,-0.995596</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"invacare assy:1--front frame plate:2"</name>
-        <nodeID>"front frame plate:2:-:invacare assy:1"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="27"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="28"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.0933342,0.99125,0.0933342</axis>
-          </Primitive>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-0.995635,0.0929232,0.00874947</axis>
-          </Primitive>
-          <Primitive>
-            <name>"revolute"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0,-0.0937434,0.995596</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"short frame bracket:2--invacare assy:1"</name>
-        <nodeID>"invacare assy:1:-:short frame bracket:2"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="29"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="30"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.705545,-0.0664327,0.705545</axis>
-          </Primitive>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-0.708665,-0.0661402,0.702438</axis>
-          </Primitive>
-          <Primitive>
-            <name>"revolute"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-5.76876e-011,0.995596,0.0937434</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
         <name>"frame bracket:4--arm rail:1"</name>
         <nodeID>"arm rail:1:-:frame bracket:4"</nodeID>
         <status>""</status>
@@ -4480,7 +4182,7 @@
           <JointSide>
             <name>""</name>
             <connection>
-              <Frame ref="31"></Frame>
+              <Frame ref="15"></Frame>
             </connection>
           </JointSide>
         </base>
@@ -4488,7 +4190,7 @@
           <JointSide>
             <name>""</name>
             <connection>
-              <Frame ref="32"></Frame>
+              <Frame ref="16"></Frame>
             </connection>
           </JointSide>
         </follower>
@@ -4521,7 +4223,7 @@
           <JointSide>
             <name>""</name>
             <connection>
-              <Frame ref="33"></Frame>
+              <Frame ref="17"></Frame>
             </connection>
           </JointSide>
         </base>
@@ -4529,7 +4231,7 @@
           <JointSide>
             <name>""</name>
             <connection>
-              <Frame ref="34"></Frame>
+              <Frame ref="18"></Frame>
             </connection>
           </JointSide>
         </follower>
@@ -4550,7 +4252,7 @@
           <JointSide>
             <name>""</name>
             <connection>
-              <Frame ref="35"></Frame>
+              <Frame ref="19"></Frame>
             </connection>
           </JointSide>
         </base>
@@ -4558,7 +4260,7 @@
           <JointSide>
             <name>""</name>
             <connection>
-              <Frame ref="36"></Frame>
+              <Frame ref="20"></Frame>
             </connection>
           </JointSide>
         </follower>
@@ -4574,6 +4276,292 @@
       <SimpleJoint>
         <name>"IRC5_Compact:1--lower side rail:3"</name>
         <nodeID>"IRC5_Compact:1:-:lower side rail:3"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="21"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="22"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>7.82816e-012,-1,0</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"IRC5_Compact:1--lower vertical rail:2"</name>
+        <nodeID>"IRC5_Compact:1:-:lower vertical rail:2"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="23"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="24"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>1,-2.50605e-010,0</axis>
+          </Primitive>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0,0,1</axis>
+          </Primitive>
+          <Primitive>
+            <name>"revolute"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>2.50605e-010,1,0</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"frame bracket:1--invacare assy:1"</name>
+        <nodeID>"frame bracket:1:-:invacare assy:1"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="25"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="26"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>1,0,0</axis>
+          </Primitive>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0,1,0</axis>
+          </Primitive>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0,0,1</axis>
+          </Primitive>
+          <Primitive>
+            <name>"revolute"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>7.79371e-012,-0.995596,-0.0937434</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"frame bracket:1--front upright:1"</name>
+        <nodeID>"frame bracket:1:-:front upright:1"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="27"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="28"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"weld"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.57735,0.57735,0.57735</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"front frame plate:2--frame bracket:1"</name>
+        <nodeID>"frame bracket:1:-:front frame plate:2"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="29"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="30"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"weld"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.57735,0.57735,0.57735</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"back frame plate:1--invacare assy:1"</name>
+        <nodeID>"back frame plate:1:-:invacare assy:1"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="31"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="32"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0,0.995596,0.0937434</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"invacare assy:1--back frame plate:2"</name>
+        <nodeID>"back frame plate:2:-:invacare assy:1"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="33"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="34"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.0933342,0.99125,0.0933342</axis>
+          </Primitive>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.995635,-0.0929232,-0.00874947</axis>
+          </Primitive>
+          <Primitive>
+            <name>"revolute"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0,-0.0937434,0.995596</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"front frame plate:1--invacare assy:1"</name>
+        <nodeID>"front frame plate:1:-:invacare assy:1"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="35"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="36"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.0933342,0.99125,0.0933342</axis>
+          </Primitive>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>-0.995635,0.0929232,0.00874947</axis>
+          </Primitive>
+          <Primitive>
+            <name>"revolute"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0,0.0937434,-0.995596</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"invacare assy:1--front frame plate:2"</name>
+        <nodeID>"front frame plate:2:-:invacare assy:1"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -4596,13 +4584,25 @@
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>7.82816e-012,-1,0</axis>
+            <axis>0.0933342,0.99125,0.0933342</axis>
+          </Primitive>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>-0.995635,0.0929232,0.00874947</axis>
+          </Primitive>
+          <Primitive>
+            <name>"revolute"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0,-0.0937434,0.995596</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"IRC5_Compact:1--lower vertical rail:2"</name>
-        <nodeID>"IRC5_Compact:1:-:lower vertical rail:2"</nodeID>
+        <name>"short frame bracket:2--invacare assy:1"</name>
+        <nodeID>"invacare assy:1:-:short frame bracket:2"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -4625,19 +4625,19 @@
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>1,-2.50605e-010,0</axis>
+            <axis>0.705545,-0.0664327,0.705545</axis>
           </Primitive>
           <Primitive>
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0,0,1</axis>
+            <axis>-0.708665,-0.0661402,0.702438</axis>
           </Primitive>
           <Primitive>
             <name>"revolute"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>2.50605e-010,1,0</axis>
+            <axis>-5.76876e-011,0.995596,0.0937434</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
