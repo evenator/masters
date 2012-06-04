@@ -1,0 +1,3 @@
+schematics remote.sch
+output-name remote
+elements-dir ../footprints
