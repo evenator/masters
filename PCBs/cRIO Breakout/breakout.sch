@@ -1,4 +1,4 @@
-v 20100214 2
+v 20110115 2
 C 47600 46800 1 0 0 header3-1.sym
 {
 T 48600 47450 5 10 0 0 0 0 1
@@ -199,17 +199,17 @@ footprint=screw_5mm_6-op
 C 43200 51200 1 0 0 generic-power.sym
 {
 T 43400 51450 5 10 1 1 0 3 1
-net=+24V
+net=+24V:1
 }
 C 43800 51200 1 0 0 generic-power.sym
 {
 T 44000 51450 5 10 1 1 0 3 1
-net=VcRIO
+net=VcRIO:2
 }
 C 44400 51200 1 0 0 generic-power.sym
 {
 T 44700 51450 5 10 1 1 0 3 1
-net=vMotors
+net=vMotors:3
 }
 C 45100 51200 1 0 0 12V-plus-1.sym
 N 43400 50900 44000 50900 4
@@ -396,17 +396,17 @@ N 60000 52100 57800 52100 4
 C 57600 53000 1 0 0 generic-power.sym
 {
 T 57800 53250 5 10 1 1 0 3 1
-net=VcRIO
+net=VcRIO:1
 }
 C 58500 51600 1 0 0 generic-power.sym
 {
 T 58700 51850 5 10 1 1 0 3 1
-net=+24V
+net=+24V:2
 }
 C 59700 44600 1 0 0 generic-power.sym
 {
 T 60000 44850 5 10 1 1 0 3 1
-net=vMotors
+net=vMotors:3
 }
 C 58200 46900 1 0 0 12V-plus-1.sym
 C 59000 45700 1 0 0 5V-plus-1.sym
