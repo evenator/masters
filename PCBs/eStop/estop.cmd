@@ -1,5 +1,35 @@
 # Pin name action command file
 
+# Start of element K5
+ChangePinName(K5, 2, 2)
+ChangePinName(K5, 1, 1)
+
+# Start of element Q2
+ChangePinName(Q2, 1, 1)
+ChangePinName(Q2, 3, 3)
+ChangePinName(Q2, 2, 2)
+
+# Start of element K4
+ChangePinName(K4, 2, 2)
+ChangePinName(K4, 1, 1)
+
+# Start of element U3
+ChangePinName(U3, unknown, unknown)
+ChangePinName(U3, unknown, unknown)
+ChangePinName(U3, 10, B)
+ChangePinName(U3, 9, A)
+ChangePinName(U3, 8, Y)
+ChangePinName(U3, unknown, unknown)
+ChangePinName(U3, unknown, unknown)
+ChangePinName(U3, 5, B)
+ChangePinName(U3, 4, A)
+ChangePinName(U3, 6, Y)
+ChangePinName(U3, unknown, unknown)
+ChangePinName(U3, unknown, unknown)
+ChangePinName(U3, 2, B)
+ChangePinName(U3, 1, A)
+ChangePinName(U3, 3, Y)
+
 # Start of element C4
 ChangePinName(C4, 2, 2)
 ChangePinName(C4, 1, 1)
@@ -20,11 +50,6 @@ ChangePinName(R8, 2, 2)
 ChangePinName(Q1, 2, 2)
 ChangePinName(Q1, 1, 1)
 ChangePinName(Q1, 3, 3)
-
-# Start of element Q2
-ChangePinName(Q2, 2, 2)
-ChangePinName(Q2, 1, 1)
-ChangePinName(Q2, 3, 3)
 
 # Start of element D1
 ChangePinName(D1, 2, 2)
@@ -71,14 +96,6 @@ ChangePinName(R2, 2, 2)
 ChangePinName(CONN1, 1, 1)
 ChangePinName(CONN1, 2, 2)
 
-# Start of element K4
-ChangePinName(K4, 2, 2)
-ChangePinName(K4, 1, 1)
-
-# Start of element K5
-ChangePinName(K5, 2, 2)
-ChangePinName(K5, 1, 1)
-
 # Start of element R5
 ChangePinName(R5, 1, 1)
 ChangePinName(R5, 2, 2)
@@ -89,23 +106,6 @@ ChangePinName(U2, 5, C)
 ChangePinName(U2, 6, B)
 ChangePinName(U2, 2, CATHODE)
 ChangePinName(U2, 1, ANODE)
-
-# Start of element U3
-ChangePinName(U3, unknown, unknown)
-ChangePinName(U3, unknown, unknown)
-ChangePinName(U3, 10, Y)
-ChangePinName(U3, 9, B)
-ChangePinName(U3, 8, A)
-ChangePinName(U3, unknown, unknown)
-ChangePinName(U3, unknown, unknown)
-ChangePinName(U3, 4, Y)
-ChangePinName(U3, 5, B)
-ChangePinName(U3, 6, A)
-ChangePinName(U3, unknown, unknown)
-ChangePinName(U3, unknown, unknown)
-ChangePinName(U3, 3, Y)
-ChangePinName(U3, 2, B)
-ChangePinName(U3, 1, A)
 
 # Start of element K1
 ChangePinName(K1, 2, 2)
