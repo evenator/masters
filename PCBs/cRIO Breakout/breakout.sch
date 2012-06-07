@@ -19,7 +19,7 @@ refdes=R_ENC
 T 47500 44200 5 10 1 1 0 0 1
 description=Right Encoders
 T 47400 44400 5 10 0 0 0 0 1
-footprint=HEADER8_1
+footprint=HEADER8_2
 }
 C 47400 42100 1 0 0 header8-1.sym
 {
@@ -30,7 +30,7 @@ refdes=L_ENC
 T 47500 41900 5 10 1 1 0 0 1
 description=Left Encoders
 T 47400 42100 5 10 0 0 0 0 1
-footprint=HEADER8_1
+footprint=HEADER8_2
 }
 C 47300 43200 1 0 0 gnd-1.sym
 C 47300 45500 1 0 0 gnd-1.sym
@@ -69,7 +69,7 @@ C 51000 41700 1 0 0 dsub_DC37f.sym
 T 51300 50125 5 10 1 1 0 0 1
 refdes=J3
 T 51025 51325 5 10 0 0 0 0 1
-footprint=DB37F.fp
+footprint=DB37F
 T 51325 49925 5 10 1 1 0 0 1
 device=DC37-f
 T 51000 41700 5 10 0 0 0 0 1
@@ -272,7 +272,7 @@ refdes=R6
 T 57900 46200 5 10 1 1 0 0 1
 value=100k
 T 58500 46000 5 10 0 0 0 0 1
-footprint=0805
+footprint=0603
 }
 C 58500 45100 1 90 0 resistor-1.sym
 {
@@ -283,7 +283,7 @@ refdes=R7
 T 58000 45300 5 10 1 1 0 0 1
 value=33k
 T 58500 45100 5 10 0 0 0 0 1
-footprint=0805
+footprint=0603
 }
 C 58300 44800 1 0 0 gnd-1.sym
 C 57900 52100 1 90 0 resistor-1.sym
@@ -295,7 +295,7 @@ refdes=R2
 T 57300 52300 5 10 1 1 0 0 1
 value=100k
 T 57900 52100 5 10 0 0 0 0 1
-footprint=0805
+footprint=0603
 }
 C 57900 51200 1 90 0 resistor-1.sym
 {
@@ -306,7 +306,7 @@ refdes=R3
 T 57400 51400 5 10 1 1 0 0 1
 value=33k
 T 57900 51200 5 10 0 0 0 0 1
-footprint=0805
+footprint=0603
 }
 C 57700 50900 1 0 0 gnd-1.sym
 C 58800 50700 1 90 0 resistor-1.sym
@@ -318,7 +318,7 @@ refdes=R4
 T 58200 50900 5 10 1 1 0 0 1
 value=100k
 T 58800 50700 5 10 0 0 0 0 1
-footprint=0805
+footprint=0603
 }
 C 58800 49800 1 90 0 resistor-1.sym
 {
@@ -329,7 +329,7 @@ refdes=R5
 T 58300 50000 5 10 1 1 0 0 1
 value=33k
 T 58800 49800 5 10 0 0 0 0 1
-footprint=0805
+footprint=0603
 }
 C 58600 49500 1 0 0 gnd-1.sym
 C 59300 44800 1 90 0 resistor-1.sym
@@ -341,7 +341,7 @@ refdes=R8
 T 58700 45000 5 10 1 1 0 0 1
 value=100k
 T 59300 44800 5 10 0 0 0 0 1
-footprint=0805
+footprint=0603
 }
 C 59300 43900 1 90 0 resistor-1.sym
 {
@@ -352,7 +352,7 @@ refdes=R9
 T 58800 44100 5 10 1 1 0 0 1
 value=33k
 T 59300 43900 5 10 0 0 0 0 1
-footprint=0805
+footprint=0603
 }
 C 59100 43600 1 0 0 gnd-1.sym
 C 60000 43700 1 90 0 resistor-1.sym
@@ -364,7 +364,7 @@ refdes=R10
 T 59400 43900 5 10 1 1 0 0 1
 value=100k
 T 60000 43700 5 10 0 0 0 0 1
-footprint=0805
+footprint=0603
 }
 C 60000 42800 1 90 0 resistor-1.sym
 {
@@ -375,7 +375,7 @@ refdes=R11
 T 59500 43000 5 10 1 1 0 0 1
 value=33k
 T 60000 42800 5 10 0 0 0 0 1
-footprint=0805
+footprint=0603
 }
 C 59800 42500 1 0 0 gnd-1.sym
 N 60500 47400 60300 47400 4
@@ -439,7 +439,7 @@ refdes=R1
 T 49900 47100 5 10 1 1 0 0 1
 value=33k
 T 50400 46900 5 10 0 0 0 0 1
-footprint=0805
+footprint=0603
 }
 C 54700 41900 1 0 1 connector2-1.sym
 {

@@ -1,0 +1,31 @@
+unnamed_net24	R1-1 SW1-1 
+VcRIO	R2-2 
+unnamed_net23	R3-2 R2-1 ANALOG-1 
+unnamed_net22	GYRO-6 ANALOG-6 
+unnamed_net21	R5-2 R4-1 ANALOG-2 
+unnamed_net20	GYRO-2 ANALOG-7 
+unnamed_net19	R7-2 R6-1 ANALOG-3 
+unnamed_net18	GYRO-4 ANALOG-8 
+unnamed_net17	R9-2 R8-1 ANALOG-4 
+unnamed_net16	R11-2 R10-1 ANALOG-5 
++24V	J1-1 
+Vcc	R10-2 R4-2 J1-3 J1-2 
++12V	R6-2 J1-4 C1-1 U1-1 
+unnamed_net15	ESTOP-1 J3-37 
+unnamed_net14	SW1-2 J3-8 
+unnamed_net13	RC3-1 J3-3 
+unnamed_net12	RC2-1 J3-2 
+unnamed_net11	RC1-1 J3-1 
+unnamed_net10	J3-30 L_ENC-7 
+unnamed_net9	J3-31 L_ENC-6 
+unnamed_net8	J2-25 L_ENC-3 
+unnamed_net7	J2-23 L_ENC-2 
+unnamed_net6	J3-11 R_ENC-7 
+unnamed_net5	J3-12 R_ENC-6 
++5V	R1-2 R8-2 GYRO-7 C2-1 U1-3 RC3-2 RC2-2 RC1-2 L_ENC-5 L_ENC-4 R_ENC-5 R_ENC-4 
+unnamed_net4	J2-22 R_ENC-3 
+unnamed_net3	J2-20 R_ENC-2 
+GND	ESTOP-2 R11-1 R9-1 R5-1 R3-1 R7-1 GYRO-5 GYRO-3 GYRO-8 GYRO-1 ANALOG-9 J2-12 J2-10 J2-9 J2-7 J2-6 J2-4 J2-3 J2-1 J2-13 J1-5 J1-6 C1-2 C2-2 U1-2 RC3-3 RC2-3 RC1-3 J3-M2 J3-M1 J3-29 J3-28 J3-10 J3-9 \
+ L_ENC-8 L_ENC-1 R_ENC-8 R_ENC-1 MC-3 
+unnamed_net2	J2-16 MC-2 
+unnamed_net1	J2-14 MC-1 
