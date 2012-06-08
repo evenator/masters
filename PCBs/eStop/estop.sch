@@ -36,7 +36,7 @@ refdes=R1
 T 43600 49000 5 10 1 1 90 0 1
 value=10k
 T 43400 48900 5 10 0 1 0 0 1
-footprint=R025
+footprint=0603
 }
 C 43300 49600 1 0 1 screw2-1.sym
 {
@@ -44,8 +44,8 @@ T 43000 50500 5 10 1 1 0 6 1
 refdes=K1
 T 43000 51100 5 10 0 0 0 6 1
 device=CONNECTOR
-T 43000 50700 5 10 0 0 0 6 1
-footprint=screw_5mm_2-op
+T 43000 50700 5 10 0 1 0 6 1
+footprint=screw_5mm_2
 T 42500 49900 5 10 1 1 0 6 1
 documentation=To ESTOP Button
 T 43300 49600 5 10 0 1 0 0 1
@@ -74,7 +74,7 @@ refdes=R5
 T 52900 45000 5 10 1 1 0 0 1
 value=27
 T 52700 45200 5 10 0 1 0 0 1
-footprint=R025
+footprint=0603
 }
 C 53500 44600 1 0 0 gnd-1.sym
 N 51200 43400 51200 45800 4
@@ -113,7 +113,7 @@ refdes=R2
 T 43600 47300 5 10 1 1 90 0 1
 value=10k
 T 43400 47200 5 10 0 1 0 0 1
-footprint=R025
+footprint=0603
 }
 C 43200 46900 1 0 0 gnd-1.sym
 C 42900 42500 1 180 0 screw2-1.sym
@@ -122,8 +122,8 @@ T 42600 41600 5 10 1 1 180 0 1
 refdes=K2
 T 42600 41000 5 10 0 0 180 0 1
 device=CONNECTOR
-T 42600 41400 5 10 0 0 180 0 1
-footprint=screw_5mm_2-op
+T 42600 41400 5 10 0 1 180 0 1
+footprint=screw_5mm_2
 T 42700 42700 5 10 1 1 180 0 1
 documentation=To IRC5 ESTOP Out
 T 42900 42500 5 10 0 1 180 6 1
@@ -140,7 +140,7 @@ refdes=R4
 T 47000 41200 5 10 1 1 180 0 1
 value=1k
 T 46700 40800 5 10 0 1 0 0 1
-footprint=R025
+footprint=0603
 }
 N 46100 41700 48800 41700 4
 N 46100 42100 46600 42100 4
@@ -166,8 +166,8 @@ T 51700 49100 5 10 1 1 0 6 1
 refdes=K3
 T 51700 49700 5 10 0 0 0 6 1
 device=CONNECTOR
-T 51700 49300 5 10 0 0 0 6 1
-footprint=screw_5mm_2-op
+T 51700 49300 5 10 0 1 0 6 1
+footprint=screw_5mm_2
 T 51700 47900 5 10 1 1 0 6 1
 documentation=12VPower
 T 52000 48200 5 10 0 1 0 0 1
@@ -222,7 +222,7 @@ refdes=R6
 T 55000 48200 5 10 1 1 0 0 1
 value=110
 T 55000 47900 5 10 1 1 0 0 1
-footprint=R025
+footprint=0603
 }
 C 55000 47000 1 90 0 resistor-1.sym
 {
@@ -233,7 +233,7 @@ refdes=R7
 T 55000 47300 5 10 1 1 0 0 1
 value=180
 T 55000 47000 5 10 0 1 0 0 1
-footprint=R025
+footprint=0603
 }
 N 53700 48000 53700 47900 4
 N 53700 47900 54900 47900 4
@@ -269,7 +269,7 @@ refdes=R8
 T 53200 42800 5 10 1 1 0 0 1
 value=1k
 T 52900 43100 5 10 0 0 0 0 1
-footprint=R025
+footprint=0603
 }
 N 52900 43200 52700 43200 4
 N 53900 43200 53800 43200 4
@@ -282,7 +282,7 @@ refdes=R9
 T 51500 45400 5 10 1 1 0 0 1
 value=1k
 T 51200 45700 5 10 0 0 0 0 1
-footprint=R025
+footprint=0603
 }
 C 44700 40600 1 0 0 capacitor-1.sym
 {
@@ -374,8 +374,8 @@ T 55800 45400 5 10 1 1 0 0 1
 refdes=K4
 T 55800 46000 5 10 0 0 0 0 1
 device=CONNECTOR
-T 55800 45600 5 10 0 0 0 0 1
-footprint=screw_5mm_2-op
+T 55800 45600 5 10 0 1 0 0 1
+footprint=screw_5mm_2
 T 55800 44200 5 10 1 1 0 0 1
 documentation=To IRC5 X1:4 and X1:3
 T 55500 44500 5 10 0 1 0 0 1
@@ -395,8 +395,8 @@ T 55600 42700 5 10 1 1 180 6 1
 refdes=K5
 T 55600 42100 5 10 0 0 180 6 1
 device=CONNECTOR
-T 55600 42500 5 10 0 0 180 6 1
-footprint=screw_5mm_2-op
+T 55600 42500 5 10 0 1 180 6 1
+footprint=screw_5mm_2
 T 55700 43900 5 10 1 1 180 6 1
 documentation=To Relay
 T 55300 43600 5 10 0 1 180 6 1
