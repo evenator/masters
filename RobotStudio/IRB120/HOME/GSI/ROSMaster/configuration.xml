@@ -3,7 +3,17 @@
 	<Enums>
 	</Enums>
 	<Records>
+		<Record Name="RobotData">
+			<Field Name="OperationMode" Type="OperationMode" Link="Intern" Alias="RobMode" />
+			<Field Name="FeedbackTime" Type="Time" Link="Intern" Alias="Ts_act" />
+			<Field Name="FeedbackPose" Type="Pose" Link="Intern" Alias="P_act" />
+			<Field Name="FeedbackJoints" Type="Joint" Link="Intern" Alias="J_act" />
+			<Field Name="PredictedTime" Type="Time" Link="Intern" Alias="Ts_des" />
+			<Field Name="PlannedPose" Type="Pose" Link="Intern" Alias="P_des" />
+			<Field Name="PlannedJoints" Type="Joint" Link="Intern" Alias="J_des" />
+		</Record>
 	</Records>
 	<Properties>
+		<Property Name="RobData" Type="RobotData" Flag="WriteOnly"/>
 	</Properties>
 </Configuration>

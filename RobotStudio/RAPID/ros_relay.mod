@@ -9,7 +9,7 @@
 
 MODULE ros_relay
 
-PERS sensor ros := "ros-gateway";
+PERS sensor ros := "ROSMaster";
 
 PROC main()
 	RRI_Open();
