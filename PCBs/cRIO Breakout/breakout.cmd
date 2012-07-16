@@ -1,16 +1,108 @@
 # Pin name action command file
 
+# Start of element RC
+ChangePinName(RC, 5, 5)
+ChangePinName(RC, 3, 3)
+ChangePinName(RC, 1, 1)
+ChangePinName(RC, 6, 6)
+ChangePinName(RC, 4, 4)
+ChangePinName(RC, 2, 2)
+
+# Start of element R14
+ChangePinName(R14, 1, 1)
+ChangePinName(R14, 2, 2)
+
+# Start of element R13
+ChangePinName(R13, 1, 1)
+ChangePinName(R13, 2, 2)
+
+# Start of element SW1
+ChangePinName(SW1, 1, 1)
+ChangePinName(SW1, 4, 4)
+ChangePinName(SW1, 2, 2)
+ChangePinName(SW1, 3, 3)
+
+# Start of element RW_ENC
+ChangePinName(RW_ENC, 1, 1)
+ChangePinName(RW_ENC, 4, 4)
+ChangePinName(RW_ENC, 2, 2)
+ChangePinName(RW_ENC, 3, 3)
+
+# Start of element LM_ENC
+ChangePinName(LM_ENC, 1, 1)
+ChangePinName(LM_ENC, 4, 4)
+ChangePinName(LM_ENC, 2, 2)
+ChangePinName(LM_ENC, 3, 3)
+
+# Start of element RM_ENC
+ChangePinName(RM_ENC, 1, 1)
+ChangePinName(RM_ENC, 4, 4)
+ChangePinName(RM_ENC, 2, 2)
+ChangePinName(RM_ENC, 3, 3)
+
+# Start of element R12
+ChangePinName(R12, 1, 1)
+ChangePinName(R12, 2, 2)
+
+# Start of element POWER_LED
+ChangePinName(POWER_LED, 2, 2)
+ChangePinName(POWER_LED, 1, 1)
+
 # Start of element ESTOP
 ChangePinName(ESTOP, 1, 1)
+ChangePinName(ESTOP, 4, 4)
 ChangePinName(ESTOP, 2, 2)
+ChangePinName(ESTOP, 3, 3)
+
+# Start of element SW2
+ChangePinName(SW2, 1, 1)
+ChangePinName(SW2, 4, 4)
+ChangePinName(SW2, 2, 2)
+ChangePinName(SW2, 3, 3)
+ChangePinName(SW2, 1, 1)
+ChangePinName(SW2, 4, 4)
+ChangePinName(SW2, 2, 2)
+ChangePinName(SW2, 3, 3)
+
+# Start of element MC
+ChangePinName(MC, 1, 1)
+ChangePinName(MC, 4, 4)
+ChangePinName(MC, 2, 2)
+ChangePinName(MC, 3, 3)
+
+# Start of element SON4
+ChangePinName(SON4, 1, 1)
+ChangePinName(SON4, 4, 4)
+ChangePinName(SON4, 2, 2)
+ChangePinName(SON4, 3, 3)
+
+# Start of element SON3
+ChangePinName(SON3, 1, 1)
+ChangePinName(SON3, 4, 4)
+ChangePinName(SON3, 2, 2)
+ChangePinName(SON3, 3, 3)
+
+# Start of element SON2
+ChangePinName(SON2, 1, 1)
+ChangePinName(SON2, 4, 4)
+ChangePinName(SON2, 2, 2)
+ChangePinName(SON2, 3, 3)
+
+# Start of element SON1
+ChangePinName(SON1, 1, 1)
+ChangePinName(SON1, 4, 4)
+ChangePinName(SON1, 2, 2)
+ChangePinName(SON1, 3, 3)
+
+# Start of element LW_ENC
+ChangePinName(LW_ENC, 1, 1)
+ChangePinName(LW_ENC, 4, 4)
+ChangePinName(LW_ENC, 2, 2)
+ChangePinName(LW_ENC, 3, 3)
 
 # Start of element R1
 ChangePinName(R1, 1, 1)
 ChangePinName(R1, 2, 2)
-
-# Start of element SW1
-ChangePinName(SW1, 1, 1)
-ChangePinName(SW1, 2, 2)
 
 # Start of element R11
 ChangePinName(R11, 1, 1)
@@ -121,21 +213,6 @@ ChangePinName(U1, 3, 3)
 ChangePinName(U1, 2, 2)
 ChangePinName(U1, 1, 1)
 
-# Start of element RC3
-ChangePinName(RC3, 3, 3)
-ChangePinName(RC3, 2, 2)
-ChangePinName(RC3, 1, 1)
-
-# Start of element RC2
-ChangePinName(RC2, 3, 3)
-ChangePinName(RC2, 2, 2)
-ChangePinName(RC2, 1, 1)
-
-# Start of element RC1
-ChangePinName(RC1, 3, 3)
-ChangePinName(RC1, 2, 2)
-ChangePinName(RC1, 1, 1)
-
 # Start of element J3
 ChangePinName(J3, M2, M2)
 ChangePinName(J3, M1, M1)
@@ -176,28 +253,3 @@ ChangePinName(J3, 4, 4)
 ChangePinName(J3, 3, 3)
 ChangePinName(J3, 2, 2)
 ChangePinName(J3, 1, 1)
-
-# Start of element L_ENC
-ChangePinName(L_ENC, 8, 8)
-ChangePinName(L_ENC, 7, 7)
-ChangePinName(L_ENC, 6, 6)
-ChangePinName(L_ENC, 5, 5)
-ChangePinName(L_ENC, 4, 4)
-ChangePinName(L_ENC, 3, 3)
-ChangePinName(L_ENC, 2, 2)
-ChangePinName(L_ENC, 1, 1)
-
-# Start of element R_ENC
-ChangePinName(R_ENC, 8, 8)
-ChangePinName(R_ENC, 7, 7)
-ChangePinName(R_ENC, 6, 6)
-ChangePinName(R_ENC, 5, 5)
-ChangePinName(R_ENC, 4, 4)
-ChangePinName(R_ENC, 3, 3)
-ChangePinName(R_ENC, 2, 2)
-ChangePinName(R_ENC, 1, 1)
-
-# Start of element MC
-ChangePinName(MC, 3, 3)
-ChangePinName(MC, 2, 2)
-ChangePinName(MC, 1, 1)
