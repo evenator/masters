@@ -1,2 +1,6 @@
 *.lck
-OldVersions/*
+CAD/OldVersions/*
+CAD/*/OldVersions/*
+CAD/*/*/OldVersions/*
+*.htm
+*.git*
