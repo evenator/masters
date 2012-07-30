@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Settings>
+	<Servers>
+	</Servers>
+	<Clients>
+		<Client Convention="CDP" Name="NACMaster" Path="GSI/NACMaster"/>
+		<Client Convention="CDP" Name="NACMasterUdp" Path="GSI/NACMasterUdp"/>
+		<Client Convention="CDP" Name="UdpTest" Path="GSI/UdpTest"/>
+	</Clients>
+</Settings>

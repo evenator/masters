@@ -1,0 +1,139 @@
+MODULE RS_BASE (SYSMODULE)
+
+    CONST num RsDataRate := 33.3;
+    CONST BOOL RsNormal := TRUE;
+    CONST BOOL RsSafe :=  FALSE;
+
+    !* RsOpen Procedure *************************************************
+
+    PROC RsOpen()
+		TPErase;
+        TPReadFK connection, "Select task:", "TC/IP", "UDP", "", "", "";
+		TEST connection
+			CASE 1:
+        		SiConnect NACMaster;
+				SiGetCyclic NACMaster, RsSensData, 16;
+        		SiSetCyclic NACMaster, RsRobData, 16;
+			CASE 2:
+        		SiConnect NACMasterUdp;
+				SiGetCyclic NACMasterUdp, RsSensData, 16;
+				SiSetCyclic NACMasterUdp, RsRobData,  16;
+			CASE 3:
+				SiConnect UdpTest;
+				SiGetCyclic UdpTest, RsSensData, 16;
+				SiSetCyclic UdpTest, RsRobData, 16;
+		ENDTEST
+
+        RsSyncNbr := 0;
+    ENDPROC
+
+    !* RsClose Procedure ************************************************
+    PROC RsClose()
+        ! Close the connection
+		TEST connection
+			CASE 1:
+				SiClose NACMaster;
+			CASE 2:
+        		SiClose NACMasterUdp;
+			CASE 3:
+				SiClose UdpTest;
+		ENDTEST
+    ENDPROC
+
+    !* RsLoad Procedure *************************************************
+
+    PROC RsLoad(num mode, num fileid)
+        VAR patterndata techData;
+
+        techdata.Item1 := -1; ! to be replaced with the right code value for robscan
+        techdata.Item2 := mode;
+        techdata.Item3 := fileid;
+
+        RsRobData.PtnData := techData;
+        WaitTime 1;
+    ENDPROC
+
+    !* RsWait Procedure *************************************************
+
+    PROC RsWait(num action, num fileid)
+        VAR patterndata indata;
+        VAR num retv;
+        VAR num runner :=0 ;
+
+        indata := RsSensData.PtnData;
+        WaitTime 1;
+        retv := indata.Item1;
+
+        WHILE ((retv <> action) and (runner<10)) DO 
+            !WaitTime 0.2;
+            retv := indata.Item1;
+            runner := runner+1;
+            indata := RsSensData.PtnData;
+        ENDWHILE
+
+        IF runner>=10 THEN
+            stop;
+            RETURN;
+        ENDIF  
+    ENDPROC
+
+    !* RsResume Procedure ***********************************************
+    !* Resume receiving information from the sensor server
+
+    PROC RsResume()
+        SiGetCyclic NACMaster, RsSensData, RsDataRate;
+        SiSetCyclic NACMaster, RsRobData, RsDataRate;
+    ENDPROC
+
+    !* RsPause Procedure ************************************************
+    !* Temporarily stop receiving information from the sensor server
+    
+    PROC RsPause()
+        SiSetCyclic NACMaster, RsRobData, 0;
+        SiGetCyclic NACMaster, RsSensData, 0;
+    ENDPROC
+
+    !* RsPattern Procedure **********************************************
+
+    PROC RsPattern(robtarget target,num type_nbr,num pkt_nbr,num dx1,num dy1,num dtheta1,num dx2,num dy2,num power_ov,bool trigger_type,\tooldata tool,\wobjdata wobj)
+        VAR patterndata techdata;
+        VAR pose p1;
+        VAR pose p2;
+        VAR pose p3;
+
+        IF Present(tool) THEN
+            SiTool := tool;
+        ENDIF
+
+        IF Present(wobj) THEN
+            SiWobj := wobj;
+        ENDIF
+
+        !p1 := PoseInv(SiWobj.oframe);
+        !p2 := PoseInv(SiWobj.uframe);
+        !p3 := PoseMult(p1,p2);
+        !p2.trans := target.trans;
+        !p2.rot := target.rot;
+        !p1 := PoseMult(p3,p2);
+        !p2 := PoseMult(p1,SiTool.tframe);
+
+
+        IF (pkt_nbr = RsSyncNbr) THEN
+            RsSyncNbr:=RsSyncNbr+1;
+        ELSE
+            RsSyncNbr:=pkt_nbr;
+        ENDIF
+
+        techdata.Item1 := RsSyncNbr;
+        techdata.Item2 := dx1;
+        techdata.Item3 := dy1;
+        techdata.Item4 := dtheta1;
+        techdata.Item5 := dx2;
+        techdata.Item6 := dy2;
+        !techdata.Item7 := dtheta2;
+
+        RsRobData.PtnData := techData;
+    ENDPROC
+
+
+ENDMODULE
