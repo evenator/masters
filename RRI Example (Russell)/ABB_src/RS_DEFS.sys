@@ -1,0 +1,63 @@
+MODULE RS_DEFS (SYSMODULE,NOSTEPIN)
+    !* Record Defintions ************************************************
+    RECORD patterndata
+        num Item1;
+        num Item2;
+        num Item3;
+        num Item4;
+        num Item5;
+        num Item6;
+        num Item7;
+        num Item8;
+        num Item9;
+        num Item10;
+        num Item11;
+        num Item12;
+        num Item13;
+        num Item14;
+        num Item15;
+        num Item16;
+        num Item17;
+        num Item18;
+        num Item19;
+        num Item20;
+    ENDRECORD
+
+    RECORD robdata
+        patterndata PtnData;
+    ENDRECORD
+
+    RECORD sensdata
+        patterndata PtnData;
+    ENDRECORD
+
+    !* Global Declarations **********************************************
+    PERS tooldata SiTool := [TRUE, [[0,0,497],[1,0,0,0]],
+                             [0.6,[0,0,100],[1,0,0,0],0,0,0]];
+    PERS wobjdata SiWobj := [FALSE,TRUE,"",
+                             [[0,0,0],[1,0,0,0]],
+                             [[0,0,0],[1,0,0,0]]];
+
+    !....................................................................
+    ! work object for Robscan
+    PERS wobjdata RsWobj:= [FALSE,TRUE,"",
+                            [[0,0,0],[1,0,0,0]],
+                            [[0,0,0],[1,0,0,0]]];
+    !....................................................................
+    ! TCP of PFO
+    PERS tooldata RsTool:= [TRUE, [[1.4545,444.775,116.373],[0,0,-0.707107,0.707107]],
+                            [12,[0,0,0.001],[1,0,0,0],0,0,0]];
+
+    PERS num RsSyncNbr := 0;
+
+	PERS num connection;
+    PERS sensor NACMaster := [1,0,2];
+    PERS sensor NACMasterUdp:=[0,0,3];
+	PERS sensor UdpTest;
+
+    PERS sensdata RsSensData := [[0,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]];
+    PERS robdata RsRobData := [[0,0,0,0,0,0,0,7.76505E-31,0.691416,0.718404,0.0648039,-0.0404986,9.26306,0.36466,7.44177,5.74532E-42,-2,0.939512,0,1]];
+    PERS tooldata Sitoolold := [TRUE,[[1.4545,444.775,116.373],[0,0,-0.707107,0.707107]],[12,[0,0.001,0],[1,0,0,0],0,0,0]];
+
+
+ENDMODULE

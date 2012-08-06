@@ -1,0 +1,322 @@
+MODULE PortalMove(SYSMODULE)
+
+	pers tooldata MainTool := [TRUE,[[0,0,460],[1,0,0,0]],[5.5,[0,0,15],[1,0,0,0],0,0,0]];
+	const tooldata Toolbase := [TRUE,[[0,0,0],[1,0,0,0]],[.1,[0,0,0.1],[1,0,0,0],0,0,0]];
+	pers pos portLoc := [715,507,340];	
+	pers pose endPose := [[750,700,350],[1,0,0,0]];
+	TASK PERS tooldata Portal_def_Tool:=[TRUE,[[0,0,254],[1,0,0,0]],[0.1,[0,0,0.1],[1,0,0,0],0,0,0]];
+	TASK PERS robtarget PortalTestStart:=[[842.84,622.53,343.96],[0.699878,-0.18232,0.660667,0.201122],[0,0,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+
+	PROC PortalDefine(VAR pos NewPortal)
+		portLoc := NewPortal;
+	ENDPROC
+
+	PROC IdentPortal()
+		VAR robtarget portalPnt; 
+		portalPnt := CRobT(\Tool:=MainTool);
+		portalPnt.trans := portLoc;
+		moveL portalPnt,v30,z50,MainTool;
+	ENDPROC
+
+	PROC MoveNextPortal(VAR pos endPos,var num zRotEnd)
+
+			VAR num delAngle;
+			VAR pos startPos;
+			VAR pos delPos;
+			var num zRot;
+			VAR pos diffTP;
+			var num nextzRot;
+			VAR pos nextZ;
+			VAR pos currPos;
+			VAR pos nextPos;
+			VAR num tempNorm;
+			VAR pos rotAxis;
+			VAR num rotAngle;
+			var orient nextOr;
+			var orient zRotate;
+			VAR robtarget nextPnts;
+			
+			
+
+		startPos := CPos(\Tool := MainTool);
+		delPos := 1/20*(endPos-startPos);
+		delAngle := 0; !1/20*(zRotEnd-zRotStart);
+		zRot := 0;
+		ConfL \Off;
+		FOR indexVal FROM 1 TO 20 DO
+			currPos := CPos(\Tool:=MainTool \Wobj:=wobj0);
+
+			!curPnts := CRobT(\Tool:=MainTool \Wobj:=wobj0);
+			!currPose.trans := curPnts.trans;
+			!currPose.rot := curPnts.rot;
+			!currPoseInv := PoseInv(currPose);
+			!transform the 
+			
+			nextPos := delPos+currPos;
+			zRot := zRot+delAngle;
+			!Calculated the vector from portal to base tool. 
+			
+			!TPWrite "Current Pos" \Pos:=currPos;
+			!TPWrite "next Tip Loc" \Pos:=nextPos;
+			!TPWrite "Portal Loc" \Pos:=portLoc;
+			diffTP := nextPos-portLoc;
+			!TPWrite "difference " \Pos:=diffTP;
+			!TPWrite "Current diff between portal and Base tool." \Pos:=diffTP;
+			
+			tempNorm := VectMagn(diffTP);
+			nextZ.x  := diffTP.x/tempNorm;
+			nextZ.y  := diffTP.y/tempNorm;
+			nextZ.z  := diffTP.z/tempNorm;
+			!TPWrite "next Z Axis" \Pos:=nextZ;
+			rotAxis := [0,0,1]*nextZ;
+			!TPWrite "Current diff between portal and Base tool." \Pos:=rotAxis;
+			!tempNorm := VectMagn(rotAxis);
+			!rotAxis.x  := diffTP.x/tempNorm;
+			!rotAxis.y  := diffTP.y/tempNorm;
+			!rotAxis.z  := diffTP.z/tempNorm;
+			!TPWrite "next Axis" \Pos:=rotAxis;
+			
+			
+			IF VectMagn(rotAxis) = 0 THEN
+			!Rotate about y if need be.
+				IF nextZ.z > 0 THEN
+					rotAngle := 0;
+				ELSE
+					rotAngle := 180;
+				ENDIF
+				rotAxis := [0,1,0];
+			
+			ELSE
+	 		tempNorm := VectMagn(rotAxis);
+			rotAxis.x  := rotAxis.x/tempNorm;
+			rotAxis.y  := rotAxis.y/tempNorm;
+			rotAxis.z  := rotAxis.z/tempNorm;
+			rotAngle := ACos(DotProd(nextZ,[0,0,1]));
+			ENDIF 
+			
+			!TPWrite "next Axis" \Pos:=rotAxis;
+			!TPWrite "z-Spin" \Num:=zRot;
+			
+			nextOr.q1 := cos(rotAngle/2);
+			nextOr.q2 := sin(rotAngle/2)*rotAxis.x;
+			nextOr.q3 := sin(rotAngle/2)*rotAxis.y;
+			nextOr.q4 := sin(rotAngle/2)*rotAxis.z;
+			!add the z rotation to the quaternion
+			zRotate.q1 :=cos(zRot/2);
+			zRotate.q2 :=sin(zRot/2)*0;
+			zRotate.q3 :=sin(zRot/2)*0;
+			zRotate.q4 :=sin(zRot/2)*1;
+			
+
+			!TPWrite "next Orient" \Orient:=nextOr;
+			nextOr := Norient(nextOr);
+			!TPWrite "next Orient" \Orient:=nextOr;
+			nextOR := nextOR*zRotate;
+			!TPWrite "next Orient Final" \Orient:=nextOr;
+			!TPWrite "next pos" \pos:=nextPos;
+			!
+		    nextPnts := CRobT(\Tool:=MainTool);
+			nextPnts.rot := nextOr;
+			nextPnts.trans := nextPos;
+			
+			!TPReadFK keyNum,"Ready to begin motion?:", "Yes", "Sure", "", "", "";
+			
+			moveL nextPnts,v30,z50,MainTool;
+			WaitTime .5;
+			
+			ENDFOR
+			
+
+
+	ENDPROC
+
+
+	PROC MoveTipPortal(VAR pos startPos,VAR pos endPos,var num zRotStart,var num zRotEnd)
+			
+			
+			VAR robtarget startPnt; 
+			VAR robtarget midPnts;
+			VAR robtarget curPnts;
+			VAR robtarget nextPnts;
+			VAR pose currPose;
+			VAR pose currPoseInv;
+			VAR pos rotAxis;
+			VAR num rotAngle;
+			
+			VAR num indexVal;
+			VAR num keyNum;
+			VAR pos delPos;
+			VAR pos currPos;
+			VAR pos nextPos;
+			var orient nextOr;
+			var orient zRotate;
+			var num zRot;
+			var num nextzRot;
+			
+			VAR pos nextZ;
+			VAR pos nextY;
+			VAR pos nextX;
+			VAR num tempNorm;
+			VAR num delAngle;
+			
+			VAR pos diffTP;
+			VAR pose transformTool;
+			VAR tooldata tempTool:=[FALSE,[[0,0,1],[1,0,0,0]],[1,[0,0,0],[1,0,0,0],0,0,0]];
+			VAR tooldata currTool;
+			VAR robjoint jointPos;
+			
+			!Erease for feedback
+			!TPErase;
+			
+			!Find the starting robot target. 
+			!Main tool is the surgical tool.
+			startPnt := CRobT(\Tool:=MainTool);
+			
+			diffTP := startPos-portLoc;
+			tempNorm := VectMagn(diffTP);
+			nextZ.x  := diffTP.x/tempNorm;
+			nextZ.y  := diffTP.y/tempNorm;
+			nextZ.z  := diffTP.z/tempNorm;
+			rotAxis := [0,0,1]*nextZ;
+			!TPWrite "Start Rot1" \Pos:=rotAxis;
+			IF VectMagn(rotAxis) = 0 THEN
+			!Rotate about y if need be.
+				IF nextZ.z > 0 THEN
+					rotAngle := 0;
+				ELSE
+					rotAngle := 180;
+				ENDIF
+				rotAxis := [0,1,0];
+			
+			ELSE
+			tempNorm := VectMagn(rotAxis);
+			rotAxis.x  := rotAxis.x/tempNorm;
+			rotAxis.y  := rotAxis.y/tempNorm;
+			rotAxis.z  := rotAxis.z/tempNorm;
+	 		
+			rotAngle := ACos(DotProd(nextZ,[0,0,1]));
+			ENDIF 
+			nextOr.q1 := cos(rotAngle/2);
+			nextOr.q2 := sin(rotAngle/2)*rotAxis.x;
+			nextOr.q3 := sin(rotAngle/2)*rotAxis.y;
+			nextOr.q4 := sin(rotAngle/2)*rotAxis.z;
+			!TPWrite "Start Rot1" \Orient:=nextOR;
+			nextOR := NOrient(nextOR);
+
+			zRotate.q1 :=cos(zRotStart/2);
+			zRotate.q2 :=sin(zRotStart/2)*0;
+			zRotate.q3 :=sin(zRotStart/2)*0;
+			zRotate.q4 :=sin(zRotStart/2)*1;
+			zRotate := NOrient(zRotate);
+			nextOR := nextOR*zRotate;
+			!TPWrite "Start Rot2" \Orient:=nextOR;
+			startPnt.Rot := nextOR;
+			startPnt.trans := startPos;
+			!TPWrite "start Rot" \Orient:=nextOR;
+			ConfJ\On;
+			moveJ startPnt, v30, z50, MainTool;
+			WaitTime 2;
+			startPos := CPos(\Tool := MainTool);
+			!TPWrite "start Pos" \Pos:=startPos;
+			!TPWrite "end Pos" \Pos:=endPos;
+			!TPReadFK keyNum,"Ready to begin motion?:", "Yes", "Sure", "", "", "";
+			currTool := CTool(); 
+			
+			
+			!Find the deltas
+			delPos := 1/20*(endPos-startPos);
+			delAngle := 1/20*(zRotEnd-zRotStart);
+			zRot := zRotStart;
+			!TPWrite "del Pos" \Pos:=delPos;
+			!TPWrite "Current angle" \num:=delAngle;
+
+			!TPReadFK keyNum,"Ready to begin motion?:", "Yes", "Sure", "", "", "";
+			FOR indexVal FROM 1 TO 20 DO
+			currPos := CPos(\Tool:=MainTool \Wobj:=wobj0);
+
+			!curPnts := CRobT(\Tool:=MainTool \Wobj:=wobj0);
+			!currPose.trans := curPnts.trans;
+			!currPose.rot := curPnts.rot;
+			!currPoseInv := PoseInv(currPose);
+			!transform the 
+			
+			nextPos := delPos+currPos;
+			zRot := zRot+delAngle;
+			!Calculated the vector from portal to base tool. 
+			
+			!TPWrite "Current Pos" \Pos:=currPos;
+			!TPWrite "next Tip Loc" \Pos:=nextPos;
+			!TPWrite "Portal Loc" \Pos:=portLoc;
+			diffTP := nextPos-portLoc;
+			!TPWrite "difference " \Pos:=diffTP;
+			!TPWrite "Current diff between portal and Base tool." \Pos:=diffTP;
+			
+			tempNorm := VectMagn(diffTP);
+			nextZ.x  := diffTP.x/tempNorm;
+			nextZ.y  := diffTP.y/tempNorm;
+			nextZ.z  := diffTP.z/tempNorm;
+			!TPWrite "next Z Axis" \Pos:=nextZ;
+			rotAxis := [0,0,1]*nextZ;
+			!TPWrite "Current diff between portal and Base tool." \Pos:=rotAxis;
+			!tempNorm := VectMagn(rotAxis);
+			!rotAxis.x  := diffTP.x/tempNorm;
+			!rotAxis.y  := diffTP.y/tempNorm;
+			!rotAxis.z  := diffTP.z/tempNorm;
+			!TPWrite "next Axis" \Pos:=rotAxis;
+			
+			
+			IF VectMagn(rotAxis) = 0 THEN
+			!Rotate about y if need be.
+				IF nextZ.z > 0 THEN
+					rotAngle := 0;
+				ELSE
+					rotAngle := 180;
+				ENDIF
+				rotAxis := [0,1,0];
+			
+			ELSE
+	 		tempNorm := VectMagn(rotAxis);
+			rotAxis.x  := rotAxis.x/tempNorm;
+			rotAxis.y  := rotAxis.y/tempNorm;
+			rotAxis.z  := rotAxis.z/tempNorm;
+			rotAngle := ACos(DotProd(nextZ,[0,0,1]));
+			ENDIF 
+			
+			!TPWrite "next Axis" \Pos:=rotAxis;
+			!TPWrite "z-Spin" \Num:=zRot;
+			
+			nextOr.q1 := cos(rotAngle/2);
+			nextOr.q2 := sin(rotAngle/2)*rotAxis.x;
+			nextOr.q3 := sin(rotAngle/2)*rotAxis.y;
+			nextOr.q4 := sin(rotAngle/2)*rotAxis.z;
+			!add the z rotation to the quaternion
+			zRotate.q1 :=cos(zRot/2);
+			zRotate.q2 :=sin(zRot/2)*0;
+			zRotate.q3 :=sin(zRot/2)*0;
+			zRotate.q4 :=sin(zRot/2)*1;
+			
+
+			!TPWrite "next Orient" \Orient:=nextOr;
+			nextOr := Norient(nextOr);
+			!TPWrite "next Orient" \Orient:=nextOr;
+			nextOR := nextOR*zRotate;
+			!TPWrite "next Orient Final" \Orient:=nextOr;
+			!TPWrite "next pos" \pos:=nextPos;
+			!
+		    nextPnts := CRobT(\Tool:=MainTool);
+			nextPnts.rot := nextOr;
+			nextPnts.trans := nextPos;
+			
+			!TPReadFK keyNum,"Ready to begin motion?:", "Yes", "Sure", "", "", "";
+			
+			moveJ nextPnts,v30,z50,MainTool;
+			
+			ENDFOR
+			
+			
+			
+	ENDPROC
+
+
+
+ENDMODULE

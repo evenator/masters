@@ -1,0 +1,16 @@
+2999
+3000
+192.168.125.1
+129.22.148.123
+ABB_Console 1 effector
+0 0 0 0 0 0
+4
+
+
+ABB-Port,
+Server-Port,
+ABB-address,
+Server-address,
+Thisname, thistype(enum), thistype(string),
+xpos ypos zpos xrot yrot zrot
+max-server-retries

@@ -1,0 +1,133 @@
+MODULE Robot_Moves(SYSMODULE)
+! *****************************************************
+! *        The purpose of this module is to subdivide the program
+! *   This will also generate shared resources between the smooth and non smooth motion.
+! *  
+
+
+func robtarget PC_CartMove( patterndata tempData)
+	! *****************************************************
+    ! *          Position Control Cartesian Move          *
+    ! *      Linear move with rotation capabilities       *
+    ! *****************************************************
+	
+					
+	
+	!Inputs :
+	! TempData is the data that is used for generating the motion.
+	
+	var robtarget Targ;
+	var num rx;
+	var num ry;
+	var num rz;
+	
+    Targ := CRobT(\Tool:=Surg_Tool \Wobj:=wobj0);
+    
+	tempData := RsSensData.PtnData;
+	
+	
+	Targ.trans.x := TARG.trans.x + tempData.Item3;
+    Targ.trans.y := Targ.trans.y + tempData.Item4;
+    Targ.trans.z := Targ.trans.z + tempData.Item5;
+    rx := EulerZYX(\X,Targ.rot) + tempData.Item8;
+	ry := EulerZYX(\Y,Targ.rot) + tempData.Item7;
+	rz := EulerZYX(\Z,Targ.rot) + tempData.Item6;
+	Targ.rot := OrientZYX (rz, ry, rx);        
+	return Targ;
+				
+	
+Endfunc
+
+
+func robtarget PC_CartRot( patterndata tempData)
+            ! *****************************************************
+            ! *            Position Control Rotation              *
+            ! *        No translation, just pure rotation         *
+            ! *****************************************************
+	
+					
+	
+	!Inputs :
+	! TempData is the data that is used for generating the motion.
+	
+	var robtarget Targ;
+	var num rx;
+	var num ry;
+	var num rz;
+	
+    Targ := CRobT(\Tool:=Surg_Tool \Wobj:=wobj0);
+    
+	tempData := RsSensData.PtnData;
+	
+    rx := EulerZYX(\X,Targ.rot) + tempData.Item8;
+	ry := EulerZYX(\Y,Targ.rot) + tempData.Item7;
+	rz := EulerZYX(\Z,Targ.rot) + tempData.Item6;
+	Targ.rot := OrientZYX (rz, ry, rx);        
+	return Targ;
+				
+	
+Endfunc
+
+
+func robtarget PC_QuatMove( patterndata tempData)
+	! *****************************************************
+    ! *          Position Control Cartesian Move          *
+    ! *      Linear move with rotation capabilities       *
+	! *   		This move Uses the Quaternions		      *
+    ! *****************************************************
+	
+	!Inputs :
+	! TempData is the data that is used for generating the motion.
+	
+	var robtarget Targ;
+	var orient myorient;
+	VAR orient normmyorient;
+	
+    Targ := CRobT(\Tool:=Surg_Tool \Wobj:=wobj0);
+    
+
+	Targ.trans.x := tempData.Item3;
+    Targ.trans.y := tempData.Item4;
+    Targ.trans.z := tempdata.Item5;                
+	myorient := [tempData.Item9, tempData.Item10, tempData.Item11, tempData.Item12];
+	normmyorient := NOrient(myorient);
+	Targ.rot := normmyorient;
+	
+	! The ConfL\Off command is used to prevent joint configuration errors.
+	! Is this really neccessary?
+	ConfL\Off;
+	
+	
+	return Targ;
+				
+				
+Endfunc
+
+func robtarget PC_JointMove( patterndata tempData)
+	! *****************************************************
+    ! *          Position Control Cartesian Move          *
+    ! *      Linear move with rotation capabilities       *
+	! *   		This move Uses the Quaternions		      *
+    ! *****************************************************
+	
+	!Inputs :
+	! TempData is the data that is used for generating the motion.
+	
+	var jointtarget Targ;
+	var robtarget   TargP;
+	
+    Targ.robax.rax_1 := tempData.Item3;
+	Targ.robax.rax_2 := tempData.Item4;
+	Targ.robax.rax_3 := tempData.Item5;
+	Targ.robax.rax_4 := tempData.Item6;
+	Targ.robax.rax_5 := tempData.Item7;
+	Targ.robax.rax_6 := tempData.Item8;
+	
+	TargP := calcRobT(Targ,Surg_Tool,\Wobj:=wobj0);
+	ConfJ\Off;
+	return TargP;
+				
+				
+Endfunc
+
+endmodule
