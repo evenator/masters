@@ -1,0 +1,5 @@
+Constrained Parts: IRB120.iam, robot_solid.iam
+Constrain Name: Tangent:1
+Error Details: Massless connector is not supported if there are more than one constrain between parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+
