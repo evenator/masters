@@ -11,7 +11,7 @@
 
   <createdOn>"Edward"</createdOn>
 
-  <createdBy>"08/09/12||09:27:21"</createdBy>
+  <createdBy>"08/09/12||10:21:37"</createdBy>
 
   <name>"fixed_robot"</name>
 
@@ -19,83 +19,6 @@
     <name>"fixed_robot"</name>
     <nodeID>"fixed_robot"</nodeID>
     <bodies>
-      <Body>
-        <name>"caster assy:1"</name>
-        <nodeID>"caster assy:1"</nodeID>
-        <status>""</status>
-        <mass>3.43681</mass>
-        <massUnits>"lbm"</massUnits>
-        <inertia>13.5091,-0.0223034,1.8349,-0.0223034,26.7096,0.0113051,1.8349,0.0113051,16.547</inertia>
-        <inertiaUnits>"lbm*in^2"</inertiaUnits>
-        <volume>95.1307</volume>
-        <volumeUnits>"in^3"</volumeUnits>
-        <surfaceArea>206.752</surfaceArea>
-        <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
-        <frames>
-          <Frame>
-            <name>"CG"</name>
-            <displayName>""</displayName>
-            <nodeID>"caster assy:1::CG(AUTOGEN)"</nodeID>
-            <position>0.274453,0.00235459,-0.139115</position>
-            <positionOrigin>"WORLD"</positionOrigin>
-            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-            <positionUnits>"in"</positionUnits>
-            <orientation>1,0,0,0,1,0,0,0,1</orientation>
-            <orientationType>"3x3 Transform"</orientationType>
-            <orientationUnits>"rad"</orientationUnits>
-            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-          </Frame>
-          <Frame>
-            <name>"CS1"</name>
-            <displayName>""</displayName>
-            <nodeID>"caster assy:1::CS1(AUTOGEN)"</nodeID>
-            <position>0,0,0</position>
-            <positionOrigin>"WORLD"</positionOrigin>
-            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-            <positionUnits>"in"</positionUnits>
-            <orientation>1,0,0,0,1,0,0,0,1</orientation>
-            <orientationType>"3x3 Transform"</orientationType>
-            <orientationUnits>"rad"</orientationUnits>
-            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-          </Frame>
-          <Frame ref="2">
-            <name>"CS2"</name>
-            <displayName>""</displayName>
-            <nodeID>"caster assy:1:-:fixed_robot/RootPart::caster assy:1(AUTOGEN)"</nodeID>
-            <position>0.274453,0.00235459,-0.139115</position>
-            <positionOrigin>"WORLD"</positionOrigin>
-            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-            <positionUnits>"in"</positionUnits>
-            <orientation>1,0,0,0,1,0,0,0,1</orientation>
-            <orientationType>"3x3 Transform"</orientationType>
-            <orientationUnits>"rad"</orientationUnits>
-            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-          </Frame>
-          <Frame ref="17">
-            <name>"CS3"</name>
-            <displayName>""</displayName>
-            <nodeID>"caster assy:1:-:robot_solid:1::caster assy:1(AUTOGEN)"</nodeID>
-            <position>5.375,0.026,-2.25</position>
-            <positionOrigin>"WORLD"</positionOrigin>
-            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-            <positionUnits>"in"</positionUnits>
-            <orientation>1,0,0,0,1,0,0,0,1</orientation>
-            <orientationType>"3x3 Transform"</orientationType>
-            <orientationUnits>"rad"</orientationUnits>
-            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-          </Frame>
-        </frames>
-        <geometryFileName>"caster assy_iam_cc1e69ad.STL"</geometryFileName>
-        <MaterialProp>
-          <color>0.752941,0.752941,0.752941</color>
-          <ambient>1</ambient>
-          <diffuse>1</diffuse>
-          <specular>1</specular>
-          <shininess>0.2</shininess>
-          <transparency>0</transparency>
-          <emission>0.2</emission>
-        </MaterialProp>
-      </Body>
       <Body>
         <name>"RootPart"</name>
         <nodeID>"fixed_robot/RootPart"</nodeID>
@@ -135,10 +58,10 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="1">
+          <Frame ref="3">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>"caster assy:1:-:fixed_robot/RootPart::fixed_robot/RootPart(AUTOGEN)"</nodeID>
+            <nodeID>"caster assy:1/RootPart:-:fixed_robot/RootPart::fixed_robot/RootPart(AUTOGEN)"</nodeID>
             <position>0.274453,0.00235459,-0.139115</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
@@ -148,7 +71,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="22">
+          <Frame ref="30">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"RootGround:-:fixed_robot/RootPart::fixed_robot/RootPart(AUTOGEN)"</nodeID>
@@ -203,7 +126,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="13">
+          <Frame ref="11">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"robot_solid:1:-:wheel:1::wheel:1(AUTOGEN)"</nodeID>
@@ -218,70 +141,6 @@
           </Frame>
         </frames>
         <geometryFileName>"wheel_ipt_982fa4fe.STL"</geometryFileName>
-        <MaterialProp>
-          <color>0.752941,0.752941,0.752941</color>
-          <ambient>1</ambient>
-          <diffuse>1</diffuse>
-          <specular>1</specular>
-          <shininess>0.2</shininess>
-          <transparency>0</transparency>
-          <emission>0.2</emission>
-        </MaterialProp>
-      </Body>
-      <Body>
-        <name>"caster assy:2"</name>
-        <nodeID>"caster assy:2"</nodeID>
-        <status>""</status>
-        <mass>3.43681</mass>
-        <massUnits>"lbm"</massUnits>
-        <inertia>13.5091,-0.0223034,1.8349,-0.0223034,26.7096,0.0113051,1.8349,0.0113051,16.547</inertia>
-        <inertiaUnits>"lbm*in^2"</inertiaUnits>
-        <volume>95.1307</volume>
-        <volumeUnits>"in^3"</volumeUnits>
-        <surfaceArea>206.752</surfaceArea>
-        <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
-        <frames>
-          <Frame>
-            <name>"CG"</name>
-            <displayName>""</displayName>
-            <nodeID>"caster assy:2::CG(AUTOGEN)"</nodeID>
-            <position>0.274453,-0.0680186,-17.126</position>
-            <positionOrigin>"WORLD"</positionOrigin>
-            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-            <positionUnits>"in"</positionUnits>
-            <orientation>1,0,0,0,0.98024,0.197814,0,-0.197814,0.98024</orientation>
-            <orientationType>"3x3 Transform"</orientationType>
-            <orientationUnits>"rad"</orientationUnits>
-            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-          </Frame>
-          <Frame>
-            <name>"CS1"</name>
-            <displayName>""</displayName>
-            <nodeID>"caster assy:2::CS1(AUTOGEN)"</nodeID>
-            <position>0,-0.0978454,-16.9901</position>
-            <positionOrigin>"WORLD"</positionOrigin>
-            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-            <positionUnits>"in"</positionUnits>
-            <orientation>1,0,0,0,0.98024,0.197814,0,-0.197814,0.98024</orientation>
-            <orientationType>"3x3 Transform"</orientationType>
-            <orientationUnits>"rad"</orientationUnits>
-            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-          </Frame>
-          <Frame ref="15">
-            <name>"CS2"</name>
-            <displayName>""</displayName>
-            <nodeID>"caster assy:2:-:robot_solid:1::caster assy:2(AUTOGEN)"</nodeID>
-            <position>5.375,0.372721,-19.1905</position>
-            <positionOrigin>"WORLD"</positionOrigin>
-            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-            <positionUnits>"in"</positionUnits>
-            <orientation>1,0,0,0,1,0,0,0,1</orientation>
-            <orientationType>"3x3 Transform"</orientationType>
-            <orientationUnits>"rad"</orientationUnits>
-            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-          </Frame>
-        </frames>
-        <geometryFileName>"caster assy_iam_cc1e69ad.STL"</geometryFileName>
         <MaterialProp>
           <color>0.752941,0.752941,0.752941</color>
           <ambient>1</ambient>
@@ -331,7 +190,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="19">
+          <Frame ref="17">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"robot_solid:1:-:wheel:2::wheel:2(AUTOGEN)"</nodeID>
@@ -362,7 +221,7 @@
         <status>""</status>
         <mass>340.261</mass>
         <massUnits>"lbm"</massUnits>
-        <inertia>10607.3,326.977,-770.948,326.977,10645.1,-8783.44,-770.948,-8783.44,16156.1</inertia>
+        <inertia>38797.8,326.795,-770.745,326.795,32958.3,4510.02,-770.745,4510.02,22033.4</inertia>
         <inertiaUnits>"lbm*in^2"</inertiaUnits>
         <volume>7906.25</volume>
         <volumeUnits>"in^3"</volumeUnits>
@@ -398,8 +257,8 @@
           <Frame ref="10">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>"IRB120:1:-:robot_solid:1::robot_solid:1(AUTOGEN)"</nodeID>
-            <position>28.7444,-9.3661,-8.07996</position>
+            <nodeID>"caster assy:1:caster assy:1/caster:1:-:robot_solid:1::robot_solid:1(AUTOGEN)"</nodeID>
+            <position>5.375,0.026,-2.25</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -408,7 +267,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="14">
+          <Frame ref="12">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"robot_solid:1:-:wheel:1::robot_solid:1(AUTOGEN)"</nodeID>
@@ -424,7 +283,7 @@
           <Frame ref="16">
             <name>"CS4"</name>
             <displayName>""</displayName>
-            <nodeID>"caster assy:2:-:robot_solid:1::robot_solid:1(AUTOGEN)"</nodeID>
+            <nodeID>"caster assy:2:caster assy:2/caster:1:-:robot_solid:1::robot_solid:1(AUTOGEN)"</nodeID>
             <position>5.375,0.372721,-19.1905</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
@@ -437,8 +296,8 @@
           <Frame ref="18">
             <name>"CS5"</name>
             <displayName>""</displayName>
-            <nodeID>"caster assy:1:-:robot_solid:1::robot_solid:1(AUTOGEN)"</nodeID>
-            <position>5.375,0.026,-2.25</position>
+            <nodeID>"robot_solid:1:-:wheel:2::robot_solid:1(AUTOGEN)"</nodeID>
+            <position>2.70014,19.2425,-21.2878</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -450,8 +309,8 @@
           <Frame ref="20">
             <name>"CS6"</name>
             <displayName>""</displayName>
-            <nodeID>"robot_solid:1:-:wheel:2::robot_solid:1(AUTOGEN)"</nodeID>
-            <position>2.70014,19.2425,-21.2878</position>
+            <nodeID>"IRB120:1:-:robot_solid:1::robot_solid:1(AUTOGEN)"</nodeID>
+            <position>28.7444,-9.3661,-8.07996</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -511,11 +370,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="4">
+          <Frame ref="19">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>"IRB120:1:-:gripper:1::IRB120:1(AUTOGEN)"</nodeID>
-            <position>36.413,-26.9949,3.59356</position>
+            <nodeID>"IRB120:1:-:robot_solid:1::IRB120:1(AUTOGEN)"</nodeID>
+            <position>28.7444,-9.3661,-8.07996</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -524,11 +383,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="9">
+          <Frame ref="22">
             <name>"CS3"</name>
             <displayName>""</displayName>
-            <nodeID>"IRB120:1:-:robot_solid:1::IRB120:1(AUTOGEN)"</nodeID>
-            <position>28.7444,-9.3661,-8.07996</position>
+            <nodeID>"IRB120:1:-:gripper:1::IRB120:1(AUTOGEN)"</nodeID>
+            <position>36.413,-26.9949,3.59356</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -588,7 +447,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="3">
+          <Frame ref="21">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"IRB120:1:-:gripper:1::gripper:1(AUTOGEN)"</nodeID>
@@ -601,11 +460,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="6">
+          <Frame ref="24">
             <name>"CS3"</name>
             <displayName>""</displayName>
-            <nodeID>"gripper jaw:2:-:gripper:1::gripper:1(AUTOGEN)"</nodeID>
-            <position>37.4345,-28.6243,3.83584</position>
+            <nodeID>"gripper jaw:1:-:gripper:1::gripper:1(AUTOGEN)"</nodeID>
+            <position>36.7849,-27.8486,5.54289</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -614,11 +473,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="8">
+          <Frame ref="26">
             <name>"CS4"</name>
             <displayName>""</displayName>
-            <nodeID>"gripper jaw:1:-:gripper:1::gripper:1(AUTOGEN)"</nodeID>
-            <position>36.7849,-27.8486,5.54289</position>
+            <nodeID>"gripper jaw:2:-:gripper:1::gripper:1(AUTOGEN)"</nodeID>
+            <position>37.4345,-28.6243,3.83584</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -678,7 +537,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="7">
+          <Frame ref="23">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"gripper jaw:1:-:gripper:1::gripper jaw:1(AUTOGEN)"</nodeID>
@@ -691,7 +550,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="12">
+          <Frame ref="28">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"gripper jaw:1:-:gripper jaw:2::gripper jaw:1(AUTOGEN)"</nodeID>
@@ -755,7 +614,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="5">
+          <Frame ref="25">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"gripper jaw:2:-:gripper:1::gripper jaw:2(AUTOGEN)"</nodeID>
@@ -768,7 +627,7 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="11">
+          <Frame ref="27">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"gripper jaw:1:-:gripper jaw:2::gripper jaw:2(AUTOGEN)"</nodeID>
@@ -796,37 +655,8 @@
     </bodies>
     <joints>
       <SimpleJoint>
-        <name>"RootPart--caster assy:1"</name>
-        <nodeID>"caster assy:1:-:fixed_robot/RootPart"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="1"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="2"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"weld"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.57735,0.57735,0.57735</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"gripper:1--IRB120:1"</name>
-        <nodeID>"IRB120:1:-:gripper:1"</nodeID>
+        <name>"RootPart--RootPart"</name>
+        <nodeID>"caster assy:1/RootPart:-:fixed_robot/RootPart"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -854,79 +684,9 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"gripper jaw:2--gripper:1"</name>
-        <nodeID>"gripper jaw:2:-:gripper:1"</nodeID>
+        <name>"caster:1--robot_solid:1"</name>
+        <nodeID>"caster assy:1:caster assy:1/caster:1:-:robot_solid:1"</nodeID>
         <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="5"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="6"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.584702,0.562358,0.584702</axis>
-          </Primitive>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.745356,-0.0878612,-0.660852</axis>
-          </Primitive>
-          <Primitive>
-            <name>"revolute"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-0.320263,0.822213,-0.470529</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"gripper jaw:1--gripper:1"</name>
-        <nodeID>"gripper jaw:1:-:gripper:1"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="7"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="8"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.320263,-0.822213,0.470529</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"IRB120:1--robot_solid:1"</name>
-        <nodeID>"IRB120:1:-:robot_solid:1"</nodeID>
-        <status>"Could not solve for constraint between IRB120.iam and robot_solid.iam because of CAD constrain Tangent:1"</status>
         <base>
           <JointSide>
             <name>""</name>
@@ -945,16 +705,16 @@
         </follower>
         <primitives>
           <Primitive>
-            <name>"weld"</name>
+            <name>"revolute"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.57735,0.57735,0.57735</axis>
+            <axis>-1,0,0</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"gripper jaw:2--gripper jaw:1"</name>
-        <nodeID>"gripper jaw:1:-:gripper jaw:2"</nodeID>
+        <name>"wheel:1--robot_solid:1"</name>
+        <nodeID>"robot_solid:1:-:wheel:1"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -974,35 +734,6 @@
         </follower>
         <primitives>
           <Primitive>
-            <name>"weld"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.57735,0.57735,0.57735</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"wheel:1--robot_solid:1"</name>
-        <nodeID>"robot_solid:1:-:wheel:1"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="13"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="14"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
             <name>"revolute"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
@@ -1011,8 +742,8 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"caster assy:2--robot_solid:1"</name>
-        <nodeID>"caster assy:2:-:robot_solid:1"</nodeID>
+        <name>"caster:1--robot_solid:1"</name>
+        <nodeID>"caster assy:2:caster assy:2/caster:1:-:robot_solid:1"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -1040,8 +771,8 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"caster assy:1--robot_solid:1"</name>
-        <nodeID>"caster assy:1:-:robot_solid:1"</nodeID>
+        <name>"wheel:2--robot_solid:1"</name>
+        <nodeID>"robot_solid:1:-:wheel:2"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -1064,14 +795,14 @@
             <name>"revolute"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-1,0,0</axis>
+            <axis>0,0.0204628,-0.999791</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"wheel:2--robot_solid:1"</name>
-        <nodeID>"robot_solid:1:-:wheel:2"</nodeID>
-        <status>""</status>
+        <name>"IRB120:1--robot_solid:1"</name>
+        <nodeID>"IRB120:1:-:robot_solid:1"</nodeID>
+        <status>"Could not solve for constraint between IRB120.iam and robot_solid.iam because of CAD constrain Tangent:1"</status>
         <base>
           <JointSide>
             <name>""</name>
@@ -1090,16 +821,16 @@
         </follower>
         <primitives>
           <Primitive>
-            <name>"revolute"</name>
+            <name>"weld"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0,0.0204628,-0.999791</axis>
+            <axis>0.57735,0.57735,0.57735</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"RootGround--RootPart"</name>
-        <nodeID>"RootGround:-:fixed_robot/RootPart"</nodeID>
+        <name>"gripper:1--IRB120:1"</name>
+        <nodeID>"IRB120:1:-:gripper:1"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -1126,6 +857,134 @@
           </Primitive>
         </primitives>
       </SimpleJoint>
+      <SimpleJoint>
+        <name>"gripper jaw:1--gripper:1"</name>
+        <nodeID>"gripper jaw:1:-:gripper:1"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="23"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="24"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.320263,-0.822213,0.470529</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"gripper jaw:2--gripper:1"</name>
+        <nodeID>"gripper jaw:2:-:gripper:1"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="25"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="26"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.584702,0.562358,0.584702</axis>
+          </Primitive>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.745356,-0.0878612,-0.660852</axis>
+          </Primitive>
+          <Primitive>
+            <name>"revolute"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>-0.320263,0.822213,-0.470529</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"gripper jaw:2--gripper jaw:1"</name>
+        <nodeID>"gripper jaw:1:-:gripper jaw:2"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="27"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="28"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"weld"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.57735,0.57735,0.57735</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"RootGround--RootPart"</name>
+        <nodeID>"RootGround:-:fixed_robot/RootPart"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="29"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="30"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"weld"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.57735,0.57735,0.57735</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
     </joints>
     <grounds>
       <Ground>
@@ -1133,7 +992,7 @@
         <nodeID>"RootGround"</nodeID>
         <status>""</status>
         <frame>
-          <Frame ref="21">
+          <Frame ref="29">
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"RootGround:-:fixed_robot/RootPart::RootGround(AUTOGEN)"</nodeID>
@@ -1149,7 +1008,581 @@
         </frame>
       </Ground>
     </grounds>
-    <subsystems></subsystems>
+    <subsystems>
+      <Subsystem>
+        <name>"caster assy:1"</name>
+        <nodeID>"caster assy:1"</nodeID>
+        <status>""</status>
+        <bodies>
+          <Body>
+            <name>"caster wheel:1"</name>
+            <nodeID>"caster assy:1/caster wheel:1"</nodeID>
+            <status>""</status>
+            <mass>3.12557</mass>
+            <massUnits>"lbm"</massUnits>
+            <inertia>11.9487,0,0,0,21.6882,0,0,0,11.9487</inertia>
+            <inertiaUnits>"lbm*in^2"</inertiaUnits>
+            <volume>86.5155</volume>
+            <volumeUnits>"in^3"</volumeUnits>
+            <surfaceArea>133.407</surfaceArea>
+            <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+            <frames>
+              <Frame>
+                <name>"CG"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:1/caster wheel:1::CG(AUTOGEN)"</nodeID>
+                <position>2.41626e-016,1.03735e-016,-1.21291e-017</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame>
+                <name>"CS1"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:1/caster wheel:1::CS1(AUTOGEN)"</nodeID>
+                <position>0,0,0</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame ref="2">
+                <name>"CS2"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:1/RootPart:-:caster assy:1/caster wheel:1::caster assy:1/caster wheel:1(AUTOGEN)"</nodeID>
+                <position>2.41626e-016,1.03735e-016,-1.21291e-017</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame ref="7">
+                <name>"CS3"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:1/caster wheel:1:-:caster assy:1/caster:1::caster assy:1/caster wheel:1(AUTOGEN)"</nodeID>
+                <position>0,1.5,0</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+            </frames>
+            <geometryFileName>"caster wheel_ipt_4784d7d8.STL"</geometryFileName>
+            <MaterialProp>
+              <color>0.752941,0.752941,0.752941</color>
+              <ambient>1</ambient>
+              <diffuse>1</diffuse>
+              <specular>1</specular>
+              <shininess>0.2</shininess>
+              <transparency>0</transparency>
+              <emission>0.2</emission>
+            </MaterialProp>
+          </Body>
+          <Body>
+            <name>"RootPart"</name>
+            <nodeID>"caster assy:1/RootPart"</nodeID>
+            <status>""</status>
+            <mass>0</mass>
+            <massUnits>"lbm"</massUnits>
+            <inertia>0,0,0,0,0,0,0,0,0</inertia>
+            <inertiaUnits>"lbm*in^2"</inertiaUnits>
+            <volume>0</volume>
+            <volumeUnits>"in^3"</volumeUnits>
+            <surfaceArea>0</surfaceArea>
+            <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+            <frames>
+              <Frame>
+                <name>"CG"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:1/RootPart::CG(AUTOGEN)"</nodeID>
+                <position>0.274453,0.00235459,-0.139115</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame>
+                <name>"CS1"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:1/RootPart::CS1(AUTOGEN)"</nodeID>
+                <position>0,0,0</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame ref="1">
+                <name>"CS2"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:1/RootPart:-:caster assy:1/caster wheel:1::caster assy:1/RootPart(AUTOGEN)"</nodeID>
+                <position>2.41626e-016,1.03735e-016,-1.21291e-017</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame ref="4">
+                <name>"CS3"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:1/RootPart:-:fixed_robot/RootPart::caster assy:1/RootPart(AUTOGEN)"</nodeID>
+                <position>0.274453,0.00235459,-0.139115</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+            </frames>
+            <geometryFileName>""</geometryFileName>
+          </Body>
+          <Body>
+            <name>"caster:1"</name>
+            <nodeID>"caster assy:1/caster:1"</nodeID>
+            <status>""</status>
+            <mass>0.311242</mass>
+            <massUnits>"lbm"</massUnits>
+            <inertia>1.75384,0,0,0,0.89231,0.517163,0,0.517163,1.99846</inertia>
+            <inertiaUnits>"lbm*in^2"</inertiaUnits>
+            <volume>8.61515</volume>
+            <volumeUnits>"in^3"</volumeUnits>
+            <surfaceArea>73.345</surfaceArea>
+            <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+            <frames>
+              <Frame>
+                <name>"CG"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:1/caster:1::CG(AUTOGEN)"</nodeID>
+                <position>3.03058,0.026,-1.53614</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>0,-1,0,1,0,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame>
+                <name>"CS1"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:1/caster:1::CS1(AUTOGEN)"</nodeID>
+                <position>0,0.026,-3.25</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>0,-1,0,1,0,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame ref="8">
+                <name>"CS2"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:1/caster wheel:1:-:caster assy:1/caster:1::caster assy:1/caster:1(AUTOGEN)"</nodeID>
+                <position>0,1.5,0</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame ref="9">
+                <name>"CS3"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:1:caster assy:1/caster:1:-:robot_solid:1::caster assy:1/caster:1(AUTOGEN)"</nodeID>
+                <position>5.375,0.026,-2.25</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+            </frames>
+            <geometryFileName>"caster_ipt_ca03a3d7.STL"</geometryFileName>
+            <MaterialProp>
+              <color>0,0,0</color>
+              <ambient>1</ambient>
+              <diffuse>1</diffuse>
+              <specular>1</specular>
+              <shininess>0.41</shininess>
+              <transparency>0</transparency>
+              <emission>0.2</emission>
+            </MaterialProp>
+          </Body>
+        </bodies>
+        <joints>
+          <SimpleJoint>
+            <name>"RootPart--caster wheel:1"</name>
+            <nodeID>"caster assy:1/RootPart:-:caster assy:1/caster wheel:1"</nodeID>
+            <status>""</status>
+            <base>
+              <JointSide>
+                <name>""</name>
+                <connection>
+                  <Frame ref="1"></Frame>
+                </connection>
+              </JointSide>
+            </base>
+            <follower>
+              <JointSide>
+                <name>""</name>
+                <connection>
+                  <Frame ref="2"></Frame>
+                </connection>
+              </JointSide>
+            </follower>
+            <primitives>
+              <Primitive>
+                <name>"weld"</name>
+                <nodeID>""</nodeID>
+                <referenceFrame>"WORLD"</referenceFrame>
+                <axis>0.57735,0.57735,0.57735</axis>
+              </Primitive>
+            </primitives>
+          </SimpleJoint>
+          <SimpleJoint>
+            <name>"caster wheel:1--caster:1"</name>
+            <nodeID>"caster assy:1/caster wheel:1:-:caster assy:1/caster:1"</nodeID>
+            <status>""</status>
+            <base>
+              <JointSide>
+                <name>""</name>
+                <connection>
+                  <Frame ref="7"></Frame>
+                </connection>
+              </JointSide>
+            </base>
+            <follower>
+              <JointSide>
+                <name>""</name>
+                <connection>
+                  <Frame ref="8"></Frame>
+                </connection>
+              </JointSide>
+            </follower>
+            <primitives>
+              <Primitive>
+                <name>"revolute"</name>
+                <nodeID>""</nodeID>
+                <referenceFrame>"WORLD"</referenceFrame>
+                <axis>0,-1,0</axis>
+              </Primitive>
+            </primitives>
+          </SimpleJoint>
+        </joints>
+        <grounds></grounds>
+        <subsystems></subsystems>
+        <connectionPorts></connectionPorts>
+        <id>0</id>
+      </Subsystem>
+      <Subsystem>
+        <name>"caster assy:2"</name>
+        <nodeID>"caster assy:2"</nodeID>
+        <status>""</status>
+        <bodies>
+          <Body>
+            <name>"caster wheel:1"</name>
+            <nodeID>"caster assy:2/caster wheel:1"</nodeID>
+            <status>""</status>
+            <mass>3.12557</mass>
+            <massUnits>"lbm"</massUnits>
+            <inertia>11.9487,0,0,0,21.6882,0,0,0,11.9487</inertia>
+            <inertiaUnits>"lbm*in^2"</inertiaUnits>
+            <volume>86.5155</volume>
+            <volumeUnits>"in^3"</volumeUnits>
+            <surfaceArea>133.407</surfaceArea>
+            <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+            <frames>
+              <Frame>
+                <name>"CG"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:2/caster wheel:1::CG(AUTOGEN)"</nodeID>
+                <position>0,-0.0978454,-16.9901</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,0.98024,0.197814,0,-0.197814,0.98024</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame>
+                <name>"CS1"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:2/caster wheel:1::CS1(AUTOGEN)"</nodeID>
+                <position>0,-0.0978454,-16.9901</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,0.98024,0.197814,0,-0.197814,0.98024</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame ref="6">
+                <name>"CS2"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:2/RootPart:-:caster assy:2/caster wheel:1::caster assy:2/caster wheel:1(AUTOGEN)"</nodeID>
+                <position>0,-0.0978454,-16.9901</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame ref="13">
+                <name>"CS3"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:2/caster wheel:1:-:caster assy:2/caster:1::caster assy:2/caster wheel:1(AUTOGEN)"</nodeID>
+                <position>0,1.37251,-16.6933</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+            </frames>
+            <geometryFileName>"caster wheel_ipt_4784d7d8.STL"</geometryFileName>
+            <MaterialProp>
+              <color>0.752941,0.752941,0.752941</color>
+              <ambient>1</ambient>
+              <diffuse>1</diffuse>
+              <specular>1</specular>
+              <shininess>0.2</shininess>
+              <transparency>0</transparency>
+              <emission>0.2</emission>
+            </MaterialProp>
+          </Body>
+          <Body>
+            <name>"RootPart"</name>
+            <nodeID>"caster assy:2/RootPart"</nodeID>
+            <status>""</status>
+            <mass>0</mass>
+            <massUnits>"lbm"</massUnits>
+            <inertia>0,0,0,0,0,0,0,0,0</inertia>
+            <inertiaUnits>"lbm*in^2"</inertiaUnits>
+            <volume>0</volume>
+            <volumeUnits>"in^3"</volumeUnits>
+            <surfaceArea>0</surfaceArea>
+            <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+            <frames>
+              <Frame>
+                <name>"CG"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:2/RootPart::CG(AUTOGEN)"</nodeID>
+                <position>0.274453,-0.0680186,-17.126</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,0.98024,0.197814,0,-0.197814,0.98024</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame>
+                <name>"CS1"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:2/RootPart::CS1(AUTOGEN)"</nodeID>
+                <position>0,-0.0978454,-16.9901</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,0.98024,0.197814,0,-0.197814,0.98024</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame ref="5">
+                <name>"CS2"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:2/RootPart:-:caster assy:2/caster wheel:1::caster assy:2/RootPart(AUTOGEN)"</nodeID>
+                <position>0,-0.0978454,-16.9901</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+            </frames>
+            <geometryFileName>""</geometryFileName>
+          </Body>
+          <Body>
+            <name>"caster:1"</name>
+            <nodeID>"caster assy:2/caster:1"</nodeID>
+            <status>""</status>
+            <mass>0.311242</mass>
+            <massUnits>"lbm"</massUnits>
+            <inertia>1.75384,0,0,0,0.89231,0.517163,0,0.517163,1.99846</inertia>
+            <inertiaUnits>"lbm*in^2"</inertiaUnits>
+            <volume>8.61515</volume>
+            <volumeUnits>"in^3"</volumeUnits>
+            <surfaceArea>73.345</surfaceArea>
+            <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+            <frames>
+              <Frame>
+                <name>"CG"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:2/caster:1::CG(AUTOGEN)"</nodeID>
+                <position>3.03058,0.23151,-18.4907</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>0,-0.98024,-0.197814,1,0,0,0,-0.197814,0.98024</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame>
+                <name>"CS1"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:2/caster:1::CS1(AUTOGEN)"</nodeID>
+                <position>0,0.570535,-20.1707</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>0,-0.98024,-0.197814,1,0,0,0,-0.197814,0.98024</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame ref="14">
+                <name>"CS2"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:2/caster wheel:1:-:caster assy:2/caster:1::caster assy:2/caster:1(AUTOGEN)"</nodeID>
+                <position>0,1.37251,-16.6933</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+              <Frame ref="15">
+                <name>"CS3"</name>
+                <displayName>""</displayName>
+                <nodeID>"caster assy:2:caster assy:2/caster:1:-:robot_solid:1::caster assy:2/caster:1(AUTOGEN)"</nodeID>
+                <position>5.375,0.372721,-19.1905</position>
+                <positionOrigin>"WORLD"</positionOrigin>
+                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                <positionUnits>"in"</positionUnits>
+                <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                <orientationType>"3x3 Transform"</orientationType>
+                <orientationUnits>"rad"</orientationUnits>
+                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+              </Frame>
+            </frames>
+            <geometryFileName>"caster_ipt_ca03a3d7.STL"</geometryFileName>
+            <MaterialProp>
+              <color>0,0,0</color>
+              <ambient>1</ambient>
+              <diffuse>1</diffuse>
+              <specular>1</specular>
+              <shininess>0.41</shininess>
+              <transparency>0</transparency>
+              <emission>0.2</emission>
+            </MaterialProp>
+          </Body>
+        </bodies>
+        <joints>
+          <SimpleJoint>
+            <name>"RootPart--caster wheel:1"</name>
+            <nodeID>"caster assy:2/RootPart:-:caster assy:2/caster wheel:1"</nodeID>
+            <status>""</status>
+            <base>
+              <JointSide>
+                <name>""</name>
+                <connection>
+                  <Frame ref="5"></Frame>
+                </connection>
+              </JointSide>
+            </base>
+            <follower>
+              <JointSide>
+                <name>""</name>
+                <connection>
+                  <Frame ref="6"></Frame>
+                </connection>
+              </JointSide>
+            </follower>
+            <primitives>
+              <Primitive>
+                <name>"weld"</name>
+                <nodeID>""</nodeID>
+                <referenceFrame>"WORLD"</referenceFrame>
+                <axis>0.57735,0.57735,0.57735</axis>
+              </Primitive>
+            </primitives>
+          </SimpleJoint>
+          <SimpleJoint>
+            <name>"caster wheel:1--caster:1"</name>
+            <nodeID>"caster assy:2/caster wheel:1:-:caster assy:2/caster:1"</nodeID>
+            <status>""</status>
+            <base>
+              <JointSide>
+                <name>""</name>
+                <connection>
+                  <Frame ref="13"></Frame>
+                </connection>
+              </JointSide>
+            </base>
+            <follower>
+              <JointSide>
+                <name>""</name>
+                <connection>
+                  <Frame ref="14"></Frame>
+                </connection>
+              </JointSide>
+            </follower>
+            <primitives>
+              <Primitive>
+                <name>"revolute"</name>
+                <nodeID>""</nodeID>
+                <referenceFrame>"WORLD"</referenceFrame>
+                <axis>0,-0.98024,-0.197814</axis>
+              </Primitive>
+            </primitives>
+          </SimpleJoint>
+        </joints>
+        <grounds></grounds>
+        <subsystems></subsystems>
+        <connectionPorts></connectionPorts>
+        <id>0</id>
+      </Subsystem>
+    </subsystems>
     <connectionPorts></connectionPorts>
     <id>0</id>
   </SimMechanics>
