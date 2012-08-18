@@ -7,7 +7,7 @@ FE
 [A]CH=C
 [A]ID=3332
 [A]DH=13A200
-[A]DL=408BE47A
+[A]DL=405D28C1
 [A]MY=0
 [A]MM=0
 [A]RR=0
@@ -45,7 +45,7 @@ FE
 [A]IU=1
 [A]IT=1
 [A]IC=0
-[A]IR=A
+[A]IR=1
 [A]P0=1
 [A]P1=0
 [A]PT=FF
