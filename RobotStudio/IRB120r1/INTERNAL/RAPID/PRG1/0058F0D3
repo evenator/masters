@@ -1,0 +1,34 @@
+MODULE choreo
+
+PROC stow()
+	VAR robtarget stow_targ := [ [ 650, 0, 260] , [.15327, -.64690, .13700, .73434] , [4, 0, 1, 6], [9E9, 9E9, 9E9, 9E9, 9E9, 9E9] ];
+	MoveL stow_targ, v1000, z30, tool0;
+ENDPROC
+
+PROC goto_table1()
+	VAR robtarget grab_targ := [ [ -40, 0, 695] , [.09232, .73506, .13644, .65769] , [0, 0, 1, 4], [9E9, 9E9, 9E9, 9E9, 9E9, 9E9] ];
+	MoveL grab_targ, v1000, z30, tool0;
+ENDPROC
+
+PROC goto_table2()
+	VAR robtarget grab_targ := [ [ -40, 0, 695] , [.09232, .73506, .13644, .65769] , [0, 0, 1, 4], [9E9, 9E9, 9E9, 9E9, 9E9, 9E9] ];
+	MoveL grab_targ, v1000, z30, tool0;
+ENDPROC
+
+PROC main()
+	VAR num approach_time := 5;
+	VAR num grasp_time := 1;
+	VAR num travel_time := 20;
+	VAR num release_time := 1;
+	
+	stow;
+	WaitTime approach_time;
+	goto_table1;
+	WaitTime grasp_time;
+	stow;
+	WaitTime travel_time;
+	goto_table2;
+	WaitTime release_time;
+ENDPROC
+
+ENDMODULE

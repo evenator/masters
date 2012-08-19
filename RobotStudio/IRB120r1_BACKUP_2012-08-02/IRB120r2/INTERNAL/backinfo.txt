@@ -1,0 +1,58 @@
+#
+# Generated backup file, do not edit.
+#
+# Originally at: /hd0a/temp/2F475867
+# 12-08-02  12:47:32
+#
+>>SYSTEM_ID:
+14-51077
+
+>>PRODUCTS_ID:
+RobotWare Version: 5.14.1032.01
+
+  RW Control module key
+  RobotWare OS and English
+  602-1 Advanced Shape Tuning
+  605-1 Multiple Axis Positioner
+  608-1 World Zones
+  609-1 Fixed Position Events
+  610-1 Independent Axis
+  611-1 Path Recovery
+  612-1 Path Offset
+  613-1 Collision Detection
+  616-1 PC Interface
+  620-1 File and Serial Channel Handling
+  621-1 Logical Cross Connections
+  622-1 Analog Signal Interrupt
+  623-1 Multitasking
+  626-1 Advanced RAPID
+  Robot Reference Inteface
+  RW Drive module 1 key
+  ABB standard manipulator
+  IRB 120
+  120-0.58/3
+  Drive System 09 120/140/1400/1600 Compact
+  1-Phase Power Supply
+  No additional drive
+
+>>ROBOT_TYPE:
+120-0.58/3
+
+>>HOME:
+All public files and directories
+
+>>SYSPAR:
+SYS.cfg
+PROC.cfg
+EIO.cfg
+SIO.cfg
+MOC.cfg
+MMC.cfg
+
+
+>>TASK1: (T_ROB1,,)
+SYSMOD/user.sys @ user.sys
+PROGMOD/ros_relay.mod @ ros_relay.mod
+
+
+>>EOF:

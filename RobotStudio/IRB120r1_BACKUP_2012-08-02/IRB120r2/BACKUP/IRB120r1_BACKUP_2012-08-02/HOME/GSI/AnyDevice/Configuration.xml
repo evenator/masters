@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Enums>
+    <Enum Name="opmode" Link="Intern">
+      <Member Name="ReducedSpeed" />
+      <Member Name="FullSpeed" />
+      <Member Name="Automatic" />
+    </Enum>
+  </Enums>
+  <Records>
+    <Record Name="robotdata">
+      <Field Name="type" Type="Real" Alias="Type" />
+      <Field Name="status" Type="String" Alias="Status" />
+      <Field Name="OperationMode" Type="opmode" Link="Intern" Alias="Mode" />
+      <Field Name="PredictedTime" Type="Time" Link="Intern" Alias="Time" />
+      <Field Name="PlannedPose" Type="Frame" Link="Intern" Alias="Frame" />
+      <Field Name="PlannedJoints" Type="Joints" Link="Intern" Alias="Joints" />
+      <Field Name="FeedbackTime" Type="Time" Link="Intern" Alias="FTime" />
+      <Field Name="FeedbackPose" Type="Frame" Link="Intern" Alias="FFrame" />
+      <Field Name="FeedbackJoints" Type="Joints" Link="Intern" Alias="FJoints" />
+    </Record>
+    <Record Name="replydata">
+      <Field Name="type" Type="Real" Alias="Type" />
+    </Record>
+  </Records>
+  <Properties>
+    <Property Name="RobotMessage" Type="robotdata" Flag="WriteOnly" />
+    <Property Name="ReplyMessage" Type="replydata" Flag="ReadOnly" />
+  </Properties>
+</Configuration>
