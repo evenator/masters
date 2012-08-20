@@ -18,9 +18,11 @@ E-stop receiver
 * Power LED (green)
 * Status LED (red) for all inputs lights when that e-stop is stopped
 * Buck-regulated 3.3v power
+* Add separate heartbeat
 
 E-stop remote
 * Power LED (green)
 * Status LED (red) for all inputs lights when that e-stop is stopped
 * Reset switch (use RC/555 to require ~2 sec hold)
 * Boost-regulated 3.3v power 
+* Add separate heartbeat
