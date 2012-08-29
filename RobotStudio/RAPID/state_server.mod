@@ -96,6 +96,30 @@ PROC send_mode()
    SocketSend client_socket \RawData := message;
 ENDPROC
 
+PROC send_estop()
+   VAR int estop;
+   VAR rawbytes message;
+   
+   TEST OpMode()
+      CASE OP_AUTO:
+         mode = 0; !auto
+      CASE OP_MAN_PROG:
+         mode = 1; !manual
+      CASE OP_MAN_TEST:
+         mode = 1; !manual
+      DEFAULT:
+         mode = 8; !undefined
+   ENDTEST
+   
+   !Pack data
+   PackRawBytes 0, message, (RawBytesLen(message)+1) \IntX := USINT; !message alert level OK
+   PackRawBytes 0, message, (RawBytesLen(message)+1) \IntX := USINT; !message type mode
+   PackRawBytes mode, message, (RawBytesLen(message)+1) \IntX := DINT; !mode
+   PackRawBytes 0, message, (RawBytesLen(message)+1) \IntX := DINT; !Data length 0
+   !Send data
+   SocketSend client_socket \RawData := message;
+ENDPROC
+
 PROC RRI_Open()
 	SiConnect AnyDevice;
 	! Send and receive data cyclic with 64 ms rate
