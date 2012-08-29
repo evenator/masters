@@ -1,4 +1,4 @@
-MODULE ros_relay
+MODULE main_module
 
 !Copyright (c) 2012, Edward Venator, Case Western Reserve University
 !All rights reserved.
@@ -25,63 +25,8 @@ MODULE ros_relay
 !CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY 
 !WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-RECORD RobotData
-	num type;
-	string status;
-ENDRECORD
-
-PERS sensor AnyDevice;
-PERS RobotData dataOut := [0, "Hello"];
-VAR socketdev server_socket;
-VAR socketdev client_socket;
-VAR string client_ip;
-VAR string receive_string;
-
-PROC relay_main()
-	SocketCreate server_socket;
-	TCP_init;
-	TPWrite "Waiting for client connection";
-	SocketAccept server_socket, client_socket, \ClientAddress:=client_ip;
-	TPWrite "Client connected.";
-	while ( true ) do
-		!Receive string from client
-		SocketReceive client_socket \Str := receive_string;
-		!Reply to client
-		SocketSend client_socket \Str := "Hello client with ip-address "+client_ip;
-	endwhile
-	SocketClose server_socket;
-	SocketClose client_socket;
-	ERROR
-		IF ERRNO=ERR_SOCK_TIMEOUT THEN
-			RETRY;
-		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
-			TCP_init;
-			RETRY;
-		ELSE
-			! No error recovery handling
-		ENDIF
+PROC main()
+	relay_main;
+	!choreo_main;
 ENDPROC
-
-PROC TCP_init()
-	SocketBind server_socket, "192.168.0.50", 3100;
-	SocketListen server_socket;
-	TPWrite "Server initialized.";
-ENDPROC
-
-PROC handle_packet(Str packetString)
-	
-ENDPROC
-
-PROC RRI_Open()
-	SiConnect AnyDevice;
-	! Send and receive data cyclic with 64 ms rate
-	SiSetCyclic AnyDevice, dataOut, 64;
-ENDPROC
-
-PROC RRI_Close()
-	! Close the connection
-	SiClose AnyDevice;
-ENDPROC
-
-
 ENDMODULE

@@ -44,10 +44,14 @@ PROC relay_main()
 	SocketAccept server_socket, client_socket, \ClientAddress:=client_ip;
 	TPWrite "Client connected.";
 	while ( true ) do
-		!Receive string from client
-		SocketReceive client_socket \Str := receive_string;
-		!Reply to client
-		SocketSend client_socket \Str := "Hello client with ip-address "+client_ip;
+		WaitTime .050;
+      !Send Mode to Client
+      send_mode;
+      !Send Status to Client
+      
+      !Send EStop State to Client
+      
+		!SocketSend client_socket \Str := "Hello client with ip-address "+client_ip;
 	endwhile
 	SocketClose server_socket;
 	SocketClose client_socket;
@@ -68,8 +72,28 @@ PROC TCP_init()
 	TPWrite "Server initialized.";
 ENDPROC
 
-PROC handle_packet(Str packetString)
-	
+PROC send_mode()
+   VAR int mode;
+   VAR rawbytes message;
+   
+   TEST OpMode()
+      CASE OP_AUTO:
+         mode = 0; !auto
+      CASE OP_MAN_PROG:
+         mode = 1; !manual
+      CASE OP_MAN_TEST:
+         mode = 1; !manual
+      DEFAULT:
+         mode = 8; !undefined
+   ENDTEST
+   
+   !Pack data
+   PackRawBytes 0, message, (RawBytesLen(message)+1) \IntX := USINT; !message alert level OK
+   PackRawBytes 0, message, (RawBytesLen(message)+1) \IntX := USINT; !message type mode
+   PackRawBytes mode, message, (RawBytesLen(message)+1) \IntX := DINT; !mode
+   PackRawBytes 0, message, (RawBytesLen(message)+1) \IntX := DINT; !Data length 0
+   !Send data
+   SocketSend client_socket \RawData := message;
 ENDPROC
 
 PROC RRI_Open()

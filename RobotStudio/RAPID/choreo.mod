@@ -1,4 +1,4 @@
-MODULE ros_relay
+MODULE choreo
 
 !Copyright (c) 2012, Edward Venator, Case Western Reserve University
 !All rights reserved.
@@ -25,63 +25,35 @@ MODULE ros_relay
 !CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY 
 !WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-RECORD RobotData
-	num type;
-	string status;
-ENDRECORD
-
-PERS sensor AnyDevice;
-PERS RobotData dataOut := [0, "Hello"];
-VAR socketdev server_socket;
-VAR socketdev client_socket;
-VAR string client_ip;
-VAR string receive_string;
-
-PROC relay_main()
-	SocketCreate server_socket;
-	TCP_init;
-	TPWrite "Waiting for client connection";
-	SocketAccept server_socket, client_socket, \ClientAddress:=client_ip;
-	TPWrite "Client connected.";
-	while ( true ) do
-		!Receive string from client
-		SocketReceive client_socket \Str := receive_string;
-		!Reply to client
-		SocketSend client_socket \Str := "Hello client with ip-address "+client_ip;
-	endwhile
-	SocketClose server_socket;
-	SocketClose client_socket;
-	ERROR
-		IF ERRNO=ERR_SOCK_TIMEOUT THEN
-			RETRY;
-		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
-			TCP_init;
-			RETRY;
-		ELSE
-			! No error recovery handling
-		ENDIF
+PROC stow()
+	VAR robtarget stow_targ := [[-646.44,17.94,299.84],[0.253051,-0.542282,-0.157717,0.785506],[-1,0,1,4],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	MoveJ stow_targ, v1000, z30, tool0;
 ENDPROC
 
-PROC TCP_init()
-	SocketBind server_socket, "192.168.0.50", 3100;
-	SocketListen server_socket;
-	TPWrite "Server initialized.";
+PROC goto_table1()
+	VAR robtarget grab_targ := [[-41.34,1.20,660.90],[0.20385,0.71582,0.209002,0.634322],[-1,0,1,4],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+	MoveJ grab_targ, v1000, z30, tool0;
 ENDPROC
 
-PROC handle_packet(Str packetString)
+PROC goto_table2()
+	VAR robtarget grab_targ := [ [ -40, 0, 695] , [.09232, .73506, .13644, .65769] , [0, 0, 1, 4], [9E9, 9E9, 9E9, 9E9, 9E9, 9E9] ];
+	MoveJ grab_targ, v1000, z30, tool0;
+ENDPROC
+
+PROC choreo_main()
+	VAR num approach_time := 5;
+	VAR num grasp_time := 1;
+	VAR num travel_time := 20;
+	VAR num release_time := 1;
 	
+	stow;
+	WaitTime approach_time;
+	goto_table1;
+	WaitTime grasp_time;
+	stow;
+	WaitTime travel_time;
+	goto_table2;
+	WaitTime release_time;
 ENDPROC
-
-PROC RRI_Open()
-	SiConnect AnyDevice;
-	! Send and receive data cyclic with 64 ms rate
-	SiSetCyclic AnyDevice, dataOut, 64;
-ENDPROC
-
-PROC RRI_Close()
-	! Close the connection
-	SiClose AnyDevice;
-ENDPROC
-
 
 ENDMODULE
