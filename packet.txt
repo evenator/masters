@@ -2,8 +2,8 @@ State Message:
 little endian
 packet length in bytes (not inclusive) (4 bytes)
 type (4 bytes) (1E for state message)
-comm_type (4 bytes)
-reply_code (4 bytes)
+comm_type (4 bytes) (1 for all message)
+reply_code (4 bytes) (0 for no reply)
 state data:
  data (data_length bytes)
  data_length (4 bytes)
