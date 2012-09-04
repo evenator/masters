@@ -50,7 +50,7 @@ PROC relay_main()
       !Send Status to Client
       
       !Send EStop State to Client
-      
+      send_estop;
 		!SocketSend client_socket \Str := "Hello client with ip-address "+client_ip;
 	endwhile
 	SocketClose server_socket;
@@ -78,13 +78,13 @@ PROC send_mode()
    
    TEST OpMode()
       CASE OP_AUTO:
-         mode = 0; !auto
+         mode := 1; !auto
       CASE OP_MAN_PROG:
-         mode = 1; !manual
+         mode := 2; !manual
       CASE OP_MAN_TEST:
-         mode = 1; !manual
+         mode := 2; !manual
       DEFAULT:
-         mode = 8; !undefined
+         mode := 8; !undefined
    ENDTEST
    
    !Pack data
@@ -92,6 +92,25 @@ PROC send_mode()
    PackRawBytes 0, message, (RawBytesLen(message)+1) \IntX := USINT; !message type mode
    PackRawBytes mode, message, (RawBytesLen(message)+1) \IntX := DINT; !mode
    PackRawBytes 0, message, (RawBytesLen(message)+1) \IntX := DINT; !Data length 0
+   !Send data
+   SocketSend client_socket \RawData := message;
+ENDPROC
+
+PROC send_status()
+   VAR int status;
+   VAR Str err_msg;
+   VAR rawbytes message;
+   
+   !Get status
+   !Currently just sends ok because this is a pain to implement
+   status = 0;
+   
+   !Pack data
+   PackRawBytes 0, message, (RawBytesLen(message)+1) \IntX := USINT; !message alert level OK
+   PackRawBytes 2, message, (RawBytesLen(message)+1) \IntX := USINT; !message type status
+   PackRawBytes status, message, (RawBytesLen(message)+1) \IntX := DINT; !status
+   PackRawBytes StrLeng(err_msg), message, (RawBytesLen(message)+1) \IntX := DINT; !Data length
+   PackRawBytes err_msg, message, (RawBytesLeng(message)+1) \ASCII; !Data
    !Send data
    SocketSend client_socket \RawData := message;
 ENDPROC
@@ -100,35 +119,19 @@ PROC send_estop()
    VAR int estop;
    VAR rawbytes message;
    
-   TEST OpMode()
-      CASE OP_AUTO:
-         mode = 0; !auto
-      CASE OP_MAN_PROG:
-         mode = 1; !manual
-      CASE OP_MAN_TEST:
-         mode = 1; !manual
-      DEFAULT:
-         mode = 8; !undefined
-   ENDTEST
+   IF DOutput(estop_sig) = 1 THEN
+      estop := 1;
+   ELSE
+      estop := 0;
+   ENDIF
    
    !Pack data
    PackRawBytes 0, message, (RawBytesLen(message)+1) \IntX := USINT; !message alert level OK
-   PackRawBytes 0, message, (RawBytesLen(message)+1) \IntX := USINT; !message type mode
-   PackRawBytes mode, message, (RawBytesLen(message)+1) \IntX := DINT; !mode
+   PackRawBytes 4, message, (RawBytesLen(message)+1) \IntX := USINT; !message type estop
+   PackRawBytes estop, message, (RawBytesLen(message)+1) \IntX := DINT; !estop value
    PackRawBytes 0, message, (RawBytesLen(message)+1) \IntX := DINT; !Data length 0
    !Send data
    SocketSend client_socket \RawData := message;
-ENDPROC
-
-PROC RRI_Open()
-	SiConnect AnyDevice;
-	! Send and receive data cyclic with 64 ms rate
-	SiSetCyclic AnyDevice, dataOut, 64;
-ENDPROC
-
-PROC RRI_Close()
-	! Close the connection
-	SiClose AnyDevice;
 ENDPROC
 
 

@@ -1,0 +1,21 @@
+State Message:
+little endian
+packet length in bytes (not inclusive) (4 bytes)
+type (4 bytes) (1E for state message)
+comm_type (4 bytes)
+reply_code (4 bytes)
+state data:
+ data (data_length bytes)
+ data_length (4 bytes)
+ value (4 bytes)
+ type (4 btyes)
+ level (1 byte)
+
+Joint State Message:
+little endian
+packet length in bytes (not inclusive) (4 bytes)
+type (4 bytes)
+comm_type (4 bytes)
+reply_code (4 bytes)
+joint data:
+
