@@ -48,9 +48,9 @@ PROC relay_main()
       !Send Mode to Client
       send_mode;
       !Send Status to Client
-      !send_status;
+!      send_status;
       !Send EStop State to Client
-      !send_estop;
+!      send_estop;
 		!SocketSend client_socket \Str := "Hello client with ip-address "+client_ip;
 	endwhile
 	SocketClose server_socket;
@@ -90,7 +90,7 @@ PROC send_mode()
    VAR data_length = 0;
    VAR packet_length = 25; ! = 12 + 4 + 4 + 4 + 1
 	VAR message_type =  30; !Message type 1E=30 is a state message
-	VAR comm_type = 0; !Look this up
+	VAR comm_type = 1; !Look this up
 	VAR reply_code = 0; !Look this up
 	VAR state_message_type = 0; !Message type mode
 	VAR alert_level = 0; !Alert level OK
@@ -120,7 +120,7 @@ PROC send_status()
    VAR data_length = StrLeng(err_msg);
    VAR packet_length = 25 + data_length; ! = 12 + 4 + 4 + 4 + 1
 	VAR message_type =  30; !Message type 1E=30 is a state message
-	VAR comm_type = 0; !Look this up
+	VAR comm_type = 1; !Look this up
 	VAR reply_code = 0; !Look this up
 	VAR state_message_type = 2; !Message type status
 	VAR alert_level = 0; !Alert level OK
@@ -152,7 +152,7 @@ PROC send_estop()
    VAR data_length = 0;
    VAR packet_length = 25; ! = 12 + 4 + 4 + 4 + 1
 	VAR message_type =  30; !Message type 1E=30 is a state message
-	VAR comm_type = 0; !Look this up
+	VAR comm_type = 1; !Look this up
 	VAR reply_code = 0; !Look this up
 	VAR state_message_type = 4; !Message type estop
 	VAR alert_level = 0; !Alert level OK
@@ -169,6 +169,5 @@ PROC send_estop()
    !Send data
    SocketSend client_socket \RawData := message;
 ENDPROC
-
 
 ENDMODULE
