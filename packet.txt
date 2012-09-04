@@ -13,9 +13,19 @@ state data:
 
 Joint State Message:
 little endian
-packet length in bytes (not inclusive) (4 bytes)
-type (4 bytes)
-comm_type (4 bytes)
-reply_code (4 bytes)
+packet length in bytes (not inclusive) (4 bytes) (56 for IRB120)
+type (4 bytes) (0A for joint message)
+comm_type (4 bytes) (1 for all messages)
+reply_code (4 bytes) (0 for no reply)
 joint data:
- 
+ sequence (4 byte int, can be 0)
+ joint0 (float)
+ joint1 (float)
+ joint2 (float)
+ joint3 (float)
+ joint4 (float)
+ joint5 (float)
+ joint6 (float)
+ joint7 (float)
+ joint8 (float)
+ joint9 (float)
