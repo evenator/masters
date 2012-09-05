@@ -29,3 +29,24 @@ joint data:
  joint7 (float)
  joint8 (float)
  joint9 (float)
+
+Joint Trajectory Pt Message:
+little endian
+packet length (4 bytes) (60)
+type (4 bytes) (0B = 11 for joint pt message)
+comm_type (4 bytes) (1 for all messages)
+reply_code (4 bytes) (0 except for stop command)
+joint trajectory point:
+ sequence (signed 4 byte int, special values for first in download(-1), first in stream(-2), last(-3), and stop(-4) command)
+ joint positions
+  joint0 (float)
+  joint1 (float)
+  joint2 (float)
+  joint3 (float)
+  joint4 (float)
+  joint5 (float)
+  joint6 (float)
+  joint7 (float)
+  joint8 (float)
+  joint9 (float)
+ joint velocity (float)
