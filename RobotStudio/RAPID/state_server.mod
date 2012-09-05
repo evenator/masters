@@ -1,4 +1,4 @@
-MODULE ros_relay
+MODULE state_server
 
 !Copyright (c) 2012, Edward Venator, Case Western Reserve University
 !All rights reserved.
@@ -25,19 +25,11 @@ MODULE ros_relay
 !CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY 
 !WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-RECORD RobotData
-	num type;
-	string status;
-ENDRECORD
+LOCAL VAR socketdev server_socket;
+LOCAL VAR socketdev client_socket;
+LOCAL VAR num server_port := 11002;
 
-PERS sensor AnyDevice;
-PERS RobotData dataOut := [0, "Hello"];
-VAR socketdev server_socket;
-VAR socketdev client_socket;
-VAR string client_ip;
-VAR string receive_string;
-
-PROC relay_main()
+PROC state_server_main()
 	SocketCreate server_socket;
 	TCP_init;
 	TPWrite "Waiting for client connection";
@@ -45,12 +37,12 @@ PROC relay_main()
 	TPWrite "Client connected.";
 	while ( true ) do
 		WaitTime .050;
-      !Send Mode to Client
-      send_mode;
-      !Send Status to Client
-!      send_status;
-      !Send EStop State to Client
-!      send_estop;
+		!Send Mode to Client
+		send_mode;
+		!Send Status to Client
+!		send_status;
+		!Send EStop State to Client
+!		send_estop;
 		!Send Joint Angles to Client
 !		send_joints;
 	endwhile
@@ -67,134 +59,139 @@ PROC relay_main()
 		ENDIF
 ENDPROC
 
-PROC TCP_init()
-	SocketBind server_socket, "192.168.0.50", 3100;
+LOCAL PROC TCP_init()
+	SocketBind server_socket, server_ip, server_port;
 	SocketListen server_socket;
 	TPWrite "Server initialized.";
 ENDPROC
 
-PROC send_mode()
-   VAR int mode;
-   VAR rawbytes message;
-   
-   TEST OpMode()
-      CASE OP_AUTO:
-         mode := 1; !auto
-      CASE OP_MAN_PROG:
-         mode := 2; !manual
-      CASE OP_MAN_TEST:
-         mode := 2; !manual
-      DEFAULT:
-         mode := 8; !undefined
-   ENDTEST
-   
-   VAR data_length = 0;
-   VAR packet_length = 25; ! = 12 + 4 + 4 + 4 + 1
-	VAR message_type =  30; !Message type 1E=30 is a state message
-	VAR comm_type = 1;
-	VAR reply_code = 0; !No reply
-	VAR state_message_type = 0; !Message type mode
-	VAR alert_level = 0; !Alert level OK
-   
-   !Pack data
-   PackRawBytes packet_length, message, ((RawBytesLen(message)+1) \IntX := DINT; !Packet length
-   PackRawBytes message_type, message, ((RawBytesLen(message)+1) \IntX := DINT; !Message type
-   PackRawBytes comm_type, message, ((RawBytesLen(message)+1) \IntX := DINT; !Comm type
-   PackRawBytes reply_code, message, ((RawBytesLen(message)+1) \IntX := DINT; !Reply code
-   PackRawBytes data_length, message, (RawBytesLen(message)+1) \IntX := DINT; !Data length
-   PackRawBytes mode, message, (RawBytesLen(message)+1) \IntX := UDINT; !mode value
-   PackRawBytes state_message_type, message, (RawBytesLen(message)+1) \IntX := UDINT; !message type estop
-   PackRawBytes alert_level, message, (RawBytesLen(message)+1) \IntX := USINT; !message alert level OK
-   !Send data
-   SocketSend client_socket \RawData := message;
+LOCAL PROC send_mode()
+	VAR num mode;
+	VAR rawbytes message;
+	
+	VAR num data_length := 0;
+	VAR num packet_length := 25; ! = 12 + 4 + 4 + 4 + 1
+	VAR num message_type :=  30; !Message type 1E=30 is a state message
+	VAR num comm_type := 1;
+	VAR num reply_code := 0; !No reply
+	VAR num state_message_type := 0; !Message type mode
+	VAR num alert_level := 0; !Alert level OK
+	
+	TEST OpMode()
+		CASE OP_AUTO:
+			mode := 1; !auto
+		CASE OP_MAN_PROG:
+			mode := 2; !manual
+		CASE OP_MAN_TEST:
+			mode := 2; !manual
+		DEFAULT:
+			mode := 8; !undefined
+	ENDTEST
+	
+	!Pack data
+	PackRawBytes packet_length, message, (RawBytesLen(message)+1), \IntX := DINT; !Packet length
+	PackRawBytes message_type, message, (RawBytesLen(message)+1), \IntX := DINT; !Message type
+	PackRawBytes comm_type, message, (RawBytesLen(message)+1), \IntX := DINT; !Comm type
+	PackRawBytes reply_code, message, (RawBytesLen(message)+1), \IntX := DINT; !Reply code
+	PackRawBytes data_length, message, (RawBytesLen(message)+1), \IntX := DINT; !Data length
+	PackRawBytes mode, message, (RawBytesLen(message)+1), \IntX := UDINT; !mode value
+	PackRawBytes state_message_type, message, (RawBytesLen(message)+1), \IntX := UDINT; !message type estop
+	PackRawBytes alert_level, message, (RawBytesLen(message)+1), \IntX := USINT; !message alert level OK
+	!Send data
+	SocketSend client_socket \RawData := message;
 ENDPROC
 
-PROC send_status()
-   VAR int status;
-   VAR Str err_msg;
-   VAR rawbytes message;
-   
-   !Get status
-   !Currently just sends ok because this is a pain to implement
-   status = 0;
-   
-   VAR data_length = StrLeng(err_msg);
-   VAR packet_length = 25 + data_length; ! = 12 + 4 + 4 + 4 + 1
-	VAR message_type =  30; !Message type 1E=30 is a state message
-	VAR comm_type = 1;
-	VAR reply_code = 0; !No reply
-	VAR state_message_type = 2; !Message type status
-	VAR alert_level = 0; !Alert level OK
-   
-   !Pack data
-   PackRawBytes packet_length, message, ((RawBytesLen(message)+1) \IntX := DINT; !Packet length
-   PackRawBytes message_type, message, ((RawBytesLen(message)+1) \IntX := DINT; !Message type
-   PackRawBytes comm_type, message, ((RawBytesLen(message)+1) \IntX := DINT; !Comm type
-   PackRawBytes reply_code, message, ((RawBytesLen(message)+1) \IntX := DINT; !Reply code
-   PackRawBytes data_length, message, (RawBytesLen(message)+1) \IntX := DINT; !Data length
-   PackRawBytes status, message, (RawBytesLen(message)+1) \IntX := UDINT; !status value
-   PackRawBytes state_message_type, message, (RawBytesLen(message)+1) \IntX := UDINT; !message type estop
-   PackRawBytes alert_level, message, (RawBytesLen(message)+1) \IntX := USINT; !message alert level OK
-   !Send data
-   SocketSend client_socket \RawData := message;
+LOCAL PROC send_status()
+	VAR num status;
+	VAR string err_msg;
+	VAR rawbytes message;
+	
+	VAR num data_length;
+	VAR num packet_length;
+	VAR num message_type :=  30; !Message type 1E=30 is a state message
+	VAR num comm_type := 1;
+	VAR num reply_code := 0; !No reply
+	VAR num state_message_type := 2; !Message type status
+	VAR num alert_level := 0; !Alert level OK
+	
+	data_length := StrLen(err_msg);
+	packet_length := 25 + data_length; ! = 12 + 4 + 4 + 4 + 1
+	
+	!Get status
+	!Currently just sends ok because this is a pain to implement
+	status := 0;
+	
+	!Pack data
+	PackRawBytes packet_length, message, (RawBytesLen(message)+1) \IntX := DINT; !Packet length
+	PackRawBytes message_type, message, (RawBytesLen(message)+1) \IntX := DINT; !Message type
+	PackRawBytes comm_type, message, (RawBytesLen(message)+1) \IntX := DINT; !Comm type
+	PackRawBytes reply_code, message, (RawBytesLen(message)+1) \IntX := DINT; !Reply code
+	PackRawBytes data_length, message, (RawBytesLen(message)+1) \IntX := DINT; !Data length
+	PackRawBytes status, message, (RawBytesLen(message)+1) \IntX := UDINT; !status value
+	PackRawBytes state_message_type, message, (RawBytesLen(message)+1) \IntX := UDINT; !message type estop
+	PackRawBytes alert_level, message, (RawBytesLen(message)+1) \IntX := USINT; !message alert level OK
+	!Send data
+	SocketSend client_socket \RawData := message;
 ENDPROC
 
 !Note: Configuration must be set to put estop status on virtual I/O estop_sig
-PROC send_estop()
-   VAR int estop;
-   VAR rawbytes message;
-   
-   IF DOutput(estop_sig) = 1 THEN
-      estop := 1;
-   ELSE
-      estop := 0;
-   ENDIF
-   
-   VAR data_length = 0;
-   VAR packet_length = 25; ! = 12 + 4 + 4 + 4 + 1
-	VAR message_type =  30; !Message type 1E=30 is a state message
-	VAR comm_type = 1;
-	VAR reply_code = 0; !No reply
-	VAR state_message_type = 4; !Message type estop
-	VAR alert_level = 0; !Alert level OK
+LOCAL PROC send_estop()
+	VAR num estop;
+	VAR rawbytes message;
 	
-   !Pack data
-   PackRawBytes packet_length, message, ((RawBytesLen(message)+1) \IntX := DINT; !Packet length
-   PackRawBytes message_type, message, ((RawBytesLen(message)+1) \IntX := DINT; !Message type
-   PackRawBytes comm_type, message, ((RawBytesLen(message)+1) \IntX := DINT; !Comm type
-   PackRawBytes reply_code, message, ((RawBytesLen(message)+1) \IntX := DINT; !Reply code
-   PackRawBytes data_length, message, (RawBytesLen(message)+1) \IntX := DINT; !Data length 0
-   PackRawBytes estop, message, (RawBytesLen(message)+1) \IntX := UDINT; !estop value
-   PackRawBytes state_message_type, message, (RawBytesLen(message)+1) \IntX := UDINT; !message type estop
-   PackRawBytes alert_level, message, (RawBytesLen(message)+1) \IntX := USINT; !message alert level OK
-   !Send data
-   SocketSend client_socket \RawData := message;
+	VAR num data_length := 0;
+	VAR num packet_length := 25; ! = 12 + 4 + 4 + 4 + 1
+	VAR num message_type :=  30; !Message type 1E=30 is a state message
+	VAR num comm_type := 1;
+	VAR num reply_code := 0; !No reply
+	VAR num state_message_type := 4; !Message type estop
+	VAR num alert_level := 0; !Alert level OK
+	
+!	IF DOutput(estop_sig) = 1 THEN
+!		estop := 1;
+!	ELSE
+		estop := 0;
+!	ENDIF
+	
+	!Pack data
+	PackRawBytes packet_length, message, (RawBytesLen(message)+1) \IntX := DINT; !Packet length
+	PackRawBytes message_type, message, (RawBytesLen(message)+1) \IntX := DINT; !Message type
+	PackRawBytes comm_type, message, (RawBytesLen(message)+1) \IntX := DINT; !Comm type
+	PackRawBytes reply_code, message, (RawBytesLen(message)+1) \IntX := DINT; !Reply code
+	PackRawBytes data_length, message, (RawBytesLen(message)+1) \IntX := DINT; !Data length 0
+	PackRawBytes estop, message, (RawBytesLen(message)+1) \IntX := UDINT; !estop value
+	PackRawBytes state_message_type, message, (RawBytesLen(message)+1) \IntX := UDINT; !message type estop
+	PackRawBytes alert_level, message, (RawBytesLen(message)+1) \IntX := USINT; !message alert level OK
+	!Send data
+	SocketSend client_socket \RawData := message;
 ENDPROC
 
-PROC send_joints()
+LOCAL PROC send_joints()
 	VAR rawbytes message;
-   
-   VAR data_length = 0;
-   VAR packet_length = 56; ! = 12 + 4 + 10 * 4
-	VAR message_type =  10; !Message type 0A=10 is a joint message
-	VAR comm_type = 1;
-	VAR reply_code = 0; !No reply
-	VAR seq = 0; 
 	
-   !Pack data
-   PackRawBytes packet_length, message, ((RawBytesLen(message)+1) \IntX := DINT; !Packet length
-   PackRawBytes message_type, message, ((RawBytesLen(message)+1) \IntX := DINT; !Message type
-   PackRawBytes comm_type, message, ((RawBytesLen(message)+1) \IntX := DINT; !Comm type
-   PackRawBytes reply_code, message, ((RawBytesLen(message)+1) \IntX := DINT; !Reply code
-   PackRawBytes seq, message, ((RawBytesLen(message)+1) \IntX := DINT; !Reply code
-   
-   FOR jointnum from 1 to 10 DO
-   	IF jointnum <= 6 THEN
-   		PackRawBytes ReadMotor(jointnum), message ((RawBytesLen(message)+1) \Float4; !Send the joint angle in radians
-   	ELSE
-   		PackRawBytes 0, message ((RawBytesLen(message)+1) \Float4; !The robot has only 6 joints, but the message requires 10
-   	ENDIF
+	VAR num data_length := 0;
+	VAR num packet_length := 56; ! = 12 + 4 + 10 * 4
+	VAR num message_type :=  10; !Message type 0A=10 is a joint message
+	VAR num comm_type := 1;
+	VAR num reply_code := 0; !No reply
+	VAR num seq := 0; 
+	
+	!Pack data
+	PackRawBytes packet_length, message, (RawBytesLen(message)+1), \IntX := DINT; !Packet length
+	PackRawBytes message_type, message, (RawBytesLen(message)+1), \IntX := DINT; !Message type
+	PackRawBytes comm_type, message, (RawBytesLen(message)+1), \IntX := DINT; !Comm type
+	PackRawBytes reply_code, message, (RawBytesLen(message)+1), \IntX := DINT; !Reply code
+	PackRawBytes seq, message, (RawBytesLen(message)+1), \IntX := DINT; !Reply code
+	
+	FOR jointnum from 1 to 10 DO
+		IF jointnum <= 6 THEN
+			PackRawBytes ReadMotor(jointnum), message, (RawBytesLen(message)+1), \Float4; !Send the joint angle in radians
+		ELSE
+			PackRawBytes 0, message, (RawBytesLen(message)+1), \Float4; !The robot has only 6 joints, but the message requires 10
+		ENDIF
 	ENDFOR
-   !Send data
-   SocketSend client_socket \RawData := message;
+	!Send data
+	SocketSend client_socket \RawData := message;
+ENDPROC
+
 ENDMODULE

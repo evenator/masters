@@ -26,7 +26,8 @@ MODULE main_module
 !WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PROC main()
-	relay_main;
+	state_server_main;
+	joint_trajectory_server_main;
 	!choreo_main;
 ENDPROC
 ENDMODULE
