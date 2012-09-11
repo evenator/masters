@@ -40,11 +40,11 @@ PROC state_server_main()
 		!Send Mode to Client
 		send_mode;
 		!Send Status to Client
-!		send_status;
+		send_status;
 		!Send EStop State to Client
-!		send_estop;
+		send_estop;
 		!Send Joint Angles to Client
-!		send_joints;
+		send_joints;
 	endwhile
 	SocketClose server_socket;
 	SocketClose client_socket;
@@ -74,7 +74,7 @@ LOCAL PROC send_mode()
 	VAR num message_type :=  30; !Message type 1E=30 is a state message
 	VAR num comm_type := 1;
 	VAR num reply_code := 0; !No reply
-	VAR num state_message_type := 0; !Message type mode
+	VAR num state_message_type := 1; !Message type mode
 	VAR num alert_level := 0; !Alert level OK
 	
 	TEST OpMode()
@@ -99,6 +99,15 @@ LOCAL PROC send_mode()
 	PackRawBytes alert_level, message, (RawBytesLen(message)+1), \IntX := USINT; !message alert level OK
 	!Send data
 	SocketSend client_socket \RawData := message;
+	ERROR
+		IF ERRNO=ERR_SOCK_TIMEOUT THEN
+			RETRY;
+		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
+			TCP_init;
+			RETRY;
+		ELSE
+			! No error recovery handling
+		ENDIF
 ENDPROC
 
 LOCAL PROC send_status()
@@ -132,6 +141,15 @@ LOCAL PROC send_status()
 	PackRawBytes alert_level, message, (RawBytesLen(message)+1) \IntX := USINT; !message alert level OK
 	!Send data
 	SocketSend client_socket \RawData := message;
+	ERROR
+		IF ERRNO=ERR_SOCK_TIMEOUT THEN
+			RETRY;
+		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
+			TCP_init;
+			RETRY;
+		ELSE
+			! No error recovery handling
+		ENDIF
 ENDPROC
 
 !Note: Configuration must be set to put estop status on virtual I/O estop_sig
@@ -164,6 +182,15 @@ LOCAL PROC send_estop()
 	PackRawBytes alert_level, message, (RawBytesLen(message)+1) \IntX := USINT; !message alert level OK
 	!Send data
 	SocketSend client_socket \RawData := message;
+	ERROR
+		IF ERRNO=ERR_SOCK_TIMEOUT THEN
+			RETRY;
+		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
+			TCP_init;
+			RETRY;
+		ELSE
+			! No error recovery handling
+		ENDIF
 ENDPROC
 
 LOCAL PROC send_joints()
@@ -175,6 +202,7 @@ LOCAL PROC send_joints()
 	VAR num comm_type := 1;
 	VAR num reply_code := 0; !No reply
 	VAR num seq := 0; 
+	VAR jointtarget joints;
 	
 	!Pack data
 	PackRawBytes packet_length, message, (RawBytesLen(message)+1), \IntX := DINT; !Packet length
@@ -183,15 +211,35 @@ LOCAL PROC send_joints()
 	PackRawBytes reply_code, message, (RawBytesLen(message)+1), \IntX := DINT; !Reply code
 	PackRawBytes seq, message, (RawBytesLen(message)+1), \IntX := DINT; !Reply code
 	
+	joints := CJointT();
 	FOR jointnum from 1 to 10 DO
-		IF jointnum <= 6 THEN
-			PackRawBytes ReadMotor(jointnum), message, (RawBytesLen(message)+1), \Float4; !Send the joint angle in radians
+		IF jointnum = 1 THEN
+			PackRawBytes joints.robax.rax_1, message, (RawBytesLen(message)+1), \Float4; !Send the joint angle in radians
+		ELSEIF jointnum = 2 THEN
+			PackRawBytes joints.robax.rax_2, message, (RawBytesLen(message)+1), \Float4; !Send the joint angle in radians
+		ELSEIF jointnum = 3 THEN
+			PackRawBytes joints.robax.rax_3, message, (RawBytesLen(message)+1), \Float4; !Send the joint angle in radians
+		ELSEIF jointnum = 4 THEN
+			PackRawBytes joints.robax.rax_4, message, (RawBytesLen(message)+1), \Float4; !Send the joint angle in radians
+		ELSEIF jointnum = 5 THEN
+			PackRawBytes joints.robax.rax_5, message, (RawBytesLen(message)+1), \Float4; !Send the joint angle in radians
+		ELSEIF jointnum = 6 THEN
+			PackRawBytes joints.robax.rax_6, message, (RawBytesLen(message)+1), \Float4; !Send the joint angle in radians
 		ELSE
 			PackRawBytes 0, message, (RawBytesLen(message)+1), \Float4; !The robot has only 6 joints, but the message requires 10
 		ENDIF
 	ENDFOR
 	!Send data
 	SocketSend client_socket \RawData := message;
+	ERROR
+		IF ERRNO=ERR_SOCK_TIMEOUT THEN
+			RETRY;
+		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
+			TCP_init;
+			RETRY;
+		ELSE
+			! No error recovery handling
+		ENDIF
 ENDPROC
 
 ENDMODULE
