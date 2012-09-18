@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+	<Enums>
+		<Enum Name="opmode" Link="Intern">
+			<Member Name="ReducedSpeed" Alias="ManRS"/>
+			<Member Name="FullSpeed" Alias="ManFS"/>
+			<Member Name="Automatic" Alias="Auto"/>
+		</Enum>
+	</Enums>
+	<Records>
+		<Record Name="robdata">
+			<Field Name="OperationMode" Type="opmode" Link="Intern" Alias="RobMode"/>
+			<Field Name="FeedbackTime" Type="Time" Link="Intern" Alias="Ts_act"/>
+			<Field Name="FeedbackPose" Type="Frame" Link="Intern" Alias="P_act"/>
+			<Field Name="FeedbackJoints"  Type="Joints" Link="Intern" Alias="J_act"/>
+			<Field Name="PredictedTime" Type="Time" Link="Intern" Alias="Ts_des"/>
+			<Field Name="PlannedPose" Type="Frame" Link="Intern" Alias="P_des"/>
+			<Field Name="PlannedJoints" Type="Joints" Link="Intern" Alias="J_des"/>
+			<Field Name="ApplicationData" Type="Real" Size="20" Alias="AppData"/>
+		</Record>
+		<Record Name="sensdata">
+			<Field Name="ApplicationData" Type="Real" Size="20" Alias="AppData"/>
+		</Record>
+	</Records>
+	<Properties>
+		<Property Name="RsRobData" Type="robdata" Flag="WriteOnly" Alias="RobData"/>
+		<Property Name="RsSensData" Type="sensdata" Flag="ReadOnly" Alias="SensData"/>
+	</Properties>
+</Configuration>

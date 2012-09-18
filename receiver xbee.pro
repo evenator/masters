@@ -6,8 +6,8 @@ FE
 0
 [A]CH=C
 [A]ID=3332
-[A]DH=0
-[A]DL=0
+[A]DH=13A200
+[A]DL=408BE476
 [A]MY=0
 [A]MM=0
 [A]RR=0
@@ -40,12 +40,12 @@ FE
 [A]D3=4
 [A]D2=3
 [A]D1=3
-[A]D0=0
-[A]PR=00
+[A]D0=4
+[A]PR=0
 [A]IU=1
 [A]IT=1
 [A]IC=0
-[A]IR=A
+[A]IR=1
 [A]P0=1
 [A]P1=0
 [A]PT=FF

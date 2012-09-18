@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Description>
+	<Name>NACMaster</Name>
+	<Convention>CDP</Convention>
+	<Type>RemoteWeldSystem</Type>
+	<Class>RemoteLaserSystem</Class>
+        <Network Address="192.168.125.2" >
+		<Channel Type="Cyclic" Protocol="Udp" Port="2999" />
+	</Network>
+	<Settings>
+		<TimeOut>4000</TimeOut>
+		<MaxLost>10000</MaxLost>
+		<DryRun>true</DryRun>
+	</Settings>
+</Description>

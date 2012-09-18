@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Description>
+	<Name>ROSMaster</Name>
+	<Convention>CDP</Convention>
+	<Type>ROS Master Node</Type>
+	<Class>Controller</Class>
+	<Network Address="192.168.125.2" Port="Service">
+		<Channel Type="Cyclic" Protocol="Udp" Port="3002" />
+	</Network>
+	<Settings>
+		<TimeOut>4000</TimeOut>
+		<MaxLost>10000</MaxLost>
+		<DryRun>true</DryRun>
+	</Settings>
+</Description>

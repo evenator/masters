@@ -1,0 +1,28 @@
+cRIO Breakout
+* 4 encoders (4P4 modular)
+* 4 ultrasonic (4P4 modular)
+* 1 analog out (DB9)
+* 1 6pos power (terminal block, removable connector)
+* 1 Gyro (8P8 modular)
+* Space for serial connectors (GPS)
+* 2 switches (4P2?)
+* 1 Sabertooth (4P4)
+* 3 RC needs 4/9 pins (Pin header? 4P4?)
+* Razer IMU (?) (6P6, needs 3.3v)
+* Headers for other DIO pins?
+
+4P connectors (.400") are .055" narrower than 6p connectors (.455")
+
+E-stop receiver
+* Override jumpers for all inputs
+* Power LED (green)
+* Status LED (red) for all inputs lights when that e-stop is stopped
+* Buck-regulated 3.3v power
+* Add separate heartbeat
+
+E-stop remote
+* Power LED (green)
+* Status LED (red) for all inputs lights when that e-stop is stopped
+* Reset switch (use RC/555 to require ~2 sec hold)
+* Boost-regulated 3.3v power 
+* Add separate heartbeat

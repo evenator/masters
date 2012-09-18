@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Description>
+<Name>AnyDevice</Name>
+<Convention>CDP</Convention>
+<Type>IntelligentCamera</Type>
+<Class>MachineVision</Class>
+<Network Address="192.168.0.150" Port="Lan">
+<Channel Type="Cyclic" Protocol="Udp" Port="3002" />
+</Network>
+<Settings>
+<TimeOut>2000</TimeOut>
+<MaxLost>200</MaxLost>
+<DryRun>false</DryRun>
+</Settings>
+</Description>

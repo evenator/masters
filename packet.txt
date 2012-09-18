@@ -1,0 +1,52 @@
+State Message:
+little endian
+packet length in bytes (not inclusive) (4 bytes)
+type (4 bytes) (1E for state message)
+comm_type (4 bytes) (1 for all message)
+reply_code (4 bytes) (0 for no reply)
+state data:
+ data (data_length bytes)
+ data_length (4 bytes)
+ value (4 bytes)
+ type (4 btyes)
+ level (1 byte)
+
+Joint State Message:
+little endian
+packet length in bytes (not inclusive) (4 bytes) (56 for IRB120)
+type (4 bytes) (0A for joint message)
+comm_type (4 bytes) (1 for all messages)
+reply_code (4 bytes) (0 for no reply)
+joint data:
+ sequence (4 byte int, can be 0)
+ joint0 (float)
+ joint1 (float)
+ joint2 (float)
+ joint3 (float)
+ joint4 (float)
+ joint5 (float)
+ joint6 (float)
+ joint7 (float)
+ joint8 (float)
+ joint9 (float)
+
+Joint Trajectory Pt Message:
+little endian
+packet length (4 bytes) (60)
+type (4 bytes) (0B = 11 for joint pt message)
+comm_type (4 bytes) (1 for all messages)
+reply_code (4 bytes) (0 except for stop command)
+joint trajectory point:
+ sequence (signed 4 byte int, special values for first in download(-1), first in stream(-2), last(-3), and stop(-4) command)
+ joint positions
+  joint0 (float)
+  joint1 (float)
+  joint2 (float)
+  joint3 (float)
+  joint4 (float)
+  joint5 (float)
+  joint6 (float)
+  joint7 (float)
+  joint8 (float)
+  joint9 (float)
+ joint velocity (float)

@@ -4,7 +4,7 @@
 	<Convention>CDP</Convention>
 	<Type>ROS Master Node</Type>
 	<Class>Controller</Class>
-	<Network Address="192.168.0.50" Port="Lan">
+	<Network Address="192.168.0.150" Port="Lan">
 		<Channel Type="Cyclic" Protocol="Udp" Port="3002" />
 	</Network>
 	<Settings>
