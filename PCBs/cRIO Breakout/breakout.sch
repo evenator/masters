@@ -105,7 +105,7 @@ footprint=terminal_header_5mm_6
 }
 C 29900 54200 1 0 0 generic-power.sym
 {
-T 30100 54450 5 10 1 1 0 3 1
+T 30000 54450 5 10 1 1 0 3 1
 net=+24V:1
 }
 C 30500 54200 1 0 0 generic-power.sym
@@ -409,20 +409,20 @@ footprint=RJ9_vert
 }
 C 32000 56500 1 270 0 led-2.sym
 {
-T 32400 56200 5 10 1 1 0 0 1
+T 32400 55900 5 10 1 1 0 0 1
 refdes=POWER_LED
 T 32600 56400 5 10 0 0 270 0 1
 device=LED
-T 32000 56500 5 10 1 1 0 0 1
+T 32400 56100 5 10 1 1 0 0 1
 footprint=T1.75_LED
 }
 C 31200 56400 1 0 0 resistor-1.sym
 {
 T 31500 56800 5 10 0 0 0 0 1
 device=RESISTOR
-T 31400 56700 5 10 1 1 0 0 1
+T 31500 56900 5 10 1 1 0 0 1
 refdes=R12
-T 31900 56600 5 10 1 1 0 0 1
+T 31500 56700 5 10 1 1 0 0 1
 value=33k
 T 31200 56400 5 10 0 0 0 0 1
 footprint=0805
