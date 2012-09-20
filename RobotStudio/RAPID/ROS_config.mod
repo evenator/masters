@@ -25,17 +25,18 @@ MODULE ROS_config
 !CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
 !WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-VAR string client_ip;
-VAR string server_ip := "192.168.0.50";
-
-VAR num max_sequence;
-VAR jointTrajectoryPt{100} current_trajectory;
-VAR num trajectory_ptr;
-
 RECORD jointTrajectoryPt
 	robjoint joint_pos;
 	num velocity;
 	bool stop;
 ENDRECORD
+
+VAR string client_ip;
+VAR string server_ip := "192.168.0.50";
+
+VAR num max_sequence;
+VAR jointTrajectoryPt current_trajectory{100};
+VAR num trajectory_ptr;
+
 	
 ENDMODULE
