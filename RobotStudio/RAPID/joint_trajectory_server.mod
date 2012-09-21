@@ -31,10 +31,11 @@ LOCAL VAR num server_port := 11000;
 LOCAL VAR rawbytes buffer;
 LOCAL VAR rawbytes reply_msg;
 
-LOCAL VAR num tmp_max_sequence;
+LOCAL VAR num sequence_ptr;
 LOCAL VAR JointTrajectoryPt tmp_trajectory{100};
 
 PROC joint_trajectory_server_main()
+	VAR string client_ip;
 	!Set up reply message (it's always the same)
 	PackRawBytes 12, reply_msg, (RawBytesLen(reply_msg)+1), \IntX := DINT; !Packet length
 	PackRawBytes 1, reply_msg, (RawBytesLen(reply_msg)+1), \IntX := DINT; !Message type
@@ -42,9 +43,6 @@ PROC joint_trajectory_server_main()
 	PackRawBytes 0, reply_msg, (RawBytesLen(reply_msg)+1), \IntX := DINT; !Reply code
 
 	TCP_init;
-	TPWrite "Waiting for client connection";
-	SocketAccept server_socket, client_socket, \ClientAddress:=client_ip;
-	TPWrite "Client connected.";
 	WHILE ( true ) DO
 		!Recieve Joint Trajectory Pt Message
 		SocketReceive client_socket \RawData:=buffer \Time:=WAIT_MAX;
@@ -56,7 +54,10 @@ PROC joint_trajectory_server_main()
 		IF ERRNO=ERR_SOCK_TIMEOUT THEN
 			RETRY;
 		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
-			TCP_init;
+			TPWrite "Connection lost. Reconnecting to client."
+			SocketAccept server_socket, client_socket, \ClientAddress:=client_ip;
+			TPWrite "Client at "+client_ip+" connected.";
+!			TCP_init;
 			RETRY;
 		ELSE
 			! No error recovery handling
@@ -64,11 +65,14 @@ PROC joint_trajectory_server_main()
 ENDPROC
 
 LOCAL PROC TCP_init()
-	SocketClose server_socket;
+	VAR string client_ip;
+!	SocketClose server_socket;
 	SocketCreate server_socket;
 	SocketBind server_socket, server_ip, server_port;
 	SocketListen server_socket;
-	TPWrite "Server initialized.";
+	TPWrite "Server socket initializated. Waiting for client connection.";
+	SocketAccept server_socket, client_socket, \ClientAddress:=client_ip;
+	TPWrite "Client connected.";
 	ERROR
 		IF ERRNO=ERR_SOCK_CLOSED THEN
 			TRYNEXT;
@@ -81,7 +85,6 @@ LOCAL PROC trajectory_pt_callback()
 	VAR num type;
 	VAR num reply_code;
 	
-	VAR num sequence;
 	VAR num joint_tmp;
 	VAR JointTrajectoryPt point;
 	VAR jointtarget current_pos;
@@ -113,36 +116,32 @@ LOCAL PROC trajectory_pt_callback()
 	TEST sequence
 		CASE -1: !Start of download
 			point.stop := false; !Don't stop on this point
-			sequence := 0; !This is the first point in the sequence
-			tmp_max_sequence := sequence; !Increment the max sequence number
-			tmp_trajectory{sequence + 1} := point; !Add this point to the trajectory
-		CASE -2: !Start of stream
+			sequence_ptr := 0; !This is the first point in the sequence
+			tmp_trajectory{sequence_ptr + 1} := point; !Add this point to the trajectory
+		CASE -2: !Start of stream. Handles streams the same as downloads for now.
 			point.stop := false; !Don't stop on this point
-			sequence := 0; !This is the first point in the sequence
-			tmp_max_sequence := sequence; !Increment the max sequence number
-			tmp_trajectory{sequence + 1} := point; !Add this point to the trajectory
+			sequence_ptr := 0; !This is the first point in the sequence
+			tmp_trajectory{sequence_ptr + 1} := point; !Add this point to the trajectory
 		CASE -3: !End of stream
 			point.stop := true; !Stop on this point
-			sequence := tmp_max_sequence + 1; !Set sequence number to 1 higher than max
-			tmp_trajectory{sequence + 1} := point; !Add this point to the trajectory
-			current_trajectory := tmp_trajectory; !Send trajectory to motion process
-			max_sequence := tmp_max_sequence + 1; !Send max sequence to motion process
-			trajectory_ptr := 0; !Reset trajectory pointer
-			tmp_max_sequence := -1; !Reset max sequence
+			sequence_ptr := sequence_ptr + 1; !Set sequence number to 1 higher than max
+			tmp_trajectory{sequence_ptr + 1} := point; !Add this point to the trajectory
+			trajectory_acquireWriteLock(); !Wait for access to the trajectory to prevent race conditions
+			trajectory = tmp_trajectory; !Write the local trajectory to the shared trajectory
+			trajectory_setIRQ(); !Set an interrupt so the motion process knows to get the trajectory
 		CASE -4: !Stop command
 			!Replace the current trajectory with a trajectory to stop at the current position
 			current_pos := CJointT(); !Get the current position
 			point.joint_pos := current_pos.robax; !Go to the current position
 			point.velocity := 0; !Velocity should be 0
 			point.stop := true; !Stop on the current position
-			current_trajectory{1} := point; !Send trajectory of one point to the motion process
-			max_sequence := 0; !Reset max sequence
-			trajectory_ptr := 0; !Reset trajectory pointer
-			tmp_max_sequence := -1;  !Reset max sequence
+			trajectory_acquireWriteLock(); !Wait for access to the trajectory to prevent race conditions
+			trajectory{1} = point; !Write the (single point) trajectory to the shared trajectory
+			trajectory_setIRQ(); !Set an interrupt so the motion process knows to get the trajectory
 		DEFAULT:
 			point.stop := false;
-			tmp_max_sequence := sequence; !Increment the max sequence number
-			tmp_trajectory{sequence + 1} := point; !Add this point to the trajectory
+			sequence_ptr := sequence; !Increment the max sequence number
+			tmp_trajectory{sequence_ptr + 1} := point; !Add this point to the trajectory
 	ENDTEST
 	
 	SocketSend client_socket \RawData := reply_msg;
@@ -151,7 +150,10 @@ LOCAL PROC trajectory_pt_callback()
 		IF ERRNO=ERR_SOCK_TIMEOUT THEN
 			RETRY;
 		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
-			TCP_init;
+			TPWrite "Connection lost. Reconnecting to client."
+			SocketAccept server_socket, client_socket, \ClientAddress:=client_ip;
+			TPWrite "Client at "+client_ip+" connected.";
+!			TCP_init;
 			RETRY;
 		ELSE
 			! No error recovery handling

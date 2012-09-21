@@ -1,4 +1,4 @@
-MODULE ROS_config
+MODULE motion_module
 
 !Copyright (c) 2012, Edward Venator, Case Western Reserve University
 !All rights reserved.
@@ -25,57 +25,27 @@ MODULE ROS_config
 !CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
 !WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-RECORD jointTrajectoryPt
-	robjoint joint_pos;
-	num velocity;
-	bool stop;
-ENDRECORD
+LOCAL VAR num sequence_ptr := 0;
+LOCAL VAR JointTrajectoryPt motion_trajectory{100};
 
-VAR string client_ip;
-VAR string server_ip := "192.168.0.50";
-VAR num trajectory_lock := 0; 
-
-VAR jointTrajectoryPt trajectory{100};
-
-PROC trajectory_acquireWriteLock()
-	WHILE trajectory_lock < 0
-		!spin
+PROC motion_main()
+	!Wait on IRQ for a new trajectory to load
+	WHILE NOT trajectory_acquireReadLockIfIRQ()
+		motion_trajectory := trajectory; !Copy joint trajectory to local var
+		trajectory_releaseLock(); !Release lock on the joint trajectory
 	ENDWHILE
-	trajectory_lock := -1;
-ENDPROC
-
-PROC trajectory_acquireReadLock()
-	WHILE trajectory_lock < 0
-		!spin
+	WHILE ( true ) DO
+		MOVEJ motion_trajectory{sequence_ptr+1}.joint_pos motion_trajectory{sequence_ptr+1}.velocity !Move to next point
+		IF NOT motion_trajectory{sequence_ptr+1}.stop !Check if stopped
+			sequence_ptr := sequence_ptr + 1; !If not stopped, advance pointer to next in sequence
+		ENDIF
+		!Check IRQ to see if there's a new trajectory to load
+		IF trajectory_acquireReadLockIfIRQ()
+			motion_trajectory := trajectory; !Copy joint trajectory to local var
+			trajectory_releaseLock(); !Release lock on the joint trajectory
+			sequence_ptr := 0;
+		ENDIF
 	ENDWHILE
-	trajectory_lock := -2;
-ENDPROC
-
-PROC trajectory_setIRQ()
-	trajectory_lock := 1;
-ENDPROC
-
-FUNC trajectory_checkIRQ()
-	IF trajectory_lock = 1
-		RETURN true;
-	ELSE
-		RETURN false;
-	ENDIF
-ENDFUNC
-
-FUNC trajectory_acquireReadLockIfIRQ()
-	IF trajectory_lock = 1
-		trajectory_lock := -2
-		RETURN true;
-	ELSE
-		RETURN false;
-	ENDIF
-ENDFUNC
-
-PROC trajectory_releaseLock()
-	IF trajectory_lock < 0
-		trajectory_lock = 0;
-	ENDIF
 ENDPROC
 
 ENDMODULE
