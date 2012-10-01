@@ -27,22 +27,24 @@ MODULE motion_module
 
 LOCAL VAR num sequence_ptr := 0;
 LOCAL VAR JointTrajectoryPt motion_trajectory{100};
+LOCAL VAR jointtarget target := [[0,0,0,0,0,0], [9E9, 9E9, 9E9, 9E9, 9E9, 9E9] ];
 
-PROC motion_main()
+PROC main()
 	!Wait on IRQ for a new trajectory to load
-	WHILE NOT trajectory_acquireReadLockIfIRQ()
-		motion_trajectory := trajectory; !Copy joint trajectory to local var
-		trajectory_releaseLock(); !Release lock on the joint trajectory
-	ENDWHILE
-	WHILE ( true ) DO
-		MOVEJ motion_trajectory{sequence_ptr+1}.joint_pos motion_trajectory{sequence_ptr+1}.velocity !Move to next point
-		IF NOT motion_trajectory{sequence_ptr+1}.stop !Check if stopped
+	WaitUntil trajectory_acquireReadLockIfIRQ();
+	motion_trajectory := trajectory; !Copy joint trajectory to local var
+	trajectory_releaseLock; !Release lock on the joint trajectory
+	
+	WHILE true DO
+		target.robax := motion_trajectory{sequence_ptr+1}.joint_pos;
+		MOVEABSJ target, v1000, z10, tool0; !Move to next point
+		IF NOT motion_trajectory{sequence_ptr+1}.stop THEN !Check if stopped
 			sequence_ptr := sequence_ptr + 1; !If not stopped, advance pointer to next in sequence
 		ENDIF
 		!Check IRQ to see if there's a new trajectory to load
-		IF trajectory_acquireReadLockIfIRQ()
+		IF trajectory_acquireReadLockIfIRQ() THEN
 			motion_trajectory := trajectory; !Copy joint trajectory to local var
-			trajectory_releaseLock(); !Release lock on the joint trajectory
+			trajectory_releaseLock; !Release lock on the joint trajectory
 			sequence_ptr := 0;
 		ENDIF
 	ENDWHILE

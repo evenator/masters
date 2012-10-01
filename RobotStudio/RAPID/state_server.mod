@@ -29,12 +29,8 @@ LOCAL VAR socketdev server_socket;
 LOCAL VAR socketdev client_socket;
 LOCAL VAR num server_port := 11002;
 
-PROC state_server_main()
-	SocketCreate server_socket;
+PROC main()
 	TCP_init;
-	TPWrite "Waiting for client connection";
-	SocketAccept server_socket, client_socket, \ClientAddress:=client_ip;
-	TPWrite "Client connected.";
 	while ( true ) do
 		WaitTime .050;
 		!Send Mode to Client
@@ -59,10 +55,36 @@ PROC state_server_main()
 		ENDIF
 ENDPROC
 
+LOCAL PROC connect_client()
+	VAR string client_ip := "";
+	WHILE strlen(client_ip) = 0 DO
+		SocketAccept server_socket, client_socket, \ClientAddress:=client_ip;
+	ENDWHILE
+	TPWrite "Client at "+client_ip+" connected.";
+	TPWrite "Client connected.";
+	ERROR
+		IF ERRNO=ERR_SOCK_TIMEOUT THEN
+			TRYNEXT;
+		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
+			TCP_init;
+			RETRY;
+		ENDIF
+ENDPROC
+
 LOCAL PROC TCP_init()
+	VAR string client_ip;
+!	SocketClose server_socket;
+	SocketCreate server_socket;
 	SocketBind server_socket, server_ip, server_port;
 	SocketListen server_socket;
-	TPWrite "Server initialized.";
+	TPWrite "Server socket initializated. Waiting for client connection.";
+	connect_client;
+	ERROR
+		IF ERRNO=ERR_SOCK_CLOSED THEN
+			TRYNEXT;
+		ELSEIF ERRNO=ERR_SOCK_TIMEOUT THEN
+			RETRY;
+		ENDIF
 ENDPROC
 
 LOCAL PROC send_mode()
@@ -103,7 +125,8 @@ LOCAL PROC send_mode()
 		IF ERRNO=ERR_SOCK_TIMEOUT THEN
 			RETRY;
 		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
-			TCP_init;
+			TPWrite "Connection lost. Waiting for client to reconnect.";
+			connect_client;
 			RETRY;
 		ELSE
 			! No error recovery handling
@@ -145,7 +168,8 @@ LOCAL PROC send_status()
 		IF ERRNO=ERR_SOCK_TIMEOUT THEN
 			RETRY;
 		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
-			TCP_init;
+			TPWrite "Connection lost. Waiting for client to reconnect.";
+			connect_client;
 			RETRY;
 		ELSE
 			! No error recovery handling
@@ -186,7 +210,8 @@ LOCAL PROC send_estop()
 		IF ERRNO=ERR_SOCK_TIMEOUT THEN
 			RETRY;
 		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
-			TCP_init;
+			TPWrite "Connection lost. Waiting for client to reconnect.";
+			connect_client;
 			RETRY;
 		ELSE
 			! No error recovery handling
@@ -235,7 +260,8 @@ LOCAL PROC send_joints()
 		IF ERRNO=ERR_SOCK_TIMEOUT THEN
 			RETRY;
 		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
-			TCP_init;
+			TPWrite "Connection lost. Waiting for client to reconnect.";
+			connect_client;
 			RETRY;
 		ELSE
 			! No error recovery handling

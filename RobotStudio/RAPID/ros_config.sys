@@ -1,4 +1,4 @@
-MODULE ROS_config
+MODULE ros_config(SYSMODULE)
 
 !Copyright (c) 2012, Edward Venator, Case Western Reserve University
 !All rights reserved.
@@ -33,21 +33,17 @@ ENDRECORD
 
 VAR string client_ip;
 VAR string server_ip := "192.168.0.50";
-VAR num trajectory_lock := 0; 
+PERS num trajectory_lock := 0; 
 
-VAR jointTrajectoryPt trajectory{100};
+PERS jointTrajectoryPt trajectory{100};
 
 PROC trajectory_acquireWriteLock()
-	WHILE trajectory_lock < 0
-		!spin
-	ENDWHILE
+	WaitUntil trajectory_lock >= 0;
 	trajectory_lock := -1;
 ENDPROC
 
 PROC trajectory_acquireReadLock()
-	WHILE trajectory_lock < 0
-		!spin
-	ENDWHILE
+	WaitUntil trajectory_lock >= 0;
 	trajectory_lock := -2;
 ENDPROC
 
@@ -55,17 +51,17 @@ PROC trajectory_setIRQ()
 	trajectory_lock := 1;
 ENDPROC
 
-FUNC trajectory_checkIRQ()
-	IF trajectory_lock = 1
+FUNC bool trajectory_checkIRQ()
+	IF trajectory_lock = 1 THEN
 		RETURN true;
 	ELSE
 		RETURN false;
 	ENDIF
 ENDFUNC
 
-FUNC trajectory_acquireReadLockIfIRQ()
-	IF trajectory_lock = 1
-		trajectory_lock := -2
+FUNC bool trajectory_acquireReadLockIfIRQ()
+	IF trajectory_lock = 1 THEN
+		trajectory_lock := -2;
 		RETURN true;
 	ELSE
 		RETURN false;
@@ -73,8 +69,8 @@ FUNC trajectory_acquireReadLockIfIRQ()
 ENDFUNC
 
 PROC trajectory_releaseLock()
-	IF trajectory_lock < 0
-		trajectory_lock = 0;
+	IF trajectory_lock < 0 THEN
+		trajectory_lock := 0;
 	ENDIF
 ENDPROC
 

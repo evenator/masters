@@ -34,7 +34,7 @@ LOCAL VAR rawbytes reply_msg;
 LOCAL VAR num sequence_ptr;
 LOCAL VAR JointTrajectoryPt tmp_trajectory{100};
 
-PROC joint_trajectory_server_main()
+PROC main()
 	VAR string client_ip;
 	!Set up reply message (it's always the same)
 	PackRawBytes 12, reply_msg, (RawBytesLen(reply_msg)+1), \IntX := DINT; !Packet length
@@ -54,13 +54,27 @@ PROC joint_trajectory_server_main()
 		IF ERRNO=ERR_SOCK_TIMEOUT THEN
 			RETRY;
 		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
-			TPWrite "Connection lost. Reconnecting to client."
-			SocketAccept server_socket, client_socket, \ClientAddress:=client_ip;
-			TPWrite "Client at "+client_ip+" connected.";
-!			TCP_init;
+			TPWrite "Connection lost. Waiting for client to reconnect.";
+			connect_client;
 			RETRY;
 		ELSE
 			! No error recovery handling
+		ENDIF
+ENDPROC
+
+LOCAL PROC connect_client()
+	VAR string client_ip := "";
+	WHILE strlen(client_ip) = 0 DO
+		SocketAccept server_socket, client_socket, \ClientAddress:=client_ip;
+	ENDWHILE
+	TPWrite "Client at "+client_ip+" connected.";
+	TPWrite "Client connected.";
+	ERROR
+		IF ERRNO=ERR_SOCK_TIMEOUT THEN
+			TRYNEXT;
+		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
+			TCP_init;
+			RETRY;
 		ENDIF
 ENDPROC
 
@@ -71,11 +85,12 @@ LOCAL PROC TCP_init()
 	SocketBind server_socket, server_ip, server_port;
 	SocketListen server_socket;
 	TPWrite "Server socket initializated. Waiting for client connection.";
-	SocketAccept server_socket, client_socket, \ClientAddress:=client_ip;
-	TPWrite "Client connected.";
+	connect_client;
 	ERROR
 		IF ERRNO=ERR_SOCK_CLOSED THEN
 			TRYNEXT;
+		ELSEIF ERRNO=ERR_SOCK_TIMEOUT THEN
+			RETRY;
 		ENDIF
 ENDPROC
 
@@ -84,6 +99,7 @@ LOCAL PROC trajectory_pt_callback()
 	VAR num packet_length;
 	VAR num type;
 	VAR num reply_code;
+	VAR num sequence;
 	
 	VAR num joint_tmp;
 	VAR JointTrajectoryPt point;
@@ -126,18 +142,18 @@ LOCAL PROC trajectory_pt_callback()
 			point.stop := true; !Stop on this point
 			sequence_ptr := sequence_ptr + 1; !Set sequence number to 1 higher than max
 			tmp_trajectory{sequence_ptr + 1} := point; !Add this point to the trajectory
-			trajectory_acquireWriteLock(); !Wait for access to the trajectory to prevent race conditions
-			trajectory = tmp_trajectory; !Write the local trajectory to the shared trajectory
-			trajectory_setIRQ(); !Set an interrupt so the motion process knows to get the trajectory
+			trajectory_acquireWriteLock; !Wait for access to the trajectory to prevent race conditions
+			trajectory := tmp_trajectory; !Write the local trajectory to the shared trajectory
+			trajectory_setIRQ; !Set an interrupt so the motion process knows to get the trajectory
 		CASE -4: !Stop command
 			!Replace the current trajectory with a trajectory to stop at the current position
 			current_pos := CJointT(); !Get the current position
 			point.joint_pos := current_pos.robax; !Go to the current position
 			point.velocity := 0; !Velocity should be 0
 			point.stop := true; !Stop on the current position
-			trajectory_acquireWriteLock(); !Wait for access to the trajectory to prevent race conditions
-			trajectory{1} = point; !Write the (single point) trajectory to the shared trajectory
-			trajectory_setIRQ(); !Set an interrupt so the motion process knows to get the trajectory
+			trajectory_acquireWriteLock; !Wait for access to the trajectory to prevent race conditions
+			trajectory{1} := point; !Write the (single point) trajectory to the shared trajectory
+			trajectory_setIRQ; !Set an interrupt so the motion process knows to get the trajectory
 		DEFAULT:
 			point.stop := false;
 			sequence_ptr := sequence; !Increment the max sequence number
@@ -150,10 +166,8 @@ LOCAL PROC trajectory_pt_callback()
 		IF ERRNO=ERR_SOCK_TIMEOUT THEN
 			RETRY;
 		ELSEIF ERRNO=ERR_SOCK_CLOSED THEN
-			TPWrite "Connection lost. Reconnecting to client."
-			SocketAccept server_socket, client_socket, \ClientAddress:=client_ip;
-			TPWrite "Client at "+client_ip+" connected.";
-!			TCP_init;
+			TPWrite "Connection lost. Waiting for client to reconnect.";
+			connect_client;
 			RETRY;
 		ELSE
 			! No error recovery handling
