@@ -37,8 +37,10 @@ PROC main()
 	
 	WHILE true DO
 		target.robax := motion_trajectory{sequence_ptr+1}.joint_pos;
-		MOVEABSJ target, v1000, z10, tool0; !Move to next point
-		IF NOT motion_trajectory{sequence_ptr+1}.stop THEN !Check if stopped
+		IF motion_trajectory{sequence_ptr+1}.stop THEN !Check if stopped
+			MOVEABSJ target, v1000, fine, tool0; !Move to next point and stop
+		ELSE
+			MOVEABSJ target, v1000, z10, tool0; !Move to next point
 			sequence_ptr := sequence_ptr + 1; !If not stopped, advance pointer to next in sequence
 		ENDIF
 		!Check IRQ to see if there's a new trajectory to load
