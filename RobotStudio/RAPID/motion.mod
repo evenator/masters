@@ -1,4 +1,4 @@
-MODULE ROS_config
+MODULE motion_module
 
 !Copyright (c) 2012, Edward Venator, Case Western Reserve University
 !All rights reserved.
@@ -25,17 +25,31 @@ MODULE ROS_config
 !CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
 !WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-VAR string client_ip;
-VAR string server_ip := "192.168.0.50";
+LOCAL VAR num sequence_ptr := 0;
+LOCAL VAR JointTrajectoryPt motion_trajectory{100};
+LOCAL VAR jointtarget target := [[0,0,0,0,0,0], [9E9, 9E9, 9E9, 9E9, 9E9, 9E9] ];
 
-VAR num max_sequence;
-VAR jointTrajectoryPt{100} current_trajectory;
-VAR num trajectory_ptr;
-
-RECORD jointTrajectoryPt
-	robjoint joint_pos;
-	num velocity;
-	bool stop;
-ENDRECORD
+PROC main()
+	!Wait on IRQ for a new trajectory to load
+	WaitUntil trajectory_acquireReadLockIfIRQ();
+	motion_trajectory := trajectory; !Copy joint trajectory to local var
+	trajectory_releaseLock; !Release lock on the joint trajectory
 	
+	WHILE true DO
+		target.robax := motion_trajectory{sequence_ptr+1}.joint_pos;
+		IF motion_trajectory{sequence_ptr+1}.stop THEN !Check if stopped
+			MOVEABSJ target, v1000, fine, tool0; !Move to next point and stop
+		ELSE
+			MOVEABSJ target, v1000, z10, tool0; !Move to next point
+			sequence_ptr := sequence_ptr + 1; !If not stopped, advance pointer to next in sequence
+		ENDIF
+		!Check IRQ to see if there's a new trajectory to load
+		IF trajectory_acquireReadLockIfIRQ() THEN
+			motion_trajectory := trajectory; !Copy joint trajectory to local var
+			trajectory_releaseLock; !Release lock on the joint trajectory
+			sequence_ptr := 0;
+		ENDIF
+	ENDWHILE
+ENDPROC
+
 ENDMODULE
