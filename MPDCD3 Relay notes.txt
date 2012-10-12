@@ -1,0 +1,9 @@
+Crydom MPDCD3 Relay
+3A, 60V output
+3-32v Input (16mA @ 24v; 40kOhm)
+
+Pins
+1 Positive output
+2 Negative output
+3 Positive coil
+4 Negative coil
