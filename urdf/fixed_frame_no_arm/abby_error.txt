@@ -1,0 +1,9 @@
+Constrained Parts: robot_no_arm.iam, SICK LMS291.ipt
+Constrain Name: Mate:118
+Error Details: Unknown
+---------------------------------------------------------------------------------
+Constrained Parts: back frame plate.ipt, frame_solid.iam
+Constrain Name: Tangent:8
+Error Details: Massless connector is not supported if there are more than one constrain between parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+
