@@ -2,4 +2,11 @@
 root: "frame1"
 freezeAll: True
 filenameformat: "package://abby_description/meshes/%s"
+forcelowercase: True
 scale: "0.0254 0.0254 0.0254"
+redefinedjoints:
+    21:  {name: r_caster_joint, type: continuous, axis: "0 1 0"}
+    23:  {name: l_caster_joint, type: continuous, axis: "0 1 0"}
+    33: {name: r_caster_wheel_joint, type: continuous, axis: "0 1 0"}
+    3: {name: l_caster_wheel_joint, type: continuous, axis: "0 1 0"}
+    17: {name: l_drive_wheel_joint, type: continuous, axis: "0 -1 0"}
