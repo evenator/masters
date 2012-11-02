@@ -1,3 +1,6 @@
+sudo sh -c 'echo "deb http://packages.ros.org/ros-shadow-fixed/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-get update
+sudo apt-get install ros-fuerte-moveit-core python-rosinstall python-rosdep
 cd ~/ros/dev_stacks/
 mkdir moveit
 cd moveit
