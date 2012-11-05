@@ -1,0 +1,5 @@
+#baseframe: "frame_origin"
+#root: "al_frame"
+freezeAll: True
+filenameformat: "package://abby_description/meshes/%s"
+scale: "0.0254 0.0254 0.0254"
