@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<PhysicalModelingXMLFile>
+
+  <formatVersion>"1.0.4"</formatVersion>
+
+  <internalVersion>1</internalVersion>
+
+  <createdUsing>"THIS FIELD IS NOT USED ANYMORE-SPACE HOLDER"</createdUsing>
+
+  <createdFrom>"Autodesk Inventor 2012 (Build 160160000, 160)"</createdFrom>
+
+  <createdOn>"Ed"</createdOn>
+
+  <createdBy>"11/30/12||15:09:22"</createdBy>
+
+  <name>"gripper with jaws"</name>
+
+  <SimMechanics>
+    <name>"gripper with jaws"</name>
+    <nodeID>"gripper with jaws"</nodeID>
+    <bodies>
+      <Body>
+        <name>"gripper:2"</name>
+        <nodeID>"gripper:2"</nodeID>
+        <status>""</status>
+        <mass>0.491192</mass>
+        <massUnits>"lbm"</massUnits>
+        <inertia>0.389168,0,0,0,0.452823,-0.00145782,0,-0.00145782,0.31023</inertia>
+        <inertiaUnits>"lbm*in^2"</inertiaUnits>
+        <volume>9.03524</volume>
+        <volumeUnits>"in^3"</volumeUnits>
+        <surfaceArea>55.6386</surfaceArea>
+        <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+        <frames>
+          <Frame>
+            <name>"CG"</name>
+            <displayName>""</displayName>
+            <nodeID>"gripper:2::CG(AUTOGEN)"</nodeID>
+            <position>-39.7776,-5.2821,-35.2291</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>-0.927642,-0.373472,0,-0.373472,0.927642,0,0,0,-1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame>
+            <name>"CS1"</name>
+            <displayName>""</displayName>
+            <nodeID>"gripper:2::CS1(AUTOGEN)"</nodeID>
+            <position>-39.7789,-5.27884,-35.8872</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>-0.927642,-0.373472,0,-0.373472,0.927642,0,0,0,-1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame ref="4">
+            <name>"CS2"</name>
+            <displayName>""</displayName>
+            <nodeID>"gripper jaw:2:-:gripper:2::gripper:2(AUTOGEN)"</nodeID>
+            <position>-40.9863,-5.73036,-33.7368</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+        </frames>
+        <geometryFileName>"gripper_iam_ad0c01b6.STL"</geometryFileName>
+        <MaterialProp>
+          <color>0.752941,0.752941,0.752941</color>
+          <ambient>1</ambient>
+          <diffuse>1</diffuse>
+          <specular>1</specular>
+          <shininess>0.2</shininess>
+          <transparency>0</transparency>
+          <emission>0.2</emission>
+        </MaterialProp>
+      </Body>
+      <Body>
+        <name>"gripper jaw:1"</name>
+        <nodeID>"gripper jaw:1"</nodeID>
+        <status>""</status>
+        <mass>0.0203212</mass>
+        <massUnits>"lbm"</massUnits>
+        <inertia>0.00704395,0.00103916,0,0.00103916,0.00280879,0,0,0,0.0058652</inertia>
+        <inertiaUnits>"lbm*in^2"</inertiaUnits>
+        <volume>0.562488</volume>
+        <volumeUnits>"in^3"</volumeUnits>
+        <surfaceArea>6.66686</surfaceArea>
+        <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+        <frames>
+          <Frame>
+            <name>"CG"</name>
+            <displayName>""</displayName>
+            <nodeID>"gripper jaw:1::CG(AUTOGEN)"</nodeID>
+            <position>-38.5955,-4.76779,-33.7368</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>-0.927642,-0.373472,0,0,0,1,-0.373472,0.927642,0</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame>
+            <name>"CS1"</name>
+            <displayName>""</displayName>
+            <nodeID>"gripper jaw:1::CS1(AUTOGEN)"</nodeID>
+            <position>-38.1837,-5.14102,-34.4664</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>-0.927642,-0.373472,0,0,0,1,-0.373472,0.927642,0</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame ref="1">
+            <name>"CS2"</name>
+            <displayName>""</displayName>
+            <nodeID>"gripper jaw:1:-:gripper jaw:2::gripper jaw:1(AUTOGEN)"</nodeID>
+            <position>-38.4156,-5.23438,-33.8414</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+        </frames>
+        <geometryFileName>"gripper jaw_ipt_2c7c957b.STL"</geometryFileName>
+        <MaterialProp>
+          <color>0.752941,0.752941,0.752941</color>
+          <ambient>1</ambient>
+          <diffuse>1</diffuse>
+          <specular>1</specular>
+          <shininess>0.2</shininess>
+          <transparency>0</transparency>
+          <emission>0.2</emission>
+        </MaterialProp>
+      </Body>
+      <Body>
+        <name>"gripper jaw:2"</name>
+        <nodeID>"gripper jaw:2"</nodeID>
+        <status>""</status>
+        <mass>0.0203212</mass>
+        <massUnits>"lbm"</massUnits>
+        <inertia>0.00704395,0.00103916,0,0.00103916,0.00280879,0,0,0,0.0058652</inertia>
+        <inertiaUnits>"lbm*in^2"</inertiaUnits>
+        <volume>0.562488</volume>
+        <volumeUnits>"in^3"</volumeUnits>
+        <surfaceArea>6.66686</surfaceArea>
+        <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+        <frames>
+          <Frame>
+            <name>"CG"</name>
+            <displayName>""</displayName>
+            <nodeID>"gripper jaw:2::CG(AUTOGEN)"</nodeID>
+            <position>-40.9863,-5.73036,-33.7368</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>0.927642,0.373472,0,0,0,1,0.373472,-0.927642,0</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame>
+            <name>"CS1"</name>
+            <displayName>""</displayName>
+            <nodeID>"gripper jaw:2::CS1(AUTOGEN)"</nodeID>
+            <position>-41.3981,-5.35713,-34.4664</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>0.927642,0.373472,0,0,0,1,0.373472,-0.927642,0</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame ref="2">
+            <name>"CS2"</name>
+            <displayName>""</displayName>
+            <nodeID>"gripper jaw:1:-:gripper jaw:2::gripper jaw:2(AUTOGEN)"</nodeID>
+            <position>-38.4156,-5.23438,-33.8414</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame ref="3">
+            <name>"CS3"</name>
+            <displayName>""</displayName>
+            <nodeID>"gripper jaw:2:-:gripper:2::gripper jaw:2(AUTOGEN)"</nodeID>
+            <position>-40.9863,-5.73036,-33.7368</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+        </frames>
+        <geometryFileName>"gripper jaw_ipt_2c7c957b.STL"</geometryFileName>
+        <MaterialProp>
+          <color>0.752941,0.752941,0.752941</color>
+          <ambient>1</ambient>
+          <diffuse>1</diffuse>
+          <specular>1</specular>
+          <shininess>0.2</shininess>
+          <transparency>0</transparency>
+          <emission>0.2</emission>
+        </MaterialProp>
+      </Body>
+    </bodies>
+    <joints>
+      <SimpleJoint>
+        <name>"gripper jaw:1--gripper jaw:2"</name>
+        <nodeID>"gripper jaw:1:-:gripper jaw:2"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="1"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="2"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"weld"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.57735,0.57735,0.57735</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"gripper jaw:2--gripper:2"</name>
+        <nodeID>"gripper jaw:2:-:gripper:2"</nodeID>
+        <status>"Could not solve for constraint between gripper jaw.ipt and gripper.iam because of CAD constrain Mate:144"</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="3"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="4"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"weld"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.57735,0.57735,0.57735</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+    </joints>
+    <grounds>
+      <Ground>
+        <name>"RootGround"</name>
+        <nodeID>"RootGround"</nodeID>
+        <status>""</status>
+        <frame>
+          <Frame ref="5">
+            <name>"CS1"</name>
+            <displayName>""</displayName>
+            <nodeID>""</nodeID>
+            <position>0,0,0</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+        </frame>
+      </Ground>
+    </grounds>
+    <subsystems></subsystems>
+    <connectionPorts></connectionPorts>
+    <id>0</id>
+  </SimMechanics>
+
+</PhysicalModelingXMLFile>

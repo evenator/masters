@@ -9,9 +9,9 @@
 
   <createdFrom>"Autodesk Inventor 2012 (Build 160160000, 160)"</createdFrom>
 
-  <createdOn>"Edward"</createdOn>
+  <createdOn>"Ed"</createdOn>
 
-  <createdBy>"10/28/12||15:21:16"</createdBy>
+  <createdBy>"11/30/12||15:27:04"</createdBy>
 
   <name>"robot_no_arm"</name>
 
@@ -36,11 +36,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"f_r_frame_bracket::CG(AUTOGEN)"</nodeID>
-            <position>-7.9544,-20.19,1.22085</position>
+            <position>-9.56569,-13.6074,-1.30325</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-5.21927e-011,0.854389,0.519635,-1,-5.62713e-012,-9.11895e-011,-7.49872e-011,-0.519635,0.854389</orientation>
+            <orientation>-0.0188837,0.995596,0.0918218,-0.979501,0,-0.20144,-0.200553,-0.0937434,0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -49,20 +49,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"f_r_frame_bracket::CS1(AUTOGEN)"</nodeID>
-            <position>-6.9544,-22.4411,-0.919093</position>
+            <position>-8.39678,-16.5676,-2.0228</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-5.21927e-011,0.854389,0.519635,-1,-5.62713e-012,-9.11895e-011,-7.49872e-011,-0.519635,0.854389</orientation>
+            <orientation>-0.0188837,0.995596,0.0918218,-0.979501,0,-0.20144,-0.200553,-0.0937434,0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="14">
+          <Frame ref="22">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>"f_l_frame_bracket:-:f_r_frame_bracket::f_r_frame_bracket(AUTOGEN)"</nodeID>
-            <position>10.5073,-20.8622,0.333774</position>
+            <nodeID>"f_r_frame_bracket:-:f_r_frame_plate::f_r_frame_bracket(AUTOGEN)"</nodeID>
+            <position>-8.94318,-13.5808,-1.84806</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -71,11 +71,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="30">
+          <Frame ref="66">
             <name>"CS3"</name>
             <displayName>""</displayName>
-            <nodeID>"f_r_frame_bracket:-:f_r_frame_plate::f_r_frame_bracket(AUTOGEN)"</nodeID>
-            <position>-7.4544,-19.8779,0.639811</position>
+            <nodeID>"f_r_frame_bracket:-:frame::f_r_frame_bracket(AUTOGEN)"</nodeID>
+            <position>-12.6138,-14.4248,14.4651</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -84,11 +84,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="32">
+          <Frame ref="78">
             <name>"CS4"</name>
             <displayName>""</displayName>
-            <nodeID>"f_r_frame_bracket:-:frame::f_r_frame_bracket(AUTOGEN)"</nodeID>
-            <position>-7.76366,-27.9471,15.3061</position>
+            <nodeID>"f_l_frame_bracket:-:f_r_frame_bracket::f_r_frame_bracket(AUTOGEN)"</nodeID>
+            <position>8.61908,-14.5998,1.92213</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -126,11 +126,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"f_l_frame_bracket::CG(AUTOGEN)"</nodeID>
-            <position>11.5073,-20.19,1.22085</position>
+            <position>9.49708,-13.6074,2.61712</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>2.41077e-010,0.854389,0.519635,-1,2.21246e-010,1.0016e-010,-2.9392e-011,-0.519635,0.854389</orientation>
+            <orientation>-0.0188837,0.995596,0.0918218,-0.979501,1.79639e-010,-0.20144,-0.200553,-0.0937434,0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -139,20 +139,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"f_l_frame_bracket::CS1(AUTOGEN)"</nodeID>
-            <position>12.5073,-22.4411,-0.919093</position>
+            <position>10.666,-16.5676,1.89757</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>2.41077e-010,0.854389,0.519635,-1,2.21246e-010,1.0016e-010,-2.9392e-011,-0.519635,0.854389</orientation>
+            <orientation>-0.0188837,0.995596,0.0918218,-0.979501,1.79639e-010,-0.20144,-0.200553,-0.0937434,0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="13">
+          <Frame ref="20">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>"f_l_frame_bracket:-:f_r_frame_bracket::f_l_frame_bracket(AUTOGEN)"</nodeID>
-            <position>10.5073,-20.8622,0.333774</position>
+            <nodeID>"f_l_frame_bracket:-:f_l_frame_plate::f_l_frame_bracket(AUTOGEN)"</nodeID>
+            <position>10.666,-16.5676,1.89757</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -161,11 +161,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="16">
+          <Frame ref="77">
             <name>"CS3"</name>
             <displayName>""</displayName>
-            <nodeID>"f_l_frame_bracket:-:f_l_frame_plate::f_l_frame_bracket(AUTOGEN)"</nodeID>
-            <position>12.5073,-22.4411,-0.919093</position>
+            <nodeID>"f_l_frame_bracket:-:f_r_frame_bracket::f_l_frame_bracket(AUTOGEN)"</nodeID>
+            <position>8.61908,-14.5998,1.92213</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -203,11 +203,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"IRC5_Compact::CG(AUTOGEN)"</nodeID>
-            <position>1.6807,-14.2228,15.2148</position>
+            <position>-2.13767,-2.12196,10.4092</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-1,2.35438e-010,-1.1991e-012,-1.04025e-010,-0.437253,0.899338,2.11214e-010,0.899338,0.437253</orientation>
+            <orientation>-0.979501,2.62027e-011,-0.20144,-0.20144,-4.77519e-011,0.979501,1.60464e-011,1,5.20513e-011</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -216,20 +216,33 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"IRC5_Compact::CS1(AUTOGEN)"</nodeID>
-            <position>-7.17114,-19.6384,7.18254</position>
+            <position>-9.82992,-10.5045,3.86992</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-1,2.35438e-010,-1.1991e-012,-1.04025e-010,-0.437253,0.899338,2.11214e-010,0.899338,0.437253</orientation>
+            <orientation>-0.979501,2.62027e-011,-0.20144,-0.20144,-4.77519e-011,0.979501,1.60464e-011,1,5.20513e-011</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="7">
+          <Frame ref="31">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>":-:robot_no_arm/RootPart::IRC5_Compact(AUTOGEN)"</nodeID>
-            <position>-7.17114,-19.6384,7.18254</position>
+            <nodeID>"IRC5_Compact:-:base_plate::IRC5_Compact(AUTOGEN)"</nodeID>
+            <position>-9.75061,-10.5045,3.48429</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame ref="34">
+            <name>"CS3"</name>
+            <displayName>""</displayName>
+            <nodeID>"IRC5_Compact:-:frame::IRC5_Compact(AUTOGEN)"</nodeID>
+            <position>-9.63786,7.7002,2.76992</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -239,23 +252,10 @@
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
           <Frame ref="35">
-            <name>"CS3"</name>
-            <displayName>""</displayName>
-            <nodeID>"IRC5_Compact:-:base_plate::IRC5_Compact(AUTOGEN)"</nodeID>
-            <position>-7.17114,-19.4662,6.82847</position>
-            <positionOrigin>"WORLD"</positionOrigin>
-            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-            <positionUnits>"in"</positionUnits>
-            <orientation>1,0,0,0,1,0,0,0,1</orientation>
-            <orientationType>"3x3 Transform"</orientationType>
-            <orientationUnits>"rad"</orientationUnits>
-            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-          </Frame>
-          <Frame ref="38">
             <name>"CS4"</name>
             <displayName>""</displayName>
-            <nodeID>"IRC5_Compact:-:frame::IRC5_Compact(AUTOGEN)"</nodeID>
-            <position>-7.2046,-2.77813,14.1388</position>
+            <nodeID>":-:robot_no_arm/RootPart::IRC5_Compact(AUTOGEN)"</nodeID>
+            <position>-9.82992,-10.5045,3.86992</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -293,11 +293,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"PC::CG(AUTOGEN)"</nodeID>
-            <position>-0.289893,-16.8847,22.8761</position>
+            <position>-5.69029,-1.16596,17.9012</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,-3.01969e-012,1.14201e-010,1.04025e-010,0.437253,-0.899338,-4.72193e-011,0.899338,0.437253</orientation>
+            <orientation>0.979501,0,0.20144,0.20144,0,-0.979501,0,1,0</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -306,20 +306,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"PC::CS1(AUTOGEN)"</nodeID>
-            <position>-6.7794,-25.0643,20.983</position>
+            <position>-12.4243,-9.35,18.4295</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,-3.01969e-012,1.14201e-010,1.04025e-010,0.437253,-0.899338,-4.72193e-011,0.899338,0.437253</orientation>
+            <orientation>0.979501,0,0.20144,0.20144,0,-0.979501,0,1,0</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="39">
+          <Frame ref="37">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"PC:-:top_plate::PC(AUTOGEN)"</nodeID>
-            <position>-6.7794,-23.4246,17.6105</position>
+            <position>-11.6689,-9.35,14.7564</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -357,11 +357,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"SICK_LMS291::CG(AUTOGEN)"</nodeID>
-            <position>1.6872,-25.8058,3.94854</position>
+            <position>-1.11052,-17.4652,5.44694</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-1,4.23343e-012,-1.16697e-010,-1.06801e-010,-0.437253,0.899338,-4.72188e-011,0.899338,0.437253</orientation>
+            <orientation>-0.979501,0,-0.20144,-0.20144,0,0.979501,0,1,0</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -370,20 +370,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"SICK_LMS291::CS1(AUTOGEN)"</nodeID>
-            <position>1.68713,-25.4219,1.16694</position>
+            <position>-0.57285,-18.3362,2.8322</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-1,4.23343e-012,-1.16697e-010,-1.06801e-010,-0.437253,0.899338,-4.72188e-011,0.899338,0.437253</orientation>
+            <orientation>-0.979501,0,-0.20144,-0.20144,0,0.979501,0,1,0</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="10">
+          <Frame ref="24">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>":-:SICK_LMS291::SICK_LMS291(AUTOGEN)"</nodeID>
-            <position>1.29686,-11.663,8.63574</position>
+            <nodeID>"SICK_LMS291:-:frame::SICK_LMS291(AUTOGEN)"</nodeID>
+            <position>-3.23005,-14.6748,2.3845</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -392,11 +392,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="42">
+          <Frame ref="26">
             <name>"CS3"</name>
             <displayName>""</displayName>
-            <nodeID>"SICK_LMS291:-:frame::SICK_LMS291(AUTOGEN)"</nodeID>
-            <position>-1.00578,-22.1714,2.85491</position>
+            <nodeID>":-:SICK_LMS291::SICK_LMS291(AUTOGEN)"</nodeID>
+            <position>-1.29364,-3.18038,3.57828</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -434,11 +434,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"b_l_frame_plate::CG(AUTOGEN)"</nodeID>
-            <position>11.0095,-1.73982,11.525</position>
+            <position>8.76789,7.49109,3.69176</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-1,1.73793e-010,1.00161e-010,-2.00532e-010,-0.854389,-0.519635,-4.73239e-012,-0.519635,0.854389</orientation>
+            <orientation>-0.979501,2.50692e-010,-0.20144,0.0188837,-0.995596,-0.0918218,-0.200553,-0.0937434,0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -447,20 +447,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"b_l_frame_plate::CS1(AUTOGEN)"</nodeID>
-            <position>12.5073,1.7376,13.4936</position>
+            <position>10.1846,11.4793,4.23831</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-1,1.73793e-010,1.00161e-010,-2.00532e-010,-0.854389,-0.519635,-4.73239e-012,-0.519635,0.854389</orientation>
+            <orientation>-0.979501,2.50692e-010,-0.20144,0.0188837,-0.995596,-0.0918218,-0.200553,-0.0937434,0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="25">
+          <Frame ref="9">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>"b_l_frame_plate:-:drive_base:drive_base/frame_solid:1::b_l_frame_plate(AUTOGEN)"</nodeID>
-            <position>11.0095,-1.73982,11.525</position>
+            <nodeID>"b_l_frame_plate:-:b_r_frame_plate::b_l_frame_plate(AUTOGEN)"</nodeID>
+            <position>7.2461,11.4793,3.63399</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -469,11 +469,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="43">
+          <Frame ref="15">
             <name>"CS3"</name>
             <displayName>""</displayName>
-            <nodeID>"b_l_frame_plate:-:b_r_frame_plate::b_l_frame_plate(AUTOGEN)"</nodeID>
-            <position>9.50731,1.7376,13.4936</position>
+            <nodeID>"b_l_frame_plate:-:f_l_frame_plate::b_l_frame_plate(AUTOGEN)"</nodeID>
+            <position>9.19022,-13.5573,1.62707</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -482,11 +482,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="45">
+          <Frame ref="27">
             <name>"CS4"</name>
             <displayName>""</displayName>
-            <nodeID>"b_l_frame_plate:-:f_l_frame_plate::b_l_frame_plate(AUTOGEN)"</nodeID>
-            <position>11.0073,-19.748,0.426214</position>
+            <nodeID>"b_l_frame_bracket:-:b_l_frame_plate::b_l_frame_plate(AUTOGEN)"</nodeID>
+            <position>10.1846,11.4793,4.23831</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -495,11 +495,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="47">
+          <Frame ref="29">
             <name>"CS5"</name>
             <displayName>""</displayName>
-            <nodeID>"b_l_frame_bracket:-:b_l_frame_plate::b_l_frame_plate(AUTOGEN)"</nodeID>
-            <position>12.5073,1.7376,13.4936</position>
+            <nodeID>"b_l_frame_plate:-:drive_base:drive_base/frame_solid:1::b_l_frame_plate(AUTOGEN)"</nodeID>
+            <position>8.76789,7.49109,3.69176</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -537,11 +537,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"b_r_frame_plate::CG(AUTOGEN)"</nodeID>
-            <position>-7.45664,-1.73982,11.525</position>
+            <position>-9.31975,7.49109,-0.0280743</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,-2.22665e-010,-1.98049e-011,-2.00533e-010,-0.854389,-0.519635,9.87834e-011,0.519635,-0.854389</orientation>
+            <orientation>0.979501,-2.58431e-010,0.20144,0.0188837,-0.995596,-0.0918218,0.200553,0.0937434,-0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -550,20 +550,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"b_r_frame_plate::CS1(AUTOGEN)"</nodeID>
-            <position>-8.9544,1.60769,13.7072</position>
+            <position>-10.8873,11.4558,0.158854</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,-2.22665e-010,-1.98049e-011,-2.00533e-010,-0.854389,-0.519635,9.87834e-011,0.519635,-0.854389</orientation>
+            <orientation>0.979501,-2.58431e-010,0.20144,0.0188837,-0.995596,-0.0918218,0.200553,0.0937434,-0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="44">
+          <Frame ref="8">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>"b_l_frame_plate:-:b_r_frame_plate::b_r_frame_plate(AUTOGEN)"</nodeID>
-            <position>9.50731,1.7376,13.4936</position>
+            <nodeID>"b_r_frame_plate:-:f_r_frame_plate::b_r_frame_plate(AUTOGEN)"</nodeID>
+            <position>-9.29238,7.49687,-0.15007</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -572,11 +572,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="50">
+          <Frame ref="10">
             <name>"CS3"</name>
             <displayName>""</displayName>
-            <nodeID>"b_r_frame_plate:-:f_r_frame_plate::b_r_frame_plate(AUTOGEN)"</nodeID>
-            <position>-7.4544,-1.67995,11.4151</position>
+            <nodeID>"b_l_frame_plate:-:b_r_frame_plate::b_r_frame_plate(AUTOGEN)"</nodeID>
+            <position>7.2461,11.4793,3.63399</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -585,11 +585,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="51">
+          <Frame ref="11">
             <name>"CS4"</name>
             <displayName>""</displayName>
             <nodeID>"b_r_frame_bracket:-:b_r_frame_plate::b_r_frame_plate(AUTOGEN)"</nodeID>
-            <position>-7.9544,-2.66425,11.1091</position>
+            <position>-9.81338,6.47784,-0.0988147</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -627,11 +627,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"f_l_frame_plate::CG(AUTOGEN)"</nodeID>
-            <position>11.0111,-19.8129,0.533013</position>
+            <position>9.16882,-13.5691,1.74973</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-1,2.2286e-010,1.00159e-010,2.42456e-010,0.854389,0.519635,3.02309e-011,0.519635,-0.854389</orientation>
+            <orientation>-0.979501,2.56155e-010,-0.20144,-0.0188837,0.995596,0.0918218,0.200553,0.0937434,-0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -640,20 +640,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"f_l_frame_plate::CS1(AUTOGEN)"</nodeID>
-            <position>12.5073,-22.4411,-0.919093</position>
+            <position>10.666,-16.5676,1.89757</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-1,2.2286e-010,1.00159e-010,2.42456e-010,0.854389,0.519635,3.02309e-011,0.519635,-0.854389</orientation>
+            <orientation>-0.979501,2.56155e-010,-0.20144,-0.0188837,0.995596,0.0918218,0.200553,0.0937434,-0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="15">
+          <Frame ref="13">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>"f_l_frame_bracket:-:f_l_frame_plate::f_l_frame_plate(AUTOGEN)"</nodeID>
-            <position>12.5073,-22.4411,-0.919093</position>
+            <nodeID>"f_l_frame_plate:-:f_r_frame_plate::f_l_frame_plate(AUTOGEN)"</nodeID>
+            <position>9.19022,-13.5573,1.62707</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -662,11 +662,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="28">
+          <Frame ref="16">
             <name>"CS3"</name>
             <displayName>""</displayName>
-            <nodeID>"drive_base:drive_base/frame_solid:1:-:f_l_frame_plate::f_l_frame_plate(AUTOGEN)"</nodeID>
-            <position>9.98231,-1.25276,11.6749</position>
+            <nodeID>"b_l_frame_plate:-:f_l_frame_plate::f_l_frame_plate(AUTOGEN)"</nodeID>
+            <position>8.79088,7.49687,3.56886</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -675,11 +675,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="46">
+          <Frame ref="18">
             <name>"CS4"</name>
             <displayName>""</displayName>
-            <nodeID>"b_l_frame_plate:-:f_l_frame_plate::f_l_frame_plate(AUTOGEN)"</nodeID>
-            <position>11.0073,-1.67995,11.4151</position>
+            <nodeID>"drive_base:drive_base/frame_solid:1:-:f_l_frame_plate::f_l_frame_plate(AUTOGEN)"</nodeID>
+            <position>7.77745,7.99467,3.40829</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -688,11 +688,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="53">
+          <Frame ref="19">
             <name>"CS5"</name>
             <displayName>""</displayName>
-            <nodeID>"f_l_frame_plate:-:f_r_frame_plate::f_l_frame_plate(AUTOGEN)"</nodeID>
-            <position>11.0073,-19.748,0.426214</position>
+            <nodeID>"f_l_frame_bracket:-:f_l_frame_plate::f_l_frame_plate(AUTOGEN)"</nodeID>
+            <position>10.666,-16.5676,1.89757</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -730,11 +730,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"f_r_frame_plate::CG(AUTOGEN)"</nodeID>
-            <position>-7.45815,-19.8129,0.533013</position>
+            <position>-8.92177,-13.5691,-1.97071</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,5.62828e-012,9.11902e-011,-5.21925e-011,0.854389,0.519635,-7.49872e-011,-0.519635,0.854389</orientation>
+            <orientation>0.979501,0,0.20144,-0.0188837,0.995596,0.0918218,-0.200553,-0.0937434,0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -743,20 +743,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"f_r_frame_plate::CS1(AUTOGEN)"</nodeID>
-            <position>-8.9544,-22.3112,-1.13269</position>
+            <position>-10.3056,-16.5441,-2.66948</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,5.62828e-012,9.11902e-011,-5.21925e-011,0.854389,0.519635,-7.49872e-011,-0.519635,0.854389</orientation>
+            <orientation>0.979501,0,0.20144,-0.0188837,0.995596,0.0918218,-0.200553,-0.0937434,0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="29">
+          <Frame ref="7">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>"f_r_frame_bracket:-:f_r_frame_plate::f_r_frame_plate(AUTOGEN)"</nodeID>
-            <position>-7.4544,-19.8779,0.639811</position>
+            <nodeID>"b_r_frame_plate:-:f_r_frame_plate::f_r_frame_plate(AUTOGEN)"</nodeID>
+            <position>-8.89304,-13.5573,-2.09185</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -765,11 +765,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="49">
+          <Frame ref="14">
             <name>"CS3"</name>
             <displayName>""</displayName>
-            <nodeID>"b_r_frame_plate:-:f_r_frame_plate::f_r_frame_plate(AUTOGEN)"</nodeID>
-            <position>-7.4544,-19.748,0.426214</position>
+            <nodeID>"f_l_frame_plate:-:f_r_frame_plate::f_r_frame_plate(AUTOGEN)"</nodeID>
+            <position>9.19022,-13.5573,1.62707</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -778,11 +778,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="54">
+          <Frame ref="21">
             <name>"CS4"</name>
             <displayName>""</displayName>
-            <nodeID>"f_l_frame_plate:-:f_r_frame_plate::f_r_frame_plate(AUTOGEN)"</nodeID>
-            <position>11.0073,-19.748,0.426214</position>
+            <nodeID>"f_r_frame_bracket:-:f_r_frame_plate::f_r_frame_plate(AUTOGEN)"</nodeID>
+            <position>-8.94318,-13.5808,-1.84806</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -820,11 +820,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"top_plate::CG(AUTOGEN)"</nodeID>
-            <position>1.834,-17.0628,20.5645</position>
+            <position>-3.20684,-2.33694,16.3691</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,2.16822e-011,6.3395e-011,4.72188e-011,-0.899338,-0.437253,4.75329e-011,0.437253,-0.899338</orientation>
+            <orientation>0.979501,0,0.20144,0,-1,0,0.20144,0,-0.979501</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -833,20 +833,46 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"top_plate::CS1(AUTOGEN)"</nodeID>
-            <position>-8.7794,-6.67443,25.7543</position>
+            <position>-13.6279,9.275,14.3535</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,2.16822e-011,6.3395e-011,4.72188e-011,-0.899338,-0.437253,4.75329e-011,0.437253,-0.899338</orientation>
+            <orientation>0.979501,0,0.20144,0,-1,0,0.20144,0,-0.979501</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="40">
+          <Frame ref="38">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"PC:-:top_plate::top_plate(AUTOGEN)"</nodeID>
-            <position>-6.7794,-23.4246,17.6105</position>
+            <position>-11.6689,-9.35,14.7564</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame ref="48">
+            <name>"CS3"</name>
+            <displayName>""</displayName>
+            <nodeID>"main_breaker:-:top_plate::top_plate(AUTOGEN)"</nodeID>
+            <position>4.35404,1.52827,18.0516</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame ref="49">
+            <name>"CS4"</name>
+            <displayName>""</displayName>
+            <nodeID>"spike_relay:-:top_plate::top_plate(AUTOGEN)"</nodeID>
+            <position>4.24803,-11.475,18.0298</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -856,36 +882,10 @@
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
           <Frame ref="56">
-            <name>"CS3"</name>
-            <displayName>""</displayName>
-            <nodeID>"compressor:-:top_plate::top_plate(AUTOGEN)"</nodeID>
-            <position>8.7206,-23.0874,17.7744</position>
-            <positionOrigin>"WORLD"</positionOrigin>
-            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-            <positionUnits>"in"</positionUnits>
-            <orientation>1,0,0,0,1,0,0,0,1</orientation>
-            <orientationType>"3x3 Transform"</orientationType>
-            <orientationUnits>"rad"</orientationUnits>
-            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-          </Frame>
-          <Frame ref="57">
-            <name>"CS4"</name>
-            <displayName>""</displayName>
-            <nodeID>"spike_relay:-:top_plate::top_plate(AUTOGEN)"</nodeID>
-            <position>1.8456,-17.3541,20.5619</position>
-            <positionOrigin>"WORLD"</positionOrigin>
-            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-            <positionUnits>"in"</positionUnits>
-            <orientation>1,0,0,0,1,0,0,0,1</orientation>
-            <orientationType>"3x3 Transform"</orientationType>
-            <orientationUnits>"rad"</orientationUnits>
-            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-          </Frame>
-          <Frame ref="60">
             <name>"CS5"</name>
             <displayName>""</displayName>
-            <nodeID>"main_breaker:-:top_plate::top_plate(AUTOGEN)"</nodeID>
-            <position>9.57882,-13.6414,22.367</position>
+            <nodeID>"router:-:top_plate::top_plate(AUTOGEN)"</nodeID>
+            <position>-2.36491,-12.9252,28.921</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -894,11 +894,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="62">
+          <Frame ref="68">
             <name>"CS6"</name>
             <displayName>""</displayName>
-            <nodeID>"router:-:top_plate::top_plate(AUTOGEN)"</nodeID>
-            <position>5.18713,-31.887,26.8392</position>
+            <nodeID>"frame:-:top_plate::top_plate(AUTOGEN)"</nodeID>
+            <position>-12.035,7.81831,14.4259</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -907,11 +907,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="64">
+          <Frame ref="80">
             <name>"CS7"</name>
             <displayName>""</displayName>
-            <nodeID>"frame:-:top_plate::top_plate(AUTOGEN)"</nodeID>
-            <position>-7.2046,-7.87518,24.8925</position>
+            <nodeID>"compressor:-:top_plate::top_plate(AUTOGEN)"</nodeID>
+            <position>3.5134,-8.975,17.8787</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -949,11 +949,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"compressor::CG(AUTOGEN)"</nodeID>
-            <position>8.72805,-22.7687,20.3618</position>
+            <position>3.08005,-7.55705,20.0229</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-5.73497e-011,-0.437253,0.899338,-1,-1.73892e-011,-7.22235e-011,4.72185e-011,-0.899338,-0.437253</orientation>
+            <orientation>-0.20144,0,0.979501,-0.979501,0,-0.20144,0,-1,0</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -962,20 +962,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"compressor::CS1(AUTOGEN)"</nodeID>
-            <position>6.58812,-28.8962,24.4539</position>
+            <position>-0.297074,-11.2785,25.821</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-5.73497e-011,-0.437253,0.899338,-1,-1.73892e-011,-7.22235e-011,4.72185e-011,-0.899338,-0.437253</orientation>
+            <orientation>-0.20144,0,0.979501,-0.979501,0,-0.20144,0,-1,0</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="55">
+          <Frame ref="79">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"compressor:-:top_plate::compressor(AUTOGEN)"</nodeID>
-            <position>8.7206,-23.0874,17.7744</position>
+            <position>3.5134,-8.975,17.8787</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1013,11 +1013,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"spike_relay::CG(AUTOGEN)"</nodeID>
-            <position>8.30936,-25.7162,16.9191</position>
+            <position>3.034,-11.7132,18.1683</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>0.999986,-0.00467996,-0.00227537,0.00520378,0.899326,0.437247,-5.73497e-011,-0.437253,0.899338</orientation>
+            <orientation>0.979488,-0.00520378,0.201437,0.00509711,0.999986,0.00104825,-0.20144,0,0.979501</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -1026,20 +1026,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"spike_relay::CS1(AUTOGEN)"</nodeID>
-            <position>8.31355,-25.5985,16.5535</position>
+            <position>3.1147,-11.7672,17.7967</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>0.999986,-0.00467996,-0.00227537,0.00520378,0.899326,0.437247,-5.73497e-011,-0.437253,0.899338</orientation>
+            <orientation>0.979488,-0.00520378,0.201437,0.00509711,0.999986,0.00104825,-0.20144,0,0.979501</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="58">
+          <Frame ref="50">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"spike_relay:-:top_plate::spike_relay(AUTOGEN)"</nodeID>
-            <position>1.8456,-17.3541,20.5619</position>
+            <position>4.24803,-11.475,18.0298</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1077,11 +1077,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"main_breaker::CG(AUTOGEN)"</nodeID>
-            <position>8.94383,-14.9291,22.4124</position>
+            <position>3.61042,0.390001,18.5152</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,1.73872e-011,7.22225e-011,-4.72162e-011,0.899338,0.437253,-5.73496e-011,-0.437253,0.899338</orientation>
+            <orientation>0.979501,0,0.20144,0,1,0,-0.20144,0,0.979501</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -1090,20 +1090,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"main_breaker::CS1(AUTOGEN)"</nodeID>
-            <position>8.9456,-14.7525,22.0492</position>
+            <position>3.6935,0.39,18.12</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,1.73872e-011,7.22225e-011,-4.72162e-011,0.899338,0.437253,-5.73496e-011,-0.437253,0.899338</orientation>
+            <orientation>0.979501,0,0.20144,0,1,0,-0.20144,0,0.979501</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="59">
+          <Frame ref="47">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"main_breaker:-:top_plate::main_breaker(AUTOGEN)"</nodeID>
-            <position>9.57882,-13.6414,22.367</position>
+            <position>4.35404,1.52827,18.0516</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1141,11 +1141,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"router::CG(AUTOGEN)"</nodeID>
-            <position>1.68713,-29.7598,24.1794</position>
+            <position>-5.12393,-12.1752,24.9618</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,2.16815e-011,6.33946e-011,4.75328e-011,0.437253,-0.899338,-4.72185e-011,0.899338,0.437253</orientation>
+            <orientation>0.979501,0,0.20144,0.20144,0,-0.979501,0,1,0</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -1154,20 +1154,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"router::CS1(AUTOGEN)"</nodeID>
-            <position>1.68713,-30.4659,23.9164</position>
+            <position>-5.13848,-12.9252,25.0326</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,2.16815e-011,6.33946e-011,4.75328e-011,0.437253,-0.899338,-4.72185e-011,0.899338,0.437253</orientation>
+            <orientation>0.979501,0,0.20144,0.20144,0,-0.979501,0,1,0</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="12">
+          <Frame ref="54">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>":-:robot_no_arm/RootPart::router(AUTOGEN)"</nodeID>
-            <position>4.28532,94.6209,-48.2061</position>
+            <nodeID>"frame:-:router::router(AUTOGEN)"</nodeID>
+            <position>-13.9104,-12.9252,52.383</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1176,11 +1176,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="61">
+          <Frame ref="55">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"router:-:top_plate::router(AUTOGEN)"</nodeID>
-            <position>5.18713,-31.887,26.8392</position>
+            <position>-2.36491,-12.9252,28.921</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1189,11 +1189,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="66">
+          <Frame ref="58">
             <name>"CS4"</name>
             <displayName>""</displayName>
-            <nodeID>"frame:-:router::router(AUTOGEN)"</nodeID>
-            <position>-1.39555,-42.9524,49.5986</position>
+            <nodeID>":-:robot_no_arm/RootPart::router(AUTOGEN)"</nodeID>
+            <position>12.0817,100.532,-58.6285</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1231,11 +1231,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"b_r_frame_bracket::CG(AUTOGEN)"</nodeID>
-            <position>-7.9544,-1.51791,12.6439</position>
+            <position>-9.99047,8.1799,0.762253</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>2.00533e-010,0.854389,0.519635,-1,2.35441e-010,-1.19732e-012,-1.23367e-010,-0.519635,0.854389</orientation>
+            <orientation>-0.0188837,0.995596,0.0918218,-0.979501,2.58433e-010,-0.20144,-0.200553,-0.0937434,0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -1244,20 +1244,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"b_r_frame_bracket::CS1(AUTOGEN)"</nodeID>
-            <position>-6.9544,-3.51864,10.5894</position>
+            <position>-8.815,5.48224,0.0108036</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>2.00533e-010,0.854389,0.519635,-1,2.35441e-010,-1.19732e-012,-1.23367e-010,-0.519635,0.854389</orientation>
+            <orientation>-0.0188837,0.995596,0.0918218,-0.979501,2.58433e-010,-0.20144,-0.200553,-0.0937434,0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="52">
+          <Frame ref="12">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"b_r_frame_bracket:-:b_r_frame_plate::b_r_frame_bracket(AUTOGEN)"</nodeID>
-            <position>-7.9544,-2.66425,11.1091</position>
+            <position>-9.81338,6.47784,-0.0988147</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1266,11 +1266,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="68">
+          <Frame ref="52">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"b_r_frame_bracket:-:frame::b_r_frame_bracket(AUTOGEN)"</nodeID>
-            <position>-7.992,-1.08176,12.4505</position>
+            <position>-9.95385,8.4876,0.397546</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1308,11 +1308,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"b_l_frame_bracket::CG(AUTOGEN)"</nodeID>
-            <position>11.5073,-1.51791,12.6439</position>
+            <position>9.0723,8.1799,4.68262</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>3.95591e-010,0.854389,0.519635,-1,4.02094e-010,1.0016e-010,-1.23367e-010,-0.519635,0.854389</orientation>
+            <orientation>-0.0188837,0.995596,0.0918218,-0.979501,3.93382e-010,-0.20144,-0.200553,-0.0937434,0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -1321,20 +1321,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"b_l_frame_bracket::CS1(AUTOGEN)"</nodeID>
-            <position>12.5073,-3.51864,10.5894</position>
+            <position>10.2478,5.48224,3.93117</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>3.95591e-010,0.854389,0.519635,-1,4.02094e-010,1.0016e-010,-1.23367e-010,-0.519635,0.854389</orientation>
+            <orientation>-0.0188837,0.995596,0.0918218,-0.979501,3.93382e-010,-0.20144,-0.200553,-0.0937434,0.975188</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="48">
+          <Frame ref="28">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"b_l_frame_bracket:-:b_l_frame_plate::b_l_frame_bracket(AUTOGEN)"</nodeID>
-            <position>12.5073,1.7376,13.4936</position>
+            <position>10.1846,11.4793,4.23831</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1343,11 +1343,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="69">
+          <Frame ref="61">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"b_l_frame_bracket:-:frame::b_l_frame_bracket(AUTOGEN)"</nodeID>
-            <position>12.3323,-2.61686,13.921</position>
+            <position>9.55222,7.75,6.44451</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1385,11 +1385,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"base_plate::CG(AUTOGEN)"</nodeID>
-            <position>0.582572,-11.5809,9.02043</position>
+            <position>-1.8584,-2.45446,3.59988</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-4.72173e-011,0.899338,0.437253,-1,3.02012e-012,-1.142e-010,-1.04025e-010,-0.437253,0.899338</orientation>
+            <orientation>0,1,0,-0.979501,0,-0.20144,-0.20144,0,0.979501</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -1398,20 +1398,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"base_plate::CS1(AUTOGEN)"</nodeID>
-            <position>20.7361,-3.41589,-11.0917</position>
+            <position>22.2447,-3.9055,-13.5542</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>-4.72173e-011,0.899338,0.437253,-1,3.02012e-012,-1.142e-010,-1.04025e-010,-0.437253,0.899338</orientation>
+            <orientation>0,1,0,-0.979501,0,-0.20144,-0.20144,0,0.979501</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="36">
+          <Frame ref="32">
             <name>"CS2"</name>
             <displayName>""</displayName>
             <nodeID>"IRC5_Compact:-:base_plate::base_plate(AUTOGEN)"</nodeID>
-            <position>-7.17114,-19.4662,6.82847</position>
+            <position>-9.75061,-10.5045,3.48429</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1420,11 +1420,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="72">
+          <Frame ref="60">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"base_plate:-:frame::base_plate(AUTOGEN)"</nodeID>
-            <position>-7.2046,-2.93159,14.5895</position>
+            <position>-9.73303,7.75925,3.23267</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1462,11 +1462,11 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"frame::CG(AUTOGEN)"</nodeID>
-            <position>1.50706,-20.7867,18.3305</position>
+            <position>-3.45036,-6.66277,15.9302</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,-9.29195e-012,1.09199e-010,-3.93905e-011,0.899338,0.437253,-1.02269e-010,-0.437253,0.899338</orientation>
+            <orientation>0.979501,-7.82746e-012,0.20144,7.68773e-012,1,1.47596e-012,-0.20144,0,0.979501</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -1475,20 +1475,20 @@
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"frame::CS1(AUTOGEN)"</nodeID>
-            <position>1.75731,7.80679,-0.114026</position>
+            <position>2.65475,10.9875,-12.5136</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
-            <orientation>1,-9.29195e-012,1.09199e-010,-3.93905e-011,0.899338,0.437253,-1.02269e-010,-0.437253,0.899338</orientation>
+            <orientation>0.979501,-7.82746e-012,0.20144,7.68773e-012,1,1.47596e-012,-0.20144,0,0.979501</orientation>
             <orientationType>"3x3 Transform"</orientationType>
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="31">
+          <Frame ref="23">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>"f_r_frame_bracket:-:frame::frame(AUTOGEN)"</nodeID>
-            <position>-7.76366,-27.9471,15.3061</position>
+            <nodeID>"SICK_LMS291:-:frame::frame(AUTOGEN)"</nodeID>
+            <position>-3.23005,-14.6748,2.3845</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1497,11 +1497,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="37">
+          <Frame ref="33">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>"IRC5_Compact:-:frame::frame(AUTOGEN)"</nodeID>
-            <position>-7.2046,-2.77813,14.1388</position>
+            <position>-9.63786,7.7002,2.76992</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1510,11 +1510,50 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="41">
+          <Frame ref="51">
             <name>"CS4"</name>
             <displayName>""</displayName>
-            <nodeID>"SICK_LMS291:-:frame::frame(AUTOGEN)"</nodeID>
-            <position>-1.00578,-22.1714,2.85491</position>
+            <nodeID>"b_r_frame_bracket:-:frame::frame(AUTOGEN)"</nodeID>
+            <position>-9.95385,8.4876,0.397546</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame ref="53">
+            <name>"CS5"</name>
+            <displayName>""</displayName>
+            <nodeID>"frame:-:router::frame(AUTOGEN)"</nodeID>
+            <position>-13.9104,-12.9252,52.383</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame ref="59">
+            <name>"CS6"</name>
+            <displayName>""</displayName>
+            <nodeID>"base_plate:-:frame::frame(AUTOGEN)"</nodeID>
+            <position>-9.73303,7.75925,3.23267</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame ref="62">
+            <name>"CS7"</name>
+            <displayName>""</displayName>
+            <nodeID>"b_l_frame_bracket:-:frame::frame(AUTOGEN)"</nodeID>
+            <position>9.55222,7.75,6.44451</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1524,10 +1563,10 @@
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
           <Frame ref="63">
-            <name>"CS5"</name>
+            <name>"CS8"</name>
             <displayName>""</displayName>
-            <nodeID>"frame:-:top_plate::frame(AUTOGEN)"</nodeID>
-            <position>-7.2046,-7.87518,24.8925</position>
+            <nodeID>"bin:1:-:frame::frame(AUTOGEN)"</nodeID>
+            <position>-3.45036,-6.66277,15.9302</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1537,10 +1576,10 @@
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
           <Frame ref="65">
-            <name>"CS6"</name>
+            <name>"CS9"</name>
             <displayName>""</displayName>
-            <nodeID>"frame:-:router::frame(AUTOGEN)"</nodeID>
-            <position>-1.39555,-42.9524,49.5986</position>
+            <nodeID>"f_r_frame_bracket:-:frame::frame(AUTOGEN)"</nodeID>
+            <position>-12.6138,-14.4248,14.4651</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1550,10 +1589,10 @@
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
           <Frame ref="67">
-            <name>"CS7"</name>
+            <name>"CS10"</name>
             <displayName>""</displayName>
-            <nodeID>"b_r_frame_bracket:-:frame::frame(AUTOGEN)"</nodeID>
-            <position>-7.992,-1.08176,12.4505</position>
+            <nodeID>"frame:-:top_plate::frame(AUTOGEN)"</nodeID>
+            <position>-12.035,7.81831,14.4259</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1563,23 +1602,10 @@
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
           <Frame ref="70">
-            <name>"CS8"</name>
+            <name>"CS11"</name>
             <displayName>""</displayName>
-            <nodeID>"b_l_frame_bracket:-:frame::frame(AUTOGEN)"</nodeID>
-            <position>12.3323,-2.61686,13.921</position>
-            <positionOrigin>"WORLD"</positionOrigin>
-            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-            <positionUnits>"in"</positionUnits>
-            <orientation>1,0,0,0,1,0,0,0,1</orientation>
-            <orientationType>"3x3 Transform"</orientationType>
-            <orientationUnits>"rad"</orientationUnits>
-            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-          </Frame>
-          <Frame ref="71">
-            <name>"CS9"</name>
-            <displayName>""</displayName>
-            <nodeID>"base_plate:-:frame::frame(AUTOGEN)"</nodeID>
-            <position>-7.2046,-2.93159,14.5895</position>
+            <nodeID>":-:robot_no_arm/RootPart::frame(AUTOGEN)"</nodeID>
+            <position>0,-36.83,0</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1592,6 +1618,70 @@
         <geometryFileName>"al_frame_iam_3826baa4.STL"</geometryFileName>
         <MaterialProp>
           <color>0.752941,0.752941,0.752941</color>
+          <ambient>1</ambient>
+          <diffuse>1</diffuse>
+          <specular>1</specular>
+          <shininess>0.2</shininess>
+          <transparency>0</transparency>
+          <emission>0.2</emission>
+        </MaterialProp>
+      </Body>
+      <Body>
+        <name>"bin:1"</name>
+        <nodeID>"bin:1"</nodeID>
+        <status>""</status>
+        <mass>9.62754</mass>
+        <massUnits>"lbm"</massUnits>
+        <inertia>151.817,6.94578,-0.0578516,6.94578,343.152,0.0114137,-0.0578516,0.0114137,274.205</inertia>
+        <inertiaUnits>"lbm*in^2"</inertiaUnits>
+        <volume>208.195</volume>
+        <volumeUnits>"in^3"</volumeUnits>
+        <surfaceArea>817.602</surfaceArea>
+        <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+        <frames>
+          <Frame>
+            <name>"CG"</name>
+            <displayName>""</displayName>
+            <nodeID>"bin:1::CG(AUTOGEN)"</nodeID>
+            <position>-9.14905,-21.5031,8.69768</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>0,-1,0,-0.20144,0,0.979501,-0.979501,0,-0.20144</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame>
+            <name>"CS1"</name>
+            <displayName>""</displayName>
+            <nodeID>"bin:1::CS1(AUTOGEN)"</nodeID>
+            <position>-5.88445,-14.4248,13.2967</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>0,-1,0,-0.20144,0,0.979501,-0.979501,0,-0.20144</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame ref="64">
+            <name>"CS2"</name>
+            <displayName>""</displayName>
+            <nodeID>"bin:1:-:frame::bin:1(AUTOGEN)"</nodeID>
+            <position>-3.45036,-6.66277,15.9302</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+        </frames>
+        <geometryFileName>"bin_ipt_175fe0bc.STL"</geometryFileName>
+        <MaterialProp>
+          <color>1,1,0</color>
           <ambient>1</ambient>
           <diffuse>1</diffuse>
           <specular>1</specular>
@@ -1617,7 +1707,7 @@
             <name>"CG"</name>
             <displayName>""</displayName>
             <nodeID>"robot_no_arm/RootPart::CG(AUTOGEN)"</nodeID>
-            <position>1.29686,-11.663,8.63574</position>
+            <position>-1.29364,-3.18038,3.57828</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1639,11 +1729,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="5">
+          <Frame ref="25">
             <name>"CS2"</name>
             <displayName>""</displayName>
-            <nodeID>":-:robot_no_arm/RootPart::robot_no_arm/RootPart(AUTOGEN)"</nodeID>
-            <position>0,0,0</position>
+            <nodeID>":-:SICK_LMS291::robot_no_arm/RootPart(AUTOGEN)"</nodeID>
+            <position>-1.29364,-3.18038,3.57828</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1652,11 +1742,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="8">
+          <Frame ref="36">
             <name>"CS3"</name>
             <displayName>""</displayName>
             <nodeID>":-:robot_no_arm/RootPart::robot_no_arm/RootPart(AUTOGEN)"</nodeID>
-            <position>-7.17114,-19.6384,7.18254</position>
+            <position>-9.82992,-10.5045,3.86992</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1665,11 +1755,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="9">
+          <Frame ref="57">
             <name>"CS4"</name>
             <displayName>""</displayName>
-            <nodeID>":-:SICK_LMS291::robot_no_arm/RootPart(AUTOGEN)"</nodeID>
-            <position>1.29686,-11.663,8.63574</position>
+            <nodeID>":-:robot_no_arm/RootPart::robot_no_arm/RootPart(AUTOGEN)"</nodeID>
+            <position>12.0817,100.532,-58.6285</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1678,11 +1768,11 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="11">
+          <Frame ref="69">
             <name>"CS5"</name>
             <displayName>""</displayName>
             <nodeID>":-:robot_no_arm/RootPart::robot_no_arm/RootPart(AUTOGEN)"</nodeID>
-            <position>4.28532,94.6209,-48.2061</position>
+            <position>0,-36.83,0</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1691,11 +1781,24 @@
             <orientationUnits>"rad"</orientationUnits>
             <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
           </Frame>
-          <Frame ref="74">
+          <Frame ref="75">
             <name>"CS6"</name>
             <displayName>""</displayName>
+            <nodeID>":-:robot_no_arm/RootPart::robot_no_arm/RootPart(AUTOGEN)"</nodeID>
+            <position>-1.29364,-3.18038,3.57828</position>
+            <positionOrigin>"WORLD"</positionOrigin>
+            <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+            <positionUnits>"in"</positionUnits>
+            <orientation>1,0,0,0,1,0,0,0,1</orientation>
+            <orientationType>"3x3 Transform"</orientationType>
+            <orientationUnits>"rad"</orientationUnits>
+            <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+          </Frame>
+          <Frame ref="82">
+            <name>"CS7"</name>
+            <displayName>""</displayName>
             <nodeID>"RootGround:-:robot_no_arm/RootPart::robot_no_arm/RootPart(AUTOGEN)"</nodeID>
-            <position>1.29686,-11.663,8.63574</position>
+            <position>-1.29364,-3.18038,3.57828</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -1710,49 +1813,8 @@
     </bodies>
     <joints>
       <SimpleJoint>
-        <name>"RootPart--RootPart"</name>
-        <nodeID>":-:robot_no_arm/RootPart"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="5"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="6"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>2.88933e-011,-1,-5.29558e-011</axis>
-          </Primitive>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-5.29558e-011,-5.29558e-011,1</axis>
-          </Primitive>
-          <Primitive>
-            <name>"revolute"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>1,0,0</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"IRC5_Compact--RootPart"</name>
-        <nodeID>":-:robot_no_arm/RootPart"</nodeID>
+        <name>"f_r_frame_plate--b_r_frame_plate"</name>
+        <nodeID>"b_r_frame_plate:-:f_r_frame_plate"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -1775,26 +1837,14 @@
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-2.42047e-010,-1,-1.19925e-012</axis>
-          </Primitive>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-1.19925e-012,-1.19925e-012,1</axis>
-          </Primitive>
-          <Primitive>
-            <name>"revolute"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-1,2.35438e-010,-1.1991e-012</axis>
+            <axis>-0.0188837,0.995596,0.0918218</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"RootPart--SICK_LMS291"</name>
-        <nodeID>":-:SICK_LMS291"</nodeID>
-        <status>"Could not solve for constraint between robot_no_arm.iam and SICK LMS291.ipt because of CAD constrain Mate:118"</status>
+        <name>"b_l_frame_plate--b_r_frame_plate"</name>
+        <nodeID>"b_l_frame_plate:-:b_r_frame_plate"</nodeID>
+        <status>""</status>
         <base>
           <JointSide>
             <name>""</name>
@@ -1813,16 +1863,28 @@
         </follower>
         <primitives>
           <Primitive>
-            <name>"weld"</name>
+            <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.57735,0.57735,0.57735</axis>
+            <axis>0.70616,-0.0517338,0.70616</axis>
+          </Primitive>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.707801,0.0781757,-0.702073</axis>
+          </Primitive>
+          <Primitive>
+            <name>"revolute"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>-0.0188837,0.995596,0.0918218</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"RootPart--router"</name>
-        <nodeID>":-:robot_no_arm/RootPart"</nodeID>
+        <name>"b_r_frame_plate--b_r_frame_bracket"</name>
+        <nodeID>"b_r_frame_bracket:-:b_r_frame_plate"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -1842,28 +1904,16 @@
         </follower>
         <primitives>
           <Primitive>
-            <name>"prismatic"</name>
+            <name>"weld"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-2.16815e-011,1,6.33946e-011</axis>
-          </Primitive>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-6.33946e-011,-6.33946e-011,1</axis>
-          </Primitive>
-          <Primitive>
-            <name>"revolute"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-1,2.42047e-010,-1.19925e-012</axis>
+            <axis>0.57735,0.57735,0.57735</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"f_l_frame_bracket--f_r_frame_bracket"</name>
-        <nodeID>"f_l_frame_bracket:-:f_r_frame_bracket"</nodeID>
+        <name>"f_l_frame_plate--f_r_frame_plate"</name>
+        <nodeID>"f_l_frame_plate:-:f_r_frame_plate"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -1886,25 +1936,25 @@
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.668693,-0.325115,0.668693</axis>
+            <axis>0.951933,0.216591,0.216591</axis>
           </Primitive>
           <Primitive>
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-0.743539,-0.292388,0.601381</axis>
+            <axis>-0.231521,0.971751,0.0457994</axis>
           </Primitive>
           <Primitive>
             <name>"revolute"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-2.4277e-010,-0.899338,-0.437253</axis>
+            <axis>0.200553,0.0937434,-0.975188</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"f_l_frame_plate--f_l_frame_bracket"</name>
-        <nodeID>"f_l_frame_bracket:-:f_l_frame_plate"</nodeID>
+        <name>"b_l_frame_plate--f_l_frame_plate"</name>
+        <nodeID>"b_l_frame_plate:-:f_l_frame_plate"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -1924,6 +1974,76 @@
         </follower>
         <primitives>
           <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>-0.0188837,0.995596,0.0918218</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"frame_solid:1--f_l_frame_plate"</name>
+        <nodeID>"drive_base:drive_base/frame_solid:1:-:f_l_frame_plate"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="17"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="18"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.951933,0.216591,0.216591</axis>
+          </Primitive>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.231521,-0.971751,-0.0457994</axis>
+          </Primitive>
+          <Primitive>
+            <name>"revolute"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>-0.200553,-0.0937434,0.975188</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"f_l_frame_plate--f_l_frame_bracket"</name>
+        <nodeID>"f_l_frame_bracket:-:f_l_frame_plate"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="19"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="20"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
             <name>"weld"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
@@ -1932,9 +2052,67 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"b_l_frame_plate--frame_solid:1"</name>
-        <nodeID>"b_l_frame_plate:-:drive_base:drive_base/frame_solid:1"</nodeID>
-        <status>"Could not solve for constraint between back frame plate.ipt and frame_solid.iam because of CAD constrain Tangent:8"</status>
+        <name>"f_r_frame_plate--f_r_frame_bracket"</name>
+        <nodeID>"f_r_frame_bracket:-:f_r_frame_plate"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="21"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="22"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"weld"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.57735,0.57735,0.57735</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"frame--SICK_LMS291"</name>
+        <nodeID>"SICK_LMS291:-:frame"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="23"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="24"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"revolute"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0,1,0</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"RootPart--SICK_LMS291"</name>
+        <nodeID>":-:SICK_LMS291"</nodeID>
+        <status>"Could not solve for constraint between robot_no_arm.iam and SICK LMS291.ipt because of CAD constrain Mate:118"</status>
         <base>
           <JointSide>
             <name>""</name>
@@ -1961,8 +2139,8 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"frame_solid:1--f_l_frame_plate"</name>
-        <nodeID>"drive_base:drive_base/frame_solid:1:-:f_l_frame_plate"</nodeID>
+        <name>"b_l_frame_plate--b_l_frame_bracket"</name>
+        <nodeID>"b_l_frame_bracket:-:b_l_frame_plate"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -1982,29 +2160,17 @@
         </follower>
         <primitives>
           <Primitive>
-            <name>"prismatic"</name>
+            <name>"weld"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.461098,0.758141,0.461098</axis>
-          </Primitive>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.887349,-0.393956,-0.239602</axis>
-          </Primitive>
-          <Primitive>
-            <name>"revolute"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-3.02309e-011,-0.519635,0.854389</axis>
+            <axis>0.57735,0.57735,0.57735</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"f_r_frame_plate--f_r_frame_bracket"</name>
-        <nodeID>"f_r_frame_bracket:-:f_r_frame_plate"</nodeID>
-        <status>""</status>
+        <name>"b_l_frame_plate--frame_solid:1"</name>
+        <nodeID>"b_l_frame_plate:-:drive_base:drive_base/frame_solid:1"</nodeID>
+        <status>"Could not solve for constraint between back frame plate.ipt and frame_solid.iam because of CAD constrain Tangent:8"</status>
         <base>
           <JointSide>
             <name>""</name>
@@ -2031,8 +2197,8 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"frame--f_r_frame_bracket"</name>
-        <nodeID>"f_r_frame_bracket:-:frame"</nodeID>
+        <name>"IRC5_Compact--base_plate"</name>
+        <nodeID>"IRC5_Compact:-:base_plate"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2055,25 +2221,66 @@
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.668693,-0.325115,0.668693</axis>
+            <axis>0.960213,0.197473,0.197473</axis>
           </Primitive>
           <Primitive>
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-0.743539,-0.292388,0.601381</axis>
+            <axis>-0.193425,0.980308,-0.0397791</axis>
           </Primitive>
           <Primitive>
             <name>"revolute"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>4.72188e-011,-0.899338,-0.437253</axis>
+            <axis>0.20144,4.77519e-011,-0.979501</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"IRC5_Compact--base_plate"</name>
-        <nodeID>"IRC5_Compact:-:base_plate"</nodeID>
+        <name>"frame--IRC5_Compact"</name>
+        <nodeID>"IRC5_Compact:-:frame"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="33"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="34"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>-1,1.60465e-011,5.20513e-011</axis>
+          </Primitive>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>5.20513e-011,-5.20513e-011,1</axis>
+          </Primitive>
+          <Primitive>
+            <name>"revolute"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>-2.53134e-010,-1,-5.20622e-011</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"IRC5_Compact--RootPart"</name>
+        <nodeID>":-:robot_no_arm/RootPart"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2096,25 +2303,25 @@
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.400629,0.82401,0.400629</axis>
+            <axis>-0.143907,0.699747,0.699747</axis>
           </Primitive>
           <Primitive>
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-0.91624,0.360301,0.175176</axis>
+            <axis>0.140957,0.714391,-0.685402</axis>
           </Primitive>
           <Primitive>
             <name>"revolute"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>1.04024e-010,0.437253,-0.899338</axis>
+            <axis>-0.979501,2.62027e-011,-0.20144</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"frame--IRC5_Compact"</name>
-        <nodeID>"IRC5_Compact:-:frame"</nodeID>
+        <name>"PC--top_plate"</name>
+        <nodeID>"PC:-:top_plate"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2134,47 +2341,6 @@
         </follower>
         <primitives>
           <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.668693,-0.325115,0.668693</axis>
-          </Primitive>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.743539,0.292388,-0.601381</axis>
-          </Primitive>
-          <Primitive>
-            <name>"revolute"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-2.11214e-010,-0.899338,-0.437253</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"PC--top_plate"</name>
-        <nodeID>"PC:-:top_plate"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="39"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="40"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
             <name>"weld"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
@@ -2183,107 +2349,8 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"frame--SICK_LMS291"</name>
-        <nodeID>"SICK_LMS291:-:frame"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="41"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="42"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"revolute"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-4.72182e-011,0.899338,0.437253</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"b_l_frame_plate--b_r_frame_plate"</name>
-        <nodeID>"b_l_frame_plate:-:b_r_frame_plate"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="43"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="44"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.649583,-0.395073,0.649583</axis>
-          </Primitive>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.76029,0.337546,-0.554997</axis>
-          </Primitive>
-          <Primitive>
-            <name>"revolute"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>2.00534e-010,0.854389,0.519635</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"b_l_frame_plate--f_l_frame_plate"</name>
-        <nodeID>"b_l_frame_plate:-:f_l_frame_plate"</nodeID>
-        <status>""</status>
-        <base>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="45"></Frame>
-            </connection>
-          </JointSide>
-        </base>
-        <follower>
-          <JointSide>
-            <name>""</name>
-            <connection>
-              <Frame ref="46"></Frame>
-            </connection>
-          </JointSide>
-        </follower>
-        <primitives>
-          <Primitive>
-            <name>"prismatic"</name>
-            <nodeID>""</nodeID>
-            <referenceFrame>"WORLD"</referenceFrame>
-            <axis>2.42455e-010,0.854389,0.519635</axis>
-          </Primitive>
-        </primitives>
-      </SimpleJoint>
-      <SimpleJoint>
-        <name>"b_l_frame_plate--b_l_frame_bracket"</name>
-        <nodeID>"b_l_frame_bracket:-:b_l_frame_plate"</nodeID>
+        <name>"main_breaker--top_plate"</name>
+        <nodeID>"main_breaker:-:top_plate"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2311,8 +2378,8 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"f_r_frame_plate--b_r_frame_plate"</name>
-        <nodeID>"b_r_frame_plate:-:f_r_frame_plate"</nodeID>
+        <name>"top_plate--spike_relay"</name>
+        <nodeID>"spike_relay:-:top_plate"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2332,16 +2399,16 @@
         </follower>
         <primitives>
           <Primitive>
-            <name>"prismatic"</name>
+            <name>"revolute"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>2.00534e-010,0.854389,0.519635</axis>
+            <axis>0.20144,0,-0.979501</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"b_r_frame_plate--b_r_frame_bracket"</name>
-        <nodeID>"b_r_frame_bracket:-:b_r_frame_plate"</nodeID>
+        <name>"frame--b_r_frame_bracket"</name>
+        <nodeID>"b_r_frame_bracket:-:frame"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2369,8 +2436,8 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"f_l_frame_plate--f_r_frame_plate"</name>
-        <nodeID>"f_l_frame_plate:-:f_r_frame_plate"</nodeID>
+        <name>"frame--router"</name>
+        <nodeID>"frame:-:router"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2393,25 +2460,25 @@
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.461098,0.758141,0.461098</axis>
+            <axis>-1,0,0</axis>
           </Primitive>
           <Primitive>
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-0.887349,0.393956,0.239602</axis>
+            <axis>0,0,1</axis>
           </Primitive>
           <Primitive>
             <name>"revolute"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>3.02309e-011,0.519635,-0.854389</axis>
+            <axis>0,1,0</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"compressor--top_plate"</name>
-        <nodeID>"compressor:-:top_plate"</nodeID>
+        <name>"router--top_plate"</name>
+        <nodeID>"router:-:top_plate"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2431,16 +2498,28 @@
         </follower>
         <primitives>
           <Primitive>
-            <name>"weld"</name>
+            <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.57735,0.57735,0.57735</axis>
+            <axis>0.960213,0.197473,0.197473</axis>
+          </Primitive>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.193425,-0.980308,0.0397791</axis>
+          </Primitive>
+          <Primitive>
+            <name>"revolute"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>-0.20144,0,0.979501</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"top_plate--spike_relay"</name>
-        <nodeID>"spike_relay:-:top_plate"</nodeID>
+        <name>"RootPart--router"</name>
+        <nodeID>":-:robot_no_arm/RootPart"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2460,16 +2539,28 @@
         </follower>
         <primitives>
           <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>-0.143907,0.699747,0.699747</axis>
+          </Primitive>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>-0.140957,-0.714391,0.685402</axis>
+          </Primitive>
+          <Primitive>
             <name>"revolute"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>4.75329e-011,0.437253,-0.899338</axis>
+            <axis>-0.979501,9.81753e-012,-0.20144</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"main_breaker--top_plate"</name>
-        <nodeID>"main_breaker:-:top_plate"</nodeID>
+        <name>"frame--base_plate"</name>
+        <nodeID>"base_plate:-:frame"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2497,8 +2588,8 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"router--top_plate"</name>
-        <nodeID>"router:-:top_plate"</nodeID>
+        <name>"b_l_frame_bracket--frame"</name>
+        <nodeID>"b_l_frame_bracket:-:frame"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2521,26 +2612,26 @@
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.400629,0.82401,0.400629</axis>
+            <axis>-0.143907,0.699747,0.699747</axis>
           </Primitive>
           <Primitive>
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.91624,-0.360301,-0.175176</axis>
+            <axis>-0.140957,-0.714391,0.685402</axis>
           </Primitive>
           <Primitive>
             <name>"revolute"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-4.75328e-011,-0.437253,0.899338</axis>
+            <axis>0.979501,-3.93384e-010,0.20144</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"frame--top_plate"</name>
-        <nodeID>"frame:-:top_plate"</nodeID>
-        <status>""</status>
+        <name>"frame--bin:1"</name>
+        <nodeID>"bin:1:-:frame"</nodeID>
+        <status>"Could not solve for constraint between al_frame.iam and bin.ipt because of CAD constrain Tangent:9"</status>
         <base>
           <JointSide>
             <name>""</name>
@@ -2567,8 +2658,8 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"frame--router"</name>
-        <nodeID>"frame:-:router"</nodeID>
+        <name>"frame--f_r_frame_bracket"</name>
+        <nodeID>"f_r_frame_bracket:-:frame"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2591,25 +2682,25 @@
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.668693,-0.325115,0.668693</axis>
+            <axis>1,0,0</axis>
           </Primitive>
           <Primitive>
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>0.743539,0.292388,-0.601381</axis>
+            <axis>0,0,1</axis>
           </Primitive>
           <Primitive>
             <name>"revolute"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-4.72179e-011,0.899338,0.437253</axis>
+            <axis>0,-1,0</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"frame--b_r_frame_bracket"</name>
-        <nodeID>"b_r_frame_bracket:-:frame"</nodeID>
+        <name>"frame--top_plate"</name>
+        <nodeID>"frame:-:top_plate"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2637,8 +2728,8 @@
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"b_l_frame_bracket--frame"</name>
-        <nodeID>"b_l_frame_bracket:-:frame"</nodeID>
+        <name>"RootPart--frame"</name>
+        <nodeID>":-:robot_no_arm/RootPart"</nodeID>
         <status>""</status>
         <base>
           <JointSide>
@@ -2661,31 +2752,32 @@
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>2.35439e-010,1,1.19919e-012</axis>
+            <axis>1,0,0</axis>
           </Primitive>
           <Primitive>
             <name>"prismatic"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>-1.19919e-012,-1.19919e-012,1</axis>
+            <axis>0,0,1</axis>
           </Primitive>
           <Primitive>
             <name>"revolute"</name>
             <nodeID>""</nodeID>
             <referenceFrame>"WORLD"</referenceFrame>
-            <axis>1,-4.02094e-010,-1.0016e-010</axis>
+            <axis>0,1,0</axis>
           </Primitive>
         </primitives>
       </SimpleJoint>
       <SimpleJoint>
-        <name>"frame--base_plate"</name>
-        <nodeID>"base_plate:-:frame"</nodeID>
-        <status>""</status>
+        <name>"RootPart--RootPart"</name>
+        <nodeID>":-:robot_no_arm/RootPart"</nodeID>
+        <status>"The SimMechanics CAD translator cannot solve for the CAD constraint between robot_no_arm.iam and invacare assy.iam.
+ The two prismatic axes are not lying in the plane perpendicular to the revolute axis in a planar joint. This axis configuration is not supported."</status>
         <base>
           <JointSide>
             <name>""</name>
             <connection>
-              <Frame ref="71"></Frame>
+              <Frame ref="75"></Frame>
             </connection>
           </JointSide>
         </base>
@@ -2693,7 +2785,77 @@
           <JointSide>
             <name>""</name>
             <connection>
-              <Frame ref="72"></Frame>
+              <Frame ref="76"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"weld"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0.57735,0.57735,0.57735</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"f_l_frame_bracket--f_r_frame_bracket"</name>
+        <nodeID>"f_l_frame_bracket:-:f_r_frame_bracket"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="77"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="78"></Frame>
+            </connection>
+          </JointSide>
+        </follower>
+        <primitives>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>1,0,0</axis>
+          </Primitive>
+          <Primitive>
+            <name>"prismatic"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>0,0,1</axis>
+          </Primitive>
+          <Primitive>
+            <name>"revolute"</name>
+            <nodeID>""</nodeID>
+            <referenceFrame>"WORLD"</referenceFrame>
+            <axis>-1.75958e-010,-1,-3.61759e-011</axis>
+          </Primitive>
+        </primitives>
+      </SimpleJoint>
+      <SimpleJoint>
+        <name>"compressor--top_plate"</name>
+        <nodeID>"compressor:-:top_plate"</nodeID>
+        <status>""</status>
+        <base>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="79"></Frame>
+            </connection>
+          </JointSide>
+        </base>
+        <follower>
+          <JointSide>
+            <name>""</name>
+            <connection>
+              <Frame ref="80"></Frame>
             </connection>
           </JointSide>
         </follower>
@@ -2714,7 +2876,7 @@
           <JointSide>
             <name>""</name>
             <connection>
-              <Frame ref="73"></Frame>
+              <Frame ref="81"></Frame>
             </connection>
           </JointSide>
         </base>
@@ -2722,7 +2884,7 @@
           <JointSide>
             <name>""</name>
             <connection>
-              <Frame ref="74"></Frame>
+              <Frame ref="82"></Frame>
             </connection>
           </JointSide>
         </follower>
@@ -2742,11 +2904,11 @@
         <nodeID>"RootGround"</nodeID>
         <status>""</status>
         <frame>
-          <Frame ref="73">
+          <Frame ref="81">
             <name>"CS1"</name>
             <displayName>""</displayName>
             <nodeID>"RootGround:-:robot_no_arm/RootPart::RootGround(AUTOGEN)"</nodeID>
-            <position>1.29686,-11.663,8.63574</position>
+            <position>-1.29364,-3.18038,3.57828</position>
             <positionOrigin>"WORLD"</positionOrigin>
             <positionReferenceFrame>"WORLD"</positionReferenceFrame>
             <positionUnits>"in"</positionUnits>
@@ -2781,11 +2943,11 @@
                 <name>"CG"</name>
                 <displayName>""</displayName>
                 <nodeID>"drive_base/frame_solid:1::CG(AUTOGEN)"</nodeID>
-                <position>1.16585,-7.59638,3.03259</position>
+                <position>0.148644,-1.48928,-3.26384</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
-                <orientation>1,2.88933e-011,5.29558e-011,-3.49915e-011,-0.437253,0.899338,4.914e-011,-0.899338,-0.437253</orientation>
+                <orientation>0.979501,-2.50742e-010,0.20144,-0.20144,0,0.979501,-2.45604e-010,-1,-5.05024e-011</orientation>
                 <orientationType>"3x3 Transform"</orientationType>
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -2794,11 +2956,11 @@
                 <name>"CS1"</name>
                 <displayName>""</displayName>
                 <nodeID>"drive_base/frame_solid:1::CS1(AUTOGEN)"</nodeID>
-                <position>-125.666,-76.8955,-41.7147</position>
+                <position>-122.081,-83.3785,-38.5509</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
-                <orientation>1,2.88933e-011,5.29558e-011,-3.49915e-011,-0.437253,0.899338,4.914e-011,-0.899338,-0.437253</orientation>
+                <orientation>0.979501,-2.50742e-010,0.20144,-0.20144,0,0.979501,-2.45604e-010,-1,-5.05024e-011</orientation>
                 <orientationType>"3x3 Transform"</orientationType>
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -2807,7 +2969,7 @@
                 <name>"CS2"</name>
                 <displayName>""</displayName>
                 <nodeID>"drive_base/RootPart:-:drive_base/frame_solid:1::drive_base/frame_solid:1(AUTOGEN)"</nodeID>
-                <position>1.16585,-7.59638,3.03259</position>
+                <position>0.148644,-1.48928,-3.26384</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
@@ -2816,11 +2978,11 @@
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
               </Frame>
-              <Frame ref="18">
+              <Frame ref="17">
                 <name>"CS3"</name>
                 <displayName>""</displayName>
-                <nodeID>"drive_base/frame_solid:1:-:drive_base/l_drive_wheel::drive_base/frame_solid:1(AUTOGEN)"</nodeID>
-                <position>12.8473,-3.23162,1.29303</position>
+                <nodeID>"drive_base:drive_base/frame_solid:1:-:f_l_frame_plate::drive_base/frame_solid:1(AUTOGEN)"</nodeID>
+                <position>7.77745,7.99467,3.40829</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
@@ -2829,11 +2991,11 @@
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
               </Frame>
-              <Frame ref="19">
+              <Frame ref="30">
                 <name>"CS4"</name>
                 <displayName>""</displayName>
-                <nodeID>"drive_base/frame_solid:1:-:drive_base/r_drive wheel::drive_base/frame_solid:1(AUTOGEN)"</nodeID>
-                <position>-9.06269,-3.23162,1.29303</position>
+                <nodeID>"b_l_frame_plate:-:drive_base:drive_base/frame_solid:1::drive_base/frame_solid:1(AUTOGEN)"</nodeID>
+                <position>8.76789,7.49109,3.69176</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
@@ -2842,11 +3004,11 @@
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
               </Frame>
-              <Frame ref="22">
+              <Frame ref="40">
                 <name>"CS5"</name>
                 <displayName>""</displayName>
-                <nodeID>"drive_base/frame_solid:1:-:drive_base/r_caster::drive_base/frame_solid:1(AUTOGEN)"</nodeID>
-                <position>-6.57969,-21.3294,-4.53176</position>
+                <nodeID>"drive_base/frame_solid:1:-:drive_base/l_drive_wheel::drive_base/frame_solid:1(AUTOGEN)"</nodeID>
+                <position>12.2902,1.67549,-4.31249</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
@@ -2855,11 +3017,11 @@
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
               </Frame>
-              <Frame ref="24">
+              <Frame ref="41">
                 <name>"CS6"</name>
                 <displayName>""</displayName>
-                <nodeID>"drive_base/frame_solid:1:-:drive_base/l_caster::drive_base/frame_solid:1(AUTOGEN)"</nodeID>
-                <position>10.3643,-21.3294,-4.53176</position>
+                <nodeID>"drive_base/frame_solid:1:-:drive_base/r_drive_wheel::drive_base/frame_solid:1(AUTOGEN)"</nodeID>
+                <position>-9.17063,1.67549,-8.72605</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
@@ -2868,11 +3030,11 @@
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
               </Frame>
-              <Frame ref="26">
+              <Frame ref="46">
                 <name>"CS7"</name>
                 <displayName>""</displayName>
-                <nodeID>"b_l_frame_plate:-:drive_base:drive_base/frame_solid:1::drive_base/frame_solid:1(AUTOGEN)"</nodeID>
-                <position>11.0095,-1.73982,11.525</position>
+                <nodeID>"drive_base/frame_solid:1:-:drive_base/l_caster:drive_base/l_caster/caster:1::drive_base/frame_solid:1(AUTOGEN)"</nodeID>
+                <position>9.31931,-17.1474,-2.19264</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
@@ -2881,11 +3043,11 @@
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
               </Frame>
-              <Frame ref="27">
+              <Frame ref="74">
                 <name>"CS8"</name>
                 <displayName>""</displayName>
-                <nodeID>"drive_base:drive_base/frame_solid:1:-:f_l_frame_plate::drive_base/frame_solid:1(AUTOGEN)"</nodeID>
-                <position>9.98231,-1.25276,11.6749</position>
+                <nodeID>"drive_base/frame_solid:1:-:drive_base/r_caster:drive_base/r_caster/caster:1::drive_base/frame_solid:1(AUTOGEN)"</nodeID>
+                <position>-7.27735,-17.1474,-5.60584</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
@@ -2923,11 +3085,11 @@
                 <name>"CG"</name>
                 <displayName>""</displayName>
                 <nodeID>"drive_base/RootPart::CG(AUTOGEN)"</nodeID>
-                <position>1.22911,-7.65904,2.45461</position>
+                <position>0.330929,-1.7935,-3.72906</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
-                <orientation>1,2.88933e-011,5.29558e-011,-3.49915e-011,-0.437253,0.899338,4.914e-011,-0.899338,-0.437253</orientation>
+                <orientation>0.979501,-2.50742e-010,0.20144,-0.20144,0,0.979501,-2.45604e-010,-1,-5.05024e-011</orientation>
                 <orientationType>"3x3 Transform"</orientationType>
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -2936,11 +3098,11 @@
                 <name>"CS1"</name>
                 <displayName>""</displayName>
                 <nodeID>"drive_base/RootPart::CS1(AUTOGEN)"</nodeID>
-                <position>-125.666,-76.8955,-41.7147</position>
+                <position>-122.081,-83.3785,-38.5509</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
-                <orientation>1,2.88933e-011,5.29558e-011,-3.49915e-011,-0.437253,0.899338,4.914e-011,-0.899338,-0.437253</orientation>
+                <orientation>0.979501,-2.50742e-010,0.20144,-0.20144,0,0.979501,-2.45604e-010,-1,-5.05024e-011</orientation>
                 <orientationType>"3x3 Transform"</orientationType>
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -2949,7 +3111,7 @@
                 <name>"CS2"</name>
                 <displayName>""</displayName>
                 <nodeID>"drive_base/RootPart:-:drive_base/frame_solid:1::drive_base/RootPart(AUTOGEN)"</nodeID>
-                <position>1.16585,-7.59638,3.03259</position>
+                <position>0.148644,-1.48928,-3.26384</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
@@ -2958,11 +3120,11 @@
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
               </Frame>
-              <Frame ref="6">
+              <Frame ref="76">
                 <name>"CS3"</name>
                 <displayName>""</displayName>
                 <nodeID>":-:robot_no_arm/RootPart::drive_base/RootPart(AUTOGEN)"</nodeID>
-                <position>0,0,0</position>
+                <position>-1.29364,-3.18038,3.57828</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
@@ -2991,11 +3153,11 @@
                 <name>"CG"</name>
                 <displayName>""</displayName>
                 <nodeID>"drive_base/l_drive_wheel::CG(AUTOGEN)"</nodeID>
-                <position>12.8756,-3.23162,1.29303</position>
+                <position>12.3179,1.67549,-4.3068</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
-                <orientation>-2.88675e-011,-0.54161,0.84063,-1,-2.88937e-011,-5.29554e-011,5.29701e-011,-0.84063,-0.54161</orientation>
+                <orientation>-0.199996,-0.119522,0.972479,-0.979501,2.43922e-010,-0.20144,0.0240766,-0.992832,-0.117072</orientation>
                 <orientationType>"3x3 Transform"</orientationType>
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -3004,20 +3166,20 @@
                 <name>"CS1"</name>
                 <displayName>""</displayName>
                 <nodeID>"drive_base/l_drive_wheel::CS1(AUTOGEN)"</nodeID>
-                <position>12.8473,-3.23162,1.29303</position>
+                <position>12.2902,1.67549,-4.31249</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
-                <orientation>-2.88675e-011,-0.54161,0.84063,-1,-2.88937e-011,-5.29554e-011,5.29701e-011,-0.84063,-0.54161</orientation>
+                <orientation>-0.199996,-0.119522,0.972479,-0.979501,2.43922e-010,-0.20144,0.0240766,-0.992832,-0.117072</orientation>
                 <orientationType>"3x3 Transform"</orientationType>
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
               </Frame>
-              <Frame ref="17">
+              <Frame ref="39">
                 <name>"CS2"</name>
                 <displayName>""</displayName>
                 <nodeID>"drive_base/frame_solid:1:-:drive_base/l_drive_wheel::drive_base/l_drive_wheel(AUTOGEN)"</nodeID>
-                <position>12.8473,-3.23162,1.29303</position>
+                <position>12.2902,1.67549,-4.31249</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
@@ -3039,8 +3201,8 @@
             </MaterialProp>
           </Body>
           <Body>
-            <name>"r_drive wheel"</name>
-            <nodeID>"drive_base/r_drive wheel"</nodeID>
+            <name>"r_drive_wheel"</name>
+            <nodeID>"drive_base/r_drive_wheel"</nodeID>
             <status>""</status>
             <mass>7.775</mass>
             <massUnits>"lbm"</massUnits>
@@ -3054,12 +3216,12 @@
               <Frame>
                 <name>"CG"</name>
                 <displayName>""</displayName>
-                <nodeID>"drive_base/r_drive wheel::CG(AUTOGEN)"</nodeID>
-                <position>-9.09096,-3.23162,1.29303</position>
+                <nodeID>"drive_base/r_drive_wheel::CG(AUTOGEN)"</nodeID>
+                <position>-9.19831,1.67549,-8.73174</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
-                <orientation>5.26883e-011,0.00920923,-0.999958,1,2.88917e-011,5.29566e-011,2.93782e-011,-0.999958,-0.00920923</orientation>
+                <orientation>0.181966,-0.428952,-0.88481,0.979501,-2.43923e-010,0.20144,-0.0864082,-0.903327,0.420159</orientation>
                 <orientationType>"3x3 Transform"</orientationType>
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
@@ -3067,21 +3229,21 @@
               <Frame>
                 <name>"CS1"</name>
                 <displayName>""</displayName>
-                <nodeID>"drive_base/r_drive wheel::CS1(AUTOGEN)"</nodeID>
-                <position>-9.06269,-3.23162,1.29303</position>
+                <nodeID>"drive_base/r_drive_wheel::CS1(AUTOGEN)"</nodeID>
+                <position>-9.17063,1.67549,-8.72605</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
-                <orientation>5.26883e-011,0.00920923,-0.999958,1,2.88917e-011,5.29566e-011,2.93782e-011,-0.999958,-0.00920923</orientation>
+                <orientation>0.181966,-0.428952,-0.88481,0.979501,-2.43923e-010,0.20144,-0.0864082,-0.903327,0.420159</orientation>
                 <orientationType>"3x3 Transform"</orientationType>
                 <orientationUnits>"rad"</orientationUnits>
                 <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
               </Frame>
-              <Frame ref="20">
+              <Frame ref="42">
                 <name>"CS2"</name>
                 <displayName>""</displayName>
-                <nodeID>"drive_base/frame_solid:1:-:drive_base/r_drive wheel::drive_base/r_drive wheel(AUTOGEN)"</nodeID>
-                <position>-9.06269,-3.23162,1.29303</position>
+                <nodeID>"drive_base/frame_solid:1:-:drive_base/r_drive_wheel::drive_base/r_drive_wheel(AUTOGEN)"</nodeID>
+                <position>-9.17063,1.67549,-8.72605</position>
                 <positionOrigin>"WORLD"</positionOrigin>
                 <positionReferenceFrame>"WORLD"</positionReferenceFrame>
                 <positionUnits>"in"</positionUnits>
@@ -3098,288 +3260,6 @@
               <diffuse>1</diffuse>
               <specular>1</specular>
               <shininess>0.2</shininess>
-              <transparency>0</transparency>
-              <emission>0.2</emission>
-            </MaterialProp>
-          </Body>
-          <Body>
-            <name>"r_caster_wheel"</name>
-            <nodeID>"drive_base/r_caster_wheel"</nodeID>
-            <status>""</status>
-            <mass>3.12557</mass>
-            <massUnits>"lbm"</massUnits>
-            <inertia>11.9487,0,0,0,21.6882,0,0,0,11.9487</inertia>
-            <inertiaUnits>"lbm*in^2"</inertiaUnits>
-            <volume>86.5155</volume>
-            <volumeUnits>"in^3"</volumeUnits>
-            <surfaceArea>133.407</surfaceArea>
-            <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
-            <frames>
-              <Frame>
-                <name>"CG"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/r_caster_wheel::CG(AUTOGEN)"</nodeID>
-                <position>-6.75066,-20.997,-10.3467</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>0.0381001,0.883184,-0.467477,0.997921,-0.0579676,-0.0281835,-0.0519897,-0.465431,-0.883556</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-              <Frame>
-                <name>"CS1"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/r_caster_wheel::CS1(AUTOGEN)"</nodeID>
-                <position>-6.75066,-20.997,-10.3467</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>0.0381001,0.883184,-0.467477,0.997921,-0.0579676,-0.0281835,-0.0519897,-0.465431,-0.883556</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-              <Frame ref="33">
-                <name>"CS2"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/r_caster:-:drive_base/r_caster_wheel::drive_base/r_caster_wheel(AUTOGEN)"</nodeID>
-                <position>-5.25378,-21.0839,-10.389</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>1,0,0,0,1,0,0,0,1</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-            </frames>
-            <geometryFileName>"caster wheel_ipt_4784d7d8.STL"</geometryFileName>
-            <MaterialProp>
-              <color>0.752941,0.752941,0.752941</color>
-              <ambient>1</ambient>
-              <diffuse>1</diffuse>
-              <specular>1</specular>
-              <shininess>0.2</shininess>
-              <transparency>0</transparency>
-              <emission>0.2</emission>
-            </MaterialProp>
-          </Body>
-          <Body>
-            <name>"r_caster"</name>
-            <nodeID>"drive_base/r_caster"</nodeID>
-            <status>""</status>
-            <mass>0.311242</mass>
-            <massUnits>"lbm"</massUnits>
-            <inertia>1.75384,0,0,0,0.89231,0.517163,0,0.517163,1.99846</inertia>
-            <inertiaUnits>"lbm*in^2"</inertiaUnits>
-            <volume>8.61515</volume>
-            <volumeUnits>"in^3"</volumeUnits>
-            <surfaceArea>73.345</surfaceArea>
-            <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
-            <frames>
-              <Frame>
-                <name>"CG"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/r_caster::CG(AUTOGEN)"</nodeID>
-                <position>-6.6257,-20.945,-6.95168</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>0.997921,-0.0579676,-0.0281835,-3.49916e-011,-0.437253,0.899338,-0.0644558,-0.897468,-0.436344</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-              <Frame>
-                <name>"CS1"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/r_caster::CS1(AUTOGEN)"</nodeID>
-                <position>-6.51524,-18.0817,-8.92936</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>0.997921,-0.0579676,-0.0281835,-3.49916e-011,-0.437253,0.899338,-0.0644558,-0.897468,-0.436344</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-              <Frame ref="21">
-                <name>"CS2"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/frame_solid:1:-:drive_base/r_caster::drive_base/r_caster(AUTOGEN)"</nodeID>
-                <position>-6.57969,-21.3294,-4.53176</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>1,0,0,0,1,0,0,0,1</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-              <Frame ref="34">
-                <name>"CS3"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/r_caster:-:drive_base/r_caster_wheel::drive_base/r_caster(AUTOGEN)"</nodeID>
-                <position>-5.25378,-21.0839,-10.389</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>1,0,0,0,1,0,0,0,1</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-            </frames>
-            <geometryFileName>"caster_ipt_ca03a3d7.STL"</geometryFileName>
-            <MaterialProp>
-              <color>0,0,0</color>
-              <ambient>1</ambient>
-              <diffuse>1</diffuse>
-              <specular>1</specular>
-              <shininess>0.41</shininess>
-              <transparency>0</transparency>
-              <emission>0.2</emission>
-            </MaterialProp>
-          </Body>
-          <Body>
-            <name>"l_caster_wheel"</name>
-            <nodeID>"drive_base/l_caster_wheel"</nodeID>
-            <status>""</status>
-            <mass>3.12557</mass>
-            <massUnits>"lbm"</massUnits>
-            <inertia>11.9487,0,0,0,21.6882,0,0,0,11.9487</inertia>
-            <inertiaUnits>"lbm*in^2"</inertiaUnits>
-            <volume>86.5155</volume>
-            <volumeUnits>"in^3"</volumeUnits>
-            <surfaceArea>133.407</surfaceArea>
-            <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
-            <frames>
-              <Frame>
-                <name>"CG"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/l_caster_wheel::CG(AUTOGEN)"</nodeID>
-                <position>9.25043,-17.2209,-8.51082</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>-0.0493256,0.510975,-0.858179,-0.863101,-0.454195,-0.220827,-0.502617,0.729803,0.463426</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-              <Frame>
-                <name>"CS1"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/l_caster_wheel::CS1(AUTOGEN)"</nodeID>
-                <position>9.25043,-17.2209,-8.51082</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>-0.0493256,0.510975,-0.858179,-0.863101,-0.454195,-0.220827,-0.502617,0.729803,0.463426</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-              <Frame ref="3">
-                <name>"CS2"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/l_caster:-:drive_base/l_caster_wheel::drive_base/l_caster_wheel(AUTOGEN)"</nodeID>
-                <position>7.95578,-17.9021,-8.84206</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>1,0,0,0,1,0,0,0,1</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-            </frames>
-            <geometryFileName>"caster wheel_ipt_4784d7d8.STL"</geometryFileName>
-            <MaterialProp>
-              <color>0.752941,0.752941,0.752941</color>
-              <ambient>1</ambient>
-              <diffuse>1</diffuse>
-              <specular>1</specular>
-              <shininess>0.2</shininess>
-              <transparency>0</transparency>
-              <emission>0.2</emission>
-            </MaterialProp>
-          </Body>
-          <Body>
-            <name>"l_caster"</name>
-            <nodeID>"drive_base/l_caster"</nodeID>
-            <status>""</status>
-            <mass>0.311242</mass>
-            <massUnits>"lbm"</massUnits>
-            <inertia>1.75384,0,0,0,0.89231,0.517163,0,0.517163,1.99846</inertia>
-            <inertiaUnits>"lbm*in^2"</inertiaUnits>
-            <volume>8.61515</volume>
-            <volumeUnits>"in^3"</volumeUnits>
-            <surfaceArea>73.345</surfaceArea>
-            <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
-            <frames>
-              <Frame>
-                <name>"CG"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/l_caster::CG(AUTOGEN)"</nodeID>
-                <position>10.0038,-19.7502,-6.37078</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>-0.863101,-0.454195,-0.220827,-3.49916e-011,-0.437253,0.899338,-0.505032,0.77622,0.377394</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-              <Frame>
-                <name>"CS1"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/l_caster::CS1(AUTOGEN)"</nodeID>
-                <position>10.8693,-19.7554,-9.74309</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>-0.863101,-0.454195,-0.220827,-3.49916e-011,-0.437253,0.899338,-0.505032,0.77622,0.377394</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-              <Frame ref="4">
-                <name>"CS2"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/l_caster:-:drive_base/l_caster_wheel::drive_base/l_caster(AUTOGEN)"</nodeID>
-                <position>7.95578,-17.9021,-8.84206</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>1,0,0,0,1,0,0,0,1</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-              <Frame ref="23">
-                <name>"CS3"</name>
-                <displayName>""</displayName>
-                <nodeID>"drive_base/frame_solid:1:-:drive_base/l_caster::drive_base/l_caster(AUTOGEN)"</nodeID>
-                <position>10.3643,-21.3294,-4.53176</position>
-                <positionOrigin>"WORLD"</positionOrigin>
-                <positionReferenceFrame>"WORLD"</positionReferenceFrame>
-                <positionUnits>"in"</positionUnits>
-                <orientation>1,0,0,0,1,0,0,0,1</orientation>
-                <orientationType>"3x3 Transform"</orientationType>
-                <orientationUnits>"rad"</orientationUnits>
-                <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
-              </Frame>
-            </frames>
-            <geometryFileName>"caster_ipt_ca03a3d7.STL"</geometryFileName>
-            <MaterialProp>
-              <color>0,0,0</color>
-              <ambient>1</ambient>
-              <diffuse>1</diffuse>
-              <specular>1</specular>
-              <shininess>0.41</shininess>
               <transparency>0</transparency>
               <emission>0.2</emission>
             </MaterialProp>
@@ -3416,35 +3296,6 @@
             </primitives>
           </SimpleJoint>
           <SimpleJoint>
-            <name>"l_caster_wheel--l_caster"</name>
-            <nodeID>"drive_base/l_caster:-:drive_base/l_caster_wheel"</nodeID>
-            <status>""</status>
-            <base>
-              <JointSide>
-                <name>""</name>
-                <connection>
-                  <Frame ref="3"></Frame>
-                </connection>
-              </JointSide>
-            </base>
-            <follower>
-              <JointSide>
-                <name>""</name>
-                <connection>
-                  <Frame ref="4"></Frame>
-                </connection>
-              </JointSide>
-            </follower>
-            <primitives>
-              <Primitive>
-                <name>"revolute"</name>
-                <nodeID>""</nodeID>
-                <referenceFrame>"WORLD"</referenceFrame>
-                <axis>0.863101,0.454195,0.220827</axis>
-              </Primitive>
-            </primitives>
-          </SimpleJoint>
-          <SimpleJoint>
             <name>"l_drive_wheel--frame_solid:1"</name>
             <nodeID>"drive_base/frame_solid:1:-:drive_base/l_drive_wheel"</nodeID>
             <status>""</status>
@@ -3452,7 +3303,7 @@
               <JointSide>
                 <name>""</name>
                 <connection>
-                  <Frame ref="17"></Frame>
+                  <Frame ref="39"></Frame>
                 </connection>
               </JointSide>
             </base>
@@ -3460,7 +3311,7 @@
               <JointSide>
                 <name>""</name>
                 <connection>
-                  <Frame ref="18"></Frame>
+                  <Frame ref="40"></Frame>
                 </connection>
               </JointSide>
             </follower>
@@ -3469,19 +3320,19 @@
                 <name>"revolute"</name>
                 <nodeID>""</nodeID>
                 <referenceFrame>"WORLD"</referenceFrame>
-                <axis>1,2.88933e-011,5.29561e-011</axis>
+                <axis>0.979501,-2.43922e-010,0.20144</axis>
               </Primitive>
             </primitives>
           </SimpleJoint>
           <SimpleJoint>
-            <name>"frame_solid:1--r_drive wheel"</name>
-            <nodeID>"drive_base/frame_solid:1:-:drive_base/r_drive wheel"</nodeID>
+            <name>"frame_solid:1--r_drive_wheel"</name>
+            <nodeID>"drive_base/frame_solid:1:-:drive_base/r_drive_wheel"</nodeID>
             <status>""</status>
             <base>
               <JointSide>
                 <name>""</name>
                 <connection>
-                  <Frame ref="19"></Frame>
+                  <Frame ref="41"></Frame>
                 </connection>
               </JointSide>
             </base>
@@ -3489,7 +3340,7 @@
               <JointSide>
                 <name>""</name>
                 <connection>
-                  <Frame ref="20"></Frame>
+                  <Frame ref="42"></Frame>
                 </connection>
               </JointSide>
             </follower>
@@ -3498,19 +3349,19 @@
                 <name>"revolute"</name>
                 <nodeID>""</nodeID>
                 <referenceFrame>"WORLD"</referenceFrame>
-                <axis>-1,-2.88927e-011,-5.29571e-011</axis>
+                <axis>-0.979501,2.50742e-010,-0.20144</axis>
               </Primitive>
             </primitives>
           </SimpleJoint>
           <SimpleJoint>
-            <name>"r_caster--frame_solid:1"</name>
-            <nodeID>"drive_base/frame_solid:1:-:drive_base/r_caster"</nodeID>
+            <name>"caster:1--frame_solid:1"</name>
+            <nodeID>"drive_base/frame_solid:1:-:drive_base/l_caster:drive_base/l_caster/caster:1"</nodeID>
             <status>""</status>
             <base>
               <JointSide>
                 <name>""</name>
                 <connection>
-                  <Frame ref="21"></Frame>
+                  <Frame ref="45"></Frame>
                 </connection>
               </JointSide>
             </base>
@@ -3518,7 +3369,7 @@
               <JointSide>
                 <name>""</name>
                 <connection>
-                  <Frame ref="22"></Frame>
+                  <Frame ref="46"></Frame>
                 </connection>
               </JointSide>
             </follower>
@@ -3527,19 +3378,19 @@
                 <name>"revolute"</name>
                 <nodeID>""</nodeID>
                 <referenceFrame>"WORLD"</referenceFrame>
-                <axis>3.49916e-011,0.437253,-0.899338</axis>
+                <axis>0.20144,0,-0.979501</axis>
               </Primitive>
             </primitives>
           </SimpleJoint>
           <SimpleJoint>
-            <name>"l_caster--frame_solid:1"</name>
-            <nodeID>"drive_base/frame_solid:1:-:drive_base/l_caster"</nodeID>
+            <name>"caster:1--frame_solid:1"</name>
+            <nodeID>"drive_base/frame_solid:1:-:drive_base/r_caster:drive_base/r_caster/caster:1"</nodeID>
             <status>""</status>
             <base>
               <JointSide>
                 <name>""</name>
                 <connection>
-                  <Frame ref="23"></Frame>
+                  <Frame ref="73"></Frame>
                 </connection>
               </JointSide>
             </base>
@@ -3547,7 +3398,7 @@
               <JointSide>
                 <name>""</name>
                 <connection>
-                  <Frame ref="24"></Frame>
+                  <Frame ref="74"></Frame>
                 </connection>
               </JointSide>
             </follower>
@@ -3556,42 +3407,574 @@
                 <name>"revolute"</name>
                 <nodeID>""</nodeID>
                 <referenceFrame>"WORLD"</referenceFrame>
-                <axis>3.49916e-011,0.437253,-0.899338</axis>
-              </Primitive>
-            </primitives>
-          </SimpleJoint>
-          <SimpleJoint>
-            <name>"r_caster_wheel--r_caster"</name>
-            <nodeID>"drive_base/r_caster:-:drive_base/r_caster_wheel"</nodeID>
-            <status>""</status>
-            <base>
-              <JointSide>
-                <name>""</name>
-                <connection>
-                  <Frame ref="33"></Frame>
-                </connection>
-              </JointSide>
-            </base>
-            <follower>
-              <JointSide>
-                <name>""</name>
-                <connection>
-                  <Frame ref="34"></Frame>
-                </connection>
-              </JointSide>
-            </follower>
-            <primitives>
-              <Primitive>
-                <name>"revolute"</name>
-                <nodeID>""</nodeID>
-                <referenceFrame>"WORLD"</referenceFrame>
-                <axis>-0.997921,0.0579676,0.0281835</axis>
+                <axis>0.20144,0,-0.979501</axis>
               </Primitive>
             </primitives>
           </SimpleJoint>
         </joints>
         <grounds></grounds>
-        <subsystems></subsystems>
+        <subsystems>
+          <Subsystem>
+            <name>"r_caster"</name>
+            <nodeID>"drive_base/r_caster"</nodeID>
+            <status>""</status>
+            <bodies>
+              <Body>
+                <name>"caster wheel:1"</name>
+                <nodeID>"drive_base/r_caster/caster wheel:1"</nodeID>
+                <status>""</status>
+                <mass>3.12557</mass>
+                <massUnits>"lbm"</massUnits>
+                <inertia>11.9487,0,0,0,21.6882,0,0,0,11.9487</inertia>
+                <inertiaUnits>"lbm*in^2"</inertiaUnits>
+                <volume>86.5155</volume>
+                <volumeUnits>"in^3"</volumeUnits>
+                <surfaceArea>133.407</surfaceArea>
+                <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+                <frames>
+                  <Frame>
+                    <name>"CG"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/r_caster/caster wheel:1::CG(AUTOGEN)"</nodeID>
+                    <position>-6.22008,-14.8974,-10.8759</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>-0.20144,0,0.979501,0.979501,-2.49374e-010,0.20144,2.44268e-010,1,5.0204e-011</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame>
+                    <name>"CS1"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/r_caster/caster wheel:1::CS1(AUTOGEN)"</nodeID>
+                    <position>-6.22008,-14.8974,-10.8759</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>-0.20144,0,0.979501,0.979501,-2.49374e-010,0.20144,2.44268e-010,1,5.0204e-011</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame ref="4">
+                    <name>"CS2"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/r_caster/RootPart:-:drive_base/r_caster/caster wheel:1::drive_base/r_caster/caster wheel:1(AUTOGEN)"</nodeID>
+                    <position>-6.22008,-14.8974,-10.8759</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame ref="71">
+                    <name>"CS3"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/r_caster/caster wheel:1:-:drive_base/r_caster/caster:1::drive_base/r_caster/caster wheel:1(AUTOGEN)"</nodeID>
+                    <position>-4.75082,-14.8974,-10.5737</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                </frames>
+                <geometryFileName>"caster wheel_ipt_4784d7d8.STL"</geometryFileName>
+                <MaterialProp>
+                  <color>0.752941,0.752941,0.752941</color>
+                  <ambient>1</ambient>
+                  <diffuse>1</diffuse>
+                  <specular>1</specular>
+                  <shininess>0.2</shininess>
+                  <transparency>0</transparency>
+                  <emission>0.2</emission>
+                </MaterialProp>
+              </Body>
+              <Body>
+                <name>"RootPart"</name>
+                <nodeID>"drive_base/r_caster/RootPart"</nodeID>
+                <status>""</status>
+                <mass>0</mass>
+                <massUnits>"lbm"</massUnits>
+                <inertia>0,0,0,0,0,0,0,0,0</inertia>
+                <inertiaUnits>"lbm*in^2"</inertiaUnits>
+                <volume>0</volume>
+                <volumeUnits>"in^3"</volumeUnits>
+                <surfaceArea>0</surfaceArea>
+                <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+                <frames>
+                  <Frame>
+                    <name>"CG"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/r_caster/RootPart::CG(AUTOGEN)"</nodeID>
+                    <position>-6.27305,-15.0366,-10.6066</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>-0.20144,0,0.979501,0.979501,-2.49374e-010,0.20144,2.44268e-010,1,5.0204e-011</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame>
+                    <name>"CS1"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/r_caster/RootPart::CS1(AUTOGEN)"</nodeID>
+                    <position>-6.22008,-14.8974,-10.8759</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>-0.20144,0,0.979501,0.979501,-2.49374e-010,0.20144,2.44268e-010,1,5.0204e-011</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame ref="3">
+                    <name>"CS2"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/r_caster/RootPart:-:drive_base/r_caster/caster wheel:1::drive_base/r_caster/RootPart(AUTOGEN)"</nodeID>
+                    <position>-6.22008,-14.8974,-10.8759</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                </frames>
+                <geometryFileName>""</geometryFileName>
+              </Body>
+              <Body>
+                <name>"caster:1"</name>
+                <nodeID>"drive_base/r_caster/caster:1"</nodeID>
+                <status>""</status>
+                <mass>0.311242</mass>
+                <massUnits>"lbm"</massUnits>
+                <inertia>1.75384,0,0,0,0.89231,0.517163,0,0.517163,1.99846</inertia>
+                <inertiaUnits>"lbm*in^2"</inertiaUnits>
+                <volume>8.61515</volume>
+                <volumeUnits>"in^3"</volumeUnits>
+                <surfaceArea>73.345</surfaceArea>
+                <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+                <frames>
+                  <Frame>
+                    <name>"CG"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/r_caster/caster:1::CG(AUTOGEN)"</nodeID>
+                    <position>-6.80509,-16.4336,-7.90221</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>-0.979501,2.49374e-010,-0.20144,-0.20144,0,0.979501,2.44264e-010,1,5.02265e-011</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame>
+                    <name>"CS1"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/r_caster/caster:1::CS1(AUTOGEN)"</nodeID>
+                    <position>-6.19461,-18.1474,-10.8707</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>-0.979501,2.49374e-010,-0.20144,-0.20144,0,0.979501,2.44264e-010,1,5.02265e-011</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame ref="72">
+                    <name>"CS2"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/r_caster/caster wheel:1:-:drive_base/r_caster/caster:1::drive_base/r_caster/caster:1(AUTOGEN)"</nodeID>
+                    <position>-4.75082,-14.8974,-10.5737</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame ref="73">
+                    <name>"CS3"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/frame_solid:1:-:drive_base/r_caster:drive_base/r_caster/caster:1::drive_base/r_caster/caster:1(AUTOGEN)"</nodeID>
+                    <position>-7.27735,-17.1474,-5.60584</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                </frames>
+                <geometryFileName>"caster_ipt_ca03a3d7.STL"</geometryFileName>
+                <MaterialProp>
+                  <color>0,0,0</color>
+                  <ambient>1</ambient>
+                  <diffuse>1</diffuse>
+                  <specular>1</specular>
+                  <shininess>0.41</shininess>
+                  <transparency>0</transparency>
+                  <emission>0.2</emission>
+                </MaterialProp>
+              </Body>
+            </bodies>
+            <joints>
+              <SimpleJoint>
+                <name>"RootPart--caster wheel:1"</name>
+                <nodeID>"drive_base/r_caster/RootPart:-:drive_base/r_caster/caster wheel:1"</nodeID>
+                <status>""</status>
+                <base>
+                  <JointSide>
+                    <name>""</name>
+                    <connection>
+                      <Frame ref="3"></Frame>
+                    </connection>
+                  </JointSide>
+                </base>
+                <follower>
+                  <JointSide>
+                    <name>""</name>
+                    <connection>
+                      <Frame ref="4"></Frame>
+                    </connection>
+                  </JointSide>
+                </follower>
+                <primitives>
+                  <Primitive>
+                    <name>"weld"</name>
+                    <nodeID>""</nodeID>
+                    <referenceFrame>"WORLD"</referenceFrame>
+                    <axis>0.57735,0.57735,0.57735</axis>
+                  </Primitive>
+                </primitives>
+              </SimpleJoint>
+              <SimpleJoint>
+                <name>"caster wheel:1--caster:1"</name>
+                <nodeID>"drive_base/r_caster/caster wheel:1:-:drive_base/r_caster/caster:1"</nodeID>
+                <status>""</status>
+                <base>
+                  <JointSide>
+                    <name>""</name>
+                    <connection>
+                      <Frame ref="71"></Frame>
+                    </connection>
+                  </JointSide>
+                </base>
+                <follower>
+                  <JointSide>
+                    <name>""</name>
+                    <connection>
+                      <Frame ref="72"></Frame>
+                    </connection>
+                  </JointSide>
+                </follower>
+                <primitives>
+                  <Primitive>
+                    <name>"revolute"</name>
+                    <nodeID>""</nodeID>
+                    <referenceFrame>"WORLD"</referenceFrame>
+                    <axis>-0.979501,2.49374e-010,-0.20144</axis>
+                  </Primitive>
+                </primitives>
+              </SimpleJoint>
+            </joints>
+            <grounds></grounds>
+            <subsystems></subsystems>
+            <connectionPorts></connectionPorts>
+            <id>0</id>
+          </Subsystem>
+          <Subsystem>
+            <name>"l_caster"</name>
+            <nodeID>"drive_base/l_caster"</nodeID>
+            <status>""</status>
+            <bodies>
+              <Body>
+                <name>"caster wheel:1"</name>
+                <nodeID>"drive_base/l_caster/caster wheel:1"</nodeID>
+                <status>""</status>
+                <mass>3.12557</mass>
+                <massUnits>"lbm"</massUnits>
+                <inertia>11.9487,0,0,0,21.6882,0,0,0,11.9487</inertia>
+                <inertiaUnits>"lbm*in^2"</inertiaUnits>
+                <volume>86.5155</volume>
+                <volumeUnits>"in^3"</volumeUnits>
+                <surfaceArea>133.407</surfaceArea>
+                <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+                <frames>
+                  <Frame>
+                    <name>"CG"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/l_caster/caster wheel:1::CG(AUTOGEN)"</nodeID>
+                    <position>10.4275,-19.3974,-7.45222</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>-0.20144,0,0.979501,-0.979501,2.49374e-010,-0.20144,-2.44268e-010,-1,-5.0204e-011</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame>
+                    <name>"CS1"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/l_caster/caster wheel:1::CS1(AUTOGEN)"</nodeID>
+                    <position>10.4275,-19.3974,-7.45222</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>-0.20144,0,0.979501,-0.979501,2.49374e-010,-0.20144,-2.44268e-010,-1,-5.0204e-011</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame ref="6">
+                    <name>"CS2"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/l_caster/RootPart:-:drive_base/l_caster/caster wheel:1::drive_base/l_caster/caster wheel:1(AUTOGEN)"</nodeID>
+                    <position>10.4275,-19.3974,-7.45222</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame ref="43">
+                    <name>"CS3"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/l_caster/caster wheel:1:-:drive_base/l_caster/caster:1::drive_base/l_caster/caster wheel:1(AUTOGEN)"</nodeID>
+                    <position>8.95827,-19.3974,-7.75438</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                </frames>
+                <geometryFileName>"caster wheel_ipt_4784d7d8.STL"</geometryFileName>
+                <MaterialProp>
+                  <color>0.752941,0.752941,0.752941</color>
+                  <ambient>1</ambient>
+                  <diffuse>1</diffuse>
+                  <specular>1</specular>
+                  <shininess>0.2</shininess>
+                  <transparency>0</transparency>
+                  <emission>0.2</emission>
+                </MaterialProp>
+              </Body>
+              <Body>
+                <name>"RootPart"</name>
+                <nodeID>"drive_base/l_caster/RootPart"</nodeID>
+                <status>""</status>
+                <mass>0</mass>
+                <massUnits>"lbm"</massUnits>
+                <inertia>0,0,0,0,0,0,0,0,0</inertia>
+                <inertiaUnits>"lbm*in^2"</inertiaUnits>
+                <volume>0</volume>
+                <volumeUnits>"in^3"</volumeUnits>
+                <surfaceArea>0</surfaceArea>
+                <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+                <frames>
+                  <Frame>
+                    <name>"CG"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/l_caster/RootPart::CG(AUTOGEN)"</nodeID>
+                    <position>10.3699,-19.2583,-7.18387</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>-0.20144,0,0.979501,-0.979501,2.49374e-010,-0.20144,-2.44268e-010,-1,-5.0204e-011</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame>
+                    <name>"CS1"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/l_caster/RootPart::CS1(AUTOGEN)"</nodeID>
+                    <position>10.4275,-19.3974,-7.45222</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>-0.20144,0,0.979501,-0.979501,2.49374e-010,-0.20144,-2.44268e-010,-1,-5.0204e-011</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame ref="5">
+                    <name>"CS2"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/l_caster/RootPart:-:drive_base/l_caster/caster wheel:1::drive_base/l_caster/RootPart(AUTOGEN)"</nodeID>
+                    <position>10.4275,-19.3974,-7.45222</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                </frames>
+                <geometryFileName>""</geometryFileName>
+              </Body>
+              <Body>
+                <name>"caster:1"</name>
+                <nodeID>"drive_base/l_caster/caster:1"</nodeID>
+                <status>""</status>
+                <mass>0.311242</mass>
+                <massUnits>"lbm"</massUnits>
+                <inertia>1.75384,0,0,0,0.89231,0.517163,0,0.517163,1.99846</inertia>
+                <inertiaUnits>"lbm*in^2"</inertiaUnits>
+                <volume>8.61515</volume>
+                <volumeUnits>"in^3"</volumeUnits>
+                <surfaceArea>73.345</surfaceArea>
+                <surfaceAreaUnits>"in^2"</surfaceAreaUnits>
+                <frames>
+                  <Frame>
+                    <name>"CG"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/l_caster/caster:1::CG(AUTOGEN)"</nodeID>
+                    <position>9.79157,-17.8613,-4.48901</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>0.979501,-2.49374e-010,0.20144,-0.20144,0,0.979501,-2.44264e-010,-1,-5.02265e-011</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame>
+                    <name>"CS1"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/l_caster/caster:1::CS1(AUTOGEN)"</nodeID>
+                    <position>10.4021,-16.1474,-7.45746</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>0.979501,-2.49374e-010,0.20144,-0.20144,0,0.979501,-2.44264e-010,-1,-5.02265e-011</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame ref="44">
+                    <name>"CS2"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/l_caster/caster wheel:1:-:drive_base/l_caster/caster:1::drive_base/l_caster/caster:1(AUTOGEN)"</nodeID>
+                    <position>8.95827,-19.3974,-7.75438</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                  <Frame ref="45">
+                    <name>"CS3"</name>
+                    <displayName>""</displayName>
+                    <nodeID>"drive_base/frame_solid:1:-:drive_base/l_caster:drive_base/l_caster/caster:1::drive_base/l_caster/caster:1(AUTOGEN)"</nodeID>
+                    <position>9.31931,-17.1474,-2.19264</position>
+                    <positionOrigin>"WORLD"</positionOrigin>
+                    <positionReferenceFrame>"WORLD"</positionReferenceFrame>
+                    <positionUnits>"in"</positionUnits>
+                    <orientation>1,0,0,0,1,0,0,0,1</orientation>
+                    <orientationType>"3x3 Transform"</orientationType>
+                    <orientationUnits>"rad"</orientationUnits>
+                    <orientationReferenceFrame>"WORLD"</orientationReferenceFrame>
+                  </Frame>
+                </frames>
+                <geometryFileName>"caster_ipt_ca03a3d7.STL"</geometryFileName>
+                <MaterialProp>
+                  <color>0,0,0</color>
+                  <ambient>1</ambient>
+                  <diffuse>1</diffuse>
+                  <specular>1</specular>
+                  <shininess>0.41</shininess>
+                  <transparency>0</transparency>
+                  <emission>0.2</emission>
+                </MaterialProp>
+              </Body>
+            </bodies>
+            <joints>
+              <SimpleJoint>
+                <name>"RootPart--caster wheel:1"</name>
+                <nodeID>"drive_base/l_caster/RootPart:-:drive_base/l_caster/caster wheel:1"</nodeID>
+                <status>""</status>
+                <base>
+                  <JointSide>
+                    <name>""</name>
+                    <connection>
+                      <Frame ref="5"></Frame>
+                    </connection>
+                  </JointSide>
+                </base>
+                <follower>
+                  <JointSide>
+                    <name>""</name>
+                    <connection>
+                      <Frame ref="6"></Frame>
+                    </connection>
+                  </JointSide>
+                </follower>
+                <primitives>
+                  <Primitive>
+                    <name>"weld"</name>
+                    <nodeID>""</nodeID>
+                    <referenceFrame>"WORLD"</referenceFrame>
+                    <axis>0.57735,0.57735,0.57735</axis>
+                  </Primitive>
+                </primitives>
+              </SimpleJoint>
+              <SimpleJoint>
+                <name>"caster wheel:1--caster:1"</name>
+                <nodeID>"drive_base/l_caster/caster wheel:1:-:drive_base/l_caster/caster:1"</nodeID>
+                <status>""</status>
+                <base>
+                  <JointSide>
+                    <name>""</name>
+                    <connection>
+                      <Frame ref="43"></Frame>
+                    </connection>
+                  </JointSide>
+                </base>
+                <follower>
+                  <JointSide>
+                    <name>""</name>
+                    <connection>
+                      <Frame ref="44"></Frame>
+                    </connection>
+                  </JointSide>
+                </follower>
+                <primitives>
+                  <Primitive>
+                    <name>"revolute"</name>
+                    <nodeID>""</nodeID>
+                    <referenceFrame>"WORLD"</referenceFrame>
+                    <axis>0.979501,-2.49374e-010,0.20144</axis>
+                  </Primitive>
+                </primitives>
+              </SimpleJoint>
+            </joints>
+            <grounds></grounds>
+            <subsystems></subsystems>
+            <connectionPorts></connectionPorts>
+            <id>0</id>
+          </Subsystem>
+        </subsystems>
         <connectionPorts></connectionPorts>
         <id>0</id>
       </Subsystem>

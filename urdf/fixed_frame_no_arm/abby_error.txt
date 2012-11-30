@@ -6,4 +6,12 @@ Constrained Parts: back frame plate.ipt, frame_solid.iam
 Constrain Name: Tangent:8
 Error Details: Massless connector is not supported if there are more than one constrain between parts. A weld joint has been added between the constrained parts.
 ---------------------------------------------------------------------------------
+Constrained Parts: al_frame.iam, bin.ipt
+Constrain Name: Tangent:9
+Error Details: Massless connector is not supported if there are more than one constrain between parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+Constrained Parts: robot_no_arm.iam, invacare assy.iam
+Constrain Name: <All constrains>
+Error Details: The two prismatic axes are not lying in the plane perpendicular to the revolute axis in a planar joint. This axis configuration is not supported.A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
 

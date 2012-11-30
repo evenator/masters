@@ -1,0 +1,5 @@
+Constrained Parts: gripper jaw.ipt, gripper.iam
+Constrain Name: Mate:144
+Error Details: Massless connector is not supported if there are more than one constrain between parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+
