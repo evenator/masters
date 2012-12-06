@@ -1,0 +1,7 @@
+root: "gripper:21"
+freezeAll: True
+filenameformat: "package://abby_description/meshes/%s"
+forcelowercase: True
+scale: "0.0254 0.0254 0.0254"
+#redefinedjoints:
+
