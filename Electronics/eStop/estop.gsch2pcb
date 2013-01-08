@@ -1,0 +1,3 @@
+schematics estop.sch
+output-name estop
+elements-dir ../footprints
