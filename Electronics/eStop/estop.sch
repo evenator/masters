@@ -202,7 +202,7 @@ Allows IRC5 to stop DT
 T 53300 45300 9 10 1 0 0 0 1
 Allows robot to stop IRC5
 B 51300 44500 4700 2800 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
-B 51200 41400 4800 2500 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+B 51200 41400 3900 2500 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
 T 51400 41500 9 10 1 0 0 0 1
 Output to solenoid coil
 C 47600 50400 1 0 0 3.3V-plus-1.sym
@@ -414,7 +414,7 @@ C 56300 43700 1 270 0 led-1.sym
 {
 T 56900 42900 5 10 0 0 270 0 1
 device=LED
-T 54900 43200 5 10 1 1 0 0 1
+T 55300 43200 5 10 1 1 0 0 1
 refdes=STOP_LED
 T 57100 42900 5 10 0 0 270 0 1
 symversion=0.1
@@ -460,7 +460,7 @@ C 52900 42300 1 0 0 nmosfet-TO220.sym
 {
 T 53500 42900 5 10 1 1 0 0 1
 refdes=Q4
-T 53500 42700 5 10 1 1 0 0 1
+T 53500 42700 5 10 0 1 0 0 1
 value=IRF530
 T 53500 42500 5 8 1 1 0 0 1
 footprint=TO220_therm
@@ -473,7 +473,7 @@ T 51600 42200 5 10 1 1 0 0 1
 refdes=Q3
 T 51600 42000 5 10 1 1 0 0 1
 value=BSS123
-T 51600 41800 5 8 1 1 0 0 1
+T 51600 41800 5 8 0 1 0 0 1
 footprint=TO92
 T 53400 42800 5 8 0 0 270 0 1
 symversion=1.0
@@ -484,7 +484,7 @@ T 51400 45900 5 10 1 1 0 0 1
 refdes=Q2
 T 51400 45700 5 10 1 1 0 0 1
 value=BSS123
-T 51400 45500 5 8 1 1 0 0 1
+T 51400 45500 5 8 0 1 0 0 1
 footprint=TO92
 T 52100 47200 5 8 0 0 0 0 1
 symversion=1.0
@@ -510,7 +510,7 @@ C 45000 48500 1 90 0 resistor-1.sym
 T 44600 48800 5 10 0 0 90 0 1
 device=RESISTOR
 T 44700 49200 5 10 1 1 180 0 1
-refdes=R?
+refdes=R5
 T 44500 48800 5 10 1 1 0 0 1
 value=47
 T 45000 48500 5 10 0 1 0 0 1
@@ -535,7 +535,7 @@ C 48500 40400 1 90 0 resistor-1.sym
 T 48100 40700 5 10 0 0 90 0 1
 device=RESISTOR
 T 48200 41100 5 10 1 1 180 0 1
-refdes=R?
+refdes=R12
 T 48000 40700 5 10 1 1 0 0 1
 value=47
 T 48500 40400 5 10 0 1 0 0 1
@@ -561,7 +561,7 @@ C 49400 47800 1 90 0 resistor-1.sym
 T 49000 48100 5 10 0 0 90 0 1
 device=RESISTOR
 T 49100 48500 5 10 1 1 180 0 1
-refdes=R?
+refdes=R11
 T 48900 48100 5 10 1 1 0 0 1
 value=47
 T 49400 47800 5 10 0 1 0 0 1
@@ -586,9 +586,33 @@ C 43100 45000 1 90 0 capacitor-1.sym
 T 42400 45200 5 10 0 0 90 0 1
 device=CAPACITOR
 T 42600 45600 5 10 1 1 180 0 1
-refdes=C?
+refdes=C5
 T 42200 45200 5 10 0 0 90 0 1
 symversion=0.1
 T 42200 45200 5 10 1 1 0 0 1
 value=10pF
 }
+T 50400 40800 9 10 1 0 0 0 2
+aBBY Robot Emergency Stop
+with Wireless E-Stop Receiver
+T 53900 40400 9 10 1 0 0 0 1
+1
+T 53900 40100 9 10 1 0 0 0 1
+Edward Venator (esv@case.edu)
+T 40800 44300 9 10 1 0 0 0 3
+Layout Notes:
+Place C1 and C5 close to U1.
+Place C6 close to U3
+C 41400 45600 1 90 0 capacitor-1.sym
+{
+T 40700 45800 5 10 0 0 90 0 1
+device=CAPACITOR
+T 40900 46200 5 10 1 1 180 0 1
+refdes=C6
+T 40500 45800 5 10 0 0 90 0 1
+symversion=0.1
+T 40500 45800 5 10 1 1 0 0 1
+value=.1uF
+}
+C 41000 46500 1 0 0 3.3V-plus-1.sym
+C 41100 45300 1 0 0 gnd-1.sym
