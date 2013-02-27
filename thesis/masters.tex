@@ -1,6 +1,5 @@
-% This file was converted to LaTeX by Writer2LaTeX ver. 1.0.2
-% see http://writer2latex.sourceforge.net for more info
-\documentclass{article}
+\documentclass{cwru}
+
 \usepackage[ascii]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
@@ -9,37 +8,41 @@
 \usepackage{array}
 \usepackage{supertabular}
 \usepackage{hhline}
-\makeatletter
-\newcommand\arraybslash{\let\\\@arraycr}
-\makeatother
-\setlength\tabcolsep{1mm}
-\renewcommand\arraystretch{1.3}
-\title{A Low-Cost Mobile Manipulator for Industrial and Research Applications}
-\begin{document}
-\begin{center}
-\tablehead{}
-\begin{supertabular}{m{6.57126in}}
-\centering Department of Electrical Engineering and Computer Science \par
 
-\centering\arraybslash Case Western Reserve University\\
-\centering\arraybslash A Low-Cost Mobile Manipulator for Industrial and Research Applications\\\hline
-\centering\arraybslash Submitted in partial fulfillment of the requirements for the degree of Master of Engineering\\
-\\
-\centering\arraybslash Edward Venator\\
-\centering\arraybslash [Pick the date]\\
-\end{supertabular}
-\end{center}
-\begin{flushleft}
-\tablehead{}
-\begin{supertabular}{m{6.57126in}}
-This thesis describes the creation of a mobile robot equipped with an industrial robotic manipulator. The resulting mobile manipulator incorporates a suite of commercially-available sensors and processing hardware to enable the robot to operate as an intelligent agent alongside humans. Ultimately, this robot will be employed in research on autonomous kitting in industrial environments.\\
-\end{supertabular}
-\end{flushleft}
-\setcounter{tocdepth}{10}
-\renewcommand\contentsname{}
+\title{A Low-Cost Mobile Manipulator for Industrial and Research Applications}
+\author{Edward Venator}
+% Customize the type of document
+%\CWRUdocumentname{Report}
+% Customize the degree
+\CWRUdegree{Master of Engineering}
+% Adds your advisor
+\CWRUadvisor{Dr. G. Lee} 
+% The name of your department ("Department of" is added by the class)
+\CWRUdepartment{Electrical Engineering\\ \& Computer Science}
+
+\begin{document}
+
+% Optional Dedication
+\CWRUdedication{Dedication text}
+% Optional Preface
+\CWRUpreface{Preface text}
+% Optional Acknowledgment
+\CWRUack{This should be the acknowlegement}
+% Optional List of Abbreviations -- This is not complete
+\CWRUloa{List of Abbreviations text}
+% Optional Glossary -- This is not complete
+\CWRUglossary{Glossary text}
+% Required Abstract
+\CWRUabstract{This thesis describes the creation of a mobile robot equipped with an industrial robotic manipulator. The resulting mobile manipulator incorporates a suite of commercially-available sensors and processing hardware to enable the robot to operate as an intelligent agent alongside humans. Ultimately, this robot will be employed in research on autonomous kitting in industrial environments.}
+
+% This must be run to generate all the preamble (Super \maketitle)
+\CWRUpreamble{}
+
 \tableofcontents
-\section[]{}
-\clearpage\section[Introduction]{Introduction}
+
+\section[Introduction]{Introduction}
+
+
 \section[Mechanical Design of Abby]{Mechanical Design of Abby}
 Abby{\textquoteright}s design was dictated by several factors. The primary factor in the design was reduction of cost, which was achieved by using materials and components already available in Case Western Reserve University{\textquoteright}s Mobile Robotics Lab.
 
@@ -198,4 +201,17 @@ The box manipulator package is designed to be able to lift small boxes from a sh
 \section[Results]{Results}
 \section[Future Work]{Future Work}
 \section[Conclusion]{Conclusion}
+% Tell the program that it is Appendix time
+\appendix
+\part{Appendices}
+
+Duded
+
+\section{Whatever}
+
+What?
+
+% References go here.  One can use any reference type that is useful. 
+
+
 \end{document}
