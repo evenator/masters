@@ -1,8 +1,7 @@
 *.lck
 *#
 *~
-CAD/OldVersions/*
-CAD/*/OldVersions/*
-CAD/*/*/OldVersions/*
+OldVersions
 *.htm
 *.git*
+\~$*
