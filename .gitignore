@@ -1,4 +1,7 @@
 *.lck
 *#
 *~
+OldVersions
 *.htm
+*.git*
+\~$*
