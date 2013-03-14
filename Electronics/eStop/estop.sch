@@ -262,16 +262,16 @@ device=SCREW
 T 54200 42900 5 10 0 1 0 0 1
 footprint=screw_6-32
 }
-C 54300 41800 1 0 0 right-screw-term.sym
+C 54200 42000 1 0 0 right-screw-term.sym
 {
-T 54500 42400 5 10 1 1 0 0 1
+T 54500 42500 5 10 1 1 0 0 1
 refdes=J9
-T 54300 41800 5 10 0 1 0 0 1
+T 54200 42000 5 10 0 1 0 0 1
 device=SCREW
-T 54300 41800 5 10 0 1 0 0 1
+T 54200 42000 5 10 0 1 0 0 1
 footprint=screw_6-32
 }
-C 54200 41700 1 0 0 gnd-1.sym
+C 54100 41900 1 0 0 gnd-1.sym
 C 40500 47200 1 0 0 connector4-1.sym
 {
 T 42300 48100 5 10 0 0 0 0 1
@@ -462,7 +462,7 @@ T 53500 42900 5 10 1 1 0 0 1
 refdes=Q4
 T 53500 42700 5 10 0 1 0 0 1
 value=IRF530
-T 53500 42500 5 8 1 1 0 0 1
+T 53500 42500 5 8 0 1 0 0 1
 footprint=TO220_therm
 T 53100 44300 5 8 0 0 0 0 1
 symversion=1.0
