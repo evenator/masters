@@ -1,0 +1,308 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     12013,        299]
+NotebookOptionsPosition[     11614,        281]
+NotebookOutlinePosition[     11958,        296]
+CellTagsIndexPosition[     11915,        293]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tipPositionMeasuresCamera", " ", "=", " ", 
+   RowBox[{"{", "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tipPoseMeasuresBase", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"qx", ":=", 
+   RowBox[{
+    RowBox[{"tipPoseBase", "[", 
+     RowBox[{"[", "4", "]"}], "]"}], "/", 
+    RowBox[{"Norm", "[", 
+     RowBox[{"tipPoseBase", "[", 
+      RowBox[{"[", 
+       RowBox[{"4", ";;", "7"}], "]"}], "]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"qy", ":=", 
+   RowBox[{
+    RowBox[{"tipPoseBase", "[", 
+     RowBox[{"[", "5", "]"}], "]"}], "/", 
+    RowBox[{"Norm", "[", 
+     RowBox[{"tipPoseBase", "[", 
+      RowBox[{"[", 
+       RowBox[{"4", ";;", "7"}], "]"}], "]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"qz", ":=", 
+   RowBox[{
+    RowBox[{"tipPoseBase", "[", 
+     RowBox[{"[", "6", "]"}], "]"}], "/", 
+    RowBox[{"Norm", "[", 
+     RowBox[{"tipPoseBase", "[", 
+      RowBox[{"[", 
+       RowBox[{"4", ";;", "7"}], "]"}], "]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"qw", ":=", 
+   RowBox[{
+    RowBox[{"tipPoseBase", "[", 
+     RowBox[{"[", "7", "]"}], "]"}], "/", 
+    RowBox[{"Norm", "[", 
+     RowBox[{"tipPoseBase", "[", 
+      RowBox[{"[", 
+       RowBox[{"4", ";;", "7"}], "]"}], "]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tipTFBase", ":=", " ", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "-", 
+        RowBox[{"2", "*", 
+         RowBox[{"qy", "^", "2"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"2", "qx", "*", "qy"}], "+", 
+        RowBox[{"2", "qw", "*", "qz"}]}], ",", 
+       RowBox[{
+        RowBox[{"2", "qx", "*", "qz"}], "-", 
+        RowBox[{"2", "qw", "*", "qy"}]}], ",", 
+       RowBox[{"tipPoseBase", "[", 
+        RowBox[{"[", "1", "]"}], "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"2", "*", "qx"}], "+", "qy", "-", 
+        RowBox[{"2", "qw", "*", "qz"}]}], ",", 
+       RowBox[{"1", "-", 
+        RowBox[{"2", 
+         RowBox[{"qx", "^", "2"}]}], "-", 
+        RowBox[{"2", 
+         RowBox[{"qz", "^", "2"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"2", "qy", "*", "qz"}], "+", 
+        RowBox[{"2", "qw", "*", "qx"}]}], ",", 
+       RowBox[{"tipPoseBase", "[", 
+        RowBox[{"[", "2", "]"}], "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"2", "qx", "*", "qz"}], "+", 
+        RowBox[{"2", "qw", "*", "qy"}]}], ",", 
+       RowBox[{
+        RowBox[{"2", "*", "qy", "*", "qz"}], "-", 
+        RowBox[{"2", "qw", "*", "qz"}]}], ",", "0", ",", 
+       RowBox[{"tipPoseBase", "[", 
+        RowBox[{"[", "3", "]"}], "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", "1"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"baseTFCamera", ":=", " ", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "-", 
+        RowBox[{"2", "*", 
+         RowBox[{"tipQYBase", "^", "2"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"2", " ", "tipQXBase", "*", "tipQYBase"}], "+", 
+        RowBox[{"2", " ", "qw", "*", "tipQZBase"}]}], ",", 
+       RowBox[{
+        RowBox[{"2", " ", "tipQXBase", "*", "tipQZBase"}], "-", 
+        RowBox[{"2", " ", "qw", "*", "tipQYBase"}]}], ",", "tipXBase"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"2", "*", "tipQXBase"}], "+", "tipQYBase", "-", 
+        RowBox[{"2", " ", "qw", "*", "tipQZBase"}]}], ",", 
+       RowBox[{"1", "-", 
+        RowBox[{"2", " ", 
+         RowBox[{"tipQXBase", "^", "2"}]}], "-", 
+        RowBox[{"2", " ", 
+         RowBox[{"tipQZBase", "^", "2"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"2", " ", "tipQYBase", "*", "tipQZBase"}], "+", 
+        RowBox[{"2", " ", "qw", "*", "tipQXBase"}]}], ",", "tipYBase"}], 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"2", " ", "tipQXBase", "*", "tipQZBase"}], "+", 
+        RowBox[{"2", " ", "qw", "*", "tipQYBase"}]}], ",", 
+       RowBox[{
+        RowBox[{"2", "*", "tipQYBase", "*", "tipQZBase"}], "-", 
+        RowBox[{"2", " ", "qw", "*", "tipQZBase"}]}], ",", "0", ",", 
+       "tipZBase"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", "1"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tipTFCamera", "  ", ":=", " ", 
+   RowBox[{"tipTFBase", " ", ".", "baseTFCamera"}]}], " ", 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"tipPositionsCamera", " ", "=", " ", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"tipTFCamera", "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{"1", ";;", "3"}], ",", "4"}], "]"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"tipPoseBase", ",", "tipPoseMeasuresBase"}], "}"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Minimize", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"RootMeanSquare", "[", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{"tipPositionMeasuresCamera", "-", "tipPositionsCamera"}], 
+       "]"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Norm", "[", 
+       RowBox[{"{", 
+        RowBox[{
+        "tipQXBase", ",", "tipQYBase", ",", "tipQZBase", ",", "tipQWBase"}], 
+        "}"}], "]"}], "\[Equal]", "1"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "tipQXBase", ",", "tipQYBase", ",", "tipQZBase", ",", "tipQWBase", ",", 
+     "tipXBase", ",", "tipYBase", ",", "tipZBase"}], "}"}], ",", "Reals"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.572866232978609*^9, 3.572866264217396*^9}, {
+   3.572866664265277*^9, 3.5728666643872843`*^9}, {3.572866781540985*^9, 
+   3.572866863908696*^9}, {3.572866935449788*^9, 3.572866939629027*^9}, {
+   3.572867027136032*^9, 3.572867086425423*^9}, {3.5728671574134836`*^9, 
+   3.5728674479270997`*^9}, {3.5728674885094213`*^9, 3.57286766507152*^9}, {
+   3.572867700266533*^9, 3.572867704148755*^9}, {3.5728677353985424`*^9, 
+   3.5728678024593782`*^9}, {3.5728679202761164`*^9, 3.572867921173168*^9}, {
+   3.572867986409899*^9, 3.5728680152625494`*^9}, 3.5728684991702275`*^9, {
+   3.5728687828774548`*^9, 3.5728688223187103`*^9}, {3.5728688556126146`*^9, 
+   3.572868857503723*^9}, {3.5728690669197006`*^9, 3.572869071720976*^9}, {
+   3.572869216508257*^9, 3.5728692898284507`*^9}, {3.572869368091927*^9, 
+   3.57286939227131*^9}, 3.572869428057357*^9, {3.572869512837206*^9, 
+   3.572869547303177*^9}, {3.572870278314989*^9, 3.5728704126136703`*^9}, {
+   3.572870450454835*^9, 3.5728706323062363`*^9}, {3.572870682574111*^9, 
+   3.5728708013459044`*^9}, 3.5728709636971903`*^9, 3.5728710377384253`*^9, {
+   3.5728710685321865`*^9, 3.5728711511729136`*^9}, {3.5728714795150304`*^9, 
+   3.572871555476375*^9}, 3.572871659379318*^9, {3.572871718631707*^9, 
+   3.57287178372343*^9}, {3.572871817625369*^9, 3.572871819968503*^9}, {
+   3.5728718717004623`*^9, 3.5728718766877475`*^9}, {3.5728719201622343`*^9, 
+   3.5728719442896137`*^9}, {3.5728720135675764`*^9, 
+   3.5728720285054307`*^9}, {3.5728783666538014`*^9, 3.572878371057053*^9}, {
+   3.5728784602051525`*^9, 3.5728784808413324`*^9}, {3.572878536025489*^9, 
+   3.5728785481501827`*^9}, {3.5728786515430965`*^9, 
+   3.5728786725562983`*^9}, {3.5728787030200405`*^9, 3.572878720937065*^9}, 
+   3.5728787542619715`*^9, {3.572878802750745*^9, 3.5728788214578147`*^9}, {
+   3.572878887233577*^9, 3.5728789072777233`*^9}, {3.5728789876983232`*^9, 
+   3.5728790051893234`*^9}, {3.572879045763644*^9, 3.5728790739532566`*^9}, {
+   3.5728792495052977`*^9, 3.5728792564086924`*^9}, {3.5728793293838663`*^9, 
+   3.5728793457058*^9}, {3.5728793783706684`*^9, 3.57287939169143*^9}, {
+   3.572879432818783*^9, 3.5728795028347874`*^9}, {3.5728795413879924`*^9, 
+   3.572879555647808*^9}, {3.572879595035061*^9, 3.5728796147321873`*^9}, {
+   3.572879652079324*^9, 3.5728796662751355`*^9}, {3.572879703871286*^9, 
+   3.572879715258937*^9}, {3.5728797571013308`*^9, 3.572879773385262*^9}, {
+   3.572879884258603*^9, 3.5728798868807535`*^9}, {3.572879960447961*^9, 
+   3.5728799720496244`*^9}, {3.572880009045741*^9, 3.5728800145450554`*^9}, {
+   3.572880067728097*^9, 3.572880073355419*^9}, {3.572880191886199*^9, 
+   3.572880193968318*^9}, {3.572880245823284*^9, 3.572880255616844*^9}, {
+   3.572880328872034*^9, 3.5728803339613247`*^9}, {3.5728808072423954`*^9, 
+   3.57288083513599*^9}, {3.5728808703930073`*^9, 3.5728809111963406`*^9}, {
+   3.572881474339551*^9, 3.5728815500058784`*^9}, {3.572882730198986*^9, 
+   3.5728827899224024`*^9}, {3.5728828261744757`*^9, 3.5728828285906143`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{{3.5728719305688295`*^9, 3.572871944900649*^9}, {
+   3.572872018723871*^9, 3.5728720308845673`*^9}, 3.572879888661855*^9, {
+   3.572879961804039*^9, 3.5728799738357267`*^9}, {3.5728800097307796`*^9, 
+   3.5728800151510897`*^9}, 3.572880195041379*^9, 3.5728803397346554`*^9, {
+   3.572880793457607*^9, 3.5728808149938383`*^9}, {3.572880906129051*^9, 
+   3.5728809127974324`*^9}, {3.57288274634191*^9, 3.572882752590267*^9}, 
+   3.5728827909384604`*^9, 3.572882829091643*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"RootMeanSquare", "::", "vecmat1"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \[NoBreak]\\!\\({}\\)\[NoBreak] is neither a \
+non-empty vector nor a non-empty matrix. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/RootMeanSquare\\\", ButtonNote -> \
+\\\"RootMeanSquare::vecmat1\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5728828291086435`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"RootMeanSquare", "[", 
+    RowBox[{"{", "}"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"tipQXBase", "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox["1", "2"]}]}], ",", 
+     RowBox[{"tipQYBase", "\[Rule]", "0"}], ",", 
+     RowBox[{"tipQZBase", "\[Rule]", "0"}], ",", 
+     RowBox[{"tipQWBase", "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox[
+        SqrtBox["3"], "2"]}]}], ",", 
+     RowBox[{"tipXBase", "\[Rule]", "0"}], ",", 
+     RowBox[{"tipYBase", "\[Rule]", "0"}], ",", 
+     RowBox[{"tipZBase", "\[Rule]", "0"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.5728719305688295`*^9, 3.572871944900649*^9}, {
+   3.572872018723871*^9, 3.5728720308845673`*^9}, 3.572879888661855*^9, {
+   3.572879961804039*^9, 3.5728799738357267`*^9}, {3.5728800097307796`*^9, 
+   3.5728800151510897`*^9}, 3.572880195041379*^9, 3.5728803397346554`*^9, {
+   3.572880793457607*^9, 3.5728808149938383`*^9}, {3.572880906129051*^9, 
+   3.5728809127974324`*^9}, {3.57288274634191*^9, 3.572882752590267*^9}, 
+   3.5728827909384604`*^9, 3.5728828292656527`*^9}]
+}, Open  ]]
+},
+WindowSize->{1672, 923},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 8860, 207, 452, "Input"],
+Cell[9442, 231, 538, 8, 30, "Output"],
+Cell[9983, 241, 492, 10, 21, "Message"],
+Cell[10478, 253, 1120, 25, 50, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
