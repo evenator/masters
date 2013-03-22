@@ -1,0 +1,63 @@
+Introduction
+
+Industrial Mobile Manipulation
+* Literature Review
+ABBY - System Design
+* Mobile Base
+* Robotic Arm
+* End effector
+* Frame
+    * Bin
+* Power
+* Sensors
+    * Odometry
+    * Yaw rate
+    * Kinect 
+    * LIDAR
+* Computing
+    * PC
+    * cRIO
+    * IRC5
+* ROS Framework    
+    * Robot model
+* Hardware Drivers
+    * Mobile base
+    * ROS Industrial
+    * Gripper
+Experimental Software
+* Kinect calibration
+* Mobile base planning
+    * Localization/mapping
+    * Planning
+* IK solver
+    * KDL Solver
+    * IKFast
+* Arm navigation
+    * Collision detection
+* Kinect data filtering    
+* Tabletop box recognition
+* QR code recognition and localization
+Industrial Safety
+* E-stop
+* Reflexive halt
+Experimental Results
+* Validation Task
+* Kinect for arm planning
+* Kinect for QR codes
+* ROS software
+    * Adapting PR2 nodes
+    * Documentation issues
+    * API stability (MoveIt)    
+    * Safety/reliability issues
+        * Kinect driver
+        * Rosserial
+        * Move arm simple action crash
+        * IK solver crashes
+* Hardware suitability
+    * Arm position
+    * Drivetrain precision
+    * Gripper utility
+* Battery life    
+Applications and Future Work
+
+Conclusion

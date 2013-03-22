@@ -1,0 +1,37 @@
+\select@language {english}
+\contentsline {section}{Contents}{i}{section*.4}
+\contentsline {section}{Preface}{ii}{section*.7}
+\contentsline {section}{Acknowledgments}{iii}{section*.9}
+\contentsline {section}{List of Abbreviations}{iv}{section*.11}
+\contentsline {section}{Glossary}{v}{section*.13}
+\contentsline {section}{Abstract}{vi}{section*.15}
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {section}{\numberline {2}Mechanical Design of Abby}{1}{section.2}
+\contentsline {subsection}{\numberline {2.1}Invacare Ranger Wheelchair Base}{1}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Custom Frame Design}{1}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}ABB IRB{}-120 Robotic Arm}{3}{subsection.2.3}
+\contentsline {section}{\numberline {3}Electronics and Sensor Packages}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Power Systems }{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Pneumatic System Control}{6}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Drivetrain Control and Odometry}{7}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Yaw Rate Sensor}{7}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Microsoft Kinect}{8}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Sick LMS{}-291}{8}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}End Effector{}-Mounted Camera}{8}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.8}Safety Systems}{8}{subsection.3.8}
+\contentsline {subsubsection}{\numberline {3.8.1}Emergency Stop}{8}{subsubsection.3.8.1}
+\contentsline {subsection}{\numberline {3.9}Computing}{10}{subsection.3.9}
+\contentsline {subsubsection}{\numberline {3.9.1}PC}{10}{subsubsection.3.9.1}
+\contentsline {subsubsection}{\numberline {3.9.2}National Instruments cRIO}{11}{subsubsection.3.9.2}
+\contentsline {subsubsection}{\numberline {3.9.3}ABB IRC5}{13}{subsubsection.3.9.3}
+\contentsline {section}{\numberline {4}Software}{14}{section.4}
+\contentsline {subsection}{\numberline {4.1}ROS}{14}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}ROS Topics}{14}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}ROS Services}{15}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.3}ROS Actions}{15}{subsubsection.4.1.3}
+\contentsline {subsection}{\numberline {4.2}Hardware Drivers}{16}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}The Mobile Base}{16}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}ROS Industrial}{17}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Gripper Driver}{18}{subsubsection.4.2.3}
+\contentsline {subsection}{\numberline {4.3}Localization}{19}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Path Planning}{20}{subsection.4.4}
