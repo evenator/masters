@@ -1,0 +1,93 @@
+digraph g {
+ rankdir=LR
+ ranksep=0.5
+ LIDAR[
+    shape=box
+    label="LIDAR"
+ ]
+ SERIAL_CONVERTER[
+    shape=box
+    label="Serial<->USB"
+ ]
+ KINECT[
+    shape=box
+    label="Kinect Camera"
+ ]
+ XB360[
+    shape=box
+    label="XBOX 360 Controller (Teleoperation)"
+ ]
+ ROUTER[
+    shape=record
+    label="Router|<eth1>Ethernet 1|<eth2>Ethernet 2|<eth3>Ethernet 3|<eth4>Ethernet 4|<wifi>Wireless Ethernet"
+ ]
+ PC[
+    shape=record
+    label="PC|<usb1>USB 1|<usb2>USB 2|<usb3>USB 3|<usb4>USB 4|<eth1>Ethernet"
+ ]
+ IRC5[
+    shape=record
+    label="IRC5|<eth1>Ethernet|<XS4>XS4 Flexpendant|<XS2>XS2 Manipulator"
+ ]
+ IRB120[
+    shape=box
+    label="IRB-120"
+ ]
+ FLEXPENDANT[
+    shape=box
+    label="FlexPendant (Display/Interface)"
+ ]
+ ARDUINO[
+    shape=box
+    label="Arduino (Gripper Control)"
+ ]
+ CRIO[
+    shape=record
+    label="cRIO|<eth1>Ethernet|<DIO>Digital I/O|<FDIO>Fast Digital IO|<AI>Analog In"
+ ]
+ RWENCODER[
+    shape=box
+    label="Right Wheel Encoder"
+ ]
+ LWENCODER[
+    shape=box
+    label="Left Wheel Encoder"
+ ]
+ RMENCODER[
+    shape=box
+    label="Right Motor Encoder"
+ ]
+ LMENCODER[
+    shape=box
+    label="Left Motor Encoder"
+ ]
+ VMONITOR[
+    shape=record
+    label="Voltage Bus Monitor"
+ ]
+ OPERATOR[
+    shape=record
+    label="Operator PC (not onboard)"
+ ]
+ SABERTOOTH[
+    shape=box
+    label="Sabertooth Motor Controller (Mobile Base)"
+ ]
+ LIDAR->SERIAL_CONVERTER;
+ SERIAL_CONVERTER->PC:usb1;
+ KINECT->PC:usb2;
+ XB360->PC:usb3;
+ PC:eth1-> ROUTER:eth1 [dir="both"];
+ PC:usb4-> ARDUINO [dir="both"];
+ ROUTER:eth3->CRIO:eth1 [dir="both"];
+ ROUTER:eth2->IRC5:eth1 [dir="both"];
+ IRC5:XS2->IRB120 [dir="both"];
+ IRC5:XS4->FLEXPENDANT [dir="both"];
+ RWENCODER->CRIO:DIO;
+ LWENCODER->CRIO:DIO;
+ RMENCODER->CRIO:FDIO;
+ LMENCODER->CRIO:FDIO;
+ VMONITOR->CRIO:AI;
+ OPERATOR->ROUTER:wifi [dir="both"];
+ CRIO:FDIO->SABERTOOTH;
+}
