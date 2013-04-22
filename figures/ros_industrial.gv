@@ -1,0 +1,30 @@
+digraph g {
+ rankdir=TD
+ ranksep=0.5
+ 
+ trajectory_downloader->motion_server [label="TCP"]
+ state_server->robot_state [label="TCP"]
+ 
+ subgraph cluster_pc_ros{
+   label = "ROS PC"
+   arm_planner
+   trajectory_downloader
+   robot_state
+   environment_server
+   
+   arm_planner->trajectory_downloader [label="Joint Trajectory"]
+   robot_state->environment_server [label="Joint State"]
+   environment_server->arm_planner [label="Arm Position"]
+   environment_server->arm_planner [label="Collision Map"]
+ }
+  
+ subgraph cluster_irc5{
+   label="IRC5"
+   state_server
+   motion_server
+   motion_process
+   
+   motion_server->motion_process [label="Trajectory Queue"]
+   motion_server->motion_process [label="Interrupt"]
+ }
+}
