@@ -1,0 +1,141 @@
+digraph G {
+  graph [dpi = 300]; 
+  rankdir=LR;
+  label="*Publishes TFs
+Blue lines are service connections
+Red lines are action server connections"
+  _collider_node [label="Collider Collision Map", URL="node:/collider_node"];
+  _abby_irb_120_kinematics [label="IK Solver", URL="node:/abby_irb_120_kinematics"];
+  _localization_map_server [label="Map Server", URL="node:/localization_map_server"];
+  _color_self_filter [label="Self-See Filter", URL="node:/color_self_filter"];
+  _move_base [label="Move Base Action Server", URL="node:/move_base"];
+  _cluster_bounding_box_finder [label="Bounding Box Finder", URL="node:/cluster_bounding_box_finder"];
+  _amcl [label="AMCL*", URL="node:/amcl"];
+  _abby_move_irb_120 [label="Move IRB 120", URL="node:/abby_move_irb_120"];
+  _robot_state_publisher [label="Robot State Publisher*", URL="node:/robot_state_publisher"];
+  _environment_server [label="Environment Server", URL="node:/environment_server"];
+  _trajectory_filter_server [label="/trajectory_filter_server", URL="node:/trajectory_filter_server"];
+  _robot_state [label="Arm State Client", URL="node:/robot_state"];
+  _joint_trajectory_action [label="Arm Trajectory Action Server", URL="node:/joint_trajectory_action"];
+  _base_laser1 [label="LIDAR Driver", URL="node:/base_laser1"];
+  _ompl_planning [label="OMPL Planner", URL="node:/ompl_planning"];
+  _tabletop_collision_map_processing [label="Tabletop Collision Map Processing", URL="node:/tabletop_collision_map_processing"];
+  _abby_demo [label="Demo Script", URL="node:/abby_demo"];
+  _motion_download_interface [label="Arm Motion Client", URL="node:/motion_download_interface"];
+  _camera_nodelet_manager [label="Kinect Driver", URL="node:/camera_nodelet_manager"];
+  _object_manipulator [label="Box Manipulator", URL="node:/object_manipulator"];
+  _planning_scene_validity_server [label="Planning Scene Validity Server", URL="node:/planning_scene_validity_server"];
+  _gripper [label="Gripper Driver", URL="node:/gripper"];
+  _twist_receiver [label="cRIO Motion Client", URL="node:/twist_receiver"];
+  _crio_receiver [label="cRIO State Client", URL="node:/crio_receiver"];
+  _odom_translator [label="Odometry Translator*", URL="node:/odom_translator"];
+  _tabletop_segmentation [label="Tabletop Segmentation", URL="node:/tabletop_segmentation"];
+  
+    _move_base->_twist_receiver [label="Drive Base Twist Commands"]
+    
+    _object_manipulator->_abby_move_irb_120 [label="Move IRB-120 Action" color="red"]
+    _abby_demo->_abby_move_irb_120 [label="Move IRB-120 Action" color="red"]
+    
+    _abby_demo->_cluster_bounding_box_finder [label="Fit Bounding Boxes" color="blue"]
+    _abby_demo->_tabletop_segmentation [label="Segment Pointcloud" color="blue"]
+    _abby_demo->_tabletop_collision_map_processing [label="Insert Objects" color="blue"]
+    
+    _object_manipulator->_gripper [label="Move Gripper" color="blue"]
+    _abby_demo->_gripper [label="Move Gripper" color="blue"]
+    
+    _abby_move_irb_120->_joint_trajectory_action [label="Joint Trajectory Action" color="red"]
+    
+    _localization_map_server->_move_base [label="a priori Map"]
+    
+    _robot_state->_joint_trajectory_action [label="Joint State Feedback"]
+    
+    _robot_state->_object_manipulator [label="Joint States"]
+    _robot_state->_environment_server [label="Joint States"]
+    _robot_state->_robot_state_publisher [label="Joint States"]
+    _gripper->_object_manipulator [label="Joint States"]
+    _gripper->_environment_server [label="Joint States"]
+    _gripper->_robot_state_publisher [label="Joint States"]
+    
+    _collider_node->_environment_server [label="Collision Map"]
+    
+    _odom_translator->_move_base [label="Odometry"]
+    
+    _abby_demo->_object_manipulator [label="Pick Action" color="red"]
+    
+    _joint_trajectory_action->_motion_download_interface [label="Joint Trajectory Command"]
+    
+    _abby_demo->_object_manipulator [label="Place Action" color="red"]
+    
+    _environment_server->_ompl_planning [label="Sync Planning Scene" color="red"]
+    _environment_server->_planning_scene_validity_server [label="Sync Planning Scene" color="red"]
+    _environment_server->_abby_irb_120_kinematics [label="Sync Planning Scene" color="red"]
+    
+    _tabletop_collision_map_processing->_environment_server [label="Attached Collision Object"]
+    _tabletop_collision_map_processing->_collider_node [label="Attached Collision Object"]
+    _object_manipulator->_environment_server [label="Attached Collision Object"]
+    _object_manipulator->_collider_node [label="Attached Collision Object"]
+    
+    _tabletop_collision_map_processing->_environment_server [label="Collision Object"]
+    _tabletop_collision_map_processing->_collider_node [label="Collision Object"]
+    
+    _base_laser1->_amcl [label="LIDAR Scan"]
+    _base_laser1->_move_base [label="LIDAR Scan"]
+    
+    _camera_nodelet_manager->_color_self_filter [label="Point Cloud"]
+    
+    _color_self_filter->_collider_node [label="Filtered Point Cloud"]
+    _color_self_filter->_tabletop_segmentation [label="Filtered Point Cloud"]
+    
+    _crio_receiver->_odom_translator [label="Pose"]
+    
+    _abby_demo->_move_base [label="Move Base Action" color="red"]
+    /*
+    _odom_translator->_tabletop_segmentation [label="/tf"]
+    _odom_translator->_object_manipulator [label="/tf"]
+    _odom_translator->_camera_nodelet_manager [label="/tf"]
+    _odom_translator->_tabletop_collision_map_processing [label="/tf"]
+    _odom_translator->_environment_server [label="/tf"]
+    _odom_translator->_amcl [label="/tf"]
+    _odom_translator->_cluster_bounding_box_finder [label="/tf"]
+    _odom_translator->_move_base [label="/tf"]
+    _odom_translator->_color_self_filter [label="/tf"]
+    _odom_translator->_collider_node [label="/tf"]
+    _amcl->_tabletop_segmentation [label="/tf"]
+    _amcl->_object_manipulator [label="/tf"]
+    _amcl->_camera_nodelet_manager [label="/tf"]
+    _amcl->_tabletop_collision_map_processing [label="/tf"]
+    _amcl->_environment_server [label="/tf"]
+    _amcl->_cluster_bounding_box_finder [label="/tf"]
+    _amcl->_move_base [label="/tf"]
+    _amcl->_color_self_filter [label="/tf"]
+    _amcl->_collider_node [label="/tf"]
+    _cluster_bounding_box_finder->_tabletop_segmentation [label="/tf"]
+    _cluster_bounding_box_finder->_object_manipulator [label="/tf"]
+    _cluster_bounding_box_finder->_camera_nodelet_manager [label="/tf"]
+    _cluster_bounding_box_finder->_tabletop_collision_map_processing [label="/tf"]
+    _cluster_bounding_box_finder->_environment_server [label="/tf"]
+    _cluster_bounding_box_finder->_amcl [label="/tf"]
+    _cluster_bounding_box_finder->_move_base [label="/tf"]
+    _cluster_bounding_box_finder->_color_self_filter [label="/tf"]
+    _cluster_bounding_box_finder->_collider_node [label="/tf"]
+    _robot_state_publisher->_tabletop_segmentation [label="/tf"]
+    _robot_state_publisher->_object_manipulator [label="/tf"]
+    _robot_state_publisher->_camera_nodelet_manager [label="/tf"]
+    _robot_state_publisher->_tabletop_collision_map_processing [label="/tf"]
+    _robot_state_publisher->_environment_server [label="/tf"]
+    _robot_state_publisher->_amcl [label="/tf"]
+    _robot_state_publisher->_cluster_bounding_box_finder [label="/tf"]
+    _robot_state_publisher->_move_base [label="/tf"]
+    _robot_state_publisher->_color_self_filter [label="/tf"]
+    _robot_state_publisher->_collider_node [label="/tf"]
+    _object_manipulator->_tabletop_segmentation [label="/tf"]
+    _object_manipulator->_camera_nodelet_manager [label="/tf"]
+    _object_manipulator->_tabletop_collision_map_processing [label="/tf"]
+    _object_manipulator->_environment_server [label="/tf"]
+    _object_manipulator->_amcl [label="/tf"]
+    _object_manipulator->_cluster_bounding_box_finder [label="/tf"]
+    _object_manipulator->_move_base [label="/tf"]
+    _object_manipulator->_color_self_filter [label="/tf"]
+    _object_manipulator->_collider_node [label="/tf"]
+    */
+}
