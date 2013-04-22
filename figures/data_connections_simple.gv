@@ -1,0 +1,77 @@
+digraph g {
+ ranksep=0.5
+ LIDAR[
+    shape=box
+    label="LIDAR"
+ ]
+ SERIAL_CONVERTER[
+    shape=box
+    label="Serial<->USB"
+ ]
+ KINECT[
+    shape=box
+    label="Kinect Camera"
+ ]
+ XB360[
+    shape=box
+    label="XBOX 360 Controller (Teleoperation)"
+ ]
+ ROUTER[
+    shape=record
+    label="Router"
+ ]
+ PC[
+    shape=record
+    label="PC"
+ ]
+ IRC5[
+    shape=record
+    label="IRC5"
+ ]
+ IRB120[
+    shape=box
+    label="IRB-120"
+ ]
+ FLEXPENDANT[
+    shape=box
+    label="FlexPendant (Display/Interface)"
+ ]
+ ARDUINO[
+    shape=box
+    label="Arduino (Gripper Control)"
+ ]
+ CRIO[
+    shape=record
+    label="cRIO"
+ ]
+ ENCODERS[
+    shape=box
+    label="Encoders"
+ ]
+ VMONITOR[
+    shape=record
+    label="Voltage Bus Monitor"
+ ]
+ OPERATOR[
+    shape=record
+    label="Operator PC (not onboard)"
+ ]
+ SABERTOOTH[
+    shape=box
+    label="Sabertooth Motor Controller (Mobile Base)"
+ ]
+ LIDAR->SERIAL_CONVERTER;
+ SERIAL_CONVERTER->PC:usb1 [color="red"];
+ KINECT->PC:usb2 [color="red"];
+ XB360->PC:usb3 [color="red"];
+ PC:eth1-> ROUTER:eth1 [dir="both" color="blue"];
+ PC:usb4-> ARDUINO [dir="both" color="red"];
+ ROUTER:eth3->CRIO:eth1 [dir="both" color="blue"];
+ ROUTER:eth2->IRC5:eth1 [dir="both" color="blue"];
+ IRC5:XS2->IRB120 [dir="both"];
+ IRC5:XS4->FLEXPENDANT [dir="both"];
+ ENCODERS->CRIO:DIO;
+ VMONITOR->CRIO:AI;
+ OPERATOR->ROUTER:wifi [dir="both" color="blue"];
+ CRIO:FDIO->SABERTOOTH;
+}
