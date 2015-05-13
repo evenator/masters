@@ -1,318 +1,207 @@
-% This is a very early CWRU thesis/dissertation class file.
 %
-% Copyright Gregory Lee 2012
-% This may be used by any CWRU students (or anyone else) free of charge.
-% This file is provided without warrany of MERCHANTABILITY of FITNESS FOR A PARTICULAR PURPOSE.
+% Class for typesetting CWRU Dissertations
+% Copyright 2013, Gary Doran (gary.doran@case.edu)
+% Distributed under the terms of the GNU Lesser General Public License
+% Uses guidelines from http://gradstudies.case.edu/current/etd/guidelines.html
+%
+% Modified by Russell Jackson 2014 to improve flexibility and overall flow.
 
-% Incomplete:
-% Committee Approval Sheet
-% Copyright Sheet
+\NeedsTeXFormat{LaTeX2e}
 
-\NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesClass{cwru}[2012/04/17 v0.1 Case Western Reserve University Thesis Class]
+\ProvidesClass{cwru}[2013/08/01 v1.0 CWRU Dissertation Format]
 
-\LoadClass[12pt]{article}[2007/10/19]
+\newif\if@notsinglespaced
+\newif\if@proposal
+\@proposalfalse
+\@notsinglespacedtrue
+\DeclareOption{singlespaced}{\@notsinglespacedfalse}
+\DeclareOption{proposal}{\@proposaltrue}
+\ProcessOptions
 
-\RequirePackage{graphicx}
+\LoadClass[12pt,letter,oneside]{book}
+\RequirePackage[top=1in,bottom=1in,left=1.5in,right=1in]{geometry}
+\RequirePackage{setspace}
+\RequirePackage{array}
+\RequirePackage{fancyhdr}
 \RequirePackage{hyperref}
-\RequirePackage{fixltx2e}
+\hypersetup{pdfborder=0 0 0} %,pdfview=FitH}
 
-\newif\if@advisor
-\@advisorfalse
-\newif\if@lof
-\newif\if@lot
-\newif\if@copy
-\newif\if@dedication
-\@dedicationfalse
-\newif\if@preface
-\@prefacefalse
-\newif\if@ack
-\@ackfalse
-\newif\if@loa
-\@loafalse
-\newif\if@glossary
-\@glossaryfalse
+\pagestyle{fancy}
+\if@notsinglespaced
+  \doublespacing
+\fi
 
-\DeclareOption{phd}{%
-  \def\@degree{Doctor of Philosophy}%
-  \def\@document{Dissertation}%
-}
-\DeclareOption{ms}{%
-  \def\@degree{Master of Science}%
-  \def\@document{Thesis}%
-}
-\DeclareOption{copyright}{\@copytrue}
-\DeclareOption{nocopyright}{\@copyfalse}
-\DeclareOption{lot}{\@lottrue}
-\DeclareOption{nolot}{\@lotfalse}
-\DeclareOption{lof}{\@loftrue}
-\DeclareOption{nolof}{\@loffalse}
+\def\degree#1{\gdef\@degree{#1}}
+\def\@degree{\@latex@warning@no@line{No \noexpand\degree given}}
 
-\ExecuteOptions{ms,nolof,nolot,nocopyright}
+\def\doctype#1{\gdef\@doctype{#1}}
+\def\@doctype{\@latex@warning@no@line{No \noexpand\doctype given}}
+%\def\advisor#1{\gdef\@advisor{#1}}
+%\def\@advisor{\@latex@warning@no@line{No \noexpand\advisor given}}
+\def\department#1{\gdef\@department{#1}}
+\def\@department{\@latex@warning@no@line{No \noexpand\department given}}
 
-\ProcessOptions\relax
+\def\defensedate#1{\gdef\@defensedate{#1}}
+\def\@defensedate{\@latex@warning@no@line{No \noexpand\defensedate given}}
+%\def\committeechair#1{\gdef\@committeechair{#1}}
+%\def\@committeechair{\@advisor}
 
-\setlength{\paperwidth}{8.5in}
-\setlength{\paperheight}{11.0in}
-\special{papersize=8.5in,11in}
+%\newcounter{committeecounter}
+%\setcounter{committeecounter}{1}
+%\newcommand{\committee}[1]{
+%\expandafter\gdef\csname @committeemember\thecommitteecounter\endcsname{#1}
+%\stepcounter{committeecounter}}
 
-\setlength{\hoffset}{-1.0in}
-\setlength{\marginparsep}{0.0in}
-\setlength{\marginparwidth}{0.0in}
-\setlength{\evensidemargin}{1.5in}
-\setlength{\oddsidemargin}{1.5in}
-\setlength{\textwidth}{6.0in}
-
-\setlength{\voffset}{-1.0in}
-\setlength{\topmargin}{1.0in}
-\setlength{\headheight}{0.0in}
-\setlength{\headsep}{0.0in}
-\setlength{\textheight}{9.0in}
-\setlength{\footskip}{2em}
-\addtolength{\textheight}{-\footskip}
-
-
-% Alter some LaTeX defaults for better treatment of figures:
-% See p.105 of "TeX Unbound" for suggested values.
-% See pp. 199-200 of Lamport's "LaTeX" book for details.
-% General parameters, for ALL pages:
-\renewcommand{\topfraction}{0.95}	% max fraction of floats at top
-\renewcommand{\bottomfraction}{0.85}	% max fraction of floats at bottom
-% Parameters for TEXT pages (not float pages):
-\setcounter{topnumber}{2}
-\setcounter{bottomnumber}{2}
-\setcounter{totalnumber}{4}     % 2 may work better
-\setcounter{dbltopnumber}{2}    % for 2-column pages
-\renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col.  text
-\renewcommand{\textfraction}{0.07}	% allow minimal text w.  figs
-% Parameters for FLOAT pages (not text pages):
-\renewcommand{\floatpagefraction}{0.8}	% require fuller float pages
-% N.B.: floatpagefraction MUST be less than topfraction !!
-\renewcommand{\dblfloatpagefraction}{0.8}	% require fuller float pages
-
-\hyphenpenalty=5000
-\tolerance=1000
-
-\DeclareRobustCommand{\CWRUadvisor}[1]{
-  \@advisortrue
-  \def\@advisor{\@document{} Advisor: \textnormal{#1}}
+\renewcommand\maketitle{\begin{titlepage}%
+\begin{spacing}{2.0}
+  %\newgeometry{left=1in,top=1in,bottom=1in,right=1in}
+  \let\footnotesize\small
+  \let\footnoterule\relax
+  \let \footnote \thanks
+  \null\vfil
+  \vskip 60\p@
+  \begin{center}%
+    {\Large\bfseries \textsf{\MakeUppercase{\@title}} \par}%
+    \vskip 3em%
+    {\large
+     \lineskip 3em%
+      {\bfseries\textsf{by}} \\
+      \begin{tabular}[t]{c}%
+        {\bfseries \textsf{\MakeUppercase{\@author}}}
+      \end{tabular}\par%
+      \vskip 2em%
+      \textsf{Submitted in partial fulfillment of the requirements} \\
+\if@proposal
+  \textsf{for the dissertation proposal} \\
+  \else
+  \textsf{for the degree of \@degree} \\
+\fi
+      \vskip 2em%
+      %Dissertation Advisor: \@advisor \\
+      %\vskip 2em%
+      \textsf{Department of \@department} \\
+      \textsf{CASE WESTERN RESERVE UNIVERSITY} \\
+      \vskip 2em%
+      \textsf{\@date} \par}
+  \end{center}\par
+  \@thanks
+  \vfil\null
+  \end{spacing}
+  \end{titlepage}%
+  \setcounter{footnote}{0}%
+  \global\let\thanks\relax
+  \global\let\maketitle\relax
+  \global\let\@thanks\@empty
+  %\global\let\@author\@empty
+  \global\let\@date\@empty
+  %\global\let\@title\@empty
+  %\global\let\title\relax
+  %\global\let\author\relax
+  %\global\let\degree\relax
+  %\global\let\advisor\relax
+  \global\let\department\relax
+  \global\let\date\relax
+  \global\let\and\relax
+  %\restoregeometry
 }
 
-\def\@department{Department of the Unnamed}
-\DeclareRobustCommand{\CWRUdepartment}[1]{\def\@department{Department of #1}}
 
-\def\@graduationdate{TBD}
-\DeclareRobustCommand{\CWRUgraduationdate}[1]{\def\@graduationdate{#1}}
+%This command allows for differing lengths of the list of commitee members.
+%Alsways define the advisor first
+\newbox\@committeeMembers \newbox\@committeeMembers
 
-% Customize the degree name and the document type text
-\DeclareRobustCommand{\CWRUdegreename}[1]{\def\@degree{#1}}
-\DeclareRobustCommand{\CWRUdocumentname}[1]{\def\@document{#1}}
+\def\advisor#1{\setbox\@committeeMembers\vbox
+  {\unvbox\@committeeMembers \vskip 10pt% plus 1fil minus 1fil
+  \centering \def\baselinestretch{1}
+  {\centering{\textsf{Committee Chair}} \par \centering{\textsf{\textbf{#1}}}}}
+  \setbox\@committeeMembers\vbox{\unvbox\@committeeMembers
+  \vskip\baselineskip \def\baselinestretch{1}\@normalsize }}
 
-\long\def\@CWRUtitle{%
-\begin{titlepage}
-    \begin{doublespace}
-        \begin{center}
-            \vspace*{0.5in}
+\def\committee#1{\setbox\@committeeMembers\vbox
+  {\unvbox\@committeeMembers \vskip 10pt% plus 1fil minus 1fil
+  \centering \def\baselinestretch{1}
+  {\centering{\textsf{Committee Member}} \par \centering{\textsf{\textbf{#1}}}}}
+  \setbox\@committeeMembers\vbox{\unvbox\@committeeMembers
+  \vskip\baselineskip \def\baselinestretch{1}\@normalsize }}
 
-            {\large{\MakeUppercase{\@title}} \par}%
 
-            { \large by
-            
-            \MakeUppercase{\@author} }\\[0.5in]
+\newcommand\makeapprovalsheet{\newpage
+\thispagestyle{empty}
+\begin{spacing}{2.0}
+\begin{center}
+{\large\bfseries
+\textsf{CASE WESTERN RESERVE UNIVERSITY \\
+SCHOOL OF GRADUATE STUDIES}
+}
+\par
+\vspace{1em}
+{\textsf{
+\if@proposal
+  We hereby approve the proposal of \\
+  \else
+  We hereby approve the \@doctype{} of \\
+\fi
+}
+\par
+\textsf{\Large \@author}}
+\par
+\textsf{candidate for the degree of \textbf{\@degree{}}*.}
+\vspace{2em}
 
-            { \large Submitted in partial fulfillment of the requirements
-            
-            For the degree of \@degree{}}\\[0.5in]
+\unvcopy\@committeeMembers
 
-            { \large Thesis Advisor:\@advisor}\\[0.5in]
-
-            { \large Department of \@department
-            
-            CASE WESTERN RESERVE UNIVERSITY}\\[0.5in]
-
-            \vfill
-
-            { \large \@graduationdate}\\[0.5in]
-        \end{center}
-    \end{doublespace}
-\end{titlepage}
+\vfill
+%\vskip 2em%
+%\noindent
+{\centering{\textsf{Date of Defense}} \par \centering{\textsf{\textbf{\@defensedate}}}}
+\vfill
+\noindent \small{*We also certify that written approval has been obtained \\
+for any proprietary material contained therein.}
+\end{center}
+\end{spacing}
 \newpage
 }
 
-\DeclareRobustCommand{\CWRUpreamble}{%
-  \@CWRUtitle
-  \@CWRUcommittee
-  \if@copy
-  \@CWRUcopy
-  \fi
-  \if@dedication
-  \@CWRUdedication
-  \fi
-  \pagenumbering{roman}
-  \@CWRUtoc
-  \if@lof
-  \@CWRUlof
-  \fi
-  \if@lot
-  \@CWRUlot
-  \fi
-  \if@preface
-  \@CWRUpreface
-  \fi
-  \if@ack
-  \@CWRUack
-  \fi
-  \if@loa
-  \@CWRUloa
-  \fi
-  \if@glossary
-  \@CWRUglossary
-  \fi
-  \@CWRUabstract
-  \pagenumbering{arabic}
-}
-
-\def\@preambledivs{section}
-\newenvironment{CWRU@page}[1]{%
-  \phantomsection%
-  \addcontentsline{toc}{\@preambledivs}{#1}%
-}{%
-  \clearpage
-}
-
-\def\@CWRUcommittee{%
-%  \section*{Committee Approval Sheet}
-  \begin{center}
-    {\large{\textbf{\uppercase{Case Western Reserve University\\
-            School of Graduate Studies}}} \par}%
-  \end{center}
-  \vspace{3em}
-  \begin{center}
-    \begin{minipage}{5.0in}
-      {\noindent We hereby approve the \MakeLowercase{\@degree} of \par}
-      \vspace{2em}
-      \centering{\large{\@author}}\par
-      \vspace{0.5em}
-      \hrule
-      \vspace{2em}
-      \centering{\large{\@degree}}\par%
-      \vspace{-1em}
-      {\noindent candidate for the \hrulefill{} degree*. \par}
-    \end{minipage}
-  \end{center}
-  \vfill
-  {\noindent *We also certify that written approval has been obtained for any proprietary material contained herein. \par}%
-  \phantomsection%
-  \clearpage
-}
-
-\def\@CWRUcopy{%
-  \section*{Copyright}
-  \phantomsection%
-  This will be the copyright page.
-  \clearpage
-}
-
-\DeclareRobustCommand{\CWRUdedication}[1]{%
-  \@dedicationtrue
-  \long\def\@CWRUdedicationtext{#1}
-}
-
-\def\@CWRUdedication{%
-  \section*{Dedication}%
-  \phantomsection
-  \@CWRUdedicationtext
-  \clearpage
-}
-
-\renewcommand{\contentsname}{Table of Contents}
-\def\@CWRUtoc{%
-  \begin{CWRU@page}{\contentsname}
-  \tableofcontents
-  \end{CWRU@page}
-}
-
-\def\@CWRUlof{%
-  \phantomsection
-  \addcontentsline{toc}{section}{\listfigurename}
-  \listoffigures
-  \clearpage
-}
-
-\def\@CWRUlot{%
-  \phantomsection
-  \addcontentsline{toc}{section}{\listtablename}
-  \listoftables
-  \clearpage
-}
-
-\DeclareRobustCommand{\CWRUpreface}[1]{%
-  \@prefacetrue
-  \long\def\@CWRUprefacetext{#1}
-}
-
-\def\@CWRUpreface{%
-  \section*{Preface}%
-  \begin{CWRU@page}{Preface}
-    \@CWRUprefacetext
-  \end{CWRU@page}
-}
-
-\DeclareRobustCommand{\CWRUack}[1]{%
-  \@acktrue
-  \long\def\@CWRUacktext{#1}
-}
-
-\def\@CWRUack{%
-  \section*{Acknowledgments}%
-  \begin{CWRU@page}{Acknowledgments}
-    \@CWRUacktext
-  \end{CWRU@page}
-}
-
-\DeclareRobustCommand{\CWRUloa}[1]{%
-  \@loatrue
-  \long\def\@CWRUloatext{#1}
-}
-
-\def\@CWRUloa{%
-  \section*{List of Abbreviation}%
-  \begin{CWRU@page}{List of Abbreviations}
-    \@CWRUloatext
-  \end{CWRU@page}
-}
-
-\DeclareRobustCommand{\CWRUglossary}[1]{%
-  \@glossarytrue
-  \long\def\@CWRUglossarytext{#1}
-}
-
-\def\@CWRUglossary{%
-  \section*{Glossary}%
-  \begin{CWRU@page}{Glossary}
-    \@CWRUloatext
-  \end{CWRU@page}
-}
-
-\long\def\@CWRUabstracttext{}
-\DeclareRobustCommand{\CWRUabstract}[1]{%
-  \long\def\@CWRUabstracttext{#1}
-}
-
-\def\@CWRUabstract{%
-  \section*{Abstract}%
-  \begin{CWRU@page}{Abstract}
-    \@CWRUabstracttext
-  \end{CWRU@page}
-}
-
-\renewcommand\appendix{\par
-  \setcounter{section}{0}%
-  \setcounter{subsection}{0}%
-  \clearpage%
-  \gdef\thesection{\@Alph\c@section}}
-
-%\renewcommand{\baselinestretch}{2}
-\linespread{1.6}
+\newenvironment{acknowledgments}%
+{\cleardoublepage\chapter*{Acknowledgments}\addcontentsline{toc}{chapter}{Acknowledgments}\markboth{ACKNOWLEDGMENTS}{}}%
+{\null}
 
 
+\newenvironment{abstract}%
+{\newpage\cleardoublepage\phantomsection
+\if@proposal
+  \addcontentsline{toc}{chapter}{Summary}
+  \else
+  \addcontentsline{toc}{chapter}{Abstract} 
+\fi
+\thispagestyle{plain}\begin{center}
+\if@proposal
+  \markboth{Summary}{}
+  \else
+  \markboth{Abstract}{}
+\fi
+\begin{spacing}{1.5}
+    {\large \@title \par}%
+    \vspace{-1.5em}
+    \vskip 2em%
+     \lineskip 2em%
+\if@proposal
+  Proposal Summary \\
+  \else
+  Abstract \\ 
+\fi
+	by \\    {%\large
+     \lineskip 2em%
+      \begin{tabular}[t]{c}%
+        \MakeUppercase{\@author}
+      \end{tabular}\par}%
+\end{spacing}
+\end{center}\vspace{-1.5em}}
+{\vfill\@gobble\null}
+
+
+
+
+
+
+\endinput

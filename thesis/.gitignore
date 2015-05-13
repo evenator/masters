@@ -1,2 +1,8 @@
+*.lot
+*.toc
+*.lof
+*.loc
+*.log
+*.out
 *.aux
 *.dvi
