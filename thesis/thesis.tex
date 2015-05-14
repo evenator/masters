@@ -10,7 +10,7 @@
 \usepackage{algorithmic}
 \usepackage{longtable}
 \usepackage{booktabs}
-\usepackage{lipsum}
+\usepackage{caption}
 
 \fancyhead[LO,RE]{} % Remove section names from header
 
@@ -64,10 +64,6 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures
-
-\begin{acknowledgments}
-\lipsum[1-3]
-\end{acknowledgments}
 
 % If you're using `glossaries` package
 
@@ -277,7 +273,7 @@ an H-bridge PWM motor controller that supplies a variable DC voltage
 from -24 volts to +24 volts to each motor based on commands it receives
 over a serial data connection. The Sabertooth 2x50 is powered by a 24
 volt DC rail that is energized and de-energized by the emergency stop
-circuit described in Section 5.2.
+circuit described in Section \ref{estop}.
 
 The wheelchair base is prone to wheel slip when commanded to accelerate
 or decelerate quickly. The acceleration limits of the robot were
@@ -484,7 +480,7 @@ rail from dropping below 10 volts, and it recovers to its nominal
 voltage in under 100 ms. This droop is not enough to cause the router to
 reboot. In order to monitor the state of the voltage rails, each one is
 connected to an analog to digital converter (ADC) on the National
-Instruments Compact RIO that controls the drive base (see Section 3.7).
+Instruments Compact RIO that controls the drive base (see Section \ref{computing-hw}).
 The ADC monitors the main 24 volt bus, the 13.8 volt bus, the power
 supply to the cRIO (which is protected from rail droop by a peak
 detector, as shown in Figure 4), and the rail that powers the drive
@@ -832,6 +828,7 @@ and local plans to specified
 waypoints.
 
 \subsection{Localization}
+\label{localization}
 
 In robotics, localization is the task of determining where the robot is.
 Localization methods can be classified into one of two groups. Relative
@@ -886,7 +883,7 @@ function used to estimate the heading in Algorithm 1. A well-calibrated
 relative localization system with an accurate observer model will still
 accumulate error over time, and the estimated position of the robot will
 slowly diverge from the true position. This was demonstrated using
-ABBY's odometry system; see Section 6.1.
+ABBY's odometry system; see Section \ref{localization}.
 
 Unlike relative localization, absolute localization does not accumulate
 error. There are several different types of absolute localization
@@ -1127,6 +1124,7 @@ IKFast was determined to be unsuitable for arms of ABBY's geometry due
 to the high incidence of solver failure.
 
 \section{Arm Navigation}
+\label{arm-nav}
 
 ABBY's arm navigation package is closely based on the standard ROS arm
 navigation package, which is generated from a URDF by a tool called the
@@ -1187,6 +1185,7 @@ object detection. This is a computationally intensive task, consuming
 one full core of the PC's processor.
 
 \section{Tabletop Box Manipulation}
+\label{tabletop-manip}
 
 Once ABBY arrives at the desired location in the factory, it must
 identify objects and pick them up from the inventory shelves. This is an
@@ -1204,9 +1203,9 @@ callable method pick\_objects(), which performs the task described in
 Algorithm \ref{alg2}.
 
 \begin{algorithm}
-\label{alg2}
 \caption{The process for detecting, picking up, and stowing the objects
 on a table.}
+\label{alg2}
 \begin{algorithmic}
 
 \STATE $detected\_objects \gets$ tabletop\_detection($kinect\_data$)
@@ -1389,6 +1388,7 @@ that does not operate in a cage or with guards, neither of which are
 practical for a mobile robot.
 
 \section{Reflexive Collision Avoidance}
+\label{reflexive-avoidance}
 
 A key safety feature of many robots is reflexive speed limiting or
 halting. Reflexive collision avoidance uses sensors to detect obstacles
@@ -1413,6 +1413,7 @@ methods for reflexive collision avoidance are described in Appendix
 3.
 
 \section{Emergency Stop System}
+\label{estop}
 
 \subsection{E-Stop Systems Used in This Lab}
 
@@ -1554,14 +1555,36 @@ ten meters in the positive x direction. The start and end points were
 marked on the floor, and the robot was teleoperated in a straight line
 between them. At the end of each trial, the robot's estimated position,
 as measured by the odometry system, was recorded. The results of these
-tests are in Table 1; no wheel slip was observed during any of these
+tests are in Table \ref{tab:loc-straight-line}; no wheel slip was observed during any of these
 trials. Perfect localization would have observed the robot to be at
-x=10.0 meters and y=0.0 meters. The results, as expected, show
+$x=10.0$ meters and $y=0.0$ meters. The results, as expected, show
 relatively accurate absolute displacement, but relatively large errors
 in the position estimate (up to 2.908 meters) due to errors in the
 heading estimate. Some of the error was introduced by the robot being
 visually aligned to the start and stop marks on the floor, but some is
 the result of wheel slip and linearization error in the odometry.
+
+\begin{table}
+\caption{Ten meter odometry test}
+\label{tab:loc-straight-line}
+\begin{tabular}[c]{rrrrr}
+\toprule
+\textbf{Trial} & \textbf{$X$} & \textbf{$Y$} & \textbf{Displacement} & \textbf{Position Error} \tabularnewline
+\midrule
+1   &  9.535 & -2.908 &  9.969 & 2.945\tabularnewline
+2   & 10.042 & -0.760 & 10.071 & 0.761\tabularnewline
+3   & 10.373 & -0.032 & 10.373 & 0.374\tabularnewline
+4   &  9.996 & -0.454 & 10.005 & 0.454\tabularnewline
+5   &  9.881 & -0.663 &  9.903 & 0.674\tabularnewline
+6   & 10.019 & -0.610 & 10.036 & 0.610\tabularnewline
+\midrule
+RMS &  9.977 &  1.294 & 10.060 & 1.318\tabularnewline
+\midrule
+STD &  0.271 &  1.016 &  0.164 & 0.978\tabularnewline
+\bottomrule
+\end{tabular}
+\caption*{Measurements in meters}
+\end{table}
 
 In the
 second test, the robot was manually driven for five laps of a circle
@@ -1569,9 +1592,10 @@ with a 1 meter radius. The start and end points, as well as the circle
 for the robot to follow, were marked on the floor, and the robot was
 teleoperated along the circle for five laps. At the end of each trial,
 the robot's estimated position and orientation, as estimated by the
-odometry system, were recorded. The results of these tests are in Table \ref{tab:loc_trials}. Since the start and end positions are the same, perfect localization
-would have observed the robot to be at x=0.0 meters and y=0.0 meters
-with a heading of 0. The results show that turning has a more negative
+odometry system, were recorded. The results of these tests are in Table 
+\ref{tab:loc-circles}. Since the start and end positions are the same, perfect 
+localization would have observed the robot to be at $x=0.0$ meters and $y=0.0$
+meters with a heading of 0. The results show that turning has a more negative
 effect on odometry accuracy than driving in a straight line. The
 displacement was consistently incorrect by at least 0.8 meters, and the
 heading was incorrect by up to 35 degrees. The consistent bias in these
@@ -1580,12 +1604,9 @@ that the robot was driven around the circle in the same direction
 (counterclockwise) in every trial.
 
 \begin{table}
-\label{tab:loc_trials}
-\caption{One meter radius circle odometry test. Measurements in meters except
-where noted. $O_z$ and $O_w$ indicate quaternion components $z$ and $w$
-(components $x$ and $y$ are 0).}
-\begin{tabular}[c]{@{}lllllll@{}}
-\\
+\caption{One meter radius circle odometry test}
+\label{tab:loc-circles}
+\begin{tabular}[c]{@{}rrrrrrr@{}}
 \toprule
 \textbf{Trial} & \textbf{$x$} & \textbf{$y$} & \textbf{$O_z$} & \textbf{$O_w$} &
 \textbf{Displacement} & \textbf{Heading (deg)}\tabularnewline
@@ -1602,6 +1623,9 @@ RMS & 0.819 & 0.488 & 0.530 & 0.848 & 0.954 & 26.975\tabularnewline
 STD & 0.0833 & 0.111 & 0.053 & 0.034 & 0.101 & 7.235\tabularnewline
 \bottomrule
 \end{tabular}
+\caption*{Measurements in meters except
+where noted. $O_z$ and $O_w$ indicate quaternion components $z$ and $w$
+(components $x$ and $y$ are 0).}
 \end{table}
 
 As expected, change in heading causes a greater error in the odometric
@@ -1629,7 +1653,7 @@ with a rough estimate of the appropriate starting position. Success was
 defined as traveling directly to the table without colliding with
 anything in the room, then driving directly to the final position, again
 without colliding with anything. The results of these tests are shown in
-Table 3.
+Table \ref{tab:drive-validation}.
 
 In several trials, the robot spun one or more times before settling into
 the final position. In one trial (16), the robot failed to settle into
@@ -1640,11 +1664,10 @@ desired rate due to the heavy load on the PC's CPU. It is possible that
 this caused the robot to overshoot the desired heading and perform a
 full rotation.
 
-\begin{table}
-\label{tab:drive-validation}
-\caption{Results of drive base validation tests}
-
 \begin{longtable}[c]{lllp{7.5cm}}
+\caption{Results of drive base validation tests}
+\label{tab:drive-validation}\tabularnewline
+\endfirsthead
 \toprule
 \textbf{Trial} & \textbf{Start Position} & \textbf{Drive To Table} &
 \textbf{Drive to Final Position}\tabularnewline
@@ -1671,12 +1694,12 @@ success\tabularnewline
 times and the gripper brushes an obstacle\tabularnewline
 \bottomrule
 \end{longtable}
-\end{table}
+
 In order to validate the object recognition and manipulation system, the
 robot was scripted to pick up one of three objects placed randomly
 within a designated area on a table in front of the robot. The robot
 used the tabletop segmentation and object recognition software described
-in Section 4.4 above to locate the objects on the table, pick one up,
+in Section \ref{tabletop-manip} above to locate the objects on the table, pick one up,
 and drop it in the onboard carrier bin. The objects, 5 cm diameter by
 5.5 cm tall paper cylinders, were only slightly smaller than the
 gripper, which has a jaw opening of 5.3 cm when opened. Smaller (4.5 cm
@@ -1692,7 +1715,7 @@ way, the robot attempted object segmentation. If no objects were found,
 the robot moved the arm again and reattempted segmentation. If at least
 one object was recognized, the robot attempted to pick one up and drop
 it in the bin. The results of these tests are shown in Figure 18 and
-Table 4.
+Table \ref{tab:object-manipulation}.
 
 FIGURE
 
@@ -1705,15 +1728,14 @@ robot arm and the third was not reachable by the robot's arm. The most
 common cause of failure was the robot gripper making contact with the
 table. This problem caused six trials to fail. The ROS arm navigation
 software used on the robot is configured to generate collision-free arm
-trajectories, as described in Section 4.3 above, but for an unknown
+trajectories, as described in Section \ref{arm-nav} above, but for an unknown
 reason, it does not always do so. A proposed solution, using recently
-released ROS software, is proposed in Section 8 below.
-
-\begin{table}
-\caption{Results of object recognition and manipulation tests}
-\label{tab:object-recognition}
+released ROS software, is proposed in Chapter \ref{future-work} below.
 
 \begin{longtable}[c]{lp{2.5cm}ll}
+\caption{Results of object recognition and manipulation tests}
+\label{tab:object-recognition}\tabularnewline
+\endfirsthead
 \toprule
 \textbf{Trial} & \textbf{Objects Recognized} & \textbf{Pick Result} &
 \textbf{Drop Result}\tabularnewline
@@ -1754,7 +1776,7 @@ Success (object fell)\tabularnewline
 25 & 2 & Missed & Success (with no object)\tabularnewline
 \bottomrule
 \end{longtable}
-\end{table}
+
 Finally, these tests were combined into a single procedure that
 simulates part of the task of retrieving an assembly kit from factory
 inventory. The procedure is as follows:
@@ -1794,14 +1816,13 @@ were marked on the floor of the testing area. Between each trial, the
 target objects were placed randomly within a designated area on the
 table and the robot's localization software was reinitialized, with AMCL
 seeded at the appropriate starting location. Of the eight trials
-performed, seven were considered successful. Table \ref{tab:validation} shows these
+performed, seven were considered successful. Table \ref{table:validation} shows these
 results.
 
-\begin{table}
-\caption{Validation Task Results}
-\label{tab:validation}
-
 \begin{longtable}[c]{@{}lp{3cm}p{2.5cm}p{7.5cm}@{}}
+\caption{Validation Task Results}
+\label{table:validation}\tabularnewline
+\endfirsthead
 \toprule
 \textbf{Trial} & \textbf{Start
 Position} & \textbf{Objects Recognized} & \textbf{Notes}\tabularnewline
@@ -1824,7 +1845,6 @@ position\tabularnewline
 position\tabularnewline
 \bottomrule
 \end{longtable}
-\end{table}
 
 Of the seven successful trials, most exhibit a similar behavior at the
 end of the trial. The robot spins one or more times before settling into
@@ -1963,6 +1983,7 @@ at new manufacturing sites and remote locations such as construction
 sites or in space.
 
 \chapter{Future Work}
+\label{future-work}
 
 Although this platform is now functional and useful for research, there
 are several areas in which future researchers could improve it.
@@ -2027,11 +2048,10 @@ in Appendix 3.
 
 \chapter{Bill of Materials}
 
-\begin{table}
-\caption{}
-\label{tab:bom}
-
 \begin{longtable}[c]{@{}ll@{}}
+\caption{Bill of Materials}
+\label{tab:bom}\tabularnewline
+\endfirsthead
 \toprule
 \textbf{Item} & \textbf{Cost}\tabularnewline
 \midrule
@@ -2069,7 +2089,6 @@ Miscellaneous Electrical Components & \$50\tabularnewline
 \textbf{Total} & \$1778.00\tabularnewline
 \bottomrule
 \end{longtable}
-\end{table}
 
 \chapter{Revised Emergency Stop Design}
 
@@ -2119,7 +2138,7 @@ requirements described above.
 
 \chapter{Reflexive Collision Avoidance}
 
-As described in Section 5.1, ABBY is slow enough that it can be operated
+As described in Section \ref{reflexive-avoidance}, ABBY is slow enough that it can be operated
 safely without a reflexive speed limiting system. This appendix
 describes proposed speed limiting systems to allow the robot to be
 operated more quickly.
@@ -2130,19 +2149,27 @@ ABBY's local planner will not allow for collisions with obstacles seen
 by the LIDAR, and it updates velocity commands at 12 Hz. Although this
 is sufficiently safe for testing, a more robust solution would be
 necessary in an industrial setting. Mobile robots often implement a
-reflexive halt as shown in Algorithm 3. For example, if a measurement
-source such as a LIDAR reports that there is an obstacle in front of the
-robot at close range, the robot's velocity would be limited to turning
-and reversing. This approach is effective, but can cause difficulties in
-navigating tight areas, where there may be enough space for a robot to
+reflexive halt as shown in Algorithm \ref{alg:reflexive-halt}. For example,
+if a measurement source such as a LIDAR reports that there is an obstacle in 
+front of the robot at close range, the robot's velocity would be limited to 
+turning and reversing. This approach is effective, but can cause difficulties 
+in navigating tight areas, where there may be enough space for a robot to
 navigate through obstacles if it does so carefully.
 
-Given:\\ Sensor measurements, M\\Do:\\ for each measurement m in M:\\
-if(dangerous(m)):\\ prevent motion in direction of m
-
-Algorithm 3: A simple reflexive halt
+\begin{algorithm}
+\caption{A simple reflexive halt
 algorithm. If an obstacle is close to the robot, the robot is prevented
-from approaching closer.
+from approaching closer.}
+\label{alg:reflexive-halt}
+\begin{algorithmic}
+\STATE \textbf{Given:} Sensor measurements $M$
+\FORALL{measurement $m$ in $M$}
+  \IF{dangerous($m$)}
+    \STATE prevent motion in direction of $m$
+  \ENDIF
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
 
 Another approach to reflexive halting was described by Chad Rockey in
 his masters thesis{[}33{]}. This approach, called Reflexive Avoidance
@@ -2217,31 +2244,44 @@ it will plan around stationary objects that enter the work envelope,
 allowing a person to leave an object in the work envelope without
 stalling the robot.
 
-Given:\\ Current Plan P, Measurements M\\Do:\\ for each state s in P,
-measurement m in M:\\
-if(dangerous(m, s)):\\ halt\\ wait for obstacle to move or replan
-
-Algorithm 4: An algorithm for reflexive
-halting for a mobile manipulator. If an obstacle enters the manipulation
-path, the robot waits, then replans.
+\begin{algorithm}
+\caption{An algorithm for reflexive halting for a mobile manipulator.
+If an obstacle enters the manipulation path, the robot waits, then 
+replans.}
+\label{alg:reflexive-manip}
+\begin{algorithmic}
+\STATE \textbf{Given:} Current Plan $P$, Measurements $M$
+\FORALL{state $s$ in $P$}
+  \FORALL{measurement $m$ in $M$}
+    \IF{dangerous($m$, $s$)}
+      \STATE halt
+      \STATE wait for obstacle to move or replan
+    \ENDIF
+  \ENDFOR
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
 
 The National Institute for Standards and Tests (NIST) has developed an
-algorithm to determine a safe separation distance S for a human to
-approach a robot. This is described in Equation 3 below, where
+algorithm to determine a safe separation distance $S$ for a human to
+approach a robot. This is described in Equation \ref{eq:NIST} below, where
 $K_H$ is the speed of a moving human, $K_R$ is
 the speed of the robot, $T_R$ is the reaction time of the
-human, $T_B$ is the braking time of the robot, B is the
-robot braking distance, and C is a distance to account for measurement
+human, $T_B$ is the braking time of the robot, $B$ is the
+robot braking distance, and $C$ is a distance to account for measurement
 uncertainty{[}35{]}.
 
-\(S = K_{H}*\left( T_{R} + T_{B} \right) + K_{R}*T_{R} + B + C\) 3
+\begin{equation}
+\label{eq:NIST}
+S = K_{H} * ( T_{R} + T_{B} ) + K_{R} * T_{R} + B + C
+\end{equation}
 
 NIST researchers used this equation, LIDAR scanners, and a Kalman filter
 to track humans moving through the robot's work envelope and determine
 whether a human had entered a danger zone around the robot (if the
-distance from the robot to the human is less than S). This method
-completes Algorithm 4 by filling in the dangerous() function. In order
-to implement this algorithm on ABBY, parameters B and C would first have
+distance from the robot to the human is less than $S$). This method
+completes Algorithm \ref{alg:reflexive-manip} by filling in the dangerous() function. In order
+to implement this algorithm on ABBY, parameters $B$ and $C$ would first have
 to be determined for this platform. Then, the algorithm would have to be
 written as a ROS node and tested on this robot.
 
