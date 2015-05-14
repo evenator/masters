@@ -11,6 +11,9 @@
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{caption}
+\usepackage{graphicx}
+
+\graphicspath{{figures/}}
 
 \fancyhead[LO,RE]{} % Remove section names from header
 
@@ -25,7 +28,7 @@
 
 \begin{document}
 
-\advisor{Dr.\ Gregory Lee}
+\advisor{Dr. Gregory Lee}
 \committee{Dr. Murat Cenk Cavusoglu}
 \committee{Dr. Roger Quinn}
 
@@ -64,18 +67,6 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures
-
-% If you're using `glossaries` package
-
-%\cleardoublepage
-%\phantomsection
-%\addcontentsline{toc}{chapter}{List of Acronyms}
-%\printglossary[type=\acronymtype]
-
-%\cleardoublepage
-%\phantomsection
-%\addcontentsline{toc}{chapter}{Glossary}
-%\printglossary
 
 \begin{abstract}
 ABBY is a mobile industrial manipulator, a mobile robot equipped with an
@@ -255,7 +246,13 @@ design was reduction of cost, which was achieved by using materials and
 components already available in Case Western Reserve University's Mobile
 Robotics Lab.
 
-FIGURE 1
+\begin{figure}[h]
+\centering
+\includegraphics[width=6.0in]{abby-diagram}
+\caption{An annotated rendering of ABBY showing several major components.}
+\caption*{\textcopyright 2013 IEEE \ref{venator-case}}
+\label{abby-diagram}
+\end{figure}
 
 \section{Invacare Ranger Wheelchair Base}
 
@@ -338,19 +335,28 @@ tanks that are kept at 825 kPa by an onboard compressor. The compressor
 is turned on and off by an Innovation First Spike relay, which is
 controlled by a digital pressure switch calibrated to turn the
 compressor on at 690 kPa and turn it off at 825 kPa. This control
-circuit can be seen in the power distribution diagram in Figure 4. The
-825 kPa stored air is regulated down to 275 kPa working pressure and
-used to actuate the gripper. The pneumatic piston in the gripper is
-controlled by a pneumatic solenoid valve, a magnetically actuated valve
-with one pressure inlet and two pressure outlets. The inlet is connected
-to the regulator, and the outlets are connected to the gripper's
+circuit can be seen in the power distribution diagram in 
+Figure \ref{fig:power-schematic}. The 825 kPa stored air is regulated down to 
+275 kPa working pressure and used to actuate the gripper. The pneumatic piston 
+in the gripper is controlled by a pneumatic solenoid valve, a magnetically 
+actuated valve with one pressure inlet and two pressure outlets. The inlet is 
+connected to the regulator, and the outlets are connected to the gripper's
 pneumatic piston so that applying pressure through one outlet opens the
 gripper and applying pressure through the other outlet closes the
 gripper. The solenoid valve is designed to that when one outlet is
 connected to the pneumatic pressure inlet, the other is vented to the
 atmosphere. The valve is actuated by running current through a solenoid
 coil. The solenoid coil is controlled by a custom circuit based on an
-Arduino microprocessor development kit, as shown in Figure 2.
+Arduino microprocessor development kit, as shown in Figure 
+\ref{fig:gripper-schematic}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=6.0in]{gripper}
+\caption{The electrical circuit to control the pneumatic gripper using 
+an Arduino microcontroller and a pneumatic solenoid valve.}
+\label{fig:gripper-schematic}
+\end{figure}
 
 Although the gripper has only two positions, the pneumatic nature of the
 system makes the gripper jaws back-drivable, with a constant gripping
@@ -362,9 +368,7 @@ gripping force would be great enough to ensure a strong grasp on
 manipulated objects without being so great as to damage
 them.
 
-\chapter{Custom Frame Design}
-
-FIGURE
+\section{Custom Frame Design}
 
 Coupling together the ABB IRB-120 robotic arm and the Invacare Ranger
 wheelchair base is the main frame of the robot. The structural elements
@@ -378,7 +382,13 @@ reconfigured without remachining frame members. However, heavy objects
 mounted to vertical rails, such as the arm, may slip if the bolts are
 not very tight.
 
-FIGURE
+\begin{figure}[h]
+\centering
+\includegraphics[height=5.0in]{abby_2_edited}
+\caption{ABBY, a mobile industrial manipulator.}
+\caption*{\textcopyright 2013 IEEE \ref{venator-case}}
+\label{fig:abby-photo}
+\end{figure}
 
 The frame is designed to hold the IRC5 Compact robot controller and the
 assorted power and control electronics of the robot. The IRC5 is large
@@ -426,7 +436,14 @@ it easily accessible, and the LIDAR power supply is mounted on a front
 panel to place it close to the LIDAR, which is mounted to the front
 frame rail.
 
-FIGURE
+\section{Power}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=6.0in]{power_block_diagram}
+\caption{A block diagram of the power distribution system on the robot}
+\label{fig:power-schematic}
+\end{figure}
 
 All of the robot's power is distributed using DIN rail power
 distribution blocks. These blocks are modular, insulated, and compact.
@@ -464,18 +481,34 @@ can supply up to 12 amps{[}12{]}, which is powered from the main 24 volt
 bus. This bus powers the WiFi router, emergency stop circuitry, the cRIO
 interface board, the Kinect camera, and the pneumatic compressor.
 
-FIGURE FIGURE
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{figure_5}
+  \captionsetup{width=.9\linewidth}
+  \captionof{figure}{13.8 volt rail dropout when compressor turns on (before addition of filter).}
+  \label{fig:compressor-dropout}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{figure_6}
+  \captionsetup{width=.9\linewidth}
+  \captionof{figure}{13.8 volt rail during compressor turn-on after addition of an LC filter.}
+  \label{fig:compressor-filter}
+\end{minipage}
+\end{figure}
 
 Because the compressor draws a large amount of current, the 13.8 volt
 regulator's output would drop to about 5 volts for approximately 450 ms
-(see Figure 5) when the compressor switched on. This droop was
+(see Figure \ref{fig:compressor-dropout}) when the compressor switched on. This droop was
 sufficient to cause the onboard Ethernet router to reboot, interrupting
 communications between the computers onboard. In order to prevent this
 problem, an LC filter was added to the 13.8 volt power rail. A 50mF
 capacitor acts as a charge reservoir for the electronics on the 13.8
 volt power rail, including the router. A 55 μH inductor acts as a
 current choke to limit the instantaneous current draw when the
-compressor turns on. Figure 6 shows that this filter kept the 13.8 volt
+compressor turns on. Figure \ref{fig:compressor-filter} shows that this filter kept the 13.8 volt
 rail from dropping below 10 volts, and it recovers to its nominal
 voltage in under 100 ms. This droop is not enough to cause the router to
 reboot. In order to monitor the state of the voltage rails, each one is
@@ -483,10 +516,16 @@ connected to an analog to digital converter (ADC) on the National
 Instruments Compact RIO that controls the drive base (see Section \ref{computing-hw}).
 The ADC monitors the main 24 volt bus, the 13.8 volt bus, the power
 supply to the cRIO (which is protected from rail droop by a peak
-detector, as shown in Figure 4), and the rail that powers the drive
+detector, as shown in Figure \ref{fig:power-schematic}), and the rail that powers the drive
 base, which is switched on and off by the emergency stop circuit.
 
-FIGURE
+\begin{figure}[h]
+\centering
+\includegraphics[width=6.0in]{data_block_diagram}
+\caption{A block diagram of the sensors and computing hardware on ABBY, 
+showing all data connections}
+\label{fig:data-schematic}
+\end{figure}
 
 In order to sense the motor speed, there is a Grayhill 61R-256 encoder
 on each motor's output shaft. The encoder outputs quadrature pulses at a
@@ -500,7 +539,23 @@ encoders is differentiated to get the wheel velocities, which are then
 fed as control inputs into a Kalman filter that outputs a robot pose
 estimate consisting of X and Y coordinates and a heading.
 
-FIGURE FIGURE
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{kinect_fov}
+  \captionsetup{width=.9\linewidth}
+  \captionof{figure}{A side view of the robot, showing the Kinect's field of view}
+  \label{fig:kinext-fov}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{kinect_mount}
+  \captionsetup{width=.9\linewidth}
+  \captionof{figure}{A close-up view of the Kinect mounted to the robot, showing the mounting bracket}
+  \label{fig:kinect-mount}
+\end{minipage}
+\end{figure}
 
 The Microsoft Kinect is an RGBD (Red, Green, Blue, Depth) camera
 marketed as a gaming controller. ABBY has a Kinect camera mounted high
@@ -694,7 +749,13 @@ angles into Cartesian coordinates and vice versa. It was also used to
 generate the arm navigation package that performs trajectory planning
 for the arm.
 
-FIGURE
+\begin{figure}[h]
+\centering
+\includegraphics[width=6.0in]{rviz}
+\caption{ABBY’s robot model, LIDAR data (green points), and Kinect point 
+cloud (multicolored points) visualized in Rviz}
+\label{fig:rviz}
+\end{figure}
 
 In addition to providing the geometric definition of the robot, the
 robot model makes the Rviz robot visualization GUI much more usable.
@@ -969,10 +1030,18 @@ odometry is more suitable for the local planner, the error it
 accumulates as the robot runs eventually makes it unsuitable for global
 planning.
 
-FIGURE
+\begin{figure}[h]
+\centering
+\includegraphics[height=4.0in]{odom_frames}
+\caption{The map, odometry, and base frames of the robot localization system.}
+\caption*{The transform from the world frame map to the odometry frame, 
+generated by AMCL, cancels out the accumulated error in the transform from 
+the odometry frame to the robot's base frame, generated by odometry.}
+\label{fig:tfs}
+\end{figure}
 
 The results of two methods are fused by storing two transforms in the
-robot's TF tree, as shown in Figure 11. One transform is between the
+robot's TF tree, as shown in Figure \ref{fig:tfs}. One transform is between the
 robot's base\_link (a coordinate frame with its origin on the floor
 between the robot's wheels) to its parent, the odometric frame odom.
 This transform is updated by the odometric state estimator on the cRIO
@@ -1090,9 +1159,17 @@ kinematic solver, which only made one attempt at a solution. When the
 number of attempts was increased to 100, the success rate was 32\% for
 solvable poses.
 
-FIGURE
+\begin{figure}[h]
+\centering
+\includegraphics[width=6.0in]{KDL_histogram}
+\caption{A histogram of the number of iterations required for the KDL inverse 
+kinematics solver to solve for achievable pose requests.}
+\caption*{5000 poses were requested, of which 1583 were solved in less than 
+100 iterations.}
+\label{fig:kdl-histo}
+\end{figure}
 
-As shown in Figure 12, most inverse kinematics requests are solved in
+As shown in Figure \ref{fig:kdl-histo}, most inverse kinematics requests are solved in
 under 20 iterations or will fail. Since the seed is random, the number
 of requests needed to solve for a difficult pose is probabilistic, and
 though some positions are more difficult to solve for using KDL's
@@ -1194,7 +1271,14 @@ system was implemented as a proof of concept. The system uses several
 object detection nodes developed by Willow Garage for the PR2 robot, as
 well as two nodes written specifically for this project.
 
-FIGURE
+\begin{figure}[h]
+\centering
+\includegraphics[width=6.0in]{box_manipulator_graph}
+\caption{The box manipulation pipeline}
+\caption*{Data from the Kinect is used to locate boxes on a table, which are 
+then picked up and placed in the bin.}
+\label{fig:box-manip}
+\end{figure}
 
 The Object Manipulation Controller was written specifically for this
 project and serves as the central control node, translating and routing
