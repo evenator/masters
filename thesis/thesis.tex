@@ -12,6 +12,7 @@
 \usepackage{booktabs}
 \usepackage{caption}
 \usepackage{graphicx}
+\usepackage{hyperref} 
 
 \graphicspath{{figures/}}
 
@@ -162,7 +163,7 @@ factories following paths that were marked with wires buried in the
 factory floor. These vehicles were only practical for permanent
 installations in unchanging environments; ``reprogramming'' a first
 generation AGV required that the path be removed from the floor and
-reinstalled {[}1{]}.
+reinstalled \cite{barbera}.
 
 More modern AGVs have eschewed physically-marked paths in favor of
 virtually-defined paths. The AGV uses sensor systems to localize itself
@@ -171,7 +172,7 @@ statically defined or dynamically chosen by a higher-level planner. The
 higher level planner chooses paths for the AGV from amongst a graph of
 paths through the factory or warehouse. A single high-level planner may
 coordinate multiple AGVs to prevent traffic jams and allocate tasks
-{[}2{]}. Although these modern AGV systems are more flexible than their
+\cite{vivaldini}. Although these modern AGV systems are more flexible than their
 predecessors, they still depend on an ordered factory or warehouse
 environment, and are not designed to cooperate with human workers. They
 execute pre-programmed routines to move loads between loading docks.
@@ -182,13 +183,13 @@ lengthy and labor-intensive process. Predefining all of the paths for an
 AGV may not be practical if the inventory system is large and does not
 have readily-defined nodes such as loading docks. AGV systems are useful
 for tasks such as pallet transportation, and many such systems are
-forklifts {[}3{]}. However, AGVs are inflexible; they cannot adapt to
+forklifts \cite{garibotto}. However, AGVs are inflexible; they cannot adapt to
 changing inventory organization, changing assembly line configurations,
 or changes in their environment. An obstacle placed along an AGV path
 could disable an entire AGV system by creating a bottleneck or blockage.
 
 Kiva Systems, a producer of automated inventory systems, has moved
-beyond the AGV paradigm to a smart-warehouse system{[}4{]}. In this type
+beyond the AGV paradigm to a smart-warehouse system \cite{kiva}. In this type
 of system, all of the inventory is stored on pallet-like mobile shelves,
 and a group of mobile drive units rearrange and deliver the shelves as
 necessary to bring items to assembly and packing stations. Kiva robots
@@ -201,7 +202,7 @@ environment. This system also has another advantage over AGV systems
 that stems from the entire inventory being movable. Namely, the
 warehouse is constantly being reorganized as it is used, moving items
 around to make commonly-needed items more accessible and improve the
-speed of the overall system{[}5{]}. Although the Kiva system does not
+speed of the overall system \cite{dandrea}. Although the Kiva system does not
 require prelaid or preplanned paths, it does require that a warehouse be
 specifically designed for and used exclusively by its robots. The system
 cannot be used with existing inventory shelves, only with the movable
@@ -210,11 +211,11 @@ environment be outfitted with a grid of barcodes on the floor to
 facilitate localization.
 
 Mobile manipulators have made little headway in industry, partly because
-of the rarity and cost of mobile manipulators{[}6{]}. However,
+of the rarity and cost of mobile manipulators \cite{bischoff}. However,
 researchers have been exploring the application of mobile manipulators
 in industrial settings for several years. In 2004, a group at the
 University of Verona, Italy devised a mobile manipulator for the
-pharmaceutical industry{[}7{]}. This robot consisted of a custom-made 5
+pharmaceutical industry \cite{cosma}. This robot consisted of a custom-made 5
 DOF manipulator with one passive DOF mounted on top of a
 commercially-available mobile base. The system used a vacuum gripper to
 pick up cardboard boxes from pallets and put them on shelves. This
@@ -228,7 +229,7 @@ stations.
 More recently, in 2011 a group at the Intelligent Systems and Production
 Engineering Research Center for Information Technology in Karlsruhe,
 Germany developed a bimanual manipulator using a custom drive base and
-two KUKA Lightweight Robot arms{[}8{]}. It used a Microsoft Kinect, two
+two KUKA Lightweight Robot arms \cite{hermann}. It used a Microsoft Kinect, two
 high resolution cameras, and three LIDAR scanners for perception, as
 well as force feedback in its manipulators. This platform was
 exceptionally capable, but was designed more as a general-purpose mobile
@@ -246,11 +247,11 @@ design was reduction of cost, which was achieved by using materials and
 components already available in Case Western Reserve University's Mobile
 Robotics Lab.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=6.0in]{abby-diagram}
 \caption{An annotated rendering of ABBY showing several major components.}
-\caption*{\textcopyright 2013 IEEE \ref{venator-case}}
+\caption*{\textcopyright 2013 IEEE \cite{venator_case}}
 \label{abby-diagram}
 \end{figure}
 
@@ -260,7 +261,7 @@ The Invacare Ranger is a wheelchair chassis in Invacare's Storm series.
 The wheelchair base has a differential drive system with two pneumatic
 drive wheels in the back and two solid caster wheels in the front. The
 drive wheels are each powered by a 24 volt DC motor geared for a maximum
-speed of 5 miles per hour (2.24 m/sec){[}10{]}. Because of the
+speed of 5 miles per hour (2.24 m/sec) \cite{venator_case}. Because of the
 configuration of the robot's wheels, it can spin on its own axis and
 drive forward and backward. It cannot move sideways.
 
@@ -286,7 +287,7 @@ rad/sec\textsuperscript{2} on tile floor.
 \section{ABB IRB-120 Robotic Arm}
 
 The manipulator on the robot is an ABB IRB-120 industrial robotic
-arm{[}11{]}. The IRB-120 is a six-axis robotic arm with a spherical
+arm \cite{abb}. The IRB-120 is a six-axis robotic arm with a spherical
 wrist. It has a tool flange that allows for the mounting of end
 effectors as well as pneumatic and electrical connections near the tool
 flange to connect sensors and actuators to the arm. The IRB-120 is ABB's
@@ -305,7 +306,7 @@ objects from horizontal surfaces.
 
 The IRB-120's joints are powered by non-back-drivable AC electric
 servos, with position feedback from resolvers. According to ABB, the
-IRB-120 is capable of position repeatability of 10 micrometers{[}11{]}.
+IRB-120 is capable of position repeatability of 10 micrometers \cite{abb}.
 The arm's position is controlled by an ABB IRC5 Compact robot
 controller, which is in turn commanded through the ROS Industrial
 interface. The details of this control structure are described in Section
@@ -350,7 +351,7 @@ coil. The solenoid coil is controlled by a custom circuit based on an
 Arduino microprocessor development kit, as shown in Figure 
 \ref{fig:gripper-schematic}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=6.0in]{gripper}
 \caption{The electrical circuit to control the pneumatic gripper using 
@@ -382,11 +383,11 @@ reconfigured without remachining frame members. However, heavy objects
 mounted to vertical rails, such as the arm, may slip if the bolts are
 not very tight.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[height=5.0in]{abby_2_edited}
 \caption{ABBY, a mobile industrial manipulator.}
-\caption*{\textcopyright 2013 IEEE \ref{venator-case}}
+\caption*{\textcopyright 2013 IEEE \cite{venator_case}}
 \label{fig:abby-photo}
 \end{figure}
 
@@ -438,7 +439,7 @@ frame rail.
 
 \section{Power}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=6.0in]{power_block_diagram}
 \caption{A block diagram of the power distribution system on the robot}
@@ -477,7 +478,7 @@ IRB-120 robotic arm.
 Much of the electronics on the robot requires a lower voltage to
 operate, nominally 12 volts DC. These electronics are powered by a
 Samlex America SDC-15, a 13.8 volt switch-mode step-down regulator that
-can supply up to 12 amps{[}12{]}, which is powered from the main 24 volt
+can supply up to 12 amps \cite{samlex}, which is powered from the main 24 volt
 bus. This bus powers the WiFi router, emergency stop circuitry, the cRIO
 interface board, the Kinect camera, and the pneumatic compressor.
 
@@ -519,7 +520,7 @@ supply to the cRIO (which is protected from rail droop by a peak
 detector, as shown in Figure \ref{fig:power-schematic}), and the rail that powers the drive
 base, which is switched on and off by the emergency stop circuit.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=6.0in]{data_block_diagram}
 \caption{A block diagram of the sensors and computing hardware on ABBY, 
@@ -632,7 +633,7 @@ low-level processing related to the operation and control of the drive
 base. The robot's physical state observer (PSO) takes in the current
 encoder counts and uses a Kalman filter to generate an estimate of the
 robot's current position. The PSO used on this robot is described in
-detail in {[}13{]}. In addition to this processing, the PowerPC
+detail in \cite{perko}. In addition to this processing, the PowerPC
 processor relays raw values from the FPGA to the robot's PC over the
 robot's local Ethernet network and receives speed commands from the
 robot's PC that it then passes to the PID controller on the FPGA.
@@ -681,7 +682,7 @@ single topic, and many ROS nodes can subscribe to a topic. ROS topic
 communication is distributed, meaning that nodes communicate directly
 from the publisher to the subscriber, and the ROS master node only
 facilitates this communication by maintaining a list published topics
-and negotiating the direct connections between nodes{[}14{]}.
+and negotiating the direct connections between nodes \cite{ros_concepts}.
 
 In addition to communicating through ROS topics, ROS nodes can provide
 services to one another. A service is defined by a request message and a
@@ -690,7 +691,7 @@ nodes in a hierarchical namespace. A service client sends a request
 message to the service server containing parameters or data to be
 processed. The service server performs the service requested and sends a
 reply message containing processed data or a status message about the
-service{[}14{]}.
+service \cite{ros_concepts}.
 
 ROS also provides an action server interface. Like ROS services, ROS
 actions are based on a server-client model. Whereas services are
@@ -703,7 +704,7 @@ goal and begins processing it. Optionally, the server may publish
 feedback messages while it is processing the goal. When the server is
 finished processing the goal, it sends a result message, which notifies
 the client that it has finished processing the goal and returns the
-result of the process{[}15{]}.
+result of the process \cite{ros_actionlib}.
 
 \section{The Robot Model}
 
@@ -749,7 +750,7 @@ angles into Cartesian coordinates and vice versa. It was also used to
 generate the arm navigation package that performs trajectory planning
 for the arm.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=6.0in]{rviz}
 \caption{ABBY’s robot model, LIDAR data (green points), and Kinect point 
@@ -776,10 +777,10 @@ with the sensor hardware and publishes data as ROS messages to the
 appropriate ROS topic(s). The driver node for an actuator subscribes to
 actuator commands on the appropriate ROS topic and interfaces with the
 actuator hardware to execute the commands. ABBY's Kinect camera and SICK
-LIDAR use preexisting open source drivers{[}16{]}{[}17{]}, and the ROS
-driver node for the mobile base was developed previously by this lab for
-other robots using the same hardware, and required limited modification
-for this robot{[}10{]}. The driver for the ABB robotic arm was written
+LIDAR use preexisting open source drivers \cite{kinect} \cite{laser_drivers},
+and the ROS driver node for the mobile base was developed previously by this 
+lab for other robots using the same hardware, and required limited modification
+for this robot \cite{harlie}. The driver for the ABB robotic arm was written
 for this platform in collaboration with the Southwest Research Institute
 (SWRI) of San Antonio, Texas as part of the ROS Industrial Project.
 
@@ -819,15 +820,15 @@ transparent bridge between the ROS system and the ROS node on the
 microcontroller. The ROS node on the microcontroller publishes joint
 state messages describing the current position of the gripper plates and
 provides a ROS service to open and close the gripper. The Fuerte version
-of ROS Serial did not properly support ROS services{[}18{]}. In order to
+of ROS Serial did not properly support ROS services \cite{venator_rosserial_ros_answers}. In order to
 implement a service on the Arduino, changes were made to the ROS Serial
 bridge node and microcontroller code to enable support of
-services{[}19{]}.
+services \cite{venator_rosserial_github}.
 
 ABBY uses the ROS Industrial framework of messages and driver nodes to
 control the IRB-120 using the IRC5 Compact. ROS Industrial is a project
 led by SWRI to develop a standard ROS framework for using ROS with
-industrial robots{[}20{]}. ABBY's ROS Industrial driver was written
+industrial robots \cite{edwards}. ABBY's ROS Industrial driver was written
 specifically for this project, and has been incorporated into the ROS
 Industrial codebase.
 
@@ -861,7 +862,7 @@ using another packet structure defined by SWRI. It publishes this state
 information, consisting of all of the robot's joint angles, as ROS joint
 state messages and ROS joint trajectory feedback messages. These
 messages are used by other ROS nodes to determine the position of the
-robot's arm and as feedback to the arm planning nodes{[}9{]}.
+robot's arm and as feedback to the arm planning nodes \cite{venator_case}.
 
 \chapter{Experimental Software}
 
@@ -905,7 +906,7 @@ of each.
 A benefit of relative localization methods is that they are
 computationally simple. Odometry on ABBY uses fourteen mathematical
 operations (seven addition, four multiplication, and three
-trigonometric, as shown in Algorithm 1 below.). This allows for high
+trigonometric, as shown in Algorithm \ref{alg:odometry}.). This allows for high
 frequency update rates and implementation on embedded processors or in
 logic circuitry.
 
@@ -914,7 +915,7 @@ logic circuitry.
 $d_r$ and $d_l$ are the difference in encoder counts since the last update. trans 
 is the translation. $d_x$ and $d_y$ are the translation in the x and y directions. 
 $d_{\theta}$ is the rotation in $\theta$, and $\theta$ is the heading.}
-\label{alg1}
+\label{alg:odometry}
 \begin{algorithmic}
 \STATE $d_r \gets r - r_0$
 \STATE $d_l \gets l - l_0$
@@ -940,10 +941,10 @@ Each update is performed with respect to the previous, and the
 superposition of successive errors causes the cumulative error to
 increase. The source of the error may be physical, such as wheel slip,
 or computational, such as the non-linearity of the trigonometric
-function used to estimate the heading in Algorithm 1. A well-calibrated
-relative localization system with an accurate observer model will still
-accumulate error over time, and the estimated position of the robot will
-slowly diverge from the true position. This was demonstrated using
+function used to estimate the heading in Algorithm \ref{alg:odometry}. A 
+well-calibrated relative localization system with an accurate observer model 
+will still accumulate error over time, and the estimated position of the 
+robot will slowly diverge from the true position. This was demonstrated using
 ABBY's odometry system; see Section \ref{localization}.
 
 Unlike relative localization, absolute localization does not accumulate
@@ -954,7 +955,7 @@ monitor the robot's position. In order for a robot to use these methods,
 the operating environment must have already been instrumented with the
 necessary sensors. Other methods use sensors on the robot to track
 features of the robot's environment and compare them to a known map of
-the robot's environment{[}21{]}. Trackable features may already exist in
+the robot's environment \cite{thrun}. Trackable features may already exist in
 the environment, such as ceiling lights in an office building, or may be
 added, such as position-coded labels on a warehouse floor. Systems with
 ranging sensors can track features of the geometry of the environment
@@ -976,7 +977,7 @@ can exploit partially-overlapping LIDAR scans to register new scans with
 respect to previous scans. The translation and rotation required to
 register the scan can be used to determine the robot's position with
 respect to the previous position. Each new scan increases the known
-region of the environment, slowly building a map{[}21{]}.
+region of the environment, slowly building a map \cite{thrun}.
 
 ABBY's sensor suite contains several sensors that can be used for
 localization. The encoders on the wheels are well-suited for odometry.
@@ -1000,7 +1001,7 @@ input to the local planner, which generates velocity pairs at a rate of
 A SLAM algorithm was considered for absolute localization on ABBY.
 Because SLAM does not require an \emph{a priori} map, it would be easy
 to install a SLAMing robot in a novel environment. Maps were generated
-by ABBY using the LIDAR and the gmapping SLAM package{[}22{]}. Gmapping
+by ABBY using the LIDAR and the gmapping SLAM package \cite{grisetti}. Gmapping
 uses a Rao-Blackwellized particle filter to generate maps as it
 localizes. Gmapping on ABBY was unable to reliably traverse doorways
 without introducing error. This was sufficient reason not to use it for
@@ -1009,7 +1010,7 @@ localization.
 Instead, the maps were manually cleaned up using image editing software
 and used as \emph{a priori} maps for AMCL. AMCL is an absolute
 localization method that models the robot's pose as a probability
-distribution{[}21{]}. The robot's pose is considered probabilistic to
+distribution \cite{thrun}. The robot's pose is considered probabilistic to
 represent the uncertainty of the sensor measurements used to determine
 the pose. ABBY uses AMCL to match LIDAR scans to an \emph{a priori} map.
 AMCL can theoretically solve the ``wake-up robot problem,'' in which the
@@ -1030,7 +1031,7 @@ odometry is more suitable for the local planner, the error it
 accumulates as the robot runs eventually makes it unsuitable for global
 planning.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[height=4.0in]{odom_frames}
 \caption{The map, odometry, and base frames of the robot localization system.}
@@ -1085,7 +1086,7 @@ forward. Since the Sabertooth motor controller can vary its voltage
 output from -24 volts to 24 volts, the 7 bits of speed resolution in
 each direction correspond to a voltage output resolution of about 189mV.
 The PID controllers on ABBY were originally tuned for another robot with
-the same mobility platform but a different weight distribution{[}23{]}.
+the same mobility platform but a different weight distribution \cite{yanick}.
 With some retuning, ABBY's minimum achievable forward/reverse speed is
 0.1 m/s and minimum rotational speed is 0.35 rad/sec; other robots based
 on the same mobility platform were able to achieve 0.1 m/second and 0.1
@@ -1109,10 +1110,10 @@ through the path without violating the acceleration and velocity
 constraints of the robot. On ABBY, these tasks are performed by a global
 and a local planner, respectively.
 
-NavFn{[}24{]}, the global planner node available in the ROS navigation
+NavFn \cite{navfn}, the global planner node available in the ROS navigation
 stack, operates on a grid-based global costmap populated by data from
 the LIDAR. Given a desired pose, NavFn finds a minimum-cost path using
-Djikstra's algorithm{[}25{]}. This path is defined as a series of
+Dijkstra's algorithm \cite{dijkstra}. This path is defined as a series of
 intermediate robot poses along the path. NavFn successfully plans paths
 for ABBY in relatively open environments, but because it assumes a
 circular robot base, it will sometimes plan impossible paths in crowded
@@ -1121,7 +1122,7 @@ environments.
 The local planner generates trajectories to follow the path produced by
 the global planner; it operates on a local costmap populated by data
 from the LIDAR. The robot performs local planning using a trajectory
-rollout approach{[}21{]}, which forward-simulates translational and
+rollout approach \cite{thrun}, which forward-simulates translational and
 rotational velocities and evaluates the resulting trajectories for
 proximity to obstacles, proximity to the goal, and adherence to the
 global path. These scores are weighted and summed to determine the
@@ -1139,7 +1140,7 @@ solvers are mathematically complex.
 
 ROS includes a kinematic solver in the kinematics\_constraint\_aware
 package that wraps the inverse kinematics solver of the Orocos project's
-Kinematics and Dynamics Library (KDL){[}26{]}{[}26{]}. The KDL solver is
+Kinematics and Dynamics Library (KDL) \cite{orocos} \cite{openrave}. The KDL solver is
 a numerical solver that uses Newton-Raphson iterations. The KDL solver
 takes joint angle limits into account in evaluation of its solutions,
 only returning a solution with valid joint angles. However, the KDL
@@ -1159,7 +1160,7 @@ kinematic solver, which only made one attempt at a solution. When the
 number of attempts was increased to 100, the success rate was 32\% for
 solvable poses.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=6.0in]{KDL_histogram}
 \caption{A histogram of the number of iterations required for the KDL inverse 
@@ -1180,7 +1181,7 @@ determining that a pose is unsolvable. This is acceptable for the robot
 at this time, but a faster, more reliable inverse kinematics solver will
 be necessary in an industrial installation.
 
-The OpenRAVE project includes the IKFast kinematic solver tool{[}27{]},
+The OpenRAVE project includes the IKFast kinematic solver tool \cite{openrave},
 which analyzes a kinematic chain and generates C++ code for an inverse
 kinematics solver for that chain. The solver it generates is a
 closed-form analytic solver, meaning it runs very quickly (\textless{}1
@@ -1218,7 +1219,7 @@ The trajectory planner for the arm is the default planner available with
 the ROS arm navigation package. It uses a sample-based planning
 algorithm from the Open Motion Planning Library called Single-Query
 Bi-Directional Probabilistic Roadmap Planner with Lazy Collision
-Checking (SBL){[}28{]}. SBL plans collision-free paths for the arm and
+Checking (SBL) \cite{sanchez}. SBL plans collision-free paths for the arm and
 publishes these paths as ROS trajectory messages, which the ROS
 Industrial arm driver executes. Because SBL performs all of its planning
 in joint-space, the arm navigation application uses the inverse
@@ -1271,7 +1272,7 @@ system was implemented as a proof of concept. The system uses several
 object detection nodes developed by Willow Garage for the PR2 robot, as
 well as two nodes written specifically for this project.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=6.0in]{box_manipulator_graph}
 \caption{The box manipulation pipeline}
@@ -1305,8 +1306,8 @@ on a table.}
 
 The tabletop\_detection() step is performed by the
 tabletop\_object\_segmentation package, developed by Willow
-Garage{[}29{]} for the PR2 robot. This software identifies a tabletop
-surface in a point cloud from the Kinect using RANSAC {[}30{]} and adds
+Garage \cite{tabletop_object_detector} for the PR2 robot. This software identifies a tabletop
+surface in a point cloud from the Kinect using RANSAC \cite{fischler} and adds
 it to the collision environment as an object. Objects on top of the
 table (detected\_objects) are segmented into separate point clouds and
 inserted into the collision environment as Graspable Objects. These
@@ -1359,7 +1360,7 @@ the position and yaw angle of this frame.
 
 To determine the height (z-axis position) and pitch angle of the Kinect,
 the robot was placed so the Kinect had an unobstructed view of the floor
-in front of it. RANSAC{[}30{]} was used to fit a plane to the floor, and
+in front of it. RANSAC \cite{fischler} was used to fit a plane to the floor, and
 the transform from the fitted plane to the Kinect was calculated. A
 similar method was used to determine the x-axis position of the Kinect.
 The robot was placed so that the Kinect had an unobstructed view of a
@@ -1411,9 +1412,17 @@ QR codes can hold up to 3 kilobytes of data, or 174 bytes with 7\% error
 correction. They include 3 "finder square" fiducials, which can be used
 to acquire and correct the skew and size of the code. QR codes are
 already used throughout the automotive industry for part
-labeling{[}31{]}.
+labeling \cite{qr}.
 
-FIGURE
+\begin{figure}[ht]
+\centering
+\includegraphics[width=2.3in]{Qr-3}
+\caption{QR Level 3 code}
+\caption*{(Source: Wikipedia, licensed under Creative Commons Attribution 
+Share-Alike License)}
+\label{fig:qr}
+
+\end{figure}
 
 Information about how to grip an object can be stored in a small amount
 of data in a QR code on an object. This information, the ``affordance
@@ -1435,7 +1444,14 @@ deciding how to manipulate an object:
   necessary to locate the sides relative to the tag.
 \end{enumerate}
 
-FIGURE
+\begin{figure}[ht]
+\centering
+\includegraphics[height=2.5in]{Qr-3}
+\caption{A box localized using the QR code.}
+\caption*{Red dots are the QR code finder pattern. Blue is the projected 
+handle center. Green are the handle corners.}
+\label{fig:qr_box}
+\end{figure}
 
 Using a Kinect sensor and MatLab, a rudimentary proof-of-concept was
 tested for boxes with handles on top. Because the Kinect image sensor
@@ -1451,8 +1467,8 @@ points, it is possible to localize the QR code in 3D space, including
 both position and orientation. Using the location of the tag and the
 tag's information about the handle's location relative to the tag, the
 handle can be located, allowing a robot to grasp it without knowing any
-other information about the box. The results are shown in Figure 15
-above.
+other information about the box. The results are shown in Figure 
+\ref{fig:qr_box}.
 
 Because the Kinect RGB camera does not have sufficiently high resolution
 for the task, these experiments were not performed on the robot.
@@ -1567,12 +1583,26 @@ as to the state of the four emergency stop sources described above.
 
 Given the requirements, an emergency stop system was designed and
 fabricated using printed circuit boards. The schematic of the system is
-shown in Figure 16 and Figure 17. The system consists of two circuits, a
-remote control and an emergency stop circuit on the robot.
+shown in Figure \ref{fig:estop-remote} and Figure \ref{fig:estop-receiver}. 
+The system consists of two circuits, a remote control and an emergency stop 
+circuit on the robot.
 
-FIGURE
+\begin{figure}[ht]
+\centering
+\includegraphics[width=6.0in]{estop_remote}
+\caption{Schematic of the emergency stop remote tested on ABBY.}
+\caption*{The remote uses an XBee radio to send an enable signal to 
+the robot and receive the current emergency stop status from the robot, 
+which is displayed with LEDs.}
+\label{fig:estop-remote}
+\end{figure}
 
-FIGURE
+\begin{figure}[ht]
+\centering
+\includegraphics[width=6.0in]{estop_receiver}
+\caption{Schematic of the emergency stop receiver and aggregator on ABBY}
+\label{fig:estop-receiver}
+\end{figure}
 
 The remote circuit uses an XBee radio module's GPIO mirroring function
 to transmit the state of the emergency stop button to the emergency stop
@@ -1594,9 +1624,10 @@ robot's DC systems. A 7400 series AND IC is used to generate logic
 signals to enable the drive base and the IRC5's emergency stop input.
 The drive base logic signal controls a Darlington transistor, which in
 turn switches the coil of a solenoid that controls the drive base in the
-same manner as on HARLIE-class robots (not shown in Figure 17; see
-Figure 4). The IRC5 output logic signal switches the 24v General Stop
-input of the IRC5 using an optoisolator IC.
+same manner as on HARLIE-class robots (not shown in Figure 
+\ref{fig:estop-receiver}; see Figure \ref{fig:power-schematic}). The IRC5 
+output logic signal switches the 24v General Stop input of the IRC5 using 
+an optoisolator IC.
 
 These circuits were prototyped and installed on the robot. Because the
 RAPID software running on the IRC5 was not configured to output the
@@ -1798,10 +1829,15 @@ maximize the Kinect's view of the table. Once the arm was out of the
 way, the robot attempted object segmentation. If no objects were found,
 the robot moved the arm again and reattempted segmentation. If at least
 one object was recognized, the robot attempted to pick one up and drop
-it in the bin. The results of these tests are shown in Figure 18 and
-Table \ref{tab:object-manipulation}.
+it in the bin. The results of these tests are shown in Figure 
+\ref{fig:results-pie} and Table \ref{tab:object-recognition}.
 
-FIGURE
+\begin{figure}[ht]
+\centering
+\includegraphics[width=6.0in]{manipulation_results}
+\caption{Manipulation test results}
+\label{fig:results-pie}
+\end{figure}
 
 Of the twenty-five trials, the robot completed the manipulation task
 thirteen times. In three attempts, the gripper missed the object,
@@ -1950,7 +1986,12 @@ volts DC, which was considered the critical shutdown voltage. At this
 point, each cell in the lead acid battery has been depleted to about 1.8
 volts, or 90\% of its nominal voltage.
 
-FIGURE
+\begin{figure}[ht]
+\centering
+\includegraphics[width=6.0in]{discharge_idle}
+\caption{Voltage curve during battery discharge test with actuators idle}
+\label{fig:discharge-idle}
+\end{figure}
 
 In the first test, the robot's systems are all turned on, but the
 actuators are disabled. In this idle test, the robot ran for 4 hours and
@@ -1963,9 +2004,19 @@ velocity to the maximum positive velocity, then resetting back to the
 maximum negative velocity. In this test, the robot ran for 3 hours and
 13 minutes before it hit the critical voltage.
 
-FIGURE
+\begin{figure}[ht]
+\centering
+\includegraphics[width=6.0in]{discharge_drive}
+\caption{Voltage curve during battery discharge test with drivetrain exercised}
+\label{fig:discharge-drive}
+\end{figure}
 
-FIGURE
+\begin{figure}[ht]
+\centering
+\includegraphics[width=6.0in]{discharge_arm}
+\caption{Voltage curve during battery discharge test with arm exercised}
+\label{fig:discharge-arm}
+\end{figure}
 
 In the third test, the drivetrain was disabled but the arm was commanded
 to repeatedly execute trajectories between the stow position and the
@@ -2181,7 +2232,12 @@ portions of it prototyped, but it has not been tested. This version
 should fix the problems discovered in the first version of the emergency
 stop.
 
-FIGURE
+\begin{figure}[ht]
+\centering
+\includegraphics[width=6.0in]{estop_remote_revised}
+\caption{Revised emergency stop remote circuit.}
+\label{fig:estop-remote-revised}
+\end{figure}
 
 To allow the system to stop the IRC5, the optoisolator on the output of
 the emergency stop circuit was replaced with a relay module, which will
@@ -2190,7 +2246,12 @@ integration with the IRC5, the RAPID software must be modified to output
 the current General Stop state to a GPIO, which should be connected to
 the IRC5 input of the emergency stop circuit.
 
-FIGURE
+\begin{figure}[ht]
+\centering
+\includegraphics[width=6.0in]{estop_receiver_revised}
+\caption{Revised emergency stop receiver/aggregator circuit.}
+\label{fig:estop-receiver-revised}
+\end{figure}
 
 To solve the wireless communication issues, the power supply in the
 remote was replaced with a 3.3 volt regulated boost supply, which should
@@ -2256,7 +2317,7 @@ from approaching closer.}
 \end{algorithm}
 
 Another approach to reflexive halting was described by Chad Rockey in
-his masters thesis{[}33{]}. This approach, called Reflexive Avoidance
+his masters thesis \cite{rockey}. This approach, called Reflexive Avoidance
 Plus, was developed for a smart wheelchair, which must operate in
 crowded areas around people. Reflexive Avoidance Plus uses velocity
 limiting rather than preventing motion altogether. When a sensor detects
@@ -2292,7 +2353,7 @@ be executed. If something enters the path of the trajectory, the robot
 does not alter the current trajectory. This makes the robot unsafe to
 operate around humans above a certain joint speed.
 
-Rethink Robotics, with their robot Baxter{[}34{]}, solved the problem of
+Rethink Robotics, with their robot Baxter \cite{rethink}, solved the problem of
 operating an industrial robot without a safety cage with a mechanical
 and software solution that relied on force feedback and serial-elastic
 actuators. Because all of Baxter's joints are elastic and its arms are
@@ -2312,7 +2373,7 @@ is brought into the robot's work envelope and left there, the robot will
 never re-enable the arm.
 
 To resolve this problem, the reflexive halt behavior can be augmented as
-shown in Algorithm 4. In this algorithm, the currently planned path is
+shown in Algorithm \ref{alg:reflexive-manip}. In this algorithm, the currently planned path is
 repeatedly checked for dangerously close objects (such as people) until
 execution is completed. If an object enters the dangerous area, the
 robot stops execution of the trajectory and waits. If the obstacle
@@ -2353,7 +2414,7 @@ $K_H$ is the speed of a moving human, $K_R$ is
 the speed of the robot, $T_R$ is the reaction time of the
 human, $T_B$ is the braking time of the robot, $B$ is the
 robot braking distance, and $C$ is a distance to account for measurement
-uncertainty{[}35{]}.
+uncertainty \cite{shackleford}.
 
 \begin{equation}
 \label{eq:NIST}
@@ -2371,7 +2432,7 @@ written as a ROS node and tested on this robot.
 
 \backmatter
 
-\bibliographystyle{apalike}
-\bibliography{sample}
+\bibliographystyle{IEEEtran}
+\bibliography{thesis}
 
 \end{document}
