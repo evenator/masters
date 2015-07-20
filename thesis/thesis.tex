@@ -922,8 +922,9 @@ $d_{\theta}$ is the rotation in $\theta$, and $\theta$ is the heading.}
 \STATE $trans \gets k_t * (d_i + d_r)$
 \STATE $d_x \gets trans * cos(\theta)$
 \STATE $d_y \gets trans * sin(\theta)$
-\STATE $y \gets y_0 * d_y$
-\STATE $d_\theta arcsin(k_\theta * (d_r - d_l))$
+\STATE $x \gets x_0 + d_x$
+\STATE $y \gets y_0 + d_y$
+\STATE $d_\theta \gets arcsin(k_\theta * (d_r - d_l))$
 \STATE $\theta \gets \theta_0 + d_\theta$
 \end{algorithmic}
 \end{algorithm}
